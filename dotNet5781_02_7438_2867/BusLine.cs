@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,6 +42,17 @@ namespace dotNet5781_02_7438_2867
         {
             return Line.Exists(s=>s.BusKey == busLine1.BusKey);
         }
+        public int distance(BusLineStation station1, BusLineStation station2)
+            {
+            int distance=0;
+            for(int i=0; i<Line.FindIndex(s=>s.BusKey==station2.BusKey)-Line.FindIndex(s=>s.BusKey==station1.BusKey) ; i++ )
+                {
+                BusLineStation temp=Line{Line.FindIndex(s=>s.BusKey==station1.BusKey)-i};
+                distance+=temp.DistanceFromThePreviousStation;
+                }
+            return distance;
+            }
+
 
     }
 }
