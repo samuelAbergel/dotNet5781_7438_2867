@@ -19,6 +19,7 @@ namespace dotNet5781_02_7438_2867
             }
             Console.WriteLine(ligne1.ToString());
             Console.WriteLine(ligne1.isExist(FirstStation) ? true:false);
+
             Console.ReadKey();
         }
     }
