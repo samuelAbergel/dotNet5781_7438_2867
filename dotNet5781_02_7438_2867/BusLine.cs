@@ -24,9 +24,9 @@ namespace dotNet5781_02_7438_2867
 
         public override string ToString()
         {
-            string tostring = $"Line number: {LineNumber}, Area:{area.ToString()}, stations: \n ";
+            string tostring = $"Line number: {LineNumber}, Area:{area.ToString()}, stations: \n";
             foreach (BusLineStation bus in Line)
-                tostring += bus.ToString();
+                tostring += bus.ToString()+ "\n";
             return tostring;
         }
         public void AddStation(int index, BusLineStation BusLine1)

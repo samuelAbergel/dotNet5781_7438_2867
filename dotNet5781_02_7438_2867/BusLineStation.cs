@@ -8,7 +8,7 @@ namespace dotNet5781_02_7438_2867
 {
     internal class BusLineStation : BusStation
     {
-        public BusLineStation(int Buskey) : base(Buskey){}
+        public BusLineStation() : base(){}
 
         public int DistanceFromThePreviousStation { set; get; }
         public int TimeFromThePreviousStation { set; get; }
