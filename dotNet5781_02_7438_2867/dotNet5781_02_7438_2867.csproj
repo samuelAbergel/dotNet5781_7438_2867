@@ -47,8 +47,10 @@
     <Compile Include="BusLineEnum.cs" />
     <Compile Include="BusLineStation.cs" />
     <Compile Include="BusStation.cs" />
+    <Compile Include="CollectionOfBusLines.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="switchEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

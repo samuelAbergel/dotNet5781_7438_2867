@@ -8,10 +8,11 @@ namespace dotNet5781_02_7438_2867
 {
     internal class BusLineStation : BusStation
     {
-        public BusLineStation() : base()
+        public static Random rnd1 = new Random();
+        public BusLineStation(int busKey) : base(busKey)
         {
-            this.DistanceFromThePreviousStation = new Random().Next(500);
-            this.TimeFromThePreviousStation = new Random().Next(200);
+            DistanceFromThePreviousStation = rnd1.Next(500);
+            TimeFromThePreviousStation = rnd1.Next(200);
         }
 
         public int DistanceFromThePreviousStation { set; get; }

@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 
 namespace dotNet5781_02_7438_2867
 {
-    class BusLine
+    
+    class BusLine : IComparable
     {
-        public List<BusLineStation> Line { get; set; }
+        static Random rnd = new Random();
+        public List<BusLineStation> Line { get ; set; }
         public int LineNumber { get; set; }
-        public BusLineStation FirstStation { get; set; }
-        public BusLineStation LastStation { get; set; }
+        public BusLineStation FirstStation { get => this.Line[0]; set => this.Line[0] = value; }
+        public BusLineStation LastStation { get => Line[Line.Count-1]; set => Line[Line.Count - 1] = value; }
         public Area area { get; set; }
 
-        public BusLine(int LineNumber,BusLineStation FirstStation, BusLineStation LastStation)
+        public BusLine(int LineNumber,Area area)
         {
             Line = new List<BusLineStation>();
             this.LineNumber = LineNumber;
-            this.FirstStation = FirstStation;
-            this.LastStation = LastStation;
+            this.area = area;
         }
 
         public override string ToString()
@@ -68,7 +69,7 @@ namespace dotNet5781_02_7438_2867
             int indexStation2 = Line.IndexOf(station2);
             string tostring = "trajet: \n";
             int i = 0;
-            while (i != indexStation2-indexStation1)
+            while (i-1 != indexStation2-indexStation1)
             {
                 tostring += Line[indexStation1 + i].ToString() + "\n";
                 i++;
@@ -76,5 +77,12 @@ namespace dotNet5781_02_7438_2867
             return tostring;
         }
 
+        public int CompareTo(object obj)
+        {
+            BusLine bus = obj as BusLine;
+            if(bus != null)
+                return this.getTimeOfTraject(FirstStation, LastStation).CompareTo(bus.getTimeOfTraject(bus.FirstStation,bus.LastStation));
+            throw new ArgumentException("it 's not a Single Autobus Line type");
+        }
     }
 }
