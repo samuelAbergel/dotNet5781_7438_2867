@@ -138,13 +138,16 @@ namespace dotNet5781_02_7438_2867
                             int numberLines;
                             toInt = Console.ReadLine();
                             isOk = int.TryParse(toInt, out numberLines);
+                            if (collection[numberLines].GetStation(numberStation) != null)
+                            {
                                 if (collection[numberLines].isExist(collection[numberLines].GetStation(numberStation)))
                                     collection[numberLines].RemoveStation(collection[numberLines].GetStation(numberStation));
-                                else
-                                {
-                                    Console.WriteLine("this station does not exist");
-                                    continue;
-                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("this station does not exist");
+                                continue;
+                            }
                         }
                         else if (choix == "line")
                         {
