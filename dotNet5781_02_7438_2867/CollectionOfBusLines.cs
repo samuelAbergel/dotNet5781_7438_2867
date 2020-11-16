@@ -30,7 +30,7 @@ namespace dotNet5781_02_7438_2867
             bool flag = true;
             foreach(BusLine bus in lines)
             {
-                if (bus.FirstStation.BusKey == busLine1.FirstStation.BusKey)
+                if (bus.LineNumber == busLine1.LineNumber)
                     flag = false;
             }
             if (flag)
@@ -79,14 +79,14 @@ namespace dotNet5781_02_7438_2867
             }
             return tostring;
         }
-        public string this[int index]
+        public BusLine this[int index]
         {
             get
             {
                 foreach(BusLine bus in lines)
                     if(bus.LineNumber == index)
                     {
-                        return bus.ToString();
+                        return bus;
                     }
                 throw new ArgumentException("this number does not correspond to any bus line");
             }

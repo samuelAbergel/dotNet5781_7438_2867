@@ -23,6 +23,12 @@ namespace dotNet5781_02_7438_2867
             this.LineNumber = LineNumber;
             this.area = area;
         }
+        public BusLine(int LineNumber)
+        {
+            Line = new List<BusLineStation>();
+            this.LineNumber = LineNumber;
+        }
+
 
         public override string ToString()
         {
@@ -41,7 +47,11 @@ namespace dotNet5781_02_7438_2867
         }
         public bool isExist(BusLineStation busLine1)
         {
-            return Line.Exists(s=>s.BusKey == busLine1.BusKey);
+            //if (Line.Exists(s => s.BusKey == busLine1.BusKey))
+            foreach(BusLineStation bus in Line)
+                if (busLine1.BusKey == bus.BusKey)
+                    return true;
+            return false;
         }
         public int getDistance(BusLineStation station1, BusLineStation station2)
             {
@@ -76,7 +86,15 @@ namespace dotNet5781_02_7438_2867
             }
             return tostring;
         }
-
+        public BusLineStation GetStation(int numberStation)
+        {
+            foreach(BusLineStation bus in Line)
+            {
+                if (bus.BusKey == numberStation)
+                    return bus;
+            }
+            return null;
+        }
         public int CompareTo(object obj)
         {
             BusLine bus = obj as BusLine;
