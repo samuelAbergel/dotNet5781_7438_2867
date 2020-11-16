@@ -134,10 +134,19 @@ namespace dotNet5781_02_7438_2867
                             int numberStation;
                             string toInt = Console.ReadLine();
                             isOk = int.TryParse(toInt, out numberStation);
-                            Console.WriteLine("in which lines do you want to add your station ? ");
+                            Console.WriteLine("in which lines do you want to remove your station ? ");
                             int numberLines;
                             toInt = Console.ReadLine();
                             isOk = int.TryParse(toInt, out numberLines);
+                            bool flag = true;
+                            foreach (BusLine line in collection.lines)
+                                if (line.LineNumber == numberLines)
+                                    flag = false;
+                            if (flag)
+                            {
+                                Console.WriteLine("this line does not exist");
+                                break;
+                            }
                             if (collection[numberLines].GetStation(numberStation) != null)
                             {
                                 if (collection[numberLines].isExist(collection[numberLines].GetStation(numberStation)))
@@ -146,7 +155,7 @@ namespace dotNet5781_02_7438_2867
                             else
                             {
                                 Console.WriteLine("this station does not exist");
-                                continue;
+                                break;
                             }
                         }
                         else if (choix == "line")
