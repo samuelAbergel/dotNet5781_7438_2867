@@ -12,6 +12,7 @@ namespace dotNet5781_02_7438_2867
 
         static void Main(string[] args)
         {
+            Random rnd = new Random();
             CollectionOfBusLines collection = new CollectionOfBusLines();
             for (int i = 0; i < 3; i++)
                 collection.AddLine(new BusLine(i + 10, Area.CENTER));
@@ -250,7 +251,6 @@ namespace dotNet5781_02_7438_2867
                         }
                         break;
                     case CHOICE.EXIT:
-                        Console.WriteLine("end");
                         break;
                     default:
                         Console.WriteLine("you cannot perform this action");
@@ -259,8 +259,8 @@ namespace dotNet5781_02_7438_2867
        
             }
             while (choice != CHOICE.EXIT);
-            Console.ReadKey();
-
+            Console.WriteLine("press any key to continue...");
+            Console.ReadLine();
         }
     }
 }
