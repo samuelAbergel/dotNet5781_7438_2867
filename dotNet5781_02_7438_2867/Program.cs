@@ -220,7 +220,6 @@ namespace dotNet5781_02_7438_2867
                             }
                             foreach (BusLine bus in collection.lines)
                             {
-                              
                                 if (bus.GetStation(numberStation) != null && bus.GetStation(numberStation1) != null)
                                 {
                                     if (time > bus.getTimeOfTraject(bus.GetStation(numberStation), bus.GetStation(numberStation1)))
