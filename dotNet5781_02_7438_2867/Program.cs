@@ -207,7 +207,6 @@ namespace dotNet5781_02_7438_2867
                               
                                 if (bus.GetStation(numberStation) != null && bus.GetStation(numberStation1) != null)
                                 {
-                                    Console.WriteLine(time);
                                     if (time > bus.getTimeOfTraject(bus.GetStation(numberStation), bus.GetStation(numberStation1)))
                                         time = bus.getTimeOfTraject(bus.GetStation(numberStation), bus.GetStation(numberStation1));
                                     temp = bus;
