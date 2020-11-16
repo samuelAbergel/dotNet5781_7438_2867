@@ -214,7 +214,10 @@ namespace dotNet5781_02_7438_2867
                                     time = bus.getTimeOfTraject(bus.GetStation(numberStation), bus.GetStation(numberStation1));
                             }
                             if (time == 0)
+                            {
+                                Console.WriteLine("no line runs through its 2 stations");
                                 break;
+                            }
                             foreach (BusLine bus in collection.lines)
                             {
                               
