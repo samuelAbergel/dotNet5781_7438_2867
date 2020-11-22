@@ -23,6 +23,7 @@ namespace dotNet5781_03A_7438_2867
     {
         List<BusLine> busLines;
         private BusLine currentDisplayBusLine;
+        static Random rnd = new Random();
         public MainWindow()
         {
             InitializeComponent();
@@ -72,7 +73,6 @@ namespace dotNet5781_03A_7438_2867
 
         public Area returnArea()
         {
-            Random rnd = new Random();
             Area area;
             bool success;
             string tostring = "";
