@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -26,13 +27,30 @@ namespace dotNet5781_03B_7438_2867
     {
         ListBuses listBuses;
         Random rnd = new Random();
+
         public MainWindow()
         {
             InitializeComponent();
             listBuses = ListBuses.GetListBuses();
             busList.ItemsSource = listBuses.listBuses;
             busList.DataContext = listBuses.listBuses;
+            initTimer();
+
         }
+
+        private void initTimer()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
+        void timer_Tick(object sender, EventArgs e)
+        {
+            lblTime.Content = DateTime.Now.ToLongTimeString();
+        }
+
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {

@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Threading;
 
 namespace dotNet5781_03B_7438_2867
 {
@@ -35,6 +37,7 @@ namespace dotNet5781_03B_7438_2867
             this.registration = rnd.Next(1000000, 99999999).ToString();
             this.lastMaintenanceMileage = rnd.Next(20000);
             this.maintenanceDate = RandomDay();
+
         }
         public Status Status
         {

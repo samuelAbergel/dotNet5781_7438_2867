@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dotNet5781_03B_7438_2867"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="846.186">
     <Grid Margin="50">
 
         <ListView x:Name="busList"   ItemsSource="{Binding}" MouseDoubleClick="busList_MouseDoubleClick" SelectionMode ="Single">
@@ -40,5 +40,6 @@
             </ListView.View>
         </ListView>
         <Button Content="add new bus" HorizontalAlignment="Left" Margin="-25,-42,0,0" VerticalAlignment="Top" Width="156" Height="32" Click="BtnAdd_Click"/>
+        <Label Name="lblTime" FontSize="23" HorizontalAlignment="Left" Margin="595,-47,-63,0" VerticalAlignment="Top" Width="163" Height="36" RenderTransformOrigin="0.626,0.481"/>
     </Grid>
 </Window>
