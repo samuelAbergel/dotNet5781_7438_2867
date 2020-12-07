@@ -1,0 +1,14 @@
+﻿<Window x:Class="dotNet5781_03B_7438_2867.tripWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dotNet5781_03B_7438_2867"
+        mc:Ignorable="d"
+        Title="tripWindows" Height="250" Width="400">
+    <Grid>
+        <Label Content="Travel distance" HorizontalContentAlignment="Center"  Margin="52,39,77,0" VerticalAlignment="Top" RenderTransformOrigin="0.346,0.037" Width="266" Height="46" FontSize="18"/>
+        <TextBox x:Name="gasolTrip" PreviewTextInput="gasolTrip_PreviewTextInput"  KeyDown="OnKeyDownHandler" HorizontalAlignment="Left" Height="43" Margin="53,118,0,0" TextWrapping="Wrap" Text="{Binding GasolTrip,Mode=TwoWay}" VerticalAlignment="Top" Width="263" RenderTransformOrigin="0.193,0.232" FontSize="20"/>
+
+    </Grid>
+</Window>

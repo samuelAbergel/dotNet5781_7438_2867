@@ -1,0 +1,53 @@
+﻿<Window x:Class="dotNet5781_03B_7438_2867.busWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dotNet5781_03B_7438_2867"
+        mc:Ignorable="d"
+        Title="busWindows" Height="375" Width="491.176"  >
+    <Window.Resources>
+        <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type local:Bus}, CreateList=True}"/>
+    </Window.Resources>
+    <Window.DataContext>
+        <Binding Source="{StaticResource busViewSource}"/>
+    </Window.DataContext>
+    <Grid>
+        <Grid x:Name="grid1"  HorizontalAlignment="Left" Margin="85,35,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Content="Gasol:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="gasolTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding Gasol, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            
+            <Label Content="Mileage:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
+            <TextBox x:Name="mileageTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding Mileage, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            
+            <Label Content="Registration:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="registrationTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding Registration, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            
+            <Label Content="Start Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
+            <DatePicker x:Name="startDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="3" SelectedDate="{Binding StartDate, Mode=TwoWay}" VerticalAlignment="Center"/>
+            
+            <Label Content="Status:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
+            <TextBox x:Name="statusTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding Status, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            
+            <Label Content="Last Maintenance Mileage:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center"/>
+            <TextBox x:Name="lastMaintenanceMileageTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="5" Text="{Binding LastMaintenanceMileage, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            
+            <Label Content="Maintenance Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center"/>
+            <DatePicker x:Name="maintenanceDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="6" SelectedDate="{Binding MaintenanceDate, Mode=TwoWay}" VerticalAlignment="Center"/>
+        </Grid>
+        <Button Content="add this bus" Background="MintCream" HorizontalAlignment="Left" Margin="96,293,0,0" VerticalAlignment="Top" Width="262" Height="37" Click="Button_Click" RenderTransformOrigin="0.495,-1.091"/>
+    </Grid>
+</Window>
