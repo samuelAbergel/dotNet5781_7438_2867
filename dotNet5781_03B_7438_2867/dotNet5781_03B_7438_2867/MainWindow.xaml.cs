@@ -45,7 +45,7 @@ namespace dotNet5781_03B_7438_2867
             Button btn = sender as Button;
             ListViewItem item = e.Source as ListViewItem;
             Bus bus = ((FrameworkElement)e.OriginalSource).DataContext as Bus;
-            if ( bus.Status != Status.midwayTrough && bus.Status != Status.refueling)
+            if ( bus.Status != Status.midwayTrough && bus.Status != Status.refueling && bus.Status != Status.inTreatment)
             {
                 tripWindows wnd = new tripWindows(bus);
                 wnd.ShowDialog();
@@ -57,10 +57,14 @@ namespace dotNet5781_03B_7438_2867
             if (bus.Gasol - bus.GasolTrip >= 0 && bus.LastMaintenanceMileage + bus.GasolTrip <= 20000)
             {
                 btn.IsEnabled = false;
-                trip(bus, hour(bus.GasolTrip), btn);                
+                trip(bus, hour(bus.GasolTrip), btn);
             }
+            else if (bus.Gasol - bus.GasolTrip < 0)
+                MessageBox.Show("you cannot travel because of your gasoline ");
+            else if (bus.LastMaintenanceMileage + bus.GasolTrip > 20000)
+                MessageBox.Show("you cannot travel because of your mileage ");
             else
-                MessageBox.Show("you cannot travel because of your gasoline or mileage ");            
+                MessageBox.Show("ERROR");
         }
         private int hour(int time)
         {
@@ -109,11 +113,13 @@ namespace dotNet5781_03B_7438_2867
         {
             Button btn = sender as Button;
             Bus bus = ((FrameworkElement)e.OriginalSource).DataContext as Bus;
-            if(bus.Status != Status.refueling)
+            if (bus.Status != Status.refueling && bus.Status != Status.midwayTrough && bus.Status != Status.inTreatment)
             {
                 btn.IsEnabled = false;
                 Tid(bus, 12000, btn);
             }
+            else
+                MessageBox.Show("this is not possible at the moment");
 
         }
 

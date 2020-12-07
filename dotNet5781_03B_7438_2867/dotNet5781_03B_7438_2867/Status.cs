@@ -8,6 +8,6 @@ namespace dotNet5781_03B_7438_2867
 {
     public enum Status
     {
-        ReadyToGo, midwayTrough, refueling
+        ReadyToGo, midwayTrough, refueling, inTreatment
     }
 }

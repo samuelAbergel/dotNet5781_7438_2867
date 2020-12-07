@@ -36,9 +36,14 @@ namespace dotNet5781_03B_7438_2867
 
         private void BtnTreatment_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-            btn.IsEnabled = false;
-            treatment(myBus, 144000, btn);
+            if (myBus.Status != Status.midwayTrough)
+            {
+                Button btn = sender as Button;
+                btn.IsEnabled = false;
+                treatment(myBus, 144000, btn);
+            }
+            else
+                MessageBox.Show("this bus is traveling");
         }
 
         private void treatment(Bus bus, int time, Button btn)
@@ -55,6 +60,8 @@ namespace dotNet5781_03B_7438_2867
         {
             List<Object> lst = (List<object>)e.Result;
             Button btn = lst[2] as Button;
+            Bus bus = lst[0] as Bus;
+            bus.Status = Status.ReadyToGo;
             btn.IsEnabled = true;
             btn.Background = Brushes.MintCream;
         }
@@ -67,6 +74,7 @@ namespace dotNet5781_03B_7438_2867
             int value = (int)lst[1];
             bus.LastMaintenanceMileage = 0;
             bus.MaintenanceDate = date;
+            bus.Status = Status.inTreatment;
             Thread.Sleep(value);
             e.Result = lst;
         }
