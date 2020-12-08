@@ -32,7 +32,7 @@ namespace dotNet5781_03B_7438_2867
             listBuses.Add(bus);
         }
 
-        private void InitListBuses()
+        private void InitListBuses() // init 10 but 
         {
             Bus bus = new Bus();
             for (int i = 0; i < 10; i++)

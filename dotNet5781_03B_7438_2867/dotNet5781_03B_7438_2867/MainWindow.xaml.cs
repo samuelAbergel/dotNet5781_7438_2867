@@ -38,7 +38,7 @@ namespace dotNet5781_03B_7438_2867
 
         }
 
-        private void initTimer()
+        private void initTimer() //init clock
         {
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
@@ -52,27 +52,26 @@ namespace dotNet5781_03B_7438_2867
         }
 
 
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        private void BtnAdd_Click(object sender, RoutedEventArgs e) // to add new bus
         {
             busWindows wnd = new busWindows();
             wnd.Show();
         }
 
-        private void BtnTrip_Click(object sender, RoutedEventArgs e)
+        private void BtnTrip_Click(object sender, RoutedEventArgs e) // to make a trip
         {
             Button btn = sender as Button;
-            ListViewItem item = e.Source as ListViewItem;
             Bus bus = ((FrameworkElement)e.OriginalSource).DataContext as Bus;
-            if ( bus.Status != Status.midwayTrough && bus.Status != Status.refueling && bus.Status != Status.inTreatment)
+            if ( bus.Status != Status.midwayTrough && bus.Status != Status.refueling && bus.Status != Status.inTreatment)//if the status is suitable
             {
-                tripWindows wnd = new tripWindows(bus);
+                tripWindows wnd = new tripWindows(bus); //open new window
                 wnd.ShowDialog();
             }
             else
             {
                 MessageBox.Show("you cannot travel because of your statue");
             }
-            if (bus.Gasol - bus.GasolTrip >= 0 && bus.LastMaintenanceMileage + bus.GasolTrip <= 20000)
+            if (bus.Gasol - bus.GasolTrip >= 0 && bus.LastMaintenanceMileage + bus.GasolTrip <= 20000) 
             {
                 btn.IsEnabled = false;
                 trip(bus, hour(bus.GasolTrip), btn);
@@ -84,7 +83,7 @@ namespace dotNet5781_03B_7438_2867
             else
                 MessageBox.Show("ERROR");
         }
-        private int hour(int time)
+        private int hour(int time) //random km between 20 and 50 
         {
             int rnd1 = rnd.Next(20, 50);
             int result = (time / rnd1)*1000*6;
@@ -127,7 +126,7 @@ namespace dotNet5781_03B_7438_2867
             e.Result = lst;
         }
 
-        private void Btntid_Click(object sender, RoutedEventArgs e)
+        private void Btntid_Click(object sender, RoutedEventArgs e)//to refuelling
         {
             Button btn = sender as Button;
             Bus bus = ((FrameworkElement)e.OriginalSource).DataContext as Bus;
@@ -172,7 +171,7 @@ namespace dotNet5781_03B_7438_2867
             e.Result = lst;
         }
 
-        private void busList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void busList_MouseDoubleClick(object sender, MouseButtonEventArgs e)//to see the information
         {
             Bus bus = ((FrameworkElement)e.OriginalSource).DataContext as Bus;
 

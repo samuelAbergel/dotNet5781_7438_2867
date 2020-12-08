@@ -27,7 +27,7 @@ namespace dotNet5781_03B_7438_2867
             this.DataContext = bus;
 
         }
-        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)//to press enter 
         {
 
             if (e.Key == Key.Return)
@@ -36,7 +36,7 @@ namespace dotNet5781_03B_7438_2867
             }
         }
 
-        private void gasolTrip_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        private void gasolTrip_PreviewTextInput(object sender, TextCompositionEventArgs e)//to be able to write only numbers
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);

@@ -31,7 +31,45 @@ namespace dotNet5781_03B_7438_2867
 
         private void BtnRefuelling_Click(object sender, RoutedEventArgs e)
         {
-            myBus.Gasol = 1200;
+            Button btn = sender as Button;
+            Bus bus = ((FrameworkElement)e.OriginalSource).DataContext as Bus; // bus of row selected
+            if (bus.Status != Status.refueling && bus.Status != Status.midwayTrough && bus.Status != Status.inTreatment) //if the status is suitable
+            {
+                btn.IsEnabled = false; // now you can't click
+                Tid(bus, 12000, btn); // 12000 = 12 sec 2 hours in the exercise
+            }
+            else
+                MessageBox.Show("this is not possible at the moment");
+        }
+        private void Tid(Bus bus, int time, Button btn)
+        {
+            List<Object> lst = new List<object> { bus, time, btn };
+            BackgroundWorker tid = new BackgroundWorker();
+            tid.DoWork += tid_DoWork;
+            tid.RunWorkerCompleted += tid_RunWorkerCompleted;
+            btn.Background = Brushes.LawnGreen; //change color of button
+            tid.RunWorkerAsync(lst);
+        }
+
+        private void tid_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            List<Object> lst = (List<object>)e.Result;
+            Bus bus1 = lst[0] as Bus;
+            bus1.Gasol = 1200;
+            bus1.Status = Status.ReadyToGo;
+            Button btn = lst[2] as Button;
+            btn.IsEnabled = true;
+            btn.Background = Brushes.MintCream;
+        }
+
+        private void tid_DoWork(object sender, DoWorkEventArgs e)
+        {
+            List<Object> lst = (List<object>)e.Argument;
+            Bus bus = lst[0] as Bus;
+            int value = (int)lst[1];
+            bus.Status = Status.refueling;
+            Thread.Sleep(value);
+            e.Result = lst;
         }
 
         private void BtnTreatment_Click(object sender, RoutedEventArgs e)

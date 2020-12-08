@@ -27,6 +27,7 @@ namespace dotNet5781_03B_7438_2867
         public string StartDateString { get => startDate.ToShortDateString(); set => startDateString = value; }
         private int gasolTrip = 0;
         public int GasolTrip { get => gasolTrip; set => gasolTrip = value; }
+        //constructor
 
         public Bus()
         {
@@ -39,6 +40,7 @@ namespace dotNet5781_03B_7438_2867
             this.maintenanceDate = RandomDay();
 
         }
+        //propertys
         public Status Status
         {
             get => status;
@@ -61,12 +63,7 @@ namespace dotNet5781_03B_7438_2867
             get => startDate;
             set { startDate = value; OnPropertyChanged("StartDate"); }
         }
-        private string maintenanceDateString;
-        public DateTime MaintenanceDate { get => maintenanceDate; set { maintenanceDate = value; OnPropertyChanged("MaintenanceDate"); } }
-        public string MaintenanceDateString { get => maintenanceDate.ToShortDateString(); set => maintenanceDateString = value;}
-        public int LastMaintenanceMileage { get => lastMaintenanceMileage; set { lastMaintenanceMileage = value; OnPropertyChanged("LastMaintenanceMileage"); } }
-
-        public string REGISTRATION
+                public string REGISTRATION
         {
             get => registration;
             set => registration = value;
@@ -107,7 +104,13 @@ namespace dotNet5781_03B_7438_2867
                OnPropertyChanged("Registration");
             }
         }
-        
+        // field ans propertys of maintenance
+        private string maintenanceDateString;
+        public DateTime MaintenanceDate { get => maintenanceDate; set { maintenanceDate = value; OnPropertyChanged("MaintenanceDate"); } }
+        public string MaintenanceDateString { get => maintenanceDate.ToShortDateString(); set => maintenanceDateString = value;}
+        public int LastMaintenanceMileage { get => lastMaintenanceMileage; set { lastMaintenanceMileage = value; OnPropertyChanged("LastMaintenanceMileage"); } }
+
+        //fonction random        
         static T RandomEnumValue<T>()
         {
             var v = Enum.GetValues(typeof(T));
@@ -115,16 +118,18 @@ namespace dotNet5781_03B_7438_2867
         }
         private DateTime RandomDay()
         {
+            // random between 1 january 1995 and now
             DateTime start = new DateTime(1995, 1, 1);
             int range = (DateTime.Today - start).Days;
             return start.AddDays(rnd.Next(range));
         }
 
+        //to string
         public override string ToString()
         {
             return String.Format("[ status: {0} , registration: {1} , startDate: {2} , gasol: {3}]", this.status.ToString(), REGISTRATION, startDate.ToShortDateString(),Gasol.ToString());
         }
-
+        //inotifypropertuchanged
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string propertyName)
         {
