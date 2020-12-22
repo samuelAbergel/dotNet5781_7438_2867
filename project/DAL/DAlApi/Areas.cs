@@ -1,0 +1,6 @@
+﻿namespace DO
+{
+    enum Areas
+    {
+    }
+}
