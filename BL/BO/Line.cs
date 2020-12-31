@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DO
+namespace BO
 {
-    class Line
+    public class Line
     {
         public int Id { get; set; }
         public int Code { get; set; }

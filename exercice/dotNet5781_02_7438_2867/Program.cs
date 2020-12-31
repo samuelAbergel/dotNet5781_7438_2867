@@ -16,15 +16,16 @@ namespace dotNet5781_02_7438_2867
            List<BusLine> busLines = new List<BusLine>();
             for (int i = 0; i < 10; i++)
             {
-                Area area = returnArea();
+                Area area = Area.CENTER;
                 busLines.Add(new BusLine(rnd.Next(100), area));
                 for (int j = 0; j < 4; j++)
                 {
                     busLines[i].AddStation(j, new BusLineStation(rnd.Next(999999)));
                 }
             }
+            foreach (BusLine bus in busLines)
+                Console.WriteLine(bus);
         }
-        foreach(BusLine bus in busLines)
-            Console.WriteLine( bus);
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DO
 {
-    enum Areas
+    public enum BusStatus
     {
     }
 }

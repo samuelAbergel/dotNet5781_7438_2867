@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DO
+namespace BO
 {
-    class LineStation
+    public class LineStation
     {
         public int LineId { get; set; }
         public int Station { get; set; }
