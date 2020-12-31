@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\project\DAL\DAlApi\DLAPI.csproj">
+    <ProjectReference Include="..\DALPI\DLAPI.csproj">
       <Project>{d3c2167a-1bc7-41b0-81a4-600a9424b184}</Project>
       <Name>DLAPI</Name>
     </ProjectReference>
