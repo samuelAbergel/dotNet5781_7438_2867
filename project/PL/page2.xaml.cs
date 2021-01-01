@@ -11,19 +11,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour page2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class page2 : Window
     {
-
-        IBL bl = BLFactory.GetBL();
-        public MainWindow()
+        IBL bl;
+        public page2()
         {
             InitializeComponent();
         }

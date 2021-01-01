@@ -32,6 +32,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLOBJECT", "project\DLOBJEC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLAPI", "project\DALPI\DLAPI.csproj", "{D3C2167A-1BC7-41B0-81A4-600A9424B184}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{748071F9-DD05-4850-B3DE-3052A1CF5B0F}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\OneDrive\Bureau\PL\PL\images\LOGO.png = ..\..\..\OneDrive\Bureau\PL\PL\images\LOGO.png
+		..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.2 = ..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.2
+		..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.png = ..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.png
+		..\..\..\OneDrive\Bureau\PL\PL\images\LOGON.png = ..\..\..\OneDrive\Bureau\PL\PL\images\LOGON.png
+		..\..\..\OneDrive\Bureau\PL\PL\images\NEWLOGO.png = ..\..\..\OneDrive\Bureau\PL\PL\images\NEWLOGO.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +103,7 @@ Global
 		{7E0F579A-1378-4A02-A83F-30CB5DE99BB4} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
 		{60971145-F586-4E45-97E6-E614BACD5FF6} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
 		{D3C2167A-1BC7-41B0-81A4-600A9424B184} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
+		{748071F9-DD05-4850-B3DE-3052A1CF5B0F} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59729C31-98F7-487B-81CC-F22C8C9BFD09}

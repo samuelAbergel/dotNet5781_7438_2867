@@ -11,28 +11,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour page3.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class page3 : Window
     {
 
-        IBL bl = BLFactory.GetBL();
-        public MainWindow()
+        BO.Bus bus;
+        public page3(IBL bl)
         {
             InitializeComponent();
+            bus = new BO.Bus();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            page3 wnd = new page3(bl);
-            wnd.Show();
-            this.Close();
-        }
+
     }
 }

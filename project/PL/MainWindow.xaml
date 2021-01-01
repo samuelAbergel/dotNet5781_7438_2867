@@ -3,10 +3,130 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PL"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" ResizeMode="NoResize"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="HOME|Transport ABN" Height="450" Width="800">
     <Grid>
-        
+        <Grid HorizontalAlignment="Left" Height="17" VerticalAlignment="Top" Width="92" Margin="702,0,-0.4,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="73*"/>
+                <ColumnDefinition Width="19*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100"/>
+        <Rectangle   Height="96"  Width="794" Margin="0,0,-0.4,324" >
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#4579a3" Offset="1" />
+                    <GradientStop Color="#044d74" Offset="0.55" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image  Source="images/LOGON.png" Width="150" Margin="321,-12,322.6,313" />
+        <GroupBox
+  Header="         INFORMATION UPDATE"
+           
+  Margin="530,110,15.6,1">
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,-6">
+As part of the fight against Covid-19 and following government decisions, TRANSPORT ABN is adapting its services.
+For the health of all, please respect the following instructions:<LineBreak/><LineBreak/>
+- wearing a mask is compulsory<LineBreak/>
+- wash your hands before and after each trip<LineBreak/>
+- maintain social distancing (one meter minimum)<LineBreak/>
+- let passengers get off before getting on<LineBreak/><LineBreak/><LineBreak/>
+
+ <Bold> <Underline>our priority is your safety </Underline>!!</Bold>
+            </TextBlock>
+        </GroupBox>
+        <materialDesign:PackIcon Kind="AlertOctagon"  RenderTransformOrigin="25.388,10.925" Margin="530,110,0,0" Height="33" Width="38" />
+
+        <Grid HorizontalAlignment="Left" Height="15" Margin="224,405,0,0" VerticalAlignment="Top" Width="356"/>
+        <Button Content="F.A.Q" HorizontalAlignment="Left" Margin="409,397,0,0" VerticalAlignment="Top" Width="67" Height="22"/>
+        <Button Content="Contact" HorizontalAlignment="Left" Margin="321,397,0,0" VerticalAlignment="Top" Width="83" Height="22"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="246,397,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="Button_Click"/>
+
+        <StackPanel>
+            <PasswordBox
+    Style="{StaticResource MaterialDesignOutlinedPasswordFieldPasswordBox}"
+    VerticalAlignment="Top"
+    IsEnabled="{Binding IsChecked, ElementName=MaterialDesignOutlinedPasswordFieldPasswordBoxEnabledComboBox}"
+    materialDesign:HintAssist.Hint="Password" Margin="280,300,372.6,0" />
+            <CheckBox
+    x:Name="MaterialDesignOutlinedPasswordFieldPasswordBoxEnabledComboBox" Content="Enabled" Margin="280,5,383.6,0"/>
+        </StackPanel>
+
+
+        <StackPanel/>
+
+
+        <ComboBox
+  IsEnabled="False"
+  materialDesign:HintAssist.Hint="LANGUAGE"
+  materialDesign:HintAssist.IsFloating="True" Margin="683,10,-0.4,373" Height="37">
+            <ComboBoxItem
+    IsSelected="True">
+                Selected
+            </ComboBoxItem>
+        </ComboBox>
+
+        <TabControl
+            Height="200"
+            Width="300"
+  Style="{StaticResource MaterialDesignNavigatilRailTabControl}"
+  materialDesign:ColorZoneAssist.Mode="Accent" Margin="19,126,474.6,94">
+            <TabItem
+    Style="{StaticResource MaterialDesignNavigationRailTabItem}">
+                <TabItem.Header>
+                    <materialDesign:PackIcon
+        Kind="Heart"
+        Width="24"
+        Height="24" />
+                </TabItem.Header>
+                <TextBlock
+      Padding="5"
+      TextWrapping="Wrap"><Run
+        Text="tab 1 content. Default look and behaviors. " /><LineBreak /><LineBreak /><Run FontStyle="Italic" Text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci ve"/><InlineUIContainer>
+            <TextBox
+                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+                VerticalAlignment="Top"
+                VerticalContentAlignment="Top"
+                AcceptsReturn="True"
+                TextWrapping="Wrap"
+                MaxWidth="400"
+                materialDesign:HintAssist.Hint="Username or Mail"
+                IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}" Margin="0,230,0,0" Height="63" Width="142" />
+        </InlineUIContainer><Run FontStyle="Italic" Text="lit..."/></TextBlock>
+            </TabItem>
+            <TabItem
+    Style="{StaticResource MaterialDesignNavigationRailTabItem}">
+                <TabItem.Header>
+                    <materialDesign:PackIcon
+        Kind="Spade"
+        Width="24"
+        Height="24" />
+                </TabItem.Header>
+                <TextBlock
+      Padding="5"
+      TextWrapping="Wrap">
+      <Run
+        Text="tab 2 content. Default look and behaviors. " />
+      <LineBreak />
+      <LineBreak />
+      <Run
+        FontStyle="Italic">
+      Praesent sed dui arcu. Vivamus porta auctor sagittis
+    </Run>
+                </TextBlock>
+            </TabItem>
+        </TabControl>
+
     </Grid>
+
 </Window>
