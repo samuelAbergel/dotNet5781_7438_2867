@@ -20,7 +20,8 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="images/LOGON.png" Margin="322,9,322,9" />
+        <Image  Source="images/LOGON.png" Margin="322,9,296,283.5" Grid.RowSpan="2" />
+
         <ListView Grid.Row="1" x:Name="busList"
   ItemsSource="{Binding}">
             <ListView.View>
