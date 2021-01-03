@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace DL
 {
-    public class DLOBJECT : IDL
+    sealed class DLObject : IDL
     {
         #region singelton
-        static readonly DLOBJECT instance = new DLOBJECT();
-        static DLOBJECT() { }// static ctor to ensure instance init is done just before first usage
-        DLOBJECT() { } // default => private
-        public static DLOBJECT Instance { get => instance; }// The public Instance property to use
+        static readonly DLObject instance = new DLObject();
+        static DLObject() { }// static ctor to ensure instance init is done just before first usage
+        DLObject() { } // default => private
+        public static DLObject Instance { get => instance; }// The public Instance property to use
         #endregion
 
         #region bus

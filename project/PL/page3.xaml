@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.page3"
         mc:Ignorable="d"
-        Title="page3" Height="450" Width="800" >
+        Title="page3" Height="450" Width="800" ResizeMode="NoResize"  >
     <Window.Resources>
         <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Bus}, CreateList=True}"/>
     </Window.Resources>

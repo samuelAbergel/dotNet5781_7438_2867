@@ -1,4 +1,5 @@
 ﻿using BL;
+using BLAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,9 +31,11 @@ namespace PL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            page3 wnd = new page3(bl);
+            listBusWindows wnd = new listBusWindows();
             wnd.Show();
             this.Close();
         }
+
+
     }
 }

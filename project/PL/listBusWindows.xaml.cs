@@ -1,5 +1,4 @@
-﻿using BL;
-using BLAPI;
+﻿using BLAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,18 +16,19 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour page3.xaml
+    /// Logique d'interaction pour listBusWindows.xaml
     /// </summary>
-    public partial class page3 : Window
+    public partial class listBusWindows : Window
     {
-
-        BO.Bus bus;
-        public page3(IBL bl)
+        IBL bl;
+        IEnumerable<BO.Bus> listBus;
+        public listBusWindows()
         {
+            bl = BLFactory.GetBL();
             InitializeComponent();
-            bus = new BO.Bus();
+            listBus = bl.GetAllBus();
+            busList.ItemsSource = listBus;
+            busList.DataContext = listBus;
         }
-
-
     }
 }

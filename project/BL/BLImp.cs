@@ -1,4 +1,5 @@
-﻿using BO;
+﻿using BLAPI;
+using BO;
 using DLAPI;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-    public class BLImp : IBL
+     class BLImp : IBL
     {
         IDL dl = DLFactory.GetDL();
 

@@ -22,7 +22,119 @@ namespace DS
 
         static DataSource()
         {
-            listBus = new List<Bus>();
+            initList();
+        }
+
+        private static void initList()
+        {
+            listBus = new List<Bus>()
+            {
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-10),
+                   FuelRemain = 1200,
+                   LicenseNum = 123456789,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 2345,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-20),
+                   FuelRemain = 1200,
+                   LicenseNum = 987654321,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 4567,
+
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-167),
+                   FuelRemain = 1200,
+                   LicenseNum = 649458358,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 9876,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-7890),
+                   FuelRemain = 1200,
+                   LicenseNum = 675636378,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 6278,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-7896),
+                   FuelRemain = 1200,
+                   LicenseNum = 123456789,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 9278,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-56),
+                   FuelRemain = 1200,
+                   LicenseNum = 875567342,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 8765,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-526),
+                   FuelRemain = 1200,
+                   LicenseNum = 098765432,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 2562,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-98),
+                   FuelRemain = 1200,
+                   LicenseNum = 876256534,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 2765,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-257),
+                   FuelRemain = 1200,
+                   LicenseNum = 987654326,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 25522,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-82),
+                   FuelRemain = 1200,
+                   LicenseNum = 0987654323,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 727,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-16),
+                   FuelRemain = 1200,
+                   LicenseNum = 098765432,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 26725,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(-267),
+                   FuelRemain = 1200,
+                   LicenseNum = 257426568,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 2562,
+               },
+               new Bus
+               {
+                   FromDate = DateTime.Now.AddMonths(76),
+                   FuelRemain = 1200,
+                   LicenseNum = 275267202,
+                   Status = BusStatus.ReadyToGo,
+                   TotalTrip = 25790,
+               },
+            };
             listBusOnTrip = new List<BusOnTrip>();
             listLine = new List<Line>();
             listLineStation = new List<LineStation>();

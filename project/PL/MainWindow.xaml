@@ -12,16 +12,12 @@
      TextOptions.TextRenderingMode="Auto"
      Background="{DynamicResource MaterialDesignPaper}"
      FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="HOME|Transport ABN" Height="450" Width="800">
+        Title="HOME|Transport ABN" Height="460" Width="800">
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="17" VerticalAlignment="Top" Width="92" Margin="702,0,-0.4,0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="73*"/>
-                <ColumnDefinition Width="19*"/>
-            </Grid.ColumnDefinitions>
-        </Grid>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100"/>
-        <Rectangle   Height="96"  Width="794" Margin="0,0,-0.4,324" >
+
+        <!--barre du haut-->
+
+        <Rectangle   Height="96"  Width="794" Margin="0,0,-0.4,324" Grid.ColumnSpan="2" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -29,11 +25,28 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="images/LOGON.png" Width="150" Margin="321,-12,322.6,313" />
+
+        <Image  Source="images/LOGON.png" Width="150" Margin="321,-13,322.6,314" RenderTransformOrigin="0.06,0.576" />
+
+
+        <!-- language-->
+        <ComboBox   
+  IsEnabled="False"
+  materialDesign:HintAssist.Hint="LANGUAGE"
+  materialDesign:HintAssist.IsFloating="True" Margin="683,10,-0.4,373" Height="37" Grid.ColumnSpan="2">
+            <ComboBoxItem
+    IsSelected="True">
+                Selected
+            </ComboBoxItem>
+        </ComboBox>
+
+
+
+        <!--information update-->
         <GroupBox
   Header="         INFORMATION UPDATE"
            
-  Margin="530,110,15.6,1">
+  Margin="530,110,15.6,1" Grid.ColumnSpan="2">
             <TextBlock TextWrapping="Wrap" Margin="0,0,0,-6">
 As part of the fight against Covid-19 and following government decisions, TRANSPORT ABN is adapting its services.
 For the health of all, please respect the following instructions:<LineBreak/><LineBreak/>
@@ -47,74 +60,48 @@ For the health of all, please respect the following instructions:<LineBreak/><Li
         </GroupBox>
         <materialDesign:PackIcon Kind="AlertOctagon"  RenderTransformOrigin="25.388,10.925" Margin="530,110,0,0" Height="33" Width="38" />
 
-        <Grid HorizontalAlignment="Left" Height="15" Margin="224,405,0,0" VerticalAlignment="Top" Width="356"/>
-        <Button Content="F.A.Q" HorizontalAlignment="Left" Margin="409,397,0,0" VerticalAlignment="Top" Width="67" Height="22"/>
-        <Button Content="Contact" HorizontalAlignment="Left" Margin="321,397,0,0" VerticalAlignment="Top" Width="83" Height="22"/>
-        <Button Content="Home" HorizontalAlignment="Left" Margin="246,397,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="Button_Click"/>
-
-        <StackPanel>
-            <PasswordBox
-    Style="{StaticResource MaterialDesignOutlinedPasswordFieldPasswordBox}"
-    VerticalAlignment="Top"
-    IsEnabled="{Binding IsChecked, ElementName=MaterialDesignOutlinedPasswordFieldPasswordBoxEnabledComboBox}"
-    materialDesign:HintAssist.Hint="Password" Margin="280,300,372.6,0" />
-            <CheckBox
-    x:Name="MaterialDesignOutlinedPasswordFieldPasswordBoxEnabledComboBox" Content="Enabled" Margin="280,5,383.6,0"/>
-        </StackPanel>
 
 
-        <StackPanel/>
-
-
-        <ComboBox
-  IsEnabled="False"
-  materialDesign:HintAssist.Hint="LANGUAGE"
-  materialDesign:HintAssist.IsFloating="True" Margin="683,10,-0.4,373" Height="37">
-            <ComboBoxItem
-    IsSelected="True">
-                Selected
-            </ComboBoxItem>
-        </ComboBox>
-
+        <!--truc pour se co-->
         <TabControl
-            Height="200"
-            Width="300"
   Style="{StaticResource MaterialDesignNavigatilRailTabControl}"
-  materialDesign:ColorZoneAssist.Mode="Accent" Margin="19,126,474.6,94">
+  materialDesign:ColorZoneAssist.Mode="Accent" BorderBrush="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource PrimaryHueMidForegroundBrush}" Margin="29,126,286.6,45" RenderTransformOrigin="0.577,0.478">
             <TabItem
     Style="{StaticResource MaterialDesignNavigationRailTabItem}">
                 <TabItem.Header>
                     <materialDesign:PackIcon
-        Kind="Heart"
+        Kind="AccountTie"
         Width="24"
-        Height="24" />
+        Height="24" RenderTransformOrigin="0.523,-0.09" />
                 </TabItem.Header>
                 <TextBlock
       Padding="5"
       TextWrapping="Wrap"><Run
-        Text="tab 1 content. Default look and behaviors. " /><LineBreak /><LineBreak /><Run FontStyle="Italic" Text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci ve"/><InlineUIContainer>
-            <TextBox
-                Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
-                VerticalAlignment="Top"
-                VerticalContentAlignment="Top"
-                AcceptsReturn="True"
-                TextWrapping="Wrap"
-                MaxWidth="400"
-                materialDesign:HintAssist.Hint="Username or Mail"
-                IsEnabled="{Binding IsChecked, ElementName=MaterialDesignFilledTextFieldTextBoxEnabledComboBox}" Margin="0,230,0,0" Height="63" Width="142" />
-        </InlineUIContainer><Run FontStyle="Italic" Text="lit..."/></TextBlock>
+        Text=" CLIENT CONNECTION " FontStyle="Normal"  /><LineBreak /><InlineUIContainer>
+                        <TextBox
+                            materialDesign:HintAssist.Hint="UserName Or Mail"
+                            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                            VerticalAlignment="Center" Margin="10,50,-300,20" Width="190"/>
+                            </InlineUIContainer><LineBreak />
+                </TextBlock>
+
             </TabItem>
             <TabItem
-    Style="{StaticResource MaterialDesignNavigationRailTabItem}">
+    Style="{StaticResource MaterialDesignNavigationRailTabItem}" BorderBrush="#DD891B1B" HorizontalAlignment="Left" Background="#DD207E19"  Height="134">
                 <TabItem.Header>
+
                     <materialDesign:PackIcon
-        Kind="Spade"
+        Kind="AccountHardHat"
+                     
         Width="24"
         Height="24" />
                 </TabItem.Header>
                 <TextBlock
       Padding="5"
-      TextWrapping="Wrap">
+      TextWrapping="Wrap"
+                  
+                    
+                    >
       <Run
         Text="tab 2 content. Default look and behaviors. " />
       <LineBreak />
@@ -126,6 +113,13 @@ For the health of all, please respect the following instructions:<LineBreak/><Li
                 </TextBlock>
             </TabItem>
         </TabControl>
+
+
+        <!--Tree button down-->
+        <Grid HorizontalAlignment="Left" Height="15" Margin="224,405,0,0" VerticalAlignment="Top" Width="356"/>
+        <Button Content="F.A.Q" HorizontalAlignment="Left" Margin="409,397,0,0" VerticalAlignment="Top" Width="67" Height="22"/>
+        <Button Content="Contact" HorizontalAlignment="Left" Margin="321,397,0,0" VerticalAlignment="Top" Width="83" Height="22"/>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="246,397,0,0" VerticalAlignment="Top" Width="70" Height="23" Click="Button_Click"/>
 
     </Grid>
 
