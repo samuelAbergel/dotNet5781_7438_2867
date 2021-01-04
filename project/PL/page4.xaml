@@ -18,12 +18,12 @@
         <Image  Source="images/LOGON.png" Width="150" Margin="321,-12,322.6,313" />
         <Button
     Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Height="Auto" Margin="266,172,254.6,173">
+    ToolTip="Resource name: MaterialDesignRaisedLightButton" Height="Auto" Margin="266,172,254.6,173" Click="Button_Click_1">
             SEARCH
         </Button>
         <Button
     Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="266,291,254.6,54" Height="Auto">
+    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="266,291,254.6,54" Height="Auto" Click="Button_Click">
             ADD
         </Button>
     </Grid>

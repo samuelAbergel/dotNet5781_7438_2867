@@ -16,7 +16,6 @@
     <Grid>
 
         <!--barre du haut-->
-
         <Rectangle   Height="96"  Width="794" Margin="0,0,-0.4,324" Grid.ColumnSpan="2" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -25,9 +24,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-
-        <Image  Source="images/LOGON.png" Width="150" Margin="321,-13,322.6,314" RenderTransformOrigin="0.06,0.576" />
-
+        <Image Source="LOGO.png" Margin="321,-13,318,313.5"/>
 
         <!-- language-->
         <ComboBox   

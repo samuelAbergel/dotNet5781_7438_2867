@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,22 +20,23 @@ namespace PL
     /// </summary>
     public partial class addbus : Window
     {
+        IBL bl;
+        BO.Bus bus;
         public addbus()
         {
             InitializeComponent();
-        }
+            bl = BLFactory.GetBL();
+            bus = new BO.Bus();
+            this.DataContext = bus;
+            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus));
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            bl.addBus(bus);
+            this.Close();
         }
 
-        private void Window_Loaded_1(object sender, RoutedEventArgs e)
-        {
-
-            System.Windows.Data.CollectionViewSource busViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("busViewSource")));
-            // Charger les données en définissant la propriété CollectionViewSource.Source :
-            // busViewSource.Source = [source de données générique]
-        }
+       
     }
 }

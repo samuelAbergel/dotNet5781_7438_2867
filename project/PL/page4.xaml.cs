@@ -19,9 +19,22 @@ namespace PL
     /// </summary>
     public partial class page4 : Window
     {
+
         public page4()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            addbus wnd = new addbus();
+            wnd.ShowDialog();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            listBusWindows wnd = new listBusWindows();
+            wnd.ShowDialog();
         }
     }
 }

@@ -35,9 +35,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{748071F9-DD05-4850-B3DE-3052A1CF5B0F}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\OneDrive\Bureau\PL\PL\images\LOGO.png = ..\..\..\OneDrive\Bureau\PL\PL\images\LOGO.png
+		project\PL\LOGO.png = project\PL\LOGO.png
 		..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.2 = ..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.2
 		..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.png = ..\..\..\OneDrive\Bureau\PL\PL\images\logo_v2.png
+		project\PL\logo_v2.png = project\PL\logo_v2.png
 		..\..\..\OneDrive\Bureau\PL\PL\images\LOGON.png = ..\..\..\OneDrive\Bureau\PL\PL\images\LOGON.png
+		project\PL\LOGON.png = project\PL\LOGON.png
 		..\..\..\OneDrive\Bureau\PL\PL\images\NEWLOGO.png = ..\..\..\OneDrive\Bureau\PL\PL\images\NEWLOGO.png
 	EndProjectSection
 EndProject

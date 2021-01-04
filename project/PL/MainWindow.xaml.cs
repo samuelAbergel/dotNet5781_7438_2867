@@ -31,7 +31,7 @@ namespace PL
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            listBusWindows wnd = new listBusWindows();
+            page2 wnd = new page2();
             wnd.Show();
             this.Close();
         }
