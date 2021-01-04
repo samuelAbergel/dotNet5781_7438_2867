@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
-         Title="page2" Height="450" Width="800" ResizeMode="NoResize">
+         Title="page2" Height="450" Width="900" ResizeMode="NoResize">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>
@@ -21,34 +22,45 @@
             </Rectangle.Fill>
         </Rectangle>
         <Image  Source="LOGON.png" Margin="309,-3,309,1" />
-
-        <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}">
+        
+        <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick">
+            
             <ListView.View>
                 <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style BasedOn="{StaticResource {x:Type GridViewColumnHeader}}" TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="IsHitTestVisible" Value="False"/>
+                            <Setter Property="HorizontalContentAlignment"  Value="Center" />
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
                     <GridViewColumn
         DisplayMemberBinding="{Binding LicenseNum}"
-        Header="LicenseNum" />
+        Header="LicenseNum" Width="150"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding FromDate}"
-        Header="FromDate" />
+        Header="FromDate" Width="130"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding TotalTrip}"
-        Header="TotalTrip" />
+        Header="TotalTrip"   Width="120"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding FuelRemain}"
-        Header="FuelRemain" />
+        Header="FuelRemain" Width="150"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding Status}"
-        Header="Status" />
+        Header="Status" Width="100"/>
                     <GridViewColumn
-        Header="Options">
+        Header="Refuel" Width="108">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <!--<ComboBox    Width="100">
-                                    <Button Content="refuelling" Click="ButtonRefuelling_Click"  />
-                                    <Button Content="treatment"/>
-                                </ComboBox>-->
                                 <Button Content="refuelling" Click="ButtonRefuelling_Click"  />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn
+        Header="treatment" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="treatment" Click="ButtonTreatment_Click"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

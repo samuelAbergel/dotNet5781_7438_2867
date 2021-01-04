@@ -65,6 +65,16 @@ namespace DL
             realBus.FuelRemain += fuel;
             bus.FuelRemain = realBus.FuelRemain;
         }
+        public void treatment(Bus bus)
+        {
+            DO.Bus realBus = (from item in DataSource.listBus
+                              where item.LicenseNum == bus.LicenseNum
+                              select item).FirstOrDefault();
+            if (realBus == null)
+                throw new Exception("not exist");
+            bus.Status = BusStatus.inTreatment;
+            bus.previewTreatmentDate = DateTime.Now;
+        }
         #endregion
 
         #region line

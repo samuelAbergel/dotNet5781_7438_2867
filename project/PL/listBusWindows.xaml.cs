@@ -33,7 +33,6 @@ namespace PL
             InitializeComponent();
             updateDataContext();
 
-             // bus = new BO.Bus();
         }
         void updateDataContext()
         {
@@ -50,6 +49,25 @@ namespace PL
             RefuellingWindows wnd = new RefuellingWindows(busPO.getBus());
             wnd.ShowDialog();
             updateDataContext();
+        }
+
+        private void ButtonTreatment_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            busPO = btn.DataContext as BusPO;
+            bl.treatment(busPO.getBus());
+            updateDataContext();
+        }
+
+        private void busList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            BusPO bus = ((FrameworkElement)e.OriginalSource).DataContext as BusPO;
+
+            if(bus != null)
+            {
+                informationWindows wnd = new informationWindows();
+                wnd.ShowDialog();
+            }
         }
     }
 }

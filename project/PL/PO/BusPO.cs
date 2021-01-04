@@ -17,7 +17,6 @@ namespace PL.PO
             this.LicenseNum = bus.LicenseNum;
             this.FromDate = bus.FromDate;
             this.FuelRemain = bus.FuelRemain;
-            this.refuel = bus.refuel;
             this.Status = bus.Status;
             this.TotalTrip = bus.TotalTrip;
           
@@ -45,8 +44,27 @@ namespace PL.PO
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
 
-        public DateTime FromDate { get ; set; }
-        public double TotalTrip { get; set; }
+        public DateTime FromDate
+        {
+            get => bus.FromDate;
+            set
+            {
+                if(value != bus.FromDate)
+                {
+                    bus.FromDate = value;
+                    RaisePropertyChanged("FromDate");
+                }
+            }
+        }
+        public double TotalTrip
+        {
+            get => bus.TotalTrip;
+            set
+            {
+                bus.TotalTrip = value;
+                RaisePropertyChanged("TotalTrip");
+            }
+        }
         public double FuelRemain { get => bus.FuelRemain; 
             set
             {
@@ -57,8 +75,24 @@ namespace PL.PO
                 }
             }
           }
-        public int refuel { get; set; }
-        public BusStatus Status { get; set; }
+        public BusStatus Status
+        {
+            get => bus.Status;
+            set
+            {
+                bus.Status = value;
+                RaisePropertyChanged("Status");
+            }
+        }
+        public DateTime previewTreatmentDate {
+            get => bus.previewTreatmentDate;
+                set
+            {
+                bus.previewTreatmentDate = value;
+                RaisePropertyChanged("previewTreatmentDate");
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

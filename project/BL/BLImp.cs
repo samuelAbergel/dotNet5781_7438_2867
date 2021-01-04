@@ -65,6 +65,14 @@ namespace BL
             dl.refuelling(fuel, busDo);
             bus.FuelRemain = busDo.FuelRemain;
         }
+        public void treatment(BO.Bus bus)
+        {
+            DO.Bus busDo = new DO.Bus();
+            bus.CopyPropertiesTo(busDo);
+            dl.treatment(busDo);
+            bus.Status = BusStatus.inTreatment;
+            bus.previewTreatmentDate = busDo.previewTreatmentDate;
+        }
         public Bus GetBus(int id)
         {
             DO.Bus busDO = new DO.Bus();

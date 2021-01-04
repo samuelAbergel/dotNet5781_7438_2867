@@ -15,6 +15,7 @@ namespace DLAPI
         void removeBus(int id);
         Bus GetBus(int id);
         void refuelling(int fuel,Bus bus);
+        void treatment(Bus bus);
         IEnumerable<Bus> GetAllBus();
         #endregion
 
