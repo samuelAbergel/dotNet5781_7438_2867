@@ -13,6 +13,7 @@ namespace BLAPI
         void addBus(BO.Bus bus);
         void updateBus(BO.Bus bus);
         void removeBus(int id);
+        void refuelling(int fuel, BO.Bus bus);
         BO.Bus GetBus(int id);
         IEnumerable<BO.Bus> GetAllBus();
         #endregion

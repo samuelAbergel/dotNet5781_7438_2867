@@ -22,8 +22,7 @@
         </Rectangle>
         <Image  Source="LOGON.png" Margin="309,-3,309,1" />
 
-        <ListView Grid.Row="1" x:Name="busList"
-  ItemsSource="{Binding}">
+        <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
@@ -45,11 +44,11 @@
         Header="Options">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <ComboBox
-              Width="100">
-                                    <Button Content="refuelling" />
+                                <!--<ComboBox    Width="100">
+                                    <Button Content="refuelling" Click="ButtonRefuelling_Click"  />
                                     <Button Content="treatment"/>
-                                </ComboBox>
+                                </ComboBox>-->
+                                <Button Content="refuelling" Click="ButtonRefuelling_Click"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

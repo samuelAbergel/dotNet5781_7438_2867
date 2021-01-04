@@ -58,6 +58,13 @@ namespace BL
                 Console.WriteLine(ex.Message);
             }
         }
+        public void refuelling(int fuel, BO.Bus bus)
+        {
+            DO.Bus busDo = new DO.Bus();
+            bus.CopyPropertiesTo(busDo);
+            dl.refuelling(fuel, busDo);
+            bus.FuelRemain = busDo.FuelRemain;
+        }
         public Bus GetBus(int id)
         {
             DO.Bus busDO = new DO.Bus();

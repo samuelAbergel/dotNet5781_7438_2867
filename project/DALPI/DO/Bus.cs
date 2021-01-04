@@ -12,6 +12,7 @@ namespace DO
         public DateTime FromDate { get; set; }
         public double TotalTrip { get; set; }
         public double FuelRemain { get; set; }
+        public int refuel { get; set; }
         public BusStatus Status { get; set; }
     }
 }

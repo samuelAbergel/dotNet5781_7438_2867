@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace BO
 {
-    public class Bus
+    public class Bus 
     {
         public int LicenseNum { get; set; }
         public DateTime FromDate { get; set; }
         public double TotalTrip { get; set; }
         public double FuelRemain { get; set; }
+        public int refuel { get; set; }
         public BusStatus Status { get; set; }
     }
 }

@@ -28,10 +28,10 @@ namespace PL
             bl = BLFactory.GetBL();
             bus = new BO.Bus();
             this.DataContext = bus;
-            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus));
+            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();
 
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonAddBus_Click(object sender, RoutedEventArgs e)
         {
             bl.addBus(bus);
             this.Close();

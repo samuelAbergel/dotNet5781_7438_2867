@@ -55,6 +55,16 @@ namespace DL
             return from bus in DataSource.listBus
                    select bus.Clone();
         }
+        public void refuelling(int fuel,Bus bus)
+        {
+            DO.Bus realBus = (from item in DataSource.listBus
+                              where item.LicenseNum == bus.LicenseNum
+                              select item).FirstOrDefault();
+            if (realBus == null)
+                throw new Exception("not exist");
+            realBus.FuelRemain += fuel;
+            bus.FuelRemain = realBus.FuelRemain;
+        }
         #endregion
 
         #region line
