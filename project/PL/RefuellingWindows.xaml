@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d"
-        Title="RefuellingWindows" Height="300" Width="400">
+        Title="RefuellingWindows" Height="372" Width="400">
     <Grid Height="372" VerticalAlignment="Top">
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
         <Rectangle Margin="-4,-4,-1,295" RenderTransformOrigin="0.496,0.679" >
@@ -16,7 +16,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="LOGO.png" Margin="113,4,113,298" RenderTransformOrigin="0.531,0.75"/>
+        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,4,113,298" RenderTransformOrigin="0.531,0.75"/>
         <Label FontFamily="Arial" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" Content="refuel" Margin="164,89,148,237" RenderTransformOrigin="-2.427,-0.037" Width="83"/>
         <TextBox x:Name="txtRefuel" PreviewTextInput="Refuel_PreviewTextInput"  KeyDown="OnKeyDownHandler" FontSize="20" Height="50" Margin="81,161,92,161" />
     </Grid>

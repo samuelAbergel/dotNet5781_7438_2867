@@ -13,7 +13,7 @@
             <RowDefinition Height="295*"/>
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
-        <Rectangle Margin="0,0,0,5" >
+        <Rectangle >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,9 +21,9 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="LOGON.png" Margin="309,-3,309,1" />
+        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="309,-3,309,4" />
         
-        <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick">
+        <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,7,0,-0.5">
             
             <ListView.View>
                 <GridView>

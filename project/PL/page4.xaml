@@ -7,7 +7,7 @@
         mc:Ignorable="d" ResizeMode="NoResize"
         Title="page4" Height="450" Width="800">
     <Grid>
-        <Rectangle   Height="96"  Width="794" Margin="0,0,-0.4,324" >
+        <Rectangle  Width="794" Margin="0,1,0,315.5" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -15,7 +15,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="images/LOGON.png" Width="150" Margin="321,-12,322.6,313" />
+        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Width="150" Margin="322,-10,322,310.5" />
         <Button
     Style="{StaticResource MaterialDesignRaisedLightButton}"
     ToolTip="Resource name: MaterialDesignRaisedLightButton" Height="Auto" Margin="266,172,254.6,173" Click="Button_Click_1">

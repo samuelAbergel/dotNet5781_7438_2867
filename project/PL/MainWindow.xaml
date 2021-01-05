@@ -16,7 +16,7 @@
     <Grid>
 
         <!--barre du haut-->
-        <Rectangle   Height="96"  Width="794" Margin="0,0,-0.4,324" Grid.ColumnSpan="2" >
+        <Rectangle  Width="794" Margin="1,-3,-1,325.5" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -24,7 +24,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="LOGO.png" Margin="321,-13,318,313.5"/>
+        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="321,-7,318,320.5"/>
 
         <!--information update-->
         <GroupBox
