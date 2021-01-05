@@ -30,8 +30,13 @@ namespace DL
             Bus sBus = DataSource.listBus.Find(p => p.LicenseNum == bus.LicenseNum);
             if (sBus != null)
             {
-                DataSource.listBus.Remove(sBus);
-                DataSource.listBus.Add(bus.Clone());
+                sBus.BusOfLine = bus.BusOfLine;
+                sBus.LicenseNum = bus.LicenseNum;
+                sBus.FromDate = bus.FromDate;
+                sBus.FuelRemain = bus.FuelRemain;
+                sBus.previewTreatmentDate = bus.previewTreatmentDate;
+                sBus.Status = bus.Status;
+                sBus.TotalTrip = bus.TotalTrip;
             }
             else
                 throw new badIdBusexeption(bus.LicenseNum);
@@ -72,8 +77,9 @@ namespace DL
                               select item).FirstOrDefault();
             if (realBus == null)
                 throw new Exception("not exist");
-            bus.Status = BusStatus.inTreatment;
-            bus.previewTreatmentDate = DateTime.Now;
+            realBus.Status = BusStatus.inTreatment;
+            realBus.previewTreatmentDate = DateTime.Now;
+
         }
         #endregion
 
