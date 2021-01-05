@@ -29,7 +29,6 @@ namespace PL
             InitializeComponent();
             bl = BLFactory.GetBL();
             txtRefuel.Text = bus.FuelRemain.ToString();
-            
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)//to press enter 

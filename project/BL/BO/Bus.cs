@@ -13,7 +13,7 @@ namespace BO
         public double TotalTrip { get; set; }
         public double FuelRemain { get; set; }
         public DateTime previewTreatmentDate { get; set; }
-
+        public int BusOfLine { get; set; }
         public BusStatus Status { get; set; }
     }
 }

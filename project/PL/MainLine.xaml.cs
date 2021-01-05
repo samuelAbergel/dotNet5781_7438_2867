@@ -49,7 +49,6 @@ namespace PL
         {
             AddLine wnd = new AddLine();
             wnd.Show();
-            this.Close();
         }
     }
 }

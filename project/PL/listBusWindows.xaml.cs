@@ -64,7 +64,7 @@ namespace PL
 
             if(bus != null)
             {
-                informationWindows wnd = new informationWindows();
+                informationWindows wnd = new informationWindows(bus.getBus());
                 wnd.ShowDialog();
             }
         }
@@ -81,6 +81,15 @@ namespace PL
             MainBus wnd = new MainBus();
             wnd.Show();
             this.Close();
+        }
+
+        private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            busPO = btn.DataContext as BusPO;
+            UpdateBus wnd = new UpdateBus(busPO.getBus());
+            wnd.ShowDialog();
+            updateDataContext();
         }
     }
 }

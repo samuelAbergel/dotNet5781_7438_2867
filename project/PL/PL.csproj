@@ -83,6 +83,9 @@
     <Compile Include="RefuellingWindows.xaml.cs">
       <DependentUpon>RefuellingWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UpdateBus.xaml.cs">
+      <DependentUpon>UpdateBus.xaml</DependentUpon>
+    </Compile>
     <Page Include="Addbus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +133,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RefuellingWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateBus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

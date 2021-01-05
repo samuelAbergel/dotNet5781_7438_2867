@@ -28,7 +28,6 @@ namespace PL
         {
             Addbus wnd = new Addbus();
             wnd.Show();
-            this.Close();
         }
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
