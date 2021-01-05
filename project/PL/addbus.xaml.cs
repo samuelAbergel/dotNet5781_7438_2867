@@ -18,11 +18,11 @@ namespace PL
     /// <summary>
     /// Logique d'interaction pour addbus.xaml
     /// </summary>
-    public partial class addbus : Window
+    public partial class Addbus : Window
     {
         IBL bl;
         BO.Bus bus;
-        public addbus()
+        public Addbus()
         {
             InitializeComponent();
             bl = BLFactory.GetBL();

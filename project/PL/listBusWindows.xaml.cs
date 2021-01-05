@@ -24,7 +24,6 @@ namespace PL
     public partial class listBusWindows : Window
     {
         IBL bl;
-      //  IEnumerable<BO.Bus> listBus;
         ObservableCollection<BusPO> collection;
         BusPO busPO;
         public listBusWindows()
@@ -68,6 +67,20 @@ namespace PL
                 informationWindows wnd = new informationWindows();
                 wnd.ShowDialog();
             }
+        }
+
+        private void ButtonHome_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow wnd = new MainWindow();
+            wnd.Show();
+            this.Close();
+        }
+
+        private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
+        {
+            MainBus wnd = new MainBus();
+            wnd.Show();
+            this.Close();
         }
     }
 }

@@ -63,14 +63,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddLine.xaml.cs">
+      <DependentUpon>AddLine.xaml</DependentUpon>
+    </Compile>
     <Compile Include="informationWindows.xaml.cs">
       <DependentUpon>informationWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListLineWindow.xaml.cs">
+      <DependentUpon>ListLineWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainLine.xaml.cs">
+      <DependentUpon>MainLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OpenWindow.xaml.cs">
+      <DependentUpon>OpenWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PO\BusPO.cs" />
+    <Compile Include="PO\LinePO.cs" />
     <Compile Include="RefuellingWindows.xaml.cs">
       <DependentUpon>RefuellingWindows.xaml</DependentUpon>
     </Compile>
-    <Page Include="addbus.xaml">
+    <Page Include="Addbus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddLine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,12 +99,16 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ListLineWindow.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="addbus.xaml.cs">
-      <DependentUpon>addbus.xaml</DependentUpon>
+    <Page Include="MainLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Addbus.xaml.cs">
+      <DependentUpon>Addbus.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -96,15 +117,15 @@
     <Compile Include="listBusWindows.xaml.cs">
       <DependentUpon>listBusWindows.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="page2.xaml">
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="page4.xaml">
+    <Page Include="MainBus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OpenWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,11 +135,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="page2.xaml.cs">
-      <DependentUpon>page2.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="page4.xaml.cs">
-      <DependentUpon>page4.xaml</DependentUpon>
+    <Compile Include="MainBus.xaml.cs">
+      <DependentUpon>MainBus.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -139,6 +160,7 @@
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BO.Bus.datasource" />
+    <None Include="Properties\DataSources\BO.Line.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

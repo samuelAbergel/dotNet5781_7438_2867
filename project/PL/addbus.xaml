@@ -6,8 +6,8 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:PL"
         xmlns:enm="clr-namespace:BO;assembly=BL"
-        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.addbus"
-        mc:Ignorable="d" ResizeMode="NoResize"
+        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.Addbus"
+        mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="addbus" Height="425" Width="400"  >
     <Window.Resources>
         <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Bus}, CreateList=True}"/>

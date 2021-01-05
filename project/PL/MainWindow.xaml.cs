@@ -12,33 +12,33 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour page2.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        IBL bl = BLFactory.GetBL();
+        IBL bl;
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonBus_Click(object sender, RoutedEventArgs e)
         {
-            page2 wnd = new page2();
+            MainBus wnd = new MainBus();
             wnd.Show();
             this.Close();
         }
 
-        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
+        private void ButtonLine_Click_1(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            MainLine wnd = new MainLine();
+            wnd.Show();
+            this.Close();
         }
     }
 }

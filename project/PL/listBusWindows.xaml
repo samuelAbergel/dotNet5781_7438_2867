@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
-        mc:Ignorable="d"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
          Title="page2" Height="450" Width="900" ResizeMode="NoResize">
 
     <Grid>
@@ -22,9 +22,10 @@
             </Rectangle.Fill>
         </Rectangle>
         <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="309,-3,309,4" />
-        
+        <Button Content="Home" HorizontalAlignment="Left" Margin="822,2,0,0" VerticalAlignment="Top" Width="70" Height="31" Click="ButtonHome_Click"/>
+        <Button Content="Previous Page" HorizontalAlignment="Left" Margin="-6,0,0,0" VerticalAlignment="Top" Width="136" Height="32" Click="ButtonPreviousPage_Click"/>
         <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,7,0,-0.5">
-            
+
             <ListView.View>
                 <GridView>
                     <GridView.ColumnHeaderContainerStyle>

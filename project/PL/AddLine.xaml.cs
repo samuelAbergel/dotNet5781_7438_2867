@@ -1,5 +1,4 @@
-﻿using BL;
-using BLAPI;
+﻿using BLAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,20 +16,23 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour page2.xaml
+    /// Logique d'interaction pour AddLine.xaml
     /// </summary>
-    public partial class page2 : Window
+    public partial class AddLine : Window
     {
         IBL bl;
-        public page2()
+        BO.Line line;
+        public AddLine()
         {
             InitializeComponent();
+            bl = BLFactory.GetBL();
+            line = new BO.Line();
+            this.DataContext = line;
+            areaComboBox.ItemsSource = Enum.GetValues(typeof(BO.Areas)).Cast<BO.Areas>();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonAddLine_Click(object sender, RoutedEventArgs e)
         {
-            page4 wnd = new page4();
-            wnd.Show();
+            bl.addLine(line);
             this.Close();
         }
     }

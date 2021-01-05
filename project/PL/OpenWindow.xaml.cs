@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,26 +16,27 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour page4.xaml
+    /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
-    public partial class page4 : Window
+    public partial class OpenWindow : Window
     {
 
-        public page4()
+        IBL bl = BLFactory.GetBL();
+        public OpenWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            addbus wnd = new addbus();
-            wnd.ShowDialog();
+            MainWindow wnd = new MainWindow();
+            wnd.Show();
+            this.Close();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
-            listBusWindows wnd = new listBusWindows();
-            wnd.ShowDialog();
+            Application.Current.Shutdown();
         }
     }
 }

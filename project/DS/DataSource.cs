@@ -135,8 +135,90 @@ namespace DS
                    TotalTrip = 25790,
                },
             };
+            listLine = new List<Line>
+            {
+                new Line
+                {
+                    Id = 123456789,
+                    Code = 1,
+                    FirstStation = 275267202,
+                    LastStation = 257426568,
+                    Area = Areas.center,
+                },
+                 new Line
+                {
+                    Id = 987654321,
+                    Code = 2,
+                    FirstStation = 275267202,
+                    LastStation = 098765432,
+                    Area = Areas.center,
+                },
+                  new Line
+                {
+                    Id = 720752642,
+                    Code = 3,
+                    FirstStation = 0987654323,
+                    LastStation = 257426568,
+                    Area = Areas.east,
+                },
+                   new Line
+                {
+                    Id = 1752975225,
+                    Code = 4,
+                    FirstStation = 987654326,
+                    LastStation = 875567342,
+                    Area = Areas.north,
+                },
+                    new Line
+                {
+                    Id = 123456789,
+                    Code = 5,
+                    FirstStation = 123456789,
+                    LastStation = 875567342,
+                    Area = Areas.south,
+                },
+                     new Line
+                {
+                    Id = 801892875,
+                    Code = 6,
+                    FirstStation = 987654321,
+                    LastStation = 098765432,
+                    Area = Areas.west,
+                },
+                      new Line
+                {
+                    Id = 425729726,
+                    Code = 7,
+                    FirstStation = 098765432,
+                    LastStation = 875567342,
+                    Area = Areas.north,
+                },
+                       new Line
+                {
+                    Id = 0867956688,
+                    Code = 8,
+                    FirstStation = 649458358,
+                    LastStation = 123456789,
+                    Area = Areas.south,
+                },
+                        new Line
+                {
+                    Id = 769756444,
+                    Code = 9,
+                    FirstStation = 675636378,
+                    LastStation = 987654326,
+                    Area = Areas.west,
+                },
+                         new Line
+                {
+                    Id = 0829687256,
+                    Code = 10,
+                    FirstStation = 098765432,
+                    LastStation = 257426568,
+                    Area = Areas.east,
+                },
+            };
             listBusOnTrip = new List<BusOnTrip>();
-            listLine = new List<Line>();
             listLineStation = new List<LineStation>();
             listLineTrip = new List<LineTrip>();
             listStation = new List<Station>();
