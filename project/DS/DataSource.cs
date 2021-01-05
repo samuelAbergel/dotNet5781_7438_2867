@@ -218,10 +218,368 @@ namespace DS
                     Area = Areas.east,
                 },
             };
+            listStation = new List<Station>
+            {
+                new Station
+                {
+                    Code= 3945,
+                    Name= "station 1",
+                    Lattitude=31.770868,
+                    Longitude=35.173806,
+
+                },
+                 new Station
+                {
+                    Code= 4725,
+                    Name= "station 2",
+                    Lattitude=31.746961,
+                    Longitude=35.23278,
+
+                },
+                  new Station
+                {
+                    Code= 1908,
+                    Name= "station 3",
+                    Lattitude=31.746998,
+                    Longitude=35.2364,
+
+                },
+                  new Station
+                {
+                    Code= 9634,
+                    Name= "station 4",
+                    Lattitude=31.746921
+                    Longitude=35.2167,
+
+                },
+                    new Station
+                {
+                    Code= 3375,
+                    Name= "station 5",
+                    Lattitude=31.746341,
+                    Longitude=35.2376,
+
+                },
+                      new Station
+                {
+                    Code= 1879,
+                    Name= "station 6",
+                    Lattitude=31.727231,
+                    Longitude=35.251990,
+
+                },
+                        new Station
+                {
+                    Code= 5583,
+                    Name= "station 7",
+                    Lattitude=31.746976,
+                    Longitude=35.251897,
+
+                },
+                          new Station
+                {
+                    Code= 2411,
+                    Name= "station 8",
+                    Lattitude=31.712961,
+                    Longitude=35.251721,
+
+                },
+                            new Station
+                {
+                    Code= 5665,
+                    Name= "station 9",
+                    Lattitude=31.748165,
+                    Longitude=35.251675,
+
+                },
+  new Station
+                {
+                    Code= 5328,
+                    Name= "station 10",
+                    Lattitude=31.748098,
+                    Longitude=35.251586,
+
+                },
+
+  new Station
+                {
+                    Code= 5908,
+                    Name= "station 11",
+                    Lattitude=31.748076,
+                    Longitude=35.251450,
+
+                },
+
+  new Station
+                {
+                    Code= 1324,
+                    Name= "station 12",
+                    Lattitude=31.748081,
+                    Longitude=35.251365,
+
+                },
+
+  new Station
+                {
+                    Code= 9737,
+                    Name= "station 13",
+                    Lattitude=31.748067,
+                    Longitude=35.251274,
+
+                },
+
+  new Station
+                {
+                    Code= 7409,
+                    Name= "station 14",
+                    Lattitude=31.7480514,
+                    Longitude=35.251189,
+
+                },
+
+  new Station
+                {
+                    Code= 7218,
+                    Name= "station 15",
+                    Lattitude=31.7480489,
+                    Longitude=35,192666,
+
+                },
+
+  new Station
+                {
+                    Code= 3398,
+                    Name= "station 16",
+                    Lattitude=31.748034,
+                    Longitude=35.25166,
+
+                },
+
+  new Station
+                {
+                    Code= 9280,
+                    Name= "station 17",
+                    Lattitude=31.780296,
+                    Longitude=35.251247,
+
+                },
+
+  new Station
+                {
+                    Code= 5547,
+                    Name= "station 18",
+                    Lattitude=31.748013,
+                    Longitude=35.19529,
+
+                },
+
+  new Station
+                {
+                    Code= 7239,
+                    Name= "station 19",
+                    Lattitude=31.748351,
+                    Longitude=35.19534,
+
+                },
+
+  new Station
+                {
+                    Code= 3385,
+                    Name= "station 20",
+                    Lattitude=31.770868,
+                    Longitude=35.192666,
+
+                },
+
+  new Station
+                {
+                    Code= 1289,
+                    Name= "station 21",
+                    Lattitude=31.748349,
+                    Longitude=35.19561,
+
+                },
+
+  new Station
+                {
+                    Code= 9238,
+                    Name= "station 22",
+                    Lattitude=31.728791,
+                    Longitude=35.19573,
+
+                },
+
+  new Station
+                {
+                    Code= 2914,
+                    Name= "station 23",
+                    Lattitude=31.728098,
+                    Longitude=35.195790,
+
+                },
+
+  new Station
+                {
+                    Code= 6482,
+                    Name= "station 24",
+                    Lattitude=31.728091,
+                    Longitude=35.19589,
+
+                },
+
+  new Station
+                {
+                    Code= 8428,
+                    Name= "station 25",
+                    Lattitude=31.728089,
+                    Longitude=35.19507,
+
+                },
+
+  new Station
+                {
+                    Code= 2904,
+                    Name= "station 26",
+                    Lattitude=31.728072,
+                    Longitude=35.19509,
+
+                },
+
+  new Station
+                {
+                    Code= 7290,
+                    Name= "station 27",
+                    Lattitude=31.728076,
+                    Longitude=35.195666,
+
+                },
+
+  new Station
+                {
+                    Code= 5540,
+                    Name= "station 28",
+                    Lattitude=31.728062,
+                    Longitude=35.19541,
+
+                },
+
+  new Station
+                {
+                    Code= 1532,
+                    Name= "station 29",
+                    Lattitude=31.728059,
+                    Longitude=35.231903,
+
+                },
+
+  new Station
+                {
+                    Code= 4020,
+                    Name= "station 30",
+                    Lattitude=31.728047,
+                    Longitude=35.231894,
+
+                },
+
+  new Station
+                {
+                    Code= 9093,
+                    Name= "station 31",
+                    Lattitude=31.728039,
+                    Longitude=35.231759,
+
+                },
+
+  new Station
+                {
+                    Code= 6881,
+                    Name= "station 32",
+                    Lattitude=31.728028,
+                    Longitude=35.231684,
+
+                },
+
+  new Station
+                {
+                    Code= 5623,
+                    Name= "station 33",
+                    Lattitude=31.728011,
+                    Longitude=35.231520,
+
+                },
+
+  new Station
+                {
+                    Code= 5423,
+                    Name= "station 34",
+                    Lattitude=31.815421,
+                    Longitude=35.231387,
+
+                },
+
+  new Station
+                {
+                    Code= 9902,
+                    Name= "station 35",
+                    Lattitude=31.81090,
+                    Longitude=35.23131,
+
+                },
+
+  new Station
+                {
+                    Code= 2309,
+                    Name= "station 36",
+                    Lattitude=31.810822,
+                    Longitude=35.231295,
+
+                },
+
+  new Station
+                {
+                    Code= 9834,
+                    Name= "station 37",
+                    Lattitude=31.810762,
+                    Longitude=35.231142,
+
+                },
+
+  new Station
+                {
+                    Code= 2204,
+                    Name= "station 38",
+                    Lattitude=31.810698,
+                    Longitude=35.231094,
+
+                },
+
+  new Station
+                {
+                    Code= 2020,
+                    Name= "station 39",
+                    Lattitude=31.813421,
+                    Longitude=35.231666,
+
+                },
+
+  new Station
+                {
+                    Code= 2021,
+                    Name= "station 40",
+                    Lattitude=31.810386,
+                    Longitude=35.231583,
+
+                },
+
+            };
+
+
+
+
             listBusOnTrip = new List<BusOnTrip>();
             listLineStation = new List<LineStation>();
             listLineTrip = new List<LineTrip>();
-            listStation = new List<Station>();
+           
             listTrip = new List<Trip>();
             listTrip = new List<Trip>();
             listUser = new List<User>();

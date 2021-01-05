@@ -15,8 +15,9 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Width="150" Margin="322,-10,322,310.5" />
+        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGON.png" Width="150" Margin="322,-10,322,310.5" />
         <Button Content="Home" HorizontalAlignment="Left" Margin="725,2,-1,0" VerticalAlignment="Top" Width="70" Height="32" Click="ButtonHome_Click"/>
+     
         <Button Content="Previous Page" HorizontalAlignment="Left" Margin="-6,0,0,0" VerticalAlignment="Top" Width="136" Height="32" Click="ButtonPreviousPage_Click"/>
         <Button
     Style="{StaticResource MaterialDesignRaisedLightButton}"
