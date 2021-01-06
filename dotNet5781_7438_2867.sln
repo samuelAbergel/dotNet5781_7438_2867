@@ -32,13 +32,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLObject", "project\DLOBJEC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLAPI", "project\DALPI\DLAPI.csproj", "{D3C2167A-1BC7-41B0-81A4-600A9424B184}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{9BA58ABA-2A68-4FF1-9D03-365666BE24E1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F8F40344-AD9E-44EB-922C-1D0F6EACE789}"
 	ProjectSection(SolutionItems) = preProject
 		images\LOGO.png = images\LOGO.png
-		images\logo_v2.2 = images\logo_v2.2
-		images\logo_v2.png = images\logo_v2.png
-		images\LOGON.png = images\LOGON.png
-		images\NEWLOGO.png = images\NEWLOGO.png
 	EndProjectSection
 EndProject
 Global
