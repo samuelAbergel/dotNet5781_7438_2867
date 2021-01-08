@@ -97,9 +97,27 @@ namespace BL
         BO.Line lineDoBoAdapter(DO.Line lineDO)
         {
             BO.Line lineBO = new BO.Line();
-            int id = lineDO.Id;
-            lineDO.CopyPropertiesTo(lineBO);
+            lineBO.Area = (Areas)lineDO.Area;
+            lineBO.Code = lineDO.Code;
+            lineBO.FirstStation = lineDO.FirstStation;
+            lineBO.LastStation = lineDO.LastStation;
+            lineBO.Id = lineDO.Id;
+            if(lineDO.listOfStationInLine != null)
+            lineBO.listOfStationInLine = from item in lineDO.listOfStationInLine
+                                         select AdjacentStationDoBoAdapter(item);
             return lineBO;
+        }
+        BO.AdjacentStations AdjacentStationDoBoAdapter(DO.AdjacentStations AdjacentStationDO)
+        {
+            BO.AdjacentStations AdjacentStationBO = new BO.AdjacentStations();
+            AdjacentStationDO.CopyPropertiesTo(AdjacentStationBO);
+            return AdjacentStationBO;
+        }
+        DO.AdjacentStations AdjacentStationBoDoAdapter(BO.AdjacentStations AdjacentStationBO)
+        {
+            DO.AdjacentStations AdjacentStationDO = new DO.AdjacentStations();
+            AdjacentStationBO.CopyPropertiesTo(AdjacentStationDO);
+            return AdjacentStationDO;
         }
         public void addLine(Line line)
         {
@@ -151,10 +169,25 @@ namespace BL
             }
             return lineDoBoAdapter(lineDO);
         }
-        public IEnumerable<Line> getAllLine()
+        public IEnumerable<BO.Line> getAllLine()
         {
             return from item in dl.getAllLine()
                    select lineDoBoAdapter(item);
+        }
+
+        public IEnumerable<BO.AdjacentStations> getStationOfLine(Line line)
+        {
+            DO.Line lineDo = new DO.Line();
+            lineDo.Area = (DO.Areas)line.Area;
+            lineDo.Id = line.Id;
+            lineDo.Code = line.Code;
+            lineDo.FirstStation = line.FirstStation;
+            lineDo.LastStation = line.LastStation;
+            if(line.listOfStationInLine != null)
+            lineDo.listOfStationInLine = from item in line.listOfStationInLine
+                                         select AdjacentStationBoDoAdapter(item);
+            return from item in dl.getStationOfLine(lineDo)
+                   select AdjacentStationDoBoAdapter(item);
         }
         #endregion
 

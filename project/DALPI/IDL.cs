@@ -33,11 +33,8 @@ namespace DLAPI
         void removeLine(int id);
         Line getLine(int id);
         IEnumerable<Line> getAllLine();
+        IEnumerable<AdjacentStations> getStationOfLine(Line line);
         #endregion
-
-
-
-
 
     }
 }

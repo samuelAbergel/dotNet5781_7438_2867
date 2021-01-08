@@ -72,12 +72,16 @@
     <Compile Include="ListLineWindow.xaml.cs">
       <DependentUpon>ListLineWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="listStationInLineWindow.xaml.cs">
+      <DependentUpon>listStationInLineWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainLine.xaml.cs">
       <DependentUpon>MainLine.xaml</DependentUpon>
     </Compile>
     <Compile Include="OpenWindow.xaml.cs">
       <DependentUpon>OpenWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PO\AdjacentStationsPO.cs" />
     <Compile Include="PO\BusPO.cs" />
     <Compile Include="PO\LinePO.cs" />
     <Compile Include="RefuellingWindows.xaml.cs">
@@ -103,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ListLineWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="listStationInLineWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

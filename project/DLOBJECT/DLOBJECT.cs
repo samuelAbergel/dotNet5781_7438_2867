@@ -120,6 +120,11 @@ namespace DL
             return from line in DataSource.listLine
                    select line.Clone();
         }
+        public IEnumerable<AdjacentStations> getStationOfLine(Line line)
+        {
+            return from item in line.listOfStationInLine
+                   select item.Clone();
+        }
         #endregion
 
         #region station
@@ -159,6 +164,7 @@ namespace DL
             return from station in DataSource.listStation
                    select station.Clone();
         }
+
         #endregion
     }
 }

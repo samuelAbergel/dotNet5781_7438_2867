@@ -19,6 +19,7 @@ namespace PL.PO
             this.Area = line.Area;
             this.FirstStation = line.FirstStation;
             this.LastStation = line.LastStation;
+            this.listOfStationInLine = line.listOfStationInLine;
         }
         protected void RaisePropertyChanged(string propertyname)
         {
@@ -72,6 +73,15 @@ namespace PL.PO
             {
                 line.LastStation = value;
                 RaisePropertyChanged("LastStation");
+            }
+        }
+        public IEnumerable<AdjacentStations> listOfStationInLine
+        {
+            get => line.listOfStationInLine;
+            set
+            {
+                line.listOfStationInLine = value;
+                RaisePropertyChanged("listOfStationInLine");
             }
         }
     }

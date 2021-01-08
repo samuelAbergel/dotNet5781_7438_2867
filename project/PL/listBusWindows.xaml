@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="page2" Height="450" Width="950" ResizeMode="NoResize">
+         Title="page2" Height="600" Width="1000" ResizeMode="NoResize">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="127*"/>
-            <RowDefinition Height="295*"/>
+            <RowDefinition Height="131*"/>
+            <RowDefinition Height="441*"/>
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
-        <Rectangle >
+        <Rectangle Margin="0,0,0,439.5" Grid.RowSpan="2" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,17 +21,17 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="309,-3,309,4" />
-        <Button Content="Home" HorizontalAlignment="Left" Margin="872,0,0,0" VerticalAlignment="Top" Width="70" Height="32" Click="ButtonHome_Click"/>
+        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="309,-3,309,5" />
+        <Button Content="Home" HorizontalAlignment="Left" Margin="923,-3,0,0" VerticalAlignment="Top" Width="70" Height="32" Click="ButtonHome_Click"/>
         <Button Content="Previous Page" HorizontalAlignment="Left" Margin="-6,0,0,0" VerticalAlignment="Top" Width="136" Height="32" Click="ButtonPreviousPage_Click"/>
-        <ListView Grid.Row="1" x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,7,0,-0.5">
+        <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,1,0,-0.5" Height="440" VerticalAlignment="Top" Grid.Row="1">
 
             <ListView.View>
                 <GridView>
                     <GridView.ColumnHeaderContainerStyle>
                         <Style BasedOn="{StaticResource {x:Type GridViewColumnHeader}}" TargetType="{x:Type GridViewColumnHeader}">
                             <Setter Property="IsHitTestVisible" Value="False"/>
-                            <Setter Property="HorizontalContentAlignment"  Value="Center" />
+                            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
                         </Style>
                     </GridView.ColumnHeaderContainerStyle>
                     <GridViewColumn
@@ -39,7 +39,7 @@
         Header="LicenseNum" Width="135"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding FromDate}"
-        Header="FromDate" Width="123"/>
+        Header="FromDate" Width="140"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding TotalTrip}"
         Header="TotalTrip"   Width="115"/>

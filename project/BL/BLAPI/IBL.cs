@@ -33,6 +33,7 @@ namespace BLAPI
         void removeLine(int id);
         BO.Line getLine(int id);
         IEnumerable<BO.Line> getAllLine();
+        IEnumerable<BO.AdjacentStations> getStationOfLine(BO.Line line);
         #endregion
     }
 }

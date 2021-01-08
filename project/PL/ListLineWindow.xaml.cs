@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BO;
 
 namespace PL
 {
@@ -52,9 +53,14 @@ namespace PL
             this.Close();
         }
 
-        private void LineList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void LineList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            LinePO linePO = ((FrameworkElement)e.OriginalSource).DataContext as LinePO;
+            if (linePO != null && linePO.listOfStationInLine != null)
+            {
+                listStationInLineWindow wnd = new listStationInLineWindow(linePO.getLine());
+                wnd.ShowDialog();
+            }
         }
     }
 }

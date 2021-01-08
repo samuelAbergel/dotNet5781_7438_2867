@@ -22,9 +22,225 @@ namespace DS
 
         static DataSource()
         {
+            intitAdjacentStation();
             initList();
         }
-
+        private static void intitAdjacentStation()
+        {
+            listAdjacentStations = new List<AdjacentStations>
+            {
+                new AdjacentStations
+                {
+                  Station1 = 3945,
+                  Station2 = 4725,
+                  Distance = 1,
+                  Time = TimeSpan.FromMinutes(55),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 4725,
+                  Station2 = 1908,
+                  Distance = 1,
+                  Time = TimeSpan.FromMinutes(30),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 1908,
+                  Station2 = 9634,
+                  Distance = 1,
+                  Time = TimeSpan.FromMinutes(25),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 9634,
+                  Station2 = 3375,
+                  Distance = 2,
+                  Time = TimeSpan.FromMinutes(15),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 3375,
+                  Station2 = 1879,
+                  Distance = 2,
+                  Time = TimeSpan.FromMinutes(45),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 1879,
+                  Station2 = 5583,
+                  Distance = 2,
+                  Time = TimeSpan.FromMinutes(53),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 5583,
+                  Station2 = 5665,
+                  Distance = 3,
+                  Time = TimeSpan.FromMinutes(50),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 5665,
+                  Station2 = 5328,
+                  Distance = 3,
+                  Time = TimeSpan.FromMinutes(40),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 5328,
+                  Station2 = 5908,
+                  Distance = 3,
+                  Time = TimeSpan.FromMinutes(42),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 5908,
+                  Station2 = 1324,
+                  Distance = 4,
+                  Time = TimeSpan.FromMinutes(35),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 1324,
+                  Station2 = 9737,
+                  Distance = 4,
+                  Time = TimeSpan.FromMinutes(33),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 9737,
+                  Station2 = 7409,
+                  Distance = 4,
+                  Time = TimeSpan.FromMinutes(31),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 7409,
+                  Station2 = 7218,
+                  Distance = 5,
+                  Time = TimeSpan.FromMinutes(41),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 7218,
+                  Station2 = 3398,
+                  Distance = 5,
+                  Time = TimeSpan.FromMinutes(42),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 3398,
+                  Station2 = 9280,
+                  Distance = 5,
+                  Time = TimeSpan.FromMinutes(43),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 9280,
+                  Station2 = 5547,
+                  Distance = 6,
+                  Time = TimeSpan.FromMinutes(50),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 5547,
+                  Station2 = 7239,
+                  Distance = 6,
+                  Time = TimeSpan.FromMinutes(52),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 7239,
+                  Station2 = 3385,
+                  Distance = 6,
+                  Time = TimeSpan.FromMinutes(51),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 3385,
+                  Station2 = 1289,
+                  Distance = 7,
+                  Time = TimeSpan.FromMinutes(15),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 1289,
+                  Station2 = 9238,
+                  Distance = 7,
+                  Time = TimeSpan.FromMinutes(16),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 9238,
+                  Station2 = 2914,
+                  Distance = 7,
+                  Time = TimeSpan.FromMinutes(18),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 2914,
+                  Station2 = 6482,
+                  Distance = 8,
+                  Time = TimeSpan.FromMinutes(26),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 6482,
+                  Station2 = 2914,
+                  Distance = 8,
+                  Time = TimeSpan.FromMinutes(29),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 9238,
+                  Station2 = 8428,
+                  Distance = 8,
+                  Time = TimeSpan.FromMinutes(27),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 8428,
+                  Station2 = 2904,
+                  Distance = 9,
+                  Time = TimeSpan.FromMinutes(39),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 2904,
+                  Station2 = 7290,
+                  Distance = 9,
+                  Time = TimeSpan.FromMinutes(35),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 7290,
+                  Station2 = 5540,
+                  Distance = 9,
+                  Time = TimeSpan.FromMinutes(37),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 5540,
+                  Station2 = 1532,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(53),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 1532,
+                  Station2 = 4020,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(54),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 4020,
+                  Station2 = 9093,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+            };
+        }
         private static void initList()
         {
             listBus = new List<Bus>()
@@ -241,6 +457,9 @@ namespace DS
                     FirstStation = 275267202,
                     LastStation = 257426568,
                     Area = Areas.center,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 1
+                                          select item,
                 },
                 new Line
                 {
@@ -249,6 +468,9 @@ namespace DS
                     FirstStation = 275267202,
                     LastStation = 098765432,
                     Area = Areas.center,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 2
+                                          select item,
                 },
                 new Line
                 {
@@ -257,6 +479,9 @@ namespace DS
                     FirstStation = 0987654323,
                     LastStation = 257426568,
                     Area = Areas.east,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 3
+                                          select item,
                 },
                 new Line
                 {
@@ -265,6 +490,9 @@ namespace DS
                     FirstStation = 987654326,
                     LastStation = 875567342,
                     Area = Areas.north,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 4
+                                          select item,
                 },
                 new Line
                 {
@@ -273,6 +501,9 @@ namespace DS
                     FirstStation = 123456789,
                     LastStation = 875567342,
                     Area = Areas.south,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 5
+                                          select item,
                 },
                 new Line
                 {
@@ -281,6 +512,9 @@ namespace DS
                     FirstStation = 987654321,
                     LastStation = 098765432,
                     Area = Areas.west,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 6
+                                          select item,
                 },
                 new Line
                 {
@@ -289,6 +523,9 @@ namespace DS
                     FirstStation = 098765432,
                     LastStation = 875567342,
                     Area = Areas.north,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 7
+                                          select item,
                 },
                 new Line
                 {
@@ -297,6 +534,9 @@ namespace DS
                     FirstStation = 649458358,
                     LastStation = 123456789,
                     Area = Areas.south,
+                   listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 8
+                                          select item,
                 },
                 new Line
                 {
@@ -305,6 +545,9 @@ namespace DS
                     FirstStation = 675636378,
                     LastStation = 987654326,
                     Area = Areas.west,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 9
+                                          select item,
                 },
                 new Line
                 {
@@ -313,6 +556,9 @@ namespace DS
                     FirstStation = 098765432,
                     LastStation = 257426568,
                     Area = Areas.east,
+                    listOfStationInLine = from item in listAdjacentStations
+                                          where item.Distance == 10
+                                          select item,
                 },
             };
             listBusOnTrip = new List<BusOnTrip>();
@@ -641,7 +887,6 @@ namespace DS
 
                 },
             };
-            listTrip = new List<Trip>();
             listTrip = new List<Trip>();
             listUser = new List<User>();
         }
