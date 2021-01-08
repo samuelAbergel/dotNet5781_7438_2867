@@ -36,5 +36,12 @@ namespace DLAPI
         IEnumerable<AdjacentStations> getStationOfLine(Line line);
         #endregion
 
+        #region adjacent station
+        IEnumerable<AdjacentStations> getAdjacentStation();
+        void addAdjacentStation(AdjacentStations adjacentStations);
+        void removeAdjacentStation(int id);
+        void updateAdjacentStation(AdjacentStations adjacentStations);
+        AdjacentStations getAdjacentStations(int id);
+        #endregion
     }
 }

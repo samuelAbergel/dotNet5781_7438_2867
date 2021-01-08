@@ -40,5 +40,12 @@ namespace PL
             wnd.Show();
             this.Close();
         }
+
+        private void ButtonStation_Click(object sender, RoutedEventArgs e)
+        {
+            MainStationWindow wnd = new MainStationWindow();
+            wnd.Show();
+            this.Close();
+        }
     }
 }

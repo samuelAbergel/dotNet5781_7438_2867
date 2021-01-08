@@ -107,18 +107,7 @@ namespace BL
                                          select AdjacentStationDoBoAdapter(item);
             return lineBO;
         }
-        BO.AdjacentStations AdjacentStationDoBoAdapter(DO.AdjacentStations AdjacentStationDO)
-        {
-            BO.AdjacentStations AdjacentStationBO = new BO.AdjacentStations();
-            AdjacentStationDO.CopyPropertiesTo(AdjacentStationBO);
-            return AdjacentStationBO;
-        }
-        DO.AdjacentStations AdjacentStationBoDoAdapter(BO.AdjacentStations AdjacentStationBO)
-        {
-            DO.AdjacentStations AdjacentStationDO = new DO.AdjacentStations();
-            AdjacentStationBO.CopyPropertiesTo(AdjacentStationDO);
-            return AdjacentStationDO;
-        }
+        
         public void addLine(Line line)
         {
             DO.Line lineDO = new DO.Line();
@@ -255,6 +244,50 @@ namespace BL
                    select stationDoBoAdapter(item);
         }
         #endregion
+        #region adjacent station
+        BO.AdjacentStations AdjacentStationDoBoAdapter(DO.AdjacentStations AdjacentStationDO)
+        {
+            BO.AdjacentStations AdjacentStationBO = new BO.AdjacentStations();
+            AdjacentStationDO.CopyPropertiesTo(AdjacentStationBO);
+            return AdjacentStationBO;
+        }
+        DO.AdjacentStations AdjacentStationBoDoAdapter(BO.AdjacentStations AdjacentStationBO)
+        {
+            DO.AdjacentStations AdjacentStationDO = new DO.AdjacentStations();
+            AdjacentStationBO.CopyPropertiesTo(AdjacentStationDO);
+            return AdjacentStationDO;
+        }
+        public IEnumerable<BO.AdjacentStations> getAdjacentStation()
+        {
+            return from item in dl.getAdjacentStation()
+                   select AdjacentStationDoBoAdapter(item);
+        }
 
+        public void removeAdjacentStation(int id)
+        {
+            dl.removeAdjacentStation(id);
+        }
+
+        public void updateAdjacentStation(BO.AdjacentStations adjacentStationsBO)
+        {
+            DO.AdjacentStations AdjacentStationDO = new DO.AdjacentStations();
+            adjacentStationsBO.CopyPropertiesTo(AdjacentStationDO);
+            dl.updateAdjacentStation(AdjacentStationDO);
+        }
+
+        public BO.AdjacentStations getAdjacentStations(int id)
+        {
+            DO.AdjacentStations AdjacentStationsDO = new DO.AdjacentStations();
+            AdjacentStationsDO = dl.getAdjacentStations(id);
+            return AdjacentStationDoBoAdapter(AdjacentStationsDO);
+        }
+
+        public void addAdjacentStation(BO.AdjacentStations adjacentStationsBO)
+        {
+            DO.AdjacentStations AdjacentStationDO = new DO.AdjacentStations();
+            adjacentStationsBO.CopyPropertiesTo(AdjacentStationDO);
+            dl.addAdjacentStation(AdjacentStationDO);
+        }
+        #endregion
     }
 }

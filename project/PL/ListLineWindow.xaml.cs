@@ -62,5 +62,22 @@ namespace PL
                 wnd.ShowDialog();
             }
         }
+
+        private void ButtonRemove_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            LinePO linePO= btn.DataContext as LinePO;
+            bl.removeLine(linePO.Id);
+            updateDataContext();
+        }
+
+        private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            LinePO linePO = btn.DataContext as LinePO;
+            UpdateLine wnd = new UpdateLine(linePO.getLine());
+            wnd.ShowDialog();
+            updateDataContext();
+        }
     }
 }

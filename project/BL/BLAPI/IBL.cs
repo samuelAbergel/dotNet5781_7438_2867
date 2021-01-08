@@ -35,5 +35,12 @@ namespace BLAPI
         IEnumerable<BO.Line> getAllLine();
         IEnumerable<BO.AdjacentStations> getStationOfLine(BO.Line line);
         #endregion
+        #region adjacent station
+        void addAdjacentStation(BO.AdjacentStations adjacentStations);
+        IEnumerable<BO.AdjacentStations> getAdjacentStation();
+        void removeAdjacentStation(int id);
+        void updateAdjacentStation(BO.AdjacentStations adjacentStations);
+        BO.AdjacentStations getAdjacentStations(int id);
+        #endregion
     }
 }

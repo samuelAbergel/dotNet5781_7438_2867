@@ -66,6 +66,15 @@
     <Compile Include="AddLine.xaml.cs">
       <DependentUpon>AddLine.xaml</DependentUpon>
     </Compile>
+    <Compile Include="addStation.xaml.cs">
+      <DependentUpon>addStation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChoiceStationWindows.xaml.cs">
+      <DependentUpon>ChoiceStationWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InformationStationWindow.xaml.cs">
+      <DependentUpon>InformationStationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="informationWindows.xaml.cs">
       <DependentUpon>informationWindows.xaml</DependentUpon>
     </Compile>
@@ -75,8 +84,14 @@
     <Compile Include="listStationInLineWindow.xaml.cs">
       <DependentUpon>listStationInLineWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ListStationWindows.xaml.cs">
+      <DependentUpon>ListStationWindows.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainLine.xaml.cs">
       <DependentUpon>MainLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainStationWindow.xaml.cs">
+      <DependentUpon>MainStationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="OpenWindow.xaml.cs">
       <DependentUpon>OpenWindow.xaml</DependentUpon>
@@ -90,11 +105,29 @@
     <Compile Include="UpdateBus.xaml.cs">
       <DependentUpon>UpdateBus.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UpdateLine.xaml.cs">
+      <DependentUpon>UpdateLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateStation.xaml.cs">
+      <DependentUpon>UpdateStation.xaml</DependentUpon>
+    </Compile>
     <Page Include="Addbus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="addStation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChoiceStationWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InformationStationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -114,6 +147,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ListStationWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainLine.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,6 +165,10 @@
     <Compile Include="listBusWindows.xaml.cs">
       <DependentUpon>listBusWindows.xaml</DependentUpon>
     </Compile>
+    <Page Include="MainStationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -145,6 +186,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UpdateBus.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateStation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,8 +223,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BO.AdjacentStations.datasource" />
     <None Include="Properties\DataSources\BO.Bus.datasource" />
     <None Include="Properties\DataSources\BO.Line.datasource" />
+    <None Include="Properties\DataSources\BO.Station.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

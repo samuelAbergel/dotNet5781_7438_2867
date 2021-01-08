@@ -34,7 +34,7 @@
         </Button>
         <Button
     Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="242,143.4,232.6,23" Height="Auto" Grid.Row="1">
+    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="242,143.4,232.6,23" Height="Auto" Grid.Row="1" Click="ButtonStation_Click">
             STATION
         </Button>
     </Grid>

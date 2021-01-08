@@ -91,5 +91,13 @@ namespace PL
             wnd.ShowDialog();
             updateDataContext();
         }
+
+        private void ButtonRemove_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            busPO = btn.DataContext as BusPO;
+            bl.removeBus(busPO.LicenseNum);
+            updateDataContext();
+        }
     }
 }

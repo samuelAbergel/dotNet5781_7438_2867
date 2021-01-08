@@ -95,11 +95,16 @@ namespace DL
             Line sLine = DataSource.listLine.Find(p => p.Id == line.Id);
             if (sLine != null)
             {
-                DataSource.listLine.Remove(sLine);
-                DataSource.listLine.Add(line.Clone());
+                sLine.Area = line.Area;
+                sLine.Code = line.Code;
+                sLine.FirstStation = line.FirstStation;
+                sLine.Id = line.Id;
+                sLine.LastStation = line.LastStation;
+                sLine.listOfStationInLine = line.listOfStationInLine;
             }
             else
                 throw new badIdLineexeption(line.Id);
+
         }
         public void removeLine(int id)
         {
@@ -164,7 +169,35 @@ namespace DL
             return from station in DataSource.listStation
                    select station.Clone();
         }
-
         #endregion
+        public IEnumerable<AdjacentStations> getAdjacentStation()
+        {
+            return from item in DataSource.listAdjacentStations
+                   select item.Clone();
+        }
+
+        public void removeAdjacentStation(int id)
+        {
+            DataSource.listAdjacentStations.RemoveAll(p => p.Station1 == id);
+        }
+
+        public void updateAdjacentStation(AdjacentStations adjacentStations)
+        {
+            DataSource.listAdjacentStations.RemoveAll(p => p.Station1 == adjacentStations.Station1);
+        }
+
+        public AdjacentStations getAdjacentStations(int id)
+        {
+            AdjacentStations sStation = DataSource.listAdjacentStations.Find(p => p.Station1 == id);
+            if (sStation != null)
+                return sStation.Clone();
+            else
+                throw new badIDStationexeption(id);
+        }
+
+        public void addAdjacentStation(AdjacentStations adjacentStations)
+        {
+            DataSource.listAdjacentStations.Add(adjacentStations.Clone());
+        }
     }
 }
