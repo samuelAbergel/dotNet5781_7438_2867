@@ -54,7 +54,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="48,261,65.2,29.2">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="48,261,65.2,29.2" Click="ButtonAdd_Click">
             <TextBlock
                 Text="ADD THIS STATION" />
         </Button>

@@ -16,7 +16,6 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,4,113,319" RenderTransformOrigin="0.531,0.75"/>
 
         <ListView x:Name="AdjacentStationList" ItemsSource="{Binding}" Margin="-1,103,3,0" Height="315" VerticalAlignment="Top">
 
@@ -37,5 +36,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="159,0,159.6,313.5" />
     </Grid>
 </Window>

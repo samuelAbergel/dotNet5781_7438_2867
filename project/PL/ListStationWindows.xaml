@@ -64,5 +64,18 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="283,-5,281.2,362.8" Grid.RowSpan="2" />
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,23.2,27.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            <materialDesign:PackIcon
+                Kind="Home" Height="25" Width="28" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,693.2,27.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            <materialDesign:PackIcon
+                Kind="ChevronLeft" Height="40" Width="44" />
+        </Button>
     </Grid>
 </Window>

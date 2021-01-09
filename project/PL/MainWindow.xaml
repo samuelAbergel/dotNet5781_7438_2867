@@ -32,7 +32,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,140,249.6,210">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,140,249.6,210" Click="ButtonBus_Click">
             <TextBlock
                 Text="BUS" />
         </Button>
@@ -40,7 +40,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,237,249.6,113">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,237,249.6,113" Click="ButtonLine_Click_1">
             <TextBlock
                 Text="LINE" />
         </Button>
@@ -48,7 +48,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,329,249.6,21">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,329,249.6,21" Click="ButtonStation_Click">
             <TextBlock
                 Text="STATION" />
         </Button>

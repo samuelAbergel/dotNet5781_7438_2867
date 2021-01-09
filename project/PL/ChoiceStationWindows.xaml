@@ -23,7 +23,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="130,79,130,107.2">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="130,79,130,107.2" Click="ButtonStation1_Click">
             <TextBlock
                 Text="STATION 1" />
         </Button>
@@ -31,7 +31,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="130,145,130,41.2">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="130,145,130,41.2" Click="ButtonStation2_Click">
             <TextBlock
                 Text="STATION 2" />
         </Button>
