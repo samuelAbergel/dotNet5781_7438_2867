@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:enm="clr-namespace:BO;assembly=BL"
-        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.informationWindows"
+        xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.informationWindows"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Title="informationWindows" Height="425" Width="400" >
     <Window.Resources>
@@ -21,7 +21,6 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,4,113,318.5" RenderTransformOrigin="0.531,0.75"/>
         <Grid  HorizontalAlignment="Left" Margin="46,121,0,0" VerticalAlignment="Top" Height="186" Width="314">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="158.5"/>
@@ -48,5 +47,12 @@
             <Label Content="Total Trip:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="5" VerticalAlignment="Center" Height="24" Width="59"/>
             <TextBox x:Name="totalTripTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="5" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
+        <Image Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="117,-4,117,310.2" RenderTransformOrigin="0.565,0.861"/>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="322,10,23.6,337.2">
+            <materialDesign:PackIcon
+                Kind="Close" />
+        </Button>
     </Grid>
 </Window>

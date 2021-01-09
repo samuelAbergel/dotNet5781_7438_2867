@@ -3,16 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PL"
+        xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="page2" Height="450" Width="800" ResizeMode="NoResize">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="46*"/>
-            <RowDefinition Height="59*"/>
-        </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
-        <Rectangle  Width="794" Margin="0,0,0,79.5" >
+        <Rectangle  Width="794" Margin="0,1,0,315.5" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -20,22 +15,42 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Width="150" Margin="323,-9,321,73.5" />
+        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="312,-15,312,302" />
         <Button
-    Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Height="Auto" Margin="242,131,232.6,219" Grid.RowSpan="2" Click="ButtonBus_Click">
-            BUS
-        </Button>
-
-        <Button
-    Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="242,47.4,232.6,119" Height="Auto" Grid.Row="1" Click="ButtonLine_Click_1">
-            LINE
+  Style="{StaticResource MaterialDesignIconForegroundButton}"
+  ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,41.6,336" Foreground="White" Height="Auto" Width="Auto">
+            <materialDesign:PackIcon
+    Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
-    Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="242,143.4,232.6,23" Height="Auto" Grid.Row="1" Click="ButtonStation_Click">
-            STATION
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,711.6,336" Foreground="White" Height="Auto" Width="Auto">
+            <materialDesign:PackIcon
+                Kind="ChevronLeft" Height="40" Width="44" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,140,249.6,210">
+            <TextBlock
+                Text="BUS" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,237,249.6,113">
+            <TextBlock
+                Text="LINE" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,329,249.6,21">
+            <TextBlock
+                Text="STATION" />
         </Button>
     </Grid>
 </Window>

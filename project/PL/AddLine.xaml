@@ -4,13 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
-        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.AddLine"
+        xmlns:BO="clr-namespace:BO;assembly=BL"
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:enm="clr-namespace:BO;assembly=BL"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.AddLine"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="addbus" Height="378.19" Width="400" >
     <Window.Resources>
-        <CollectionViewSource x:Key="lineViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Line}, CreateList=True}"/>
+        <CollectionViewSource x:Key="lineViewSource" d:DesignSource="{d:DesignInstance {x:Type enm:Line}, CreateList=True}"/>
 
         <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
@@ -29,7 +30,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,3,113,262" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="100,-4,100,247" RenderTransformOrigin="0.565,0.861"/>
 
         <Grid  HorizontalAlignment="Left" Margin="57,120,0,0" VerticalAlignment="Top" Width="303">
             <Grid.ColumnDefinitions>
@@ -60,6 +61,19 @@
             <Label Content="Last Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="4" VerticalAlignment="Center" Height="24" Width="72"/>
             <TextBox x:Name="lastStationTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="4" Text="{Binding LastStation, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button Content="add this line" HorizontalAlignment="Left" Margin="82,296,0,0" VerticalAlignment="Top" Width="220" Height="45" Click="ButtonAddLine_Click"/>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,291,99.6,10">
+            <TextBlock
+                Text="ADD THIS LINE" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="321,24,24.6,278">
+            <materialDesign:PackIcon
+                Kind="Close" />
+        </Button>
     </Grid>
 </Window>

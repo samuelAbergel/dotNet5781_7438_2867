@@ -15,6 +15,19 @@
         WindowStartupLocation="CenterScreen"
         Title="HOME|Transport ABN" Height="460" Width="800"  >
     <Grid>
+        <StackPanel Margin="112,146,271.6,47.4">
+            <Button
+    Command="{Binding RunDialogCommand}"
+    Width="128">
+                CLIENT
+            </Button>
+            <Button
+    Command="{Binding RunExtendedDialogCommand}"
+    Width="128"
+    Margin="0 32 0 0">
+                ADMIN
+            </Button>
+        </StackPanel>
 
         <!--barre du haut-->
         <Rectangle  Width="794" Margin="1,-3,-1,325.5" >
@@ -50,7 +63,7 @@ For the health of all, please respect the following instructions:<LineBreak/><Li
         <!--truc pour se co-->
         <TabControl
   Style="{StaticResource MaterialDesignNavigatilRailTabControl}"
-  materialDesign:ColorZoneAssist.Mode="Accent" BorderBrush="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource PrimaryHueMidForegroundBrush}" Margin="29,126,286.6,45" RenderTransformOrigin="0.577,0.478">
+  materialDesign:ColorZoneAssist.Mode="Accent" BorderBrush="{DynamicResource PrimaryHueMidBrush}" Background="{DynamicResource PrimaryHueMidForegroundBrush}" Margin="29,126,681.6,263.4" RenderTransformOrigin="0.577,0.478">
             <TabItem
     Style="{StaticResource MaterialDesignNavigationRailTabItem}">
                 <TabItem.Header>

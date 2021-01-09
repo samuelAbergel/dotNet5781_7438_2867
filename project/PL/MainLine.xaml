@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PL"
+        xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="MainLine" Height="450" Width="800">
     <Grid>
@@ -15,18 +15,34 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Width="150" Margin="322,-10,322,310.5" />
-        <Button Content="Home" HorizontalAlignment="Left" Margin="725,2,-1,0" VerticalAlignment="Top" Width="70" Height="32" Click="ButtonHome_Click"/>
-        <Button Content="Previous Page" HorizontalAlignment="Left" Margin="-6,0,0,0" VerticalAlignment="Top" Width="136" Height="32" Click="ButtonPreviousPage_Click"/>
+        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="312,-15,312,302" />
         <Button
-    Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Height="Auto" Margin="266,172,254.6,173" Click="ButtonSearch_Click">
-            SEARCH
+  Style="{StaticResource MaterialDesignIconForegroundButton}"
+  ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,41.6,336" Foreground="White" Height="Auto" Width="Auto">
+            <materialDesign:PackIcon
+    Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
-    Style="{StaticResource MaterialDesignRaisedLightButton}"
-    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="266,291,254.6,54" Height="Auto" Click="ButtonAdd_Click">
-            ADD
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,711.6,336" Foreground="White" Height="Auto" Width="Auto">
+            <materialDesign:PackIcon
+                Kind="ChevronLeft" Height="40" Width="44" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,187,250,163">
+            <TextBlock
+                Text="RESEARCH" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,273,250,77">
+            <TextBlock
+                Text="ADD" />
         </Button>
     </Grid>
 </Window>

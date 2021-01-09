@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
-        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.UpdateLine"
+        xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.UpdateLine"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="update line" Height="425" Width="333.842" >
     <Window.Resources>
@@ -20,7 +20,6 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,0,106,317.5" RenderTransformOrigin="0.531,0.75"/>
         <Grid  HorizontalAlignment="Left" Margin="71,126,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -44,6 +43,20 @@
             <Label Content="Last Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
             <TextBox x:Name="lastStationTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding LastStation, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button Content="update this bus" Margin="45,301,52,40.5" Height="Auto" Click="ButtonUpdate_Click"/>
+        <Image Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="93,-11,92.2,310.2" RenderTransformOrigin="0.565,0.861"/>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="265,10,14.2,337.2">
+            <materialDesign:PackIcon
+                Kind="Close" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="71,302,62.2,44.2">
+            <TextBlock
+                Text="UPDATE THIS LINE" />
+        </Button>
     </Grid>
 </Window>

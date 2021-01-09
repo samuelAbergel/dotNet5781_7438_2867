@@ -1,19 +1,16 @@
-﻿<Window x:Class="PL.listBusWindows"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.listBusWindows"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
          Title="page2" Height="600" Width="1120" ResizeMode="NoResize">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="131*"/>
-            <RowDefinition Height="441*"/>
-        </Grid.RowDefinitions>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
-        <Rectangle Margin="0,0,0,439.5" Grid.RowSpan="2" >
+
+        <Rectangle Margin="0,1,-0.4,445.4" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,17 +18,28 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="309,-3,309,5" />
-        <Button Content="Home" HorizontalAlignment="Left" Margin="1042,-2,0,0" VerticalAlignment="Top" Width="70" Height="32" Click="ButtonHome_Click"/>
-        <Button Content="Previous Page" HorizontalAlignment="Left" Margin="-6,0,0,0" VerticalAlignment="Top" Width="136" Height="32" Click="ButtonPreviousPage_Click"/>
-        <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,1,0,-0.5" Height="440" VerticalAlignment="Top" Grid.Row="1">
+        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="430,0,429.6,440.4" />
+        <Button
+  Style="{StaticResource MaterialDesignIconForegroundButton}"
+  ToolTip="MaterialDesignIconForegroundButton" Margin="972,10,28.6,456.4" Foreground="White" Height="Auto" Width="Auto">
+            <materialDesign:PackIcon
+    Kind="Home" Height="25" Width="28" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Margin="10,10,970.6,456.4" Foreground="White" Height="Auto" Width="Auto">
+            <materialDesign:PackIcon
+                Kind="ChevronLeft" Height="40" Width="44" />
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
+        <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,130,-0.4,0" Height="440" VerticalAlignment="Top">
 
             <ListView.View>
                 <GridView>
                     <GridView.ColumnHeaderContainerStyle>
                         <Style BasedOn="{StaticResource {x:Type GridViewColumnHeader}}" TargetType="{x:Type GridViewColumnHeader}">
                             <Setter Property="IsHitTestVisible" Value="False"/>
-                            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
                         </Style>
                     </GridView.ColumnHeaderContainerStyle>
                     <GridViewColumn

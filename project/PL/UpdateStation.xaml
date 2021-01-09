@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
-       xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.UpdateStation"
+       xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.UpdateStation"
        mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="update station" Height="377.566" Width="322.607" >
     <Window.Resources>
@@ -20,7 +20,6 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,4,96.5,266" RenderTransformOrigin="0.531,0.75"/>
         <Grid  HorizontalAlignment="Left" Margin="64,116,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -41,6 +40,20 @@
             <Label Content="Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
             <TextBox x:Name="nameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button Content="update this station" Margin="35,260,40.5,32" Height="Auto" Click="ButtonUpdate_Click"/>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="64,261,58,38">
+            <TextBlock
+                Text="UPDATE THIS STATION" />
+        </Button>
+        <Image Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="89,-11,85,257" RenderTransformOrigin="0.565,0.861"/>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="249,10,19,290">
+            <materialDesign:PackIcon
+                Kind="Close" />
+        </Button>
     </Grid>
 </Window>

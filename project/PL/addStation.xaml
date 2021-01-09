@@ -4,14 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL"
-        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.addStation"
+        xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.addStation"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="add station" Height="368.828" Width="313.87" >
     <Window.Resources>
         <CollectionViewSource x:Key="adjacentStationsViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:AdjacentStations}, CreateList=True}"/>
     </Window.Resources>
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
+  
         <Rectangle Margin="-4,-4,-1,258.5" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -20,7 +20,16 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="99,6,98,264.5" RenderTransformOrigin="0.531,0.75"/>
+
+
+        <Button
+  Style="{StaticResource MaterialDesignIconForegroundButton}"
+  ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="249,10,10.2,281.2">
+            <materialDesign:PackIcon
+    Kind="Close" />
+        </Button>
+
+        <Image Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="89,-17,87.2,245.2" RenderTransformOrigin="0.565,0.861"/>
         <Grid  HorizontalAlignment="Left" Margin="48,109,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -41,6 +50,13 @@
             <Label Content="Time:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
             <TextBox x:Name="timeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Time, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button Content=" add this station" Margin="36,264,42,20.5" Height="Auto" Click="ButtonAdd_Click"/>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="48,261,65.2,29.2">
+            <TextBlock
+                Text="ADD THIS STATION" />
+        </Button>
     </Grid>
 </Window>

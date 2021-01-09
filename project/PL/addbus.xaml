@@ -6,20 +6,20 @@
         xmlns:System="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:PL"
         xmlns:enm="clr-namespace:BO;assembly=BL"
-        xmlns:BO="clr-namespace:BO;assembly=BL" x:Class="PL.Addbus"
+        xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.Addbus"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="addbus" Height="425" Width="400"  >
     <Window.Resources>
         <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Bus}, CreateList=True}"/>
 
-            <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
+        <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
-                <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="enm:BusStatus"/>
-                </ObjectDataProvider.MethodParameters>
-            </ObjectDataProvider>
+            <ObjectDataProvider.MethodParameters>
+                <x:Type TypeName="BO:BusStatus"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
     </Window.Resources>
-    
+
 
     <Grid>
 
@@ -32,7 +32,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="113,4,113,318.5" RenderTransformOrigin="0.531,0.75"/>
+        <Image Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="100,-4,100,314.2" RenderTransformOrigin="0.531,0.75"/>
         <Grid  HorizontalAlignment="Left" Margin="33,131,0,0" VerticalAlignment="Top" Height="158" Width="327">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="146.5"/>
@@ -62,6 +62,19 @@
             <Label Content="Total Trip:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,2.5,0,4" Grid.Row="4" VerticalAlignment="Center" Height="24" Width="59"/>
             <TextBox x:Name="totalTripTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4.5,0,4" Grid.Row="4" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Button Content="add this bus" HorizontalAlignment="Left" Margin="80,325,0,0" VerticalAlignment="Top" Width="220" Height="45" Click="ButtonAddBus_Click"/>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,305,100,41.2">
+            <TextBlock
+                Text="ADD THIS BUS" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignIconForegroundButton}"
+            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="330,15,15.6,332.2">
+            <materialDesign:PackIcon
+                Kind="Close" />
+        </Button>
     </Grid>
 </Window>
