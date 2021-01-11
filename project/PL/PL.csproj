@@ -93,8 +93,8 @@
     <Compile Include="MainStationWindow.xaml.cs">
       <DependentUpon>MainStationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OpenWindow.xaml.cs">
-      <DependentUpon>OpenWindow.xaml</DependentUpon>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="PO\AdjacentStationsPO.cs" />
     <Compile Include="PO\BusPO.cs" />
@@ -169,7 +169,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Opwindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -177,7 +177,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="OpenWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,8 +199,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="Opwindow.xaml.cs">
+      <DependentUpon>Opwindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainBus.xaml.cs">
       <DependentUpon>MainBus.xaml</DependentUpon>

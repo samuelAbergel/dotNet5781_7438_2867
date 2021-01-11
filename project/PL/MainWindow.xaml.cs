@@ -1,5 +1,4 @@
-﻿using BL;
-using BLAPI;
+﻿using BLAPI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,35 +16,27 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour page2.xaml
+    /// Logique d'interaction pour MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        IBL bl;
+
+        IBL bl = BLFactory.GetBL();
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void ButtonBus_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainBus wnd = new MainBus();
+            Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
 
-        private void ButtonLine_Click_1(object sender, RoutedEventArgs e)
+        private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
-            MainLine wnd = new MainLine();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void ButtonStation_Click(object sender, RoutedEventArgs e)
-        {
-            MainStationWindow wnd = new MainStationWindow();
-            wnd.Show();
-            this.Close();
+            Application.Current.Shutdown();
         }
     }
 }

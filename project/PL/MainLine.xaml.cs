@@ -26,14 +26,14 @@ namespace PL
 
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wnd = new MainWindow();
+            Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
 
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wnd = new MainWindow();
+            Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }

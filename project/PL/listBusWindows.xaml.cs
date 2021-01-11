@@ -71,7 +71,7 @@ namespace PL
 
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wnd = new MainWindow();
+            Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
@@ -98,6 +98,11 @@ namespace PL
             busPO = btn.DataContext as BusPO;
             bl.removeBus(busPO.LicenseNum);
             updateDataContext();
+        }
+
+        private void busList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
