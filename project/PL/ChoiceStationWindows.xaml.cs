@@ -32,13 +32,13 @@ namespace PL
 
         private void ButtonStation1_Click(object sender, RoutedEventArgs e)
         {
-            if (index == 1)
+            if (index == 1)//open information of the station and close this window
             {
                 InformationStationWindow wnd = new InformationStationWindow(adjacentStations.Station1);
                 wnd.Show();
                 this.Close();
             }
-            if(index == 2)
+            if(index == 2)//open window of update station and close this window
             {
                 UpdateStation wnd = new UpdateStation(adjacentStations.Station1);
                 wnd.Show();
@@ -49,13 +49,13 @@ namespace PL
 
         private void ButtonStation2_Click(object sender, RoutedEventArgs e)
         {
-            if (index == 1)
+            if (index == 1)//open information of the station and close this window
             {
                 InformationStationWindow wnd = new InformationStationWindow(adjacentStations.Station2);
                 wnd.Show();
                 this.Close();
             }
-            if (index == 2)
+            if (index == 2)//open window of update station and close this window
             {
                 UpdateStation wnd = new UpdateStation(adjacentStations.Station2);
                 wnd.Show();

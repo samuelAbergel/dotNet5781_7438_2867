@@ -20,14 +20,14 @@ namespace PL
     /// </summary>
     public partial class InformationStationWindow : Window
     {
-        IBL bl;
+        IBL bl;// create instance of IBL
         BO.Station station;
         public InformationStationWindow(int stationId)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
-            station = bl.getStation(stationId);
-            this.DataContext = station;
+            bl = BLFactory.GetBL();//and get it with blfactory
+            station = bl.getStation(stationId);//use getstation of blimp and put in station
+            this.DataContext = station;//match datacontext and station
         }
     }
 }

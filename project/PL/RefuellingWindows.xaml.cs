@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour RefuellingWindows.xaml
+    /// page to do refuelling
     /// </summary>
     public partial class RefuellingWindows : Window
     {
@@ -28,7 +28,7 @@ namespace PL
             this.bus = bus;
             InitializeComponent();
             bl = BLFactory.GetBL();
-            txtRefuel.Text = bus.FuelRemain.ToString();
+            txtRefuel.Text = bus.FuelRemain.ToString();//to set the textbox
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)//to press enter 
@@ -36,7 +36,7 @@ namespace PL
 
             if (e.Key == Key.Return)
             {
-                bl.refuelling(int.Parse(this.txtRefuel.Text), bus);
+                bl.refuelling(int.Parse(this.txtRefuel.Text), bus);//use refuzlling of blimp
                 this.Close();
             }
         }

@@ -27,14 +27,14 @@ namespace PL
             this.bus = bus;
             InitializeComponent();
             bl = BLFactory.GetBL();
-            this.DataContext = bus;
-            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();
+            this.DataContext = bus;//set the datacontext
+            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();///set the combobox to busstatue
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            bl.updateBus(bus);
-            this.Close();
+            bl.updateBus(bus);//use the update of blimp
+            this.Close();//and close this page
         }
     }
 }

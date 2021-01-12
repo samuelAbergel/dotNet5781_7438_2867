@@ -26,14 +26,14 @@ namespace PL
         {
             InitializeComponent();
             bl = BLFactory.GetBL();
-            Stations = bl.getStation(idStation);
-            this.DataContext = Stations;
+            Stations = bl.getStation(idStation);//get the station with his id
+            this.DataContext = Stations;//set the data context
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            bl.updateStation(Stations);
-            this.Close();
+            bl.updateStation(Stations);//use update of blimp
+            this.Close();//and close this page
         }
     }
 }

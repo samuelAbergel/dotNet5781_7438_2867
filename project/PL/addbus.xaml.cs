@@ -16,25 +16,25 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour addbus.xaml
+    /// add bus to windows list bus
     /// </summary>
     public partial class Addbus : Window
     {
-        IBL bl;
-        BO.Bus bus;
+        IBL bl;//create an instance of IBL
+        BO.Bus bus;//create BO bus
         public Addbus()
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            bl = BLFactory.GetBL();//and get it with blfactory
             bus = new BO.Bus();
-            this.DataContext = bus;
-            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();
+            this.DataContext = bus;//the bus corresponds to the datacontext
+            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();//set item source of combo box to bus statue BO
 
         }
         private void ButtonAddBus_Click(object sender, RoutedEventArgs e)
         {
-            bl.addBus(bus);
-            this.Close();
+            bl.addBus(bus);//use add from blImp
+            this.Close();//close this window
         }
 
        

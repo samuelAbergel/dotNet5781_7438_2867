@@ -9,6 +9,11 @@ namespace BLAPI
 {
     public interface IBL
     {
+        //CRUD Logic:
+        // Create - add new instance
+        // Request - ask for an instance or for a collection
+        // Update - update properties of an instance
+        // Delete - delete an instance
         #region bus
         void addBus(BO.Bus bus);
         void updateBus(BO.Bus bus);
@@ -35,6 +40,7 @@ namespace BLAPI
         IEnumerable<BO.Line> getAllLine();
         IEnumerable<BO.AdjacentStations> getStationOfLine(BO.Line line);
         #endregion
+
         #region adjacent station
         void addAdjacentStation(BO.AdjacentStations adjacentStations);
         IEnumerable<BO.AdjacentStations> getAdjacentStation();

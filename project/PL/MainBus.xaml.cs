@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour page4.xaml
+    ///home page of bus
     /// </summary>
     public partial class MainBus : Window
     {
@@ -23,27 +23,43 @@ namespace PL
         {
             InitializeComponent();
         }
-        
+        /// <summary>
+        /// button to open page page to add a bus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            Addbus wnd = new Addbus();
+            Addbus wnd = new Addbus();//open window to add bus
             wnd.Show();
         }
-
+        /// <summary>
+        /// open page to search bus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
-            listBusWindows wnd = new listBusWindows();
+            listBusWindows wnd = new listBusWindows();//open page to search bus
             wnd.Show();
-            this.Close();
+            this.Close();//and close this page
         }
-
+        /// <summary>
+        /// button to go to the window home
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
             Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// button to go one page before
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
             Opwindow wnd = new Opwindow();

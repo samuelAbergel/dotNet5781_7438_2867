@@ -18,7 +18,7 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour listStationInLineWindow.xaml
+    /// this window display list of station in line
     /// </summary>
     public partial class listStationInLineWindow : Window
     {
@@ -31,14 +31,14 @@ namespace PL
             bl = BLFactory.GetBL();
             InitializeComponent();
             this.line = line;
-            updateDataContext();
+            updateDataContext();//call fonction to update the data context
         }
         void updateDataContext()
         {
-            collection = new ObservableCollection<AdjacentStationsPO>(from item in bl.getStationOfLine(line)
+            collection = new ObservableCollection<AdjacentStationsPO>(from item in bl.getStationOfLine(line)//get all station of list of station
                                                          select new AdjacentStationsPO(item));
             AdjacentStationList.DataContext = null;
-            AdjacentStationList.DataContext = collection;
+            AdjacentStationList.DataContext = collection;//and reset the data context
         }
     }
 }

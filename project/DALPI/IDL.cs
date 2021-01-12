@@ -9,12 +9,31 @@ namespace DLAPI
 {
     public interface IDL
     {
+        //CRUD Logic:
+        // Create - add new instance
+        // Request - ask for an instance or for a collection
+        // Update - update properties of an instance
+        // Delete - delete an instance
         #region bus
         void addBus(Bus bus);
         void updateBus(Bus bus);
         void removeBus(int id);
+        /// <summary>
+        /// get bus with his id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         Bus GetBus(int id);
+        /// <summary>
+        /// refill gasoline
+        /// </summary>
+        /// <param name="fuel"></param>
+        /// <param name="bus"></param>
         void refuelling(int fuel,Bus bus);
+        /// <summary>
+        /// treat a bus
+        /// </summary>
+        /// <param name="bus"></param>
         void treatment(Bus bus);
         IEnumerable<Bus> GetAllBus();
         #endregion

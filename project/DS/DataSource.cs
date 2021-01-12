@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DS
 {
+    /// <summary>
+    /// init all list 
+    /// </summary>
     public static class DataSource
     {
         public static List<Bus> listBus;

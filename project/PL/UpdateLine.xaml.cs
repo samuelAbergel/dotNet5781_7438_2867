@@ -27,13 +27,13 @@ namespace PL
             this.line = line;
             InitializeComponent();
             bl = BLFactory.GetBL();
-            this.DataContext = line;
+            this.DataContext = line;//set the data context
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            bl.updateLine(line);
-            this.Close();
+            bl.updateLine(line);//use the update of blimp
+            this.Close();//and close this page
         }
     }
 }

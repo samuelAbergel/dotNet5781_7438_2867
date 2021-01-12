@@ -9,6 +9,10 @@ namespace BLAPI
 {
     public static class BLFactory
     {
+        /// <summary>
+        /// return instance of BLImp
+        /// </summary>
+        /// <returns></returns>
         public static IBL GetBL()
         {
             return new BLImp();

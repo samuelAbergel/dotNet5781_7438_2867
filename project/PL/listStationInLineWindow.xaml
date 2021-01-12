@@ -36,6 +36,6 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="159,0,159.6,313.5" />
+        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="159,0,159.6,313.5" />
     </Grid>
 </Window>

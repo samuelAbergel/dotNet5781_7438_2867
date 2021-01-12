@@ -30,79 +30,91 @@ namespace PL
         {
             bl = BLFactory.GetBL();
             InitializeComponent();
-            updateDataContext();
+            updateDataContext(); //fonction for update datacontext
 
         }
         void updateDataContext()
         {
-            collection = new ObservableCollection<BusPO>(from item in bl.GetAllBus()
+            collection = new ObservableCollection<BusPO>(from item in bl.GetAllBus() //get all bus from list of bus
                                                          select new BusPO(item));
-            busList.DataContext = null;
+            busList.DataContext = null; //and reset datacontext
             busList.DataContext = collection;
         }
 
         private void ButtonRefuelling_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-            busPO = btn.DataContext as BusPO;
-            RefuellingWindows wnd = new RefuellingWindows(busPO.getBus());
+            Button btn = sender as Button; //set bouton
+            busPO = btn.DataContext as BusPO;//set the bus to the datacontext(line of listview)
+            RefuellingWindows wnd = new RefuellingWindows(busPO.getBus());//open windows to do refuelling
             wnd.ShowDialog();
-            updateDataContext();
+            updateDataContext();//update datacontext
         }
 
         private void ButtonTreatment_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-            busPO = btn.DataContext as BusPO;
-            bl.treatment(busPO.getBus());
-            updateDataContext();
+            Button btn = sender as Button;//set button
+            busPO = btn.DataContext as BusPO;//set the bus to the datacontext(line of listview)
+            bl.treatment(busPO.getBus());//we call the function to treat the bus
+            updateDataContext();//we update the datacontext
         }
 
         private void busList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            BusPO bus = ((FrameworkElement)e.OriginalSource).DataContext as BusPO;
+            BusPO bus = ((FrameworkElement)e.OriginalSource).DataContext as BusPO; //set bus as datacontext(line of listview)
 
-            if(bus != null)
+            if(bus != null)//if it exist
             {
-                informationWindows wnd = new informationWindows(bus.getBus());
+                informationWindows wnd = new informationWindows(bus.getBus());//openwindow of information bus
                 wnd.ShowDialog();
             }
         }
-
+        /// <summary>
+        /// button click to return to home
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            Opwindow wnd = new Opwindow();
+            Opwindow wnd = new Opwindow();//open the home page
             wnd.Show();
-            this.Close();
+            this.Close();//and close this page
         }
-
+        /// <summary>
+        /// button click  to return a page before
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            MainBus wnd = new MainBus();
+            MainBus wnd = new MainBus();//open a page before
             wnd.Show();
-            this.Close();
+            this.Close();//and close this page
         }
-
+        /// <summary>
+        /// button for update the bus of this line
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-            busPO = btn.DataContext as BusPO;
-            UpdateBus wnd = new UpdateBus(busPO.getBus());
+            Button btn = sender as Button;//set bus
+            busPO = btn.DataContext as BusPO;//set bus of line of listview
+            UpdateBus wnd = new UpdateBus(busPO.getBus());//open the page of update bus
             wnd.ShowDialog();
-            updateDataContext();
+            updateDataContext();//and updat ethe data context
         }
-
+        /// <summary>
+        /// button for remove the line
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonRemove_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;
-            busPO = btn.DataContext as BusPO;
-            bl.removeBus(busPO.LicenseNum);
-            updateDataContext();
+            Button btn = sender as Button;//set button to sender
+            busPO = btn.DataContext as BusPO;//set bus to line of listview
+            bl.removeBus(busPO.LicenseNum);//use remove from blimp
+            updateDataContext();//and update the data context
         }
 
-        private void busList_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

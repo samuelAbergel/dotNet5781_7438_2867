@@ -16,24 +16,24 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour addStation.xaml
+    /// add station to list of sttaaaaaaion
     /// </summary>
     public partial class addStation : Window
     {
-        IBL bl;
+        IBL bl;//create instance of IBL
         BO.AdjacentStations adjacentStations;
         public addStation()
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            bl = BLFactory.GetBL();//and get it with blfactory
             adjacentStations = new BO.AdjacentStations();
-            this.DataContext = adjacentStations;
+            this.DataContext = adjacentStations;//match datacontext with the instance of adjacent station
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            bl.addAdjacentStation(adjacentStations);
-            this.Close();
+            bl.addAdjacentStation(adjacentStations);//use add of bl imp
+            this.Close();//close this window
         }
     }
 }

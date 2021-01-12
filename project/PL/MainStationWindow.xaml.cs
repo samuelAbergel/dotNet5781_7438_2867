@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour MainStationWindow.xaml
+    /// main page of sttaion
     /// </summary>
     public partial class MainStationWindow : Window
     {
@@ -23,27 +23,44 @@ namespace PL
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// to go to the home
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
             Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// to go one page before
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
             Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// to go to page for search station
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
             ListStationWindows wnd = new ListStationWindows();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// to go to page for add station
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             addStation wnd = new addStation();

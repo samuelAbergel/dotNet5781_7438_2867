@@ -25,7 +25,7 @@ namespace PL
         public informationWindows(BO.Bus bus)
         {
             InitializeComponent();
-            this.DataContext = bus;
+            this.DataContext = bus; //match data context and bus
         }
 
     }

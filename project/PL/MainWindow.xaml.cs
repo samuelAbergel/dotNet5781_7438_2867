@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// main page
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -26,14 +26,22 @@ namespace PL
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// button to open the next
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Opwindow wnd = new Opwindow();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// button to close all
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonFechar_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

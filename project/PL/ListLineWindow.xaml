@@ -77,6 +77,6 @@
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
-        <Image  Source="C:\Users\yechoua\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="336,-16,342.8,278.8" Grid.RowSpan="2" />
+        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="336,-16,342.8,278.8" Grid.RowSpan="2" />
     </Grid>
 </Window>

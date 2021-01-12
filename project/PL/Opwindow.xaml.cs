@@ -17,7 +17,7 @@ using System.Windows.Shapes;
 namespace PL
 {
     /// <summary>
-    /// Logique d'interaction pour page2.xaml
+    /// main page
     /// </summary>
     public partial class Opwindow : Window
     {
@@ -26,21 +26,33 @@ namespace PL
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// to go to page of main bus
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonBus_Click(object sender, RoutedEventArgs e)
         {
             MainBus wnd = new MainBus();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// to go to page of main line
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonLine_Click_1(object sender, RoutedEventArgs e)
         {
             MainLine wnd = new MainLine();
             wnd.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// to go to page of main station
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonStation_Click(object sender, RoutedEventArgs e)
         {
             MainStationWindow wnd = new MainStationWindow();
