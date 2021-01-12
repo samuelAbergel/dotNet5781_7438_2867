@@ -73,11 +73,10 @@ namespace PL
             List<Object> lst = (List<object>)e.Result;//take the list with all data
             Button ButtonRefuelling_Click = lst[2] as Button;//set the button
             BusPO bus = lst[0] as BusPO;//set the bus
-            bus.Status = BO.BusStatus.ReadyToGo; //set the bus
-:           ButtonRefuelling_Click.IsEnabled = true; //you can press the button
+            bus.Status = BO.BusStatus.ReadyToGo;//set the statue
+            ButtonRefuelling_Click.IsEnabled = true; //you can press the button
             updateDataContext();//update the data context
         }
-
 
         private void Refuelling_DoWork(object sender, DoWorkEventArgs a)
         {
