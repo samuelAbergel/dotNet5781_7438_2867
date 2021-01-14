@@ -116,7 +116,7 @@ namespace BL
             if(lineDO.listOfStationInLine != null)
             //to adapt this enumerable we use a linq
             lineBO.listOfStationInLine = from item in lineDO.listOfStationInLine//search in list of station of this line
-                                         select AdjacentStationDoBoAdapter(item);//return this adapt list
+                                         select stationDoBoAdapter(item);//return this adapt list
             return lineBO;
         }
         
@@ -180,7 +180,7 @@ namespace BL
         /// </summary>
         /// <param name="line"></param>
         /// <returns></returns>
-        public IEnumerable<BO.AdjacentStations> getStationOfLine(Line line)
+        public IEnumerable<BO.Station> getStationOfLine(Line line)
         {
             DO.Line lineDo = new DO.Line();//create line DO
             //copy all property to DO line from line in parameter
@@ -192,10 +192,10 @@ namespace BL
             if(line.listOfStationInLine != null)
             //to copy this property we use linq
             lineDo.listOfStationInLine = from item in line.listOfStationInLine
-                                         select AdjacentStationBoDoAdapter(item);
+                                         select stationDoBoAdapter(item);
             //return all station of this using dl.getstation and lineDO
             return from item in dl.getStationOfLine(lineDo)
-                   select AdjacentStationDoBoAdapter(item);
+                   select stationDoBoAdapter(item);
         }
         #endregion
 
@@ -210,6 +210,12 @@ namespace BL
             BO.Station stationBO = new BO.Station();// create station BO
             stationDO.CopyPropertiesTo(stationBO);//copy property from DO to BO
             return stationBO; //return station BO
+        }
+        DO.Station stationDoBoAdapter(BO.Station stationBO)
+        {
+            DO.Station stationDO = new DO.Station();// create station DO
+            stationBO.CopyPropertiesTo(stationDO);//copy property from BO to DO
+            return stationDO; //return station DO
         }
         public void addStation(Station station)
         {

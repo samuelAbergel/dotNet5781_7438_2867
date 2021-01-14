@@ -32,7 +32,6 @@ namespace PL
             bl = BLFactory.GetBL();
             InitializeComponent();
             updateDataContext();//call fonction to update the data context
-
         }
         void updateDataContext()
         {

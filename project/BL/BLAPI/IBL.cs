@@ -38,7 +38,7 @@ namespace BLAPI
         void removeLine(int id);
         BO.Line getLine(int id);
         IEnumerable<BO.Line> getAllLine();
-        IEnumerable<BO.AdjacentStations> getStationOfLine(BO.Line line);
+        IEnumerable<BO.Station> getStationOfLine(BO.Line line);
         #endregion
 
         #region adjacent station

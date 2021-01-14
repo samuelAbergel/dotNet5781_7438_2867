@@ -144,7 +144,7 @@ namespace DL
             return from line in DataSource.listLine //search line in list of line                                                                    
                    select line.Clone(); //return all line
         }
-        public IEnumerable<AdjacentStations> getStationOfLine(Line line)
+        public IEnumerable<Station> getStationOfLine(Line line)
         {
             return from item in line.listOfStationInLine // search in line list of station
                    select item.Clone();//return this list of station of line

@@ -34,22 +34,22 @@
                         </Style>
                     </GridView.ColumnHeaderContainerStyle>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Station1}"
-        Header="Station1" Width="135"/>
+        DisplayMemberBinding="{Binding Name}"
+        Header="Name" Width="135"/>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Station2}"
-        Header="Station2" Width="140"/>
+        DisplayMemberBinding="{Binding Code}"
+        Header="Code" Width="140"/>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Distance}"
-        Header="Distance"   Width="115"/>
+        DisplayMemberBinding="{Binding Lattitude}"
+        Header="Lattitude"   Width="120"/>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Time}"
-        Header="Time" Width="132"/>
-                    <GridViewColumn
+        DisplayMemberBinding="{Binding Longitude}"
+        Header="Longitude" Width="132"/>
+                    <GridViewColumn x:Name="columnRemove"
         Header="remove" Width="108">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="remove" Click="ButtonRemove_Click"  />
+                                <Button x:Name="btnRemove" Content="remove" Click="ButtonRemove_Click"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -57,7 +57,7 @@
         Header="update" Width="108">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="update" Click="ButtonUpdate_Click"  />
+                                <Button x:Name="btnUpdate" Content="update" Click="ButtonUpdate_Click"  />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

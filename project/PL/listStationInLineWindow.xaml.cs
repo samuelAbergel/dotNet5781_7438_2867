@@ -23,8 +23,8 @@ namespace PL
     public partial class listStationInLineWindow : Window
     {
         IBL bl;
-        ObservableCollection<AdjacentStationsPO> collection;
-        AdjacentStationsPO adjacentStationsPO;
+        ObservableCollection<StationPO> collection;
+        StationPO stationPO;
         BO.Line line;
         public listStationInLineWindow(BO.Line line)
         {
@@ -35,10 +35,11 @@ namespace PL
         }
         void updateDataContext()
         {
-            collection = new ObservableCollection<AdjacentStationsPO>(from item in bl.getStationOfLine(line)//get all station of list of station
-                                                         select new AdjacentStationsPO(item));
-            AdjacentStationList.DataContext = null;
-            AdjacentStationList.DataContext = collection;//and reset the data context
+            collection = new ObservableCollection<StationPO>(from item in bl.getStationOfLine(line)//get all station of list of station
+                                                         select new StationPO(item));
+            StationList.DataContext = null;
+            StationList.DataContext = collection;//and reset the data context
         }
+
     }
 }

@@ -28,7 +28,7 @@ namespace PL
             this.bus = bus;
             InitializeComponent();
             bl = BLFactory.GetBL();
-            txtRefuel.Text = bus.FuelRemain.ToString();//to set the textbox
+            txtRefuel.Text = (1200-bus.FuelRemain).ToString();//to set the textbox
         }
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)//to press enter 

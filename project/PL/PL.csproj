@@ -99,6 +99,7 @@
     <Compile Include="PO\AdjacentStationsPO.cs" />
     <Compile Include="PO\BusPO.cs" />
     <Compile Include="PO\LinePO.cs" />
+    <Compile Include="PO\StationPO.cs" />
     <Compile Include="RefuellingWindows.xaml.cs">
       <DependentUpon>RefuellingWindows.xaml</DependentUpon>
     </Compile>

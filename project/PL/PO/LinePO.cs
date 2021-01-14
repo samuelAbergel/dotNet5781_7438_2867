@@ -75,7 +75,7 @@ namespace PL.PO
                 RaisePropertyChanged("LastStation");
             }
         }
-        public IEnumerable<AdjacentStations> listOfStationInLine
+        public IEnumerable<Station> listOfStationInLine
         {
             get => line.listOfStationInLine;
             set

@@ -17,22 +17,22 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <ListView x:Name="AdjacentStationList" ItemsSource="{Binding}" Margin="-1,103,3,0" Height="315" VerticalAlignment="Top">
+        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,103,3,0" Height="315" VerticalAlignment="Top" >
 
             <ListView.View>
                 <GridView>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Station1}"
-        Header="Station1" Width="135"/>
+        DisplayMemberBinding="{Binding Name}"
+        Header="Name" Width="135"/>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Station2}"
-        Header="Station2" Width="135"/>
+        DisplayMemberBinding="{Binding Code}"
+        Header="Code" Width="115"/>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Distance}"
-        Header="Distance"   Width="115"/>
+        DisplayMemberBinding="{Binding Longitude}"
+        Header="Longitude"   Width="125"/>
                     <GridViewColumn
-        DisplayMemberBinding="{Binding Time}"
-        Header="Time" Width="132"/>
+        DisplayMemberBinding="{Binding Lattitude}"
+        Header="Lattitude" Width="132"/>
                 </GridView>
             </ListView.View>
         </ListView>

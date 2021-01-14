@@ -23,18 +23,29 @@ namespace PL
     public partial class ListStationWindows : Window
     {
         IBL bl;
-        ObservableCollection<AdjacentStationsPO> collection;
-        AdjacentStationsPO adjacentStationsPO;
+        ObservableCollection<StationPO> collection;
+        StationPO stationsPO;
+        BO.Line line;
+        int index = 0;
         public ListStationWindows()
         {
             InitializeComponent();
             bl = BLFactory.GetBL();
             updateDataContext();//call fonction to update the data context
         }
+        public ListStationWindows(BO.Line line ,int index)
+        {
+            InitializeComponent();
+            bl = BLFactory.GetBL();
+            this.index = index;
+            this.line = line;
+            line.listOfStationInLine = new BO.Station[] { new BO.Station() };
+            updateDataContext();//call fonction to update the data context
+        }
         void updateDataContext()
         {
-            collection = new ObservableCollection<AdjacentStationsPO>(from item in bl.getAdjacentStation()//get all station of list of sttaion
-                                                                      select new AdjacentStationsPO(item));
+            collection = new ObservableCollection<StationPO>(from item in bl.getAllStation()//get all station of list of sttaion
+                                                                      select new StationPO(item));
             StationList.DataContext = null;
             StationList.DataContext = collection;//and restet the data context
         }
@@ -45,9 +56,16 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            MainStationWindow wnd = new MainStationWindow();//open one page before
-            wnd.Show();
-            this.Close();//and close this page
+            if (index == 0)
+            {
+                MainStationWindow wnd = new MainStationWindow();//open one page before
+                wnd.Show();
+                this.Close();//and close this page
+            }
+            if(index == 2)
+            {
+                this.Close();
+            }
         }
         /// <summary>
         /// to go to home page
@@ -67,9 +85,18 @@ namespace PL
         /// <param name="e"></param>
         private void StationList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            AdjacentStationsPO adjacentStationsPO = ((FrameworkElement)e.OriginalSource).DataContext as AdjacentStationsPO;//set the line of list view to station
-            ChoiceStationWindows wnd = new ChoiceStationWindows(adjacentStationsPO.getAdjacentStations(),1); //and open window to choose station 1 or 2
-            wnd.Show();
+            StationPO station = ((FrameworkElement)e.OriginalSource).DataContext as StationPO;//set the bus
+            if (index == 2 && station != null)
+            {
+                IEnumerable<BO.Station> list = from item in bl.getAllStation()
+                                               where item.Code == station.Code
+                                               select item;
+                if (line.listOfStationInLine.FirstOrDefault(p => p.Code == list.First().Code) == null)
+                {
+                    line.listOfStationInLine = line.listOfStationInLine.Concat(list);
+                    MessageBox.Show(string.Format($"this station :{station.Code} was add"));
+                }
+            }
         }
         /// <summary>
         /// button click to remove a line from listview
@@ -78,10 +105,13 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonRemove_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;//set the button
-            AdjacentStationsPO adjacentStationsPO = btn.DataContext as AdjacentStationsPO;//Set the line of listview to station
-            bl.removeAdjacentStation(adjacentStationsPO.Station1);//and use remove from blimp
-            updateDataContext();//and update the datacontext
+            if (index == 0)
+            {
+                Button btn = sender as Button;//set the button
+                StationPO StationPO = btn.DataContext as StationPO;//Set the line of listview to station
+                bl.removeStation(StationPO.Code);//and use remove from blimp
+                updateDataContext();//and update the datacontext
+            }
         }
         /// <summary>
         /// button for update one line of the listview
@@ -90,11 +120,19 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = sender as Button;//set the button
-            AdjacentStationsPO adjacentStationsPO = btn.DataContext as AdjacentStationsPO;//set the line of listview to station
-            ChoiceStationWindows wnd = new ChoiceStationWindows(adjacentStationsPO.getAdjacentStations(),2);//open page to choose sttaion 1 or 2
-            wnd.Show();
-            updateDataContext();// and update the datacontext
+            if (index == 0)
+            {
+                Button btn = sender as Button;//set the button
+                StationPO stationsPO = btn.DataContext as StationPO;//set the line of listview to station
+                UpdateStation wnd = new UpdateStation(stationsPO.Code);
+                wnd.Show();
+                updateDataContext();// and update the datacontext
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

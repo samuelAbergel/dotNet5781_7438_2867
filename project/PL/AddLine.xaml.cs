@@ -1,4 +1,5 @@
 ﻿using BLAPI;
+using BO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace PL
     {
         IBL bl;//create instance of IBL
         BO.Line line;
+        IEnumerable<Station> listStation;
         public AddLine()
         {
             InitializeComponent();
@@ -29,11 +31,31 @@ namespace PL
             line = new BO.Line();
             this.DataContext = line;//match the line with the data context
             areaComboBox.ItemsSource = Enum.GetValues(typeof(BO.Areas)).Cast<BO.Areas>();//set the itemsource of combo box to area BO(enum)
+            btnAdd.IsEnabled = false;
+        }
+        private void update()
+        {
+            listStation = bl.getStationOfLine(line);
+            StationBox.ItemsSource = listStation;
+            StationBox.DisplayMemberPath = "Name";
         }
         private void ButtonAddLine_Click(object sender, RoutedEventArgs e)
         {
             bl.addLine(line);//use add from blimp
             this.Close();//close this window
+        }
+
+        private void ButtonAddStationLine_Click(object sender, RoutedEventArgs e)
+        {
+            ListStationWindows wnd = new ListStationWindows(line, 2);
+            wnd.ShowDialog();
+            line.listOfStationInLine = line.listOfStationInLine.Where(p => p.Code != 0);
+            if (line.listOfStationInLine != null && line.listOfStationInLine.Count() != 0 )
+            {
+                btnAdd.IsEnabled = true;
+                update();
+                StationBox.IsEnabled = true;
+            }
         }
     }
 }

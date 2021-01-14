@@ -21,19 +21,27 @@ namespace PL
     public partial class addStation : Window
     {
         IBL bl;//create instance of IBL
-        BO.AdjacentStations adjacentStations;
+        BO.Station station;
         public addStation()
         {
             InitializeComponent();
             bl = BLFactory.GetBL();//and get it with blfactory
-            adjacentStations = new BO.AdjacentStations();
-            this.DataContext = adjacentStations;//match datacontext with the instance of adjacent station
+            station = new BO.Station();
+            this.DataContext = station;//match datacontext with the instance of  station
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            bl.addAdjacentStation(adjacentStations);//use add of bl imp
+            bl.addStation(station);//use add of bl imp
             this.Close();//close this window
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            System.Windows.Data.CollectionViewSource stationViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("stationViewSource")));
+            // Charger les données en définissant la propriété CollectionViewSource.Source :
+            // stationViewSource.Source = [source de données générique]
         }
     }
 }
