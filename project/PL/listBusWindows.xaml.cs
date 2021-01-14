@@ -49,7 +49,7 @@ namespace PL
         {
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the line of listview to the bus
-            if (busPO.Status == BO.BusStatus.ReadyToGo)//if it's possible
+            if (busPO.Status == BO.BusStatus.ReadyToGo && busPO.FuelRemain <1200)//if it's possible
             {
                 RefuellingWindows wnd = new RefuellingWindows(busPO.getBus());//open the window to refuel
                 wnd.ShowDialog();

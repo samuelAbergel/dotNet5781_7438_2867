@@ -94,7 +94,7 @@ namespace PL
                 if (line.listOfStationInLine.FirstOrDefault(p => p.Code == list.First().Code) == null)
                 {
                     line.listOfStationInLine = line.listOfStationInLine.Concat(list);
-                    MessageBox.Show(string.Format($"this station :{station.Code} was add"));
+                    MessageBox.Show(string.Format($"this station :{station.Code} was add"), "bus add", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
         }

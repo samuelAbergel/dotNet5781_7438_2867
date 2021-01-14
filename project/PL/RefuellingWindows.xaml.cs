@@ -36,8 +36,13 @@ namespace PL
 
             if (e.Key == Key.Return)
             {
-                bl.refuelling(int.Parse(this.txtRefuel.Text), bus);//use refuzlling of blimp
-                this.Close();
+                if (int.Parse(txtRefuel.Text) > (1200 - bus.FuelRemain))
+                    MessageBox.Show(string.Format("invalid entry, you can add fuel add :" + (1200 - bus.FuelRemain)), "error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                else
+                {
+                    bl.refuelling(int.Parse(this.txtRefuel.Text), bus);//use refuzlling of blimp
+                    this.Close();
+                }
             }
         }
 

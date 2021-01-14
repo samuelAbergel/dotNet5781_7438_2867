@@ -22,7 +22,6 @@ namespace BL
         BO.Bus busDoBoAdapter(DO.Bus busDO)
         {
             BO.Bus busBO = new BO.Bus();
-            int id = busDO.LicenseNum;
             busDO.CopyPropertiesTo(busBO);//to copy property from DO to BO
             return busBO;
         }
