@@ -70,11 +70,6 @@
             <TextBlock
                 Text="ADD THIS BUS" />
         </Button>
-        <Button
-            Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="330,15,15.6,332.2">
-            <materialDesign:PackIcon
-                Kind="Close" />
-        </Button>
+       
     </Grid>
 </Window>

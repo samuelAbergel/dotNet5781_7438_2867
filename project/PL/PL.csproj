@@ -69,9 +69,6 @@
     <Compile Include="addStation.xaml.cs">
       <DependentUpon>addStation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ChoiceStationWindows.xaml.cs">
-      <DependentUpon>ChoiceStationWindows.xaml</DependentUpon>
-    </Compile>
     <Compile Include="InformationStationWindow.xaml.cs">
       <DependentUpon>InformationStationWindow.xaml</DependentUpon>
     </Compile>
@@ -121,10 +118,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="addStation.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ChoiceStationWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

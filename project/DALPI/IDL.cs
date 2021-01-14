@@ -44,6 +44,7 @@ namespace DLAPI
         void removeStation(int id);
         Station getStation(int id);
         IEnumerable<Station> getAllStation();
+        IEnumerable<Line> getLineOfStation(Station station);
         #endregion
 
         #region line

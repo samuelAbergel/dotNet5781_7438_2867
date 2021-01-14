@@ -195,6 +195,14 @@ namespace DL
             return from station in DataSource.listStation // search station in list of station
                    select station.Clone();//select all station
         }
+
+        public IEnumerable<Line> getLineOfStation(Station station)
+        {
+            return from item in DataSource.listLine
+                    from stu in item.listOfStationInLine
+                     where stu.Code == station.Code
+                      select item;
+        }
         #endregion
 
         #region adjacent station
@@ -240,6 +248,7 @@ namespace DL
             //if it existe add it
             DataSource.listAdjacentStations.Add(adjacentStations.Clone());
         }
+
         #endregion
     }
 }

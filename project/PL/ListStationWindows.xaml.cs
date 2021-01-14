@@ -86,6 +86,11 @@ namespace PL
         private void StationList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             StationPO station = ((FrameworkElement)e.OriginalSource).DataContext as StationPO;//set the bus
+            if(index == 0)
+            {
+                InformationStationWindow wnd = new InformationStationWindow(station.Code);
+                wnd.Show();
+            }
             if (index == 2 && station != null)
             {
                 IEnumerable<BO.Station> list = from item in bl.getAllStation()

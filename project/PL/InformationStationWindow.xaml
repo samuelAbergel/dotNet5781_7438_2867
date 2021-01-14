@@ -39,13 +39,9 @@
             <TextBox x:Name="longitudeTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding Longitude}" VerticalAlignment="Center" Width="120"/>
             <Label Content="Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
             <TextBox x:Name="nameTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="line in station" Margin="0,29,0,-29" Grid.Row="3"/>
+            <ComboBox Name="lineBox" IsReadOnly="False" ItemsSource="{Binding}" Grid.Column="1" Margin="2,32,4,-27" Grid.Row="3"/>
         </Grid>
-        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="80,-20,80,215.8" RenderTransformOrigin="0.565,0.861"/>
-        <Button
-            Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="249,10,8.6,262.8">
-            <materialDesign:PackIcon
-                Kind="Close" />
-        </Button>
+        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="80,1,80,239.5" RenderTransformOrigin="0.565,0.861"/>
     </Grid>
 </Window>

@@ -49,11 +49,6 @@
                 Text="UPDATE THIS STATION" />
         </Button>
         <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="89,-11,85,257" RenderTransformOrigin="0.565,0.861"/>
-        <Button
-            Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Foreground="White" Margin="249,10,19,290">
-            <materialDesign:PackIcon
-                Kind="Close" />
-        </Button>
+       
     </Grid>
 </Window>

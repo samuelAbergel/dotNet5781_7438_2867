@@ -271,6 +271,14 @@ namespace BL
             return from item in dl.getAllStation()//search station in getallstation 
                    select stationDoBoAdapter(item);//select station adapter
         }
+
+        public IEnumerable<Line> getLineOfStation(Station station)
+        {
+            DO.Station stationDO = new DO.Station();//create do station
+            station.CopyPropertiesTo(stationDO);//copy property from BO to DO
+            return from item in dl.getLineOfStation(stationDO)
+                   select lineDoBoAdapter(item);
+        }
         #endregion
 
         #region adjacent station
@@ -350,6 +358,7 @@ namespace BL
                 Console.WriteLine(e);
             }
         }
+
         #endregion
-     }
+    }
 }
