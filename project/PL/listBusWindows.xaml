@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.listBusWindows"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="page2" Height="600" Width="1120"  ResizeMode="NoResize" WindowStyle="None">
+         Title="page2" Height="600" Width="1085"  ResizeMode="NoResize" WindowStyle="None">
 
     <Grid>
 
@@ -21,13 +21,13 @@
         <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="430,0,429.6,440.4" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="972,10,28.6,456.4" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="944,41,72.8,484" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
     Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="10,10,970.6,456.4" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="34,30,994,484" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
@@ -47,10 +47,6 @@
                     <GridViewColumn
         DisplayMemberBinding="{Binding LicenseNum}"
         Header="LicenseNum"  Width="135"/>
-
-                    <GridViewColumn
-        DisplayMemberBinding="{Binding FromDate}"
-        Header="FromDate" Width="140"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding TotalTrip}"
         Header="TotalTrip"   Width="135"/>
@@ -93,7 +89,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn
-        Header="update" Width="130">
+        Header="update" Width="110">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="update" Click="ButtonUpdate_Click" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -101,7 +97,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn
-        Header="remove" Width="130">
+        Header="remove" Width="108">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button Content="remove" Click="ButtonRemove_Click" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -111,9 +107,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content=" sort by" Margin="0,155,1051,414" FontSize="16"/>
-        <ComboBox x:Name="sortBox" Margin="2,182,1032,392" Height="26" SelectionChanged="sortBox_SelectionChanged" />
-        <Label Content="search by liscence num" Margin="130,155,814,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
-        <TextBox x:Name="searchBox" Margin="153,183,855,391" KeyDown="OnKeyDownHandler"/>
+        <Label Content=" sort by" Margin="0,155,993.8,414" FontSize="16"/>
+        <ComboBox x:Name="sortBox" Margin="10,186,993.8,389" Height="25" SelectionChanged="sortBox_SelectionChanged" />
+        <Label Content="search by liscence num" Margin="130,155,775.8,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
+        <TextBox x:Name="searchBox" Margin="130,183,798.8,394" KeyDown="OnKeyDownHandler"/>
     </Grid>
 </Window>

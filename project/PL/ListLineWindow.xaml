@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.ListLineWindow"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="ListLineWindow" Height="450" Width="882.872" ResizeMode="NoResize" WindowStyle="None">
+         Title="ListLineWindow" Height="450" Width="900" ResizeMode="NoResize" WindowStyle="None">
     <Grid Margin="0,0,-2,-0.5">
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>

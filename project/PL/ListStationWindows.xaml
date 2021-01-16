@@ -73,7 +73,7 @@
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,693.5,27" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,690.6,27.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>

@@ -98,11 +98,7 @@ namespace DL
             IEnumerable<Bus> listStart = from bus in DataSource.listBus
                                          where bus.LicenseNum.ToString().StartsWith(item)
                                          select bus;
-            IEnumerable<Bus> listcontain = from bus in DataSource.listBus
-                                           where bus.LicenseNum.ToString().Contains(item)
-                                           select bus;
-            if(listcontain != null)
-                listStart = listStart.Concat(listcontain);
+           
             if(listStart != null)
             return listStart;
             return null;
