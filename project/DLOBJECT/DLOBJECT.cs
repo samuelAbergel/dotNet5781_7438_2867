@@ -93,6 +93,20 @@ namespace DL
             realBus.previewTreatmentDate = DateTime.Now;
 
         }
+        public IEnumerable<Bus> search(string item)
+        {
+            IEnumerable<Bus> listStart = from bus in DataSource.listBus
+                                         where bus.LicenseNum.ToString().StartsWith(item)
+                                         select bus;
+            IEnumerable<Bus> listcontain = from bus in DataSource.listBus
+                                           where bus.LicenseNum.ToString().Contains(item)
+                                           select bus;
+            if(listcontain != null)
+                listStart = listStart.Concat(listcontain);
+            if(listStart != null)
+            return listStart;
+            return null;
+        }
         #endregion
 
         #region line
@@ -167,8 +181,10 @@ namespace DL
             //if the station exist update it
             if (sStation != null)
             {
-                DataSource.listStation.Remove(sStation);
-                DataSource.listStation.Add(station.Clone());
+                sStation.Code = station.Code;
+                sStation.Lattitude = station.Lattitude;
+                sStation.Longitude = station.Longitude;
+                sStation.Name = station.Name;
             }
             else //else throw an error
                 throw new badIDStationexeption(station.Code);
@@ -248,6 +264,8 @@ namespace DL
             //if it existe add it
             DataSource.listAdjacentStations.Add(adjacentStations.Clone());
         }
+
+
 
         #endregion
     }

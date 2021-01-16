@@ -28,5 +28,9 @@ namespace PL
             this.DataContext = bus; //match data context and bus
         }
 
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

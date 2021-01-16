@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.UpdateLine"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="update line" Height="425" Width="333.842" >
+        Title="update line" Height="425" Width="333.842" WindowStyle="None" >
     <Window.Resources>
         <CollectionViewSource x:Key="lineViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Line}, CreateList=True}"/>
     </Window.Resources>
@@ -20,7 +20,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="71,126,0,0" VerticalAlignment="Top">
+        <Grid  HorizontalAlignment="Left" Margin="69,145,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -49,9 +49,13 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="71,302,62.2,44.2" Click="ButtonUpdate_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="71,317,62,44" Click="ButtonUpdate_Click">
             <TextBlock
                 Text="UPDATE THIS LINE" />
+        </Button>
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
+
+            <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>
     </Grid>
 </Window>

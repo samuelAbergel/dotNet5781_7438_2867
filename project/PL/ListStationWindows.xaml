@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:PL"
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.ListStationWindows"
        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="page2" Height="514.494" Width="781.554" ResizeMode="NoResize">
+         Title="page2" Height="514.494" Width="781.554" ResizeMode="NoResize" WindowStyle="None">
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="131*"/>
-            <RowDefinition Height="441*"/>
+            <RowDefinition Height="119*"/>
+            <RowDefinition Height="396*"/>
         </Grid.RowDefinitions>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
-        <Rectangle Margin="0,0,0.5,0.5" >
+        <Rectangle Margin="0,0,-3.5,394.5" Grid.RowSpan="2" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -22,8 +22,8 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        
-        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="0,0.5,0,0" Height="373" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="StationList_MouseDoubleClick">
+
+        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,3,1.5,0" Height="389" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="StationList_MouseDoubleClick">
 
             <ListView.View>
                 <GridView>
@@ -64,16 +64,16 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="283,-5,281.2,362.8" Grid.RowSpan="2" />
+        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="297,1,296.5,6" />
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,23.2,27.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,23.5,27" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,693.2,27.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,693.5,27" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>

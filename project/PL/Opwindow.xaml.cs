@@ -55,9 +55,14 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonStation_Click(object sender, RoutedEventArgs e)
         {
-            MainStationWindow wnd = new MainStationWindow();
+            MainStation wnd = new MainStation();
             wnd.Show();
             this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

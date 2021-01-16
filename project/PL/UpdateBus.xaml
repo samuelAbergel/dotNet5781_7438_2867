@@ -8,7 +8,7 @@
        xmlns:enm="clr-namespace:BO;assembly=BL"
        xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.UpdateBus"
        mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="update bus" Height="425" Width="400" >
+        Title="update bus" Height="425" Width="400" WindowStyle="None" >
     <Window.Resources>
         <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Bus}, CreateList=True}"/>
         <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
@@ -28,7 +28,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="50,99,0,0" VerticalAlignment="Top" Width="302">
+        <Grid  HorizontalAlignment="Left" Margin="53,125,0,0" VerticalAlignment="Top" Width="302">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="152.5"/>
                 <ColumnDefinition Width="Auto" MinWidth="125"/>
@@ -67,11 +67,14 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,336,99.6,10.2" Click="ButtonUpdate_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,350,100,10" Click="ButtonUpdate_Click">
             <TextBlock
                 Text="UPDATE THIS BUS" />
         </Button>
         <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="125,-15,126.6,308.2" RenderTransformOrigin="0.565,0.861"/>
-       
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
+
+            <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
+        </Button>
     </Grid>
 </Window>

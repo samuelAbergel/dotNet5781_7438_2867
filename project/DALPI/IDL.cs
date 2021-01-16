@@ -18,6 +18,7 @@ namespace DLAPI
         void addBus(Bus bus);
         void updateBus(Bus bus);
         void removeBus(int id);
+        IEnumerable<Bus> search(string item);
         /// <summary>
         /// get bus with his id
         /// </summary>

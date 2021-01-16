@@ -27,11 +27,24 @@ namespace PL
         IBL bl;
         ObservableCollection<BusPO> collection;
         BusPO busPO;
+        string[] listString = { "LicenseNum", "TotalTrip", "FuelRemain" };
         public listBusWindows()
         {
             bl = BLFactory.GetBL();
             InitializeComponent();
             updateDataContext();//call fonction to update the data context
+            sortBox.ItemsSource = listString;
+
+        }
+        public listBusWindows(string item)
+        {
+            bl = BLFactory.GetBL();
+            InitializeComponent();
+            updateDataContext();//call fonction to update the data context
+            sortBox.ItemsSource = listString;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(busList.DataContext);
+			view.SortDescriptions.Add(new SortDescription(item, ListSortDirection.Ascending));
+
         }
         void updateDataContext()
         {
@@ -40,6 +53,16 @@ namespace PL
             busList.DataContext = null;
             busList.DataContext = collection;//and reset the data context
         }
+        void updateDataContext1(string item)
+        {
+            IEnumerable<BusPO> listBus = from bus in bl.search(item)//get all buses from thelist
+                                         select new BusPO(bus);
+            collection = new ObservableCollection<BusPO>(from bus in bl.search(item)//get all buses from thelist
+                                                         select new BusPO(bus));
+            busList.DataContext = null;
+            busList.DataContext = collection;//and reset the data context
+        }
+
         /// <summary>
         /// button click to refuel a bus
         /// </summary>
@@ -138,7 +161,9 @@ namespace PL
             if (bus != null)//if it exist
             {
                 informationWindows wnd = new informationWindows(bus.getBus());//open page withthe information
+                this.Hide();
                 wnd.ShowDialog();
+                this.Show();
             }
         }
         /// <summary>
@@ -168,8 +193,10 @@ namespace PL
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the bus
             UpdateBus wnd = new UpdateBus(busPO.getBus());//open page for update
+            this.Hide();
             wnd.ShowDialog();
             updateDataContext();//and update the datacontext
+            this.Show();
         }
         /// <summary>
         /// for remove a line of listview
@@ -182,6 +209,29 @@ namespace PL
             busPO = btn.DataContext as BusPO;//set the bus
             bl.removeBus(busPO.LicenseNum);//use remove from blimp
             updateDataContext();//and update the data context
+        }
+
+        private void sortBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string item = sortBox.SelectedItem as string;
+            if(item != null)
+            {
+                listBusWindows wnd = new listBusWindows(item);
+                wnd.Show();
+                this.Close();
+            }
+        }
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)//to press enter 
+        {
+
+            if (e.Key == Key.Return)
+            {
+                string item = searchBox.Text as string;
+                if (item != null)
+                    updateDataContext1(item);
+                else
+                    MessageBox.Show("ecrit un chiffre");
+            }
         }
     }
 

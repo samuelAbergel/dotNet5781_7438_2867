@@ -87,8 +87,8 @@
     <Compile Include="MainLine.xaml.cs">
       <DependentUpon>MainLine.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainStationWindow.xaml.cs">
-      <DependentUpon>MainStationWindow.xaml</DependentUpon>
+    <Compile Include="MainStation.xaml.cs">
+      <DependentUpon>MainStation.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -159,7 +159,7 @@
     <Compile Include="listBusWindows.xaml.cs">
       <DependentUpon>listBusWindows.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainStationWindow.xaml">
+    <Page Include="MainStation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

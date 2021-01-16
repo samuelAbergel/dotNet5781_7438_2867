@@ -37,6 +37,9 @@ namespace PL
             this.Close();//close this window
         }
 
-       
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:PL"
        xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.UpdateStation"
        mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="update station" Height="377.566" Width="322.607" >
+        Title="update station" Height="377.566" Width="322.607" WindowStyle="None"  >
     <Window.Resources>
         <CollectionViewSource x:Key="stationViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Station}, CreateList=True}"/>
     </Window.Resources>
     <Grid>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
-        <Rectangle Margin="-4,-4,-1.5,263" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="-4,-4,-1.5,256.5" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -20,7 +20,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="64,116,0,0" VerticalAlignment="Top">
+        <Grid  HorizontalAlignment="Left" Margin="69,138,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -44,11 +44,14 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="64,261,58,38" Click="ButtonUpdate_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="64,280,58.5,37.5" Click="ButtonUpdate_Click">
             <TextBlock
                 Text="UPDATE THIS STATION" />
         </Button>
-        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="89,-11,85,257" RenderTransformOrigin="0.565,0.861"/>
-       
+        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="84,3,84.5,257.5" RenderTransformOrigin="0.565,0.861"/>
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
+
+            <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
+        </Button>
     </Grid>
 </Window>

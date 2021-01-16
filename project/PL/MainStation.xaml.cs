@@ -17,9 +17,9 @@ namespace PL
     /// <summary>
     /// main page of sttaion
     /// </summary>
-    public partial class MainStationWindow : Window
+    public partial class MainStation : Window
     {
-        public MainStationWindow()
+        public MainStation()
         {
             InitializeComponent();
         }
@@ -64,7 +64,9 @@ namespace PL
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             addStation wnd = new addStation();
-            wnd.Show();
+            this.Hide();
+            wnd.ShowDialog();
+            this.Show();
         }
 
      

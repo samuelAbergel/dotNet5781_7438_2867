@@ -8,12 +8,12 @@
         xmlns:enm="clr-namespace:BO;assembly=BL"
         xmlns:BO="clr-namespace:BO;assembly=BL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.informationWindows"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Title="informationWindows" Height="425" Width="400" >
+        Title="informationWindows" Height="425" Width="400" WindowStyle="None">
     <Window.Resources>
         <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Bus}, CreateList=True}"/>
     </Window.Resources>
     <Grid>
-        <Rectangle Margin="-4,-4,-1,316.5" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="-10,-9,-6,307" RenderTransformOrigin="0.496,0.679" Height="127" VerticalAlignment="Bottom" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,7 +21,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="46,121,0,0" VerticalAlignment="Top" Height="186" Width="314">
+        <Grid  HorizontalAlignment="Left" Margin="48,156,0,0" VerticalAlignment="Top" Height="186" Width="314">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="158.5"/>
                 <ColumnDefinition Width="Auto" MinWidth="131"/>
@@ -48,5 +48,9 @@
             <TextBox x:Name="totalTripTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="5" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="117,-4,117,310.2" RenderTransformOrigin="0.565,0.861"/>
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
+
+            <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
+        </Button>
     </Grid>
 </Window>

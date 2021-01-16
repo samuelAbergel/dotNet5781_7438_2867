@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="page4" Height="450" Width="800">
+        Title="page4" Height="450" Width="800" WindowStyle="None">
     <Grid>
-        <Rectangle  Width="794" Margin="0,1,0,315.5" >
+        <Rectangle Margin="-4,-7,-4,316" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -32,7 +32,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,187,250,163" Click="ButtonSearch_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,187,250,177" Click="ButtonSearch_Click">
             <TextBlock
                 Text="RESEARCH" />
         </Button>
@@ -40,7 +40,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,273,250,77" Click="ButtonAdd_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="248,317,252,47" Click="ButtonAdd_Click">
             <TextBlock
                 Text="ADD" />
         </Button>

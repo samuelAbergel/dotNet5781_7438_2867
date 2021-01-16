@@ -72,7 +72,9 @@ namespace PL
             if (linePO != null && linePO.listOfStationInLine != null) //if it exist
             {
                 listStationInLineWindow wnd = new listStationInLineWindow(linePO.getLine());//open information page
+                this.Hide();
                 wnd.ShowDialog();
+                this.Show();
             }
         }
         /// <summary>
@@ -93,8 +95,10 @@ namespace PL
             Button btn = sender as Button;//set the bus 
             LinePO linePO = btn.DataContext as LinePO;//ste the line in line
             UpdateLine wnd = new UpdateLine(linePO.getLine());//open window page
+            this.Hide();
             wnd.ShowDialog();
             updateDataContext();// an dupdate the data context
+            this.Show();
         }
     }
 }

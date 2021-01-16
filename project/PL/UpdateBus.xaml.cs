@@ -36,5 +36,10 @@ namespace PL
             bl.updateBus(bus);//use the update of blimp
             this.Close();//and close this page
         }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

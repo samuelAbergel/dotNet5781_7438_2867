@@ -64,7 +64,9 @@ namespace PL
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             AddLine wnd = new AddLine();
-            wnd.Show();
+            this.Hide();
+            wnd.ShowDialog();
+            this.Show();
         }
     }
 }

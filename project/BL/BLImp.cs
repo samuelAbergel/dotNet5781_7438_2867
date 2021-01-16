@@ -62,6 +62,12 @@ namespace BL
                 Console.WriteLine(ex.Message);
             }
         }
+
+        public IEnumerable<Bus> search(string item)
+        {
+            return from bus in dl.search(item)
+                   select busDoBoAdapter(bus);
+        }
         public void refuelling(int fuel, BO.Bus bus)
         {
             DO.Bus busDo = new DO.Bus();//create bus DO
@@ -358,6 +364,7 @@ namespace BL
                 Console.WriteLine(e);
             }
         }
+
 
         #endregion
     }

@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-        Title="page2" Height="450" Width="800" ResizeMode="NoResize">
+        Title="page2" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
-        <Rectangle  Width="794" Margin="0,1,0,315.5" >
+        <Rectangle Margin="-5,-7,-4,316" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -18,7 +18,7 @@
         <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="312,-15,312,302" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,41.6,336" Foreground="White" Height="Auto" Width="Auto">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,41.6,336" Foreground="White" Height="Auto" Width="Auto" Click="Button_Click">
             <materialDesign:PackIcon
     Kind="Home" Height="25" Width="28" />
         </Button>
@@ -32,7 +32,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,140,249.6,210" Click="ButtonBus_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,159,250,210" Click="ButtonBus_Click">
             <TextBlock
                 Text="BUS" />
         </Button>
@@ -40,7 +40,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,237,249.6,113" Click="ButtonLine_Click_1">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,258,250,113" Click="ButtonLine_Click_1">
             <TextBlock
                 Text="LINE" />
         </Button>
@@ -48,7 +48,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,329,249.6,21" Click="ButtonStation_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,351,250,21" Click="ButtonStation_Click">
             <TextBlock
                 Text="STATION" />
         </Button>

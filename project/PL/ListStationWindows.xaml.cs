@@ -58,7 +58,7 @@ namespace PL
         {
             if (index == 0)
             {
-                MainStationWindow wnd = new MainStationWindow();//open one page before
+                MainStation wnd = new MainStation();//open one page before
                 wnd.Show();
                 this.Close();//and close this page
             }
@@ -89,7 +89,9 @@ namespace PL
             if(index == 0)
             {
                 InformationStationWindow wnd = new InformationStationWindow(station.Code);
-                wnd.Show();
+                this.Hide();
+                wnd.ShowDialog();
+                this.Show();
             }
             if (index == 2 && station != null)
             {
@@ -130,8 +132,10 @@ namespace PL
                 Button btn = sender as Button;//set the button
                 StationPO stationsPO = btn.DataContext as StationPO;//set the line of listview to station
                 UpdateStation wnd = new UpdateStation(stationsPO.Code);
-                wnd.Show();
+                this.Hide();
+                wnd.ShowDialog();
                 updateDataContext();// and update the datacontext
+                this.Show();
             }
         }
 

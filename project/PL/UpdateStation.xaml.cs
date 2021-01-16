@@ -35,5 +35,10 @@ namespace PL
             bl.updateStation(Stations);//use update of blimp
             this.Close();//and close this page
         }
+
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

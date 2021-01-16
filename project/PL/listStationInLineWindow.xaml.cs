@@ -41,5 +41,9 @@ namespace PL
             StationList.DataContext = collection;//and reset the data context
         }
 
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -31,7 +31,9 @@ namespace PL
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
             Addbus wnd = new Addbus();//open window to add bus
-            wnd.Show();
+            this.Hide();
+            wnd.ShowDialog();
+            this.Show();
         }
         /// <summary>
         /// open page to search bus

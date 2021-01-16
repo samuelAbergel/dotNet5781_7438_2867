@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.ListLineWindow"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="ListLineWindow" Height="450" Width="882.872" ResizeMode="NoResize">
+         Title="ListLineWindow" Height="450" Width="882.872" ResizeMode="NoResize" WindowStyle="None">
     <Grid Margin="0,0,-2,-0.5">
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>
@@ -77,6 +77,6 @@
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
-        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="336,-16,342.8,278.8" Grid.RowSpan="2" />
+        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="340,4,339,8.5" />
     </Grid>
 </Window>

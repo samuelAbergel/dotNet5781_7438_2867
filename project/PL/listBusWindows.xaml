@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:PL"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.listBusWindows"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="page2" Height="600" Width="1120" ResizeMode="NoResize">
+         Title="page2" Height="600" Width="1120"  ResizeMode="NoResize" WindowStyle="None">
 
     <Grid>
 
-        <Rectangle Margin="0,1,-0.4,445.4" >
+        <Rectangle Margin="-9,-7,-7,445" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -31,8 +31,7 @@
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,2,0,0" VerticalAlignment="Top" Width="100" Grid.Row="1"/>
-        <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="0,130,-0.4,0" Height="440"  Grid.Column="4" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
+        <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="-4,211,3,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
 
             <ListView.View>
 
@@ -112,5 +111,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        <Label Content=" sort by" Margin="0,155,1051,414" FontSize="16"/>
+        <ComboBox x:Name="sortBox" Margin="2,182,1032,392" Height="26" SelectionChanged="sortBox_SelectionChanged" />
+        <Label Content="search by liscence num" Margin="130,155,814,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
+        <TextBox x:Name="searchBox" Margin="153,183,855,391" KeyDown="OnKeyDownHandler"/>
     </Grid>
-    </Window>
+</Window>

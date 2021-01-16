@@ -35,13 +35,9 @@ namespace PL
             bl.addStation(station);//use add of bl imp
             this.Close();//close this window
         }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-
-            System.Windows.Data.CollectionViewSource stationViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("stationViewSource")));
-            // Charger les données en définissant la propriété CollectionViewSource.Source :
-            // stationViewSource.Source = [source de données générique]
+            this.Close();
         }
     }
 }
