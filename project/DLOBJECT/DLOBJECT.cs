@@ -93,7 +93,7 @@ namespace DL
             realBus.previewTreatmentDate = DateTime.Now;
 
         }
-        public IEnumerable<Bus> search(string item)
+        public IEnumerable<Bus> searchBus(string item)
         {
             IEnumerable<Bus> listStart = from bus in DataSource.listBus
                                          where bus.LicenseNum.ToString().StartsWith(item)

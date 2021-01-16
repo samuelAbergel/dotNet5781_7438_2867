@@ -63,9 +63,9 @@ namespace BL
             }
         }
 
-        public IEnumerable<Bus> search(string item)
+        public IEnumerable<Bus> searchBus(string item)
         {
-            return from bus in dl.search(item)
+            return from bus in dl.searchBus(item)
                    select busDoBoAdapter(bus);
         }
         public void refuelling(int fuel, BO.Bus bus)

@@ -18,7 +18,7 @@ namespace BLAPI
         void addBus(BO.Bus bus);
         void updateBus(BO.Bus bus);
         void removeBus(int id);
-        IEnumerable<BO.Bus> search(string item);
+        IEnumerable<BO.Bus> searchBus(string item);
         void refuelling(int fuel, BO.Bus bus);
         void treatment(BO.Bus bus);
         BO.Bus GetBus(int id);

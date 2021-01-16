@@ -55,9 +55,9 @@ namespace PL
         }
         void updateDataContext1(string item)
         {
-            IEnumerable<BusPO> listBus = from bus in bl.search(item)//get all buses from thelist
+            IEnumerable<BusPO> listBus = from bus in bl.searchBus(item)//get all buses from thelist
                                          select new BusPO(bus);
-            collection = new ObservableCollection<BusPO>(from bus in bl.search(item)//get all buses from thelist
+            collection = new ObservableCollection<BusPO>(from bus in bl.searchBus(item)//get all buses from thelist
                                                          select new BusPO(bus));
             busList.DataContext = null;
             busList.DataContext = collection;//and reset the data context
