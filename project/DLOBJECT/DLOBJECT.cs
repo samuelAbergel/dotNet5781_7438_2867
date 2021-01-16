@@ -149,6 +149,18 @@ namespace DL
             else
                 throw new badIdLineexeption(id);
         }
+
+        public IEnumerable<Line> searchLine(string item)
+        {
+            IEnumerable<Line> listStart = from line in DataSource.listLine
+                                          where line.Id.ToString().StartsWith(item)
+                                          select line;
+
+            if (listStart != null)
+                return listStart;
+            return null;
+        }
+
         public IEnumerable<Line> getAllLine()
         {
             return from line in DataSource.listLine //search line in list of line                                                                    
@@ -202,6 +214,18 @@ namespace DL
             else
                 throw new badIDStationexeption(id);
         }
+
+        public IEnumerable<Station> searchStation(string item)
+        {
+            IEnumerable<Station> listStart = from station in DataSource.listStation
+                                         where station.Code.ToString().StartsWith(item)
+                                         select station;
+
+            if (listStart != null)
+                return listStart;
+            return null;
+        }
+
         public IEnumerable<Station> getAllStation()
         {
             return from station in DataSource.listStation // search station in list of station
@@ -260,8 +284,6 @@ namespace DL
             //if it existe add it
             DataSource.listAdjacentStations.Add(adjacentStations.Clone());
         }
-
-
 
         #endregion
     }

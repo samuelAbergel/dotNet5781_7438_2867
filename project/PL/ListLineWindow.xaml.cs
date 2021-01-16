@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BO;
+using System.ComponentModel;
 
 namespace PL
 {
@@ -26,11 +27,22 @@ namespace PL
         IBL bl;
         ObservableCollection<LinePO> collection;
         LinePO linePO;
+        string[] listString = { "Id", "Area", "FirstStation", "LastStation" };
         public ListLineWindow()
         {
             InitializeComponent();
             bl = BLFactory.GetBL();
             updateDataContext();//call this fonction to update data context
+            sortBox.ItemsSource = listString;
+        }
+        public ListLineWindow(string item)
+        {
+            InitializeComponent();
+            bl = BLFactory.GetBL();
+            updateDataContext();//call this fonction to update data context
+            sortBox.ItemsSource = listString;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(LineList.DataContext);
+            view.SortDescriptions.Add(new SortDescription(item, ListSortDirection.Ascending));
         }
         void updateDataContext()
         {
@@ -38,6 +50,13 @@ namespace PL
                                                          select new LinePO(item));
             LineList.DataContext = null;
             LineList.DataContext = collection;//reset the data context
+        }
+        void updateDataContext1(string item)
+        {
+            collection = new ObservableCollection<LinePO>(from line in bl.searchLine(item)//get all buses from thelist
+                                                             select new LinePO(line));
+            LineList.DataContext = null;
+            LineList.DataContext = collection;//and restet the data context
         }
         /// <summary>
         /// button to go to home page
@@ -99,6 +118,31 @@ namespace PL
             wnd.ShowDialog();
             updateDataContext();// an dupdate the data context
             this.Show();
+        }
+        /// <summary>
+        /// to sort the window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void sortBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string item = sortBox.SelectedItem as string;
+            if (item != null)
+            {
+                ListLineWindow wnd = new ListLineWindow(item);//I open the page again with the constructor which sorts the list
+                wnd.Show();
+                this.Close();
+            }
+        }
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)//to press enter 
+        {
+
+            if (e.Key == Key.Return)
+            {
+                string item = searchBox.Text as string;
+                if (item != null)
+                    updateDataContext1(item);//i'mm search and update it
+            }
         }
     }
 }

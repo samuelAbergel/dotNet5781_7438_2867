@@ -124,11 +124,18 @@ namespace BL
                                          select stationDoBoAdapter(item);//return this adapt list
             return lineBO;
         }
-        
-        public void addLine(Line line)
+        public void addLine(BO.Line line)
         {
-            DO.Line lineDO = new DO.Line();//create line DO
-            line.CopyPropertiesTo(lineDO);//copy property from BO line in DO line
+            DO.Line lineDO = new DO.Line
+            {
+                Area = (DO.Areas)line.Area,
+                Code = line.Code,
+                FirstStation = line.FirstStation,
+                Id  = line.Id,
+                LastStation = line.LastStation,
+                listOfStationInLine = from item in line.listOfStationInLine
+                                      select stationDoBoAdapter(item),
+            };
             try
             {
                 dl.addLine(lineDO);//use dl.addLine of DLObject
@@ -140,8 +147,16 @@ namespace BL
         }
         public void updateLine(Line line)
         {
-            DO.Line lineDO = new DO.Line();//create line DO
-            line.CopyPropertiesTo(lineDO);//copy property from BO line to DO line
+            DO.Line lineDO = new DO.Line
+            {
+                Area = (DO.Areas)line.Area,
+                Code = line.Code,
+                FirstStation = line.FirstStation,
+                Id = line.Id,
+                LastStation = line.LastStation,
+                listOfStationInLine = from item in line.listOfStationInLine
+                                      select stationDoBoAdapter(item),
+            };
             try
             {
                 dl.updateLine(lineDO);//use dl.updateline of DLObject
@@ -161,6 +176,11 @@ namespace BL
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+        public IEnumerable<BO.Line> searchLine(string item)
+        {
+            return from line in dl.searchLine(item)
+                   select lineDoBoAdapter(line);
         }
         public Line getLine(int id)
         {
@@ -258,6 +278,12 @@ namespace BL
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        public IEnumerable<BO.Station> searchStation(string item)
+        {
+                return from station in dl.searchStation(item)
+                       select stationDoBoAdapter(station);
         }
         public Station getStation(int id)
         {
@@ -364,7 +390,6 @@ namespace BL
                 Console.WriteLine(e);
             }
         }
-
 
         #endregion
     }

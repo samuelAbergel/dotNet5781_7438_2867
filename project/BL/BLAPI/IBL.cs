@@ -29,6 +29,7 @@ namespace BLAPI
         void addStation(BO.Station station);
         void updateStation(BO.Station station);
         void removeStation(int id);
+        IEnumerable<BO.Station> searchStation(string item);
         BO.Station getStation(int id);
         IEnumerable<BO.Station> getAllStation();
         #endregion
@@ -38,6 +39,7 @@ namespace BLAPI
         void updateLine(BO.Line line);
         void removeLine(int id);
         BO.Line getLine(int id);
+        IEnumerable<BO.Line> searchLine(string item);
         IEnumerable<BO.Line> getAllLine();
         IEnumerable<BO.Station> getStationOfLine(BO.Line line);
         #endregion

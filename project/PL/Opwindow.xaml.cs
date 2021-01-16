@@ -60,9 +60,11 @@ namespace PL
             this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            MainWindow wnd = new MainWindow();
+            wnd.Show();
+            this.Close();
         }
     }
 }

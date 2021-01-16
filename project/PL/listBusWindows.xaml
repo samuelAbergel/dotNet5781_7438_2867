@@ -110,6 +110,6 @@
         <Label Content=" sort by" Margin="0,155,993.8,414" FontSize="16"/>
         <ComboBox x:Name="sortBox" Margin="10,186,993.8,389" Height="25" SelectionChanged="sortBox_SelectionChanged" />
         <Label Content="search by liscence num" Margin="130,155,775.8,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
-        <TextBox x:Name="searchBox" Margin="130,183,798.8,394" KeyDown="OnKeyDownHandler"/>
+        <TextBox x:Name="searchBox" Margin="129,186,799,391" KeyDown="OnKeyDownHandler"/>
     </Grid>
 </Window>

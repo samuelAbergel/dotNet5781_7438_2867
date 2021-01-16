@@ -33,8 +33,13 @@ namespace PL
         }
         private void ButtonAddBus_Click(object sender, RoutedEventArgs e)
         {
-            bl.addBus(bus);//use add from blImp
-            this.Close();//close this window
+            if (int.Parse(fuelRemainTextBox.Text) <= 1200)
+            {
+                bl.addBus(bus);//use add from blImp
+                this.Close();//close this window
+            }
+            else
+                MessageBox.Show("too much fuel", "fuel",  MessageBoxButton.OK,MessageBoxImage.Warning);
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)

@@ -55,8 +55,6 @@ namespace PL
         }
         void updateDataContext1(string item)
         {
-            IEnumerable<BusPO> listBus = from bus in bl.searchBus(item)//get all buses from thelist
-                                         select new BusPO(bus);
             collection = new ObservableCollection<BusPO>(from bus in bl.searchBus(item)//get all buses from thelist
                                                          select new BusPO(bus));
             busList.DataContext = null;
@@ -210,13 +208,17 @@ namespace PL
             bl.removeBus(busPO.LicenseNum);//use remove from blimp
             updateDataContext();//and update the data context
         }
-
+        /// <summary>
+        /// to sort this listtt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void sortBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string item = sortBox.SelectedItem as string;
             if(item != null)
             {
-                listBusWindows wnd = new listBusWindows(item);
+                listBusWindows wnd = new listBusWindows(item);//I open the window again with the constructor which sorts
                 wnd.Show();
                 this.Close();
             }
@@ -228,9 +230,7 @@ namespace PL
             {
                 string item = searchBox.Text as string;
                 if (item != null)
-                    updateDataContext1(item);
-                else
-                    MessageBox.Show("ecrit un chiffre");
+                    updateDataContext1(item);//i'm search and update the list
             }
         }
     }

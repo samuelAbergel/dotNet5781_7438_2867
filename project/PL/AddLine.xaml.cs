@@ -35,26 +35,30 @@ namespace PL
         }
         private void update()
         {
-            listStation = bl.getStationOfLine(line);
-            StationBox.ItemsSource = listStation;
-            StationBox.DisplayMemberPath = "Name";
+            listStation = bl.getStationOfLine(line);//search all station in line
+            StationBox.ItemsSource = listStation;//set the itemsource to thi liststation with all station pf the line
+            StationBox.DisplayMemberPath = "Name";//i want that the combobox display name of station
         }
         private void ButtonAddLine_Click(object sender, RoutedEventArgs e)
         {
             bl.addLine(line);//use add from blimp
             this.Close();//close this window
         }
-
+        /// <summary>
+        /// when i want to add station to this line
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ButtonAddStationLine_Click(object sender, RoutedEventArgs e)
         {
-            ListStationWindows wnd = new ListStationWindows(line, 2);
+            ListStationWindows wnd = new ListStationWindows(line, 2,string.Empty);// i open list of station to add 
             wnd.ShowDialog();
-            line.listOfStationInLine = line.listOfStationInLine.Where(p => p.Code != 0);
-            if (line.listOfStationInLine != null && line.listOfStationInLine.Count() != 0 )
+            line.listOfStationInLine = line.listOfStationInLine.Where(p => p.Code != 0);//i take the new line but i'm remove the fisrt station that I added so that the list is not null
+            if (line.listOfStationInLine != null && line.listOfStationInLine.Count() != 0 )//if there is a station
             {
-                btnAdd.IsEnabled = true;
-                update();
-                StationBox.IsEnabled = true;
+                btnAdd.IsEnabled = true;// i can add this line
+                update();//and update it 
+                StationBox.IsEnabled = true;// and i can see all station that i have add
             }
         }
 

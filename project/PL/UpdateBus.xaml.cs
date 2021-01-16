@@ -33,8 +33,13 @@ namespace PL
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            bl.updateBus(bus);//use the update of blimp
-            this.Close();//and close this page
+            if (int.Parse(fuelRemainTextBox.Text) <= 1200)
+            {
+                bl.updateBus(bus);//use the update of blimp
+                this.Close();//and close this page
+            }
+            else
+                MessageBox.Show("too much fuel", "fuel", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)

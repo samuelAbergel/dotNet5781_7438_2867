@@ -44,6 +44,7 @@ namespace DLAPI
         void updateStation(Station station);
         void removeStation(int id);
         Station getStation(int id);
+        IEnumerable<Station> searchStation(string item);
         IEnumerable<Station> getAllStation();
         IEnumerable<Line> getLineOfStation(Station station);
         #endregion
@@ -53,6 +54,7 @@ namespace DLAPI
         void updateLine(Line line);
         void removeLine(int id);
         Line getLine(int id);
+        IEnumerable<Line> searchLine(string item);
         IEnumerable<Line> getAllLine();
         IEnumerable<Station> getStationOfLine(Line line);
         #endregion
