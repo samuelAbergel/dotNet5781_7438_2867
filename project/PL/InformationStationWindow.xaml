@@ -12,7 +12,7 @@
     </Window.Resources>
     <Grid>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
-        <Rectangle Margin="-4,-4,-1,235.5" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,0,0,239.4" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -44,7 +44,7 @@
 
         </Grid>
         <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="80,1,80,239.5" RenderTransformOrigin="0.565,0.861"/>
-        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="254,12,12,280">
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="255,27,12,280.4">
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>
     </Grid>

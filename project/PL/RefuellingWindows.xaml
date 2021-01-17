@@ -9,7 +9,7 @@
         Title="RefuellingWindows" Height="372" Width="400" WindowStyle="None">
     <Grid Height="372" VerticalAlignment="Top">
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
-        <Rectangle Margin="-4,-4,-1,256" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,-4,-1,263" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />

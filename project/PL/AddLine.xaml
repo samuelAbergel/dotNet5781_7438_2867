@@ -21,7 +21,7 @@
         </ObjectDataProvider>
     </Window.Resources>
     <Grid Height="448" VerticalAlignment="Top">
-        <Rectangle Margin="-4,-4,-1,346" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,0,-1,346" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -63,25 +63,28 @@
             <ComboBox x:Name="StationBox" IsEnabled="False" Grid.Column="1" Margin="1,30,-0.5,-25" Grid.Row="4" />
         </Grid>
         <Button
-            Style="{StaticResource MaterialDesignRaisedDarkButton}"
-            Height="Auto"
-            materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="51,336,81,77" Click="ButtonAddStationLine_Click">
-            <TextBlock
-                Text="ADD STATION IN LINE" />
-        </Button>
-        <Button
             x:Name="btnAdd"
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="54,380,78,4" Click="ButtonAddLine_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="49,355,83,29" Click="ButtonAddLine_Click">
             <TextBlock
                 Text="ADD THIS LINE" />
         </Button>
-        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,28,17,373">
 
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
+
+        <Button
+  Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
+  ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="318,301,48,112" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
+            <materialDesign:PackIcon
+    Kind="Plus"
+    Height="24"
+    Width="24" />
+        </Button>
+
     </Grid>
 </Window>

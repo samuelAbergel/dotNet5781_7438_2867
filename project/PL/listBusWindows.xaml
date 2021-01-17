@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <Rectangle Margin="-9,-7,-7,445" >
+        <Rectangle Margin="-4,-7,-0.2,450" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,13 +21,13 @@
         <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="430,0,429.6,440.4" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="944,41,72.8,484" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="984,41,39.8,500" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
     Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="34,30,994,484" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="34,41,993.8,500" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
@@ -63,12 +63,8 @@
                                 <Grid
   Width="124">
                                     <Button
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    materialDesign:ButtonProgressAssist.Value="-1"
-    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
-    Content="Refuelling"
-    Margin="2,0" Click="ButtonRefuelling_Click" />
+  Content="{materialDesign:PackIcon Kind=GasStation}"
+  ToolTip="Refuel" Click="ButtonRefuelling_Click" Width="50" />
                                 </Grid>
 
                             </DataTemplate>
@@ -79,12 +75,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button
-    Style="{StaticResource MaterialDesignRaisedButton}"
-    materialDesign:ButtonProgressAssist.Value="-1"
-    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
-    Content="TREATMENT"
-    Margin="2,0" Click="ButtonTreatment_Click" />
+  Content="{materialDesign:PackIcon Kind=CogRefresh}"
+  ToolTip="Treatment" Click="ButtonTreatment_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -92,7 +84,9 @@
         Header="update" Width="110">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="update" Click="ButtonUpdate_Click" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Button
+  Content="{materialDesign:PackIcon Kind=Update}"
+  ToolTip="Update" Click="ButtonUpdate_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -100,7 +94,9 @@
         Header="remove" Width="108">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="remove" Click="ButtonRemove_Click" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                <Button
+  Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
+  ToolTip="Remove" Click="ButtonRemove_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

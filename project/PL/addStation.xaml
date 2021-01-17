@@ -12,7 +12,7 @@
     </Window.Resources>
     <Grid>
 
-        <Rectangle Margin="-4,-4,-1,258.5" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,0,-0.4,258.8" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -27,11 +27,11 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="48,261,65.2,29.2" Click="ButtonAdd_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="66,290,47.6,9.8" Click="ButtonAdd_Click">
             <TextBlock
                 Text="ADD THIS STATION" />
         </Button>
-        <Grid HorizontalAlignment="Left" Margin="54,117,0,0" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Left" Margin="66,141,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>

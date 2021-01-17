@@ -49,7 +49,9 @@
         Header="remove" Width="130">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="remove" Click="ButtonRemove_Click"  />
+                                <Button
+  Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
+  ToolTip="Remove" Click="ButtonRemove_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -57,7 +59,9 @@
         Header="update" Width="130">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="update" Click="ButtonUpdate_Click"  />
+                                <Button
+  Content="{materialDesign:PackIcon Kind=Update}"
+  ToolTip="Update" Click="ButtonUpdate_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -66,13 +70,13 @@
         </ListView>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,797,42" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="10,37,842,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="789,37,30,29" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="822,38,29,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>

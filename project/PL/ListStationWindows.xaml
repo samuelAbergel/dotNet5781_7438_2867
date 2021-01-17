@@ -13,7 +13,7 @@
             <RowDefinition Height="119*"/>
             <RowDefinition Height="396*"/>
         </Grid.RowDefinitions>
-        <Rectangle Margin="0,0,-3.5,394.5" Grid.RowSpan="2" >
+        <Rectangle Margin="0,0,-0.4,4.2" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -48,7 +48,9 @@
         Header="remove" Width="108">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnRemove" Content="remove" Click="ButtonRemove_Click"  />
+                                <Button
+  Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
+  ToolTip="Remove" Click="ButtonRemove_Click" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -56,7 +58,9 @@
         Header="update" Width="108" x:Name="columnUpdate">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnUpdate" Content="update" Click="ButtonUpdate_Click"  />
+                               <Button
+  Content="{materialDesign:PackIcon Kind=Update}"
+  ToolTip="Update" Click="ButtonUpdate_Click" />  
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -66,13 +70,13 @@
         <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="297,1,296.5,6" />
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,23.5,27" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="705,29,23.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,690.6,27.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="11,29,717.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>

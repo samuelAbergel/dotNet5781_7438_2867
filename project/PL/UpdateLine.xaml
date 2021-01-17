@@ -11,7 +11,6 @@
         <CollectionViewSource x:Key="lineViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Line}, CreateList=True}"/>
     </Window.Resources>
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
         <Rectangle Margin="-4,-4,-1,317.5" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -50,20 +49,22 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="69,317,64,65" Click="ButtonAddStationLine_Click">
-            <TextBlock
-                Text="ADD STATION IN LINE" />
-        </Button>
-        <Button
-            Style="{StaticResource MaterialDesignRaisedDarkButton}"
-            Height="Auto"
-            materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="69,367,64,4" Click="ButtonUpdate_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="74,342,59.6,29.8" Click="ButtonUpdate_Click">
             <TextBlock
                 Text="UPDATE THIS LINE" />
         </Button>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="262,20,12,352">
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>
+
+        <Button
+  Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
+  ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="279,283,25.6,113.8" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
+            <materialDesign:PackIcon
+    Kind="Plus"
+    Height="24"
+    Width="24" />
+        </Button>
+
     </Grid>
 </Window>

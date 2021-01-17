@@ -23,7 +23,7 @@
 
     <Grid>
 
-        <Rectangle Margin="-4,-8,-3,317" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,1,0,316.8" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -66,11 +66,11 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,305,100,41.2" Click="ButtonAddBus_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,317,112,40.8" Click="ButtonAddBus_Click">
             <TextBlock
                 Text="ADD THIS BUS" />
         </Button>
-        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="351,28,10,358.8">
             
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>

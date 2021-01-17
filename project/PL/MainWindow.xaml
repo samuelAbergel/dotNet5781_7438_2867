@@ -24,11 +24,10 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Border Height="360" VerticalAlignment="Top" CornerRadius="0 0 180 0" Background="White" Margin="0,0,47,0" >
-            <Image Margin="410,38,45.8,72" Source="C:\Users\samuel\source\repos\dotNet5781_7438_2867\images\newLogo.jpeg" Stretch="Fill"/>
+            <Image Margin="413,44,28.8,86" Source="nn.png" Stretch="Fill"/>
         </Border>
 
         <!--barre du haut-->
-
         <!--information update-->
 
         <StackPanel Width="350" Margin="64,45,386,-45">

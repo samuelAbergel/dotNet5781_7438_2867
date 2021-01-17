@@ -7,7 +7,7 @@
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
         Title="page4" Height="450" Width="800" WindowStyle="None">
     <Grid>
-        <Rectangle Margin="-4,-7,-4,316" >
+        <Rectangle Margin="0,-7,0,319.6" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -18,7 +18,7 @@
         <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="312,-15,312,302" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="692,24,42,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="709,24,25,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
     Kind="Home" Height="25" Width="28" />
         </Button>
