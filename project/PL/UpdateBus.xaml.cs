@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -33,18 +34,28 @@ namespace PL
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if (int.Parse(fuelRemainTextBox.Text) <= 1200)
-            {
+            int result;
+            bool success = int.TryParse(fuelRemainTextBox.Text, out result);
+            if (result <= 1200 && success)
+            { 
                 bl.updateBus(bus);//use the update of blimp
                 this.Close();//and close this page
             }
             else
-                MessageBox.Show("too much fuel", "fuel", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("bad entry", "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
+        private void Refuel_PreviewTextInput(object sender, TextCompositionEventArgs e)//to be able to write only numbers
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+
     }
 }

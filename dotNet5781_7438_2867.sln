@@ -35,6 +35,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{F8F40344-AD9E-44EB-922C-1D0F6EACE789}"
 	ProjectSection(SolutionItems) = preProject
 		images\LOGO.png = images\LOGO.png
+		images\newLogo.jpeg = images\newLogo.jpeg
 	EndProjectSection
 EndProject
 Global

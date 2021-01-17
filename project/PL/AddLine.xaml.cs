@@ -41,8 +41,16 @@ namespace PL
         }
         private void ButtonAddLine_Click(object sender, RoutedEventArgs e)
         {
-            bl.addLine(line);//use add from blimp
-            this.Close();//close this window
+            if (bl.isLineExisting(line))
+            {
+                bl.addLine(line);//use add from blimp
+                this.Close();//close this window
+            }
+            else
+            {
+                MessageBox.Show("this line already exist", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
+                update();
+            }
         }
         /// <summary>
         /// when i want to add station to this line

@@ -200,6 +200,22 @@ namespace BL
             return from item in dl.getAllLine()//search line in de.getallline of dlobject
                    select lineDoBoAdapter(item);//select adapt line
         }
+
+        public bool isLineExisting(BO.Line line)
+        {
+            DO.Line lineDO = new DO.Line
+            {
+                Area = (DO.Areas)line.Area,
+                Code = line.Code,
+                FirstStation = line.FirstStation,
+                Id = line.Id,
+                LastStation = line.LastStation,
+                listOfStationInLine = from item in line.listOfStationInLine
+                                      select stationDoBoAdapter(item),
+            };
+            return dl.isLineExisting(lineDO);
+        }
+
         /// <summary>
         /// get list of station of line
         /// </summary>

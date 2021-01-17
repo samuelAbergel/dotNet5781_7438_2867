@@ -42,6 +42,7 @@ namespace BLAPI
         IEnumerable<BO.Line> searchLine(string item);
         IEnumerable<BO.Line> getAllLine();
         IEnumerable<BO.Station> getStationOfLine(BO.Line line);
+        bool isLineExisting(BO.Line line);
         #endregion
 
         #region adjacent station

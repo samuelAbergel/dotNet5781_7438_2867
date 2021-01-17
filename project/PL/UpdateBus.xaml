@@ -43,11 +43,11 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Bus Of Line:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center" Height="24" Width="71"/>
-            <TextBox x:Name="busOfLineTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="0" Text="{Binding BusOfLine, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="busOfLineTextBox" PreviewTextInput="Refuel_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="0" Text="{Binding BusOfLine, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="From Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,3" Grid.Row="1" VerticalAlignment="Center" Height="24" Width="66"/>
             <DatePicker x:Name="fromDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="1" SelectedDate="{Binding FromDate, Mode=TwoWay}" VerticalAlignment="Center" Height="25" Width="116"/>
             <Label Content="Fuel Remain:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="2" VerticalAlignment="Center" Height="24" Width="75"/>
-            <TextBox x:Name="fuelRemainTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,3,0,3" Grid.Row="2" Text="{Binding FuelRemain, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="fuelRemainTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,3,0,3" Grid.Row="2" Text="{Binding FuelRemain, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="License Num:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Height="24" Width="79"/>
             <TextBox x:Name="licenseNumTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,3,0,3" Grid.Row="3" Text="{Binding LicenseNum, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="preview Treatment Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,4" Grid.Row="4" VerticalAlignment="Center" Height="24" Width="137"/>
@@ -61,7 +61,7 @@
                 </ComboBox.ItemsPanel>
             </ComboBox>
             <Label Content="Total Trip:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="6" VerticalAlignment="Center" Height="24" Width="59"/>
-            <TextBox x:Name="totalTripTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="6" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="totalTripTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="6" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Button
             Style="{StaticResource MaterialDesignRaisedDarkButton}"

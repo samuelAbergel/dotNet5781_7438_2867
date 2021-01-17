@@ -171,6 +171,30 @@ namespace DL
             return from item in line.listOfStationInLine // search in line list of station
                    select item.Clone();//return this list of station of line
         }
+
+        public bool isLineExisting(Line line)
+        {
+            int count = 0;
+            foreach (var item in DataSource.listLine)
+            {
+                if (line.Id == item.Id)
+                    return false;
+                foreach (var item1 in item.listOfStationInLine)
+                {
+                    foreach (var item2 in line.listOfStationInLine)
+                        if (item1.Code == item2.Code)
+                        {
+                            count++;
+                            break;
+                        }
+                }
+                if (count == item.listOfStationInLine.Count() && count == line.listOfStationInLine.Count())
+                    return false;
+                count = 0;
+            }
+            return true;
+        }
+
         #endregion
 
         #region station

@@ -57,6 +57,7 @@ namespace DLAPI
         IEnumerable<Line> searchLine(string item);
         IEnumerable<Line> getAllLine();
         IEnumerable<Station> getStationOfLine(Line line);
+        bool isLineExisting(Line line);
         #endregion
 
         #region adjacent station

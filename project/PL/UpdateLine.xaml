@@ -20,7 +20,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="69,145,0,0" VerticalAlignment="Top">
+        <Grid  HorizontalAlignment="Left" Margin="68,132,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -42,19 +42,27 @@
             <TextBox x:Name="idTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="Last Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
             <TextBox x:Name="lastStationTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding LastStation, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <Label Content=" list of station" Margin="-1,31,1,-30" Grid.Row="6"/>
+            <ComboBox x:Name="StationBox"  Grid.Column="1" Margin="0,31,2.5,-26" Grid.Row="6" />
         </Grid>
         <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="93,-11,92.2,310.2" RenderTransformOrigin="0.565,0.861"/>
-       
         <Button
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="71,317,62,44" Click="ButtonUpdate_Click">
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="69,317,64,65" Click="ButtonAddStationLine_Click">
+            <TextBlock
+                Text="ADD STATION IN LINE" />
+        </Button>
+        <Button
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            Height="Auto"
+            materialDesign:ButtonAssist.CornerRadius="25"
+            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="69,367,64,4" Click="ButtonUpdate_Click">
             <TextBlock
                 Text="UPDATE THIS LINE" />
         </Button>
-        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
-
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="262,20,12,352">
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>
     </Grid>
