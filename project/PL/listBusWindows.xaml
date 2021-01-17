@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.listBusWindows"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="page2" Height="600" Width="1085"  ResizeMode="NoResize" WindowStyle="None">
+         Title="page2" Height="600" Width="905"  ResizeMode="NoResize" WindowStyle="None">
 
     <Grid>
 
@@ -18,21 +18,25 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="430,0,429.6,440.4" />
+        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="336,8,313,454" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="984,41,39.8,500" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="790,28,18,499" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
-    Kind="Home" Height="25" Width="28" />
+    Kind="Home" Height="46" Width="51" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="34,41,993.8,500" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="20,30,816,490" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click" RenderTransformOrigin="0.426,0.503">
             <materialDesign:PackIcon
-                Kind="ChevronLeft" Height="40" Width="44" />
+                Kind="ChevronLeft" Height="85" Width="61" />
         </Button>
         <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="-4,211,3,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
-
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
 
                 <GridView>
@@ -49,44 +53,44 @@
         Header="LicenseNum"  Width="135"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding TotalTrip}"
-        Header="TotalTrip"   Width="135"/>
+        Header="TotalTrip"   Width="115"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding FuelRemain}"
         Header="FuelRemain" Width="135"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding Status}"
-        Header="Status" Width="135"  />
+        Header="Status" Width="100" />
                     <GridViewColumn
-        Header="Refuel" Width="150" >
+        Header="Refuel" Width="115" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid
-  Width="124">
+>
                                     <Button
   Content="{materialDesign:PackIcon Kind=GasStation}"
-  ToolTip="Refuel" Click="ButtonRefuelling_Click" Width="50" />
+  ToolTip="Refuel" Click="ButtonRefuelling_Click" Width="65" />
                                 </Grid>
 
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn
-        Header="treatment" Width="140">
+        Header="treat" Width="95">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button
   Content="{materialDesign:PackIcon Kind=CogRefresh}"
-  ToolTip="Treatment" Click="ButtonTreatment_Click" />
+  ToolTip="Treatment" Click="ButtonTreatment_Click" Width="65" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn
-        Header="update" Width="110">
+        Header="upd" Width="90">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button
   Content="{materialDesign:PackIcon Kind=Update}"
-  ToolTip="Update" Click="ButtonUpdate_Click" />
+  ToolTip="Update" Click="ButtonUpdate_Click" Width="65" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -96,16 +100,16 @@
                             <DataTemplate>
                                 <Button
   Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
-  ToolTip="Remove" Click="ButtonRemove_Click" />
+  ToolTip="Remove" Click="ButtonRemove_Click" Width="65" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content=" sort by" Margin="0,155,993.8,414" FontSize="16"/>
-        <ComboBox x:Name="sortBox" Margin="10,186,993.8,389" Height="25" SelectionChanged="sortBox_SelectionChanged" />
-        <Label Content="search by liscence num" Margin="130,155,775.8,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
-        <TextBox x:Name="searchBox" Margin="129,186,799,391" KeyDown="OnKeyDownHandler"/>
+        <Label Content=" sort by" Margin="0,155,813,414" FontSize="16"/>
+        <ComboBox x:Name="sortBox" Margin="10,186,770,389" Height="25" SelectionChanged="sortBox_SelectionChanged" />
+        <Label Content="search by liscence num" Margin="130,155,600,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
+        <TextBox x:Name="searchBox" Margin="136,187,597,389" KeyDown="OnKeyDownHandler"/>
     </Grid>
 </Window>
