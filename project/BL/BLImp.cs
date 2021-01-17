@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BL
 {
-     class BLImp : IBL
+     class BLImp : IBL 
      {
         IDL dl = DLFactory.GetDL();
 
