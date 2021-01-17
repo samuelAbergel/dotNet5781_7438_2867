@@ -67,7 +67,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="297,1,296.5,6" />
+        <Image  Source="images\LOGO.png" Margin="297,1,296.5,6" />
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
             ToolTip="MaterialDesignIconForegroundButton" Margin="705,29,23.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">

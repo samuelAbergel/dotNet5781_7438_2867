@@ -31,7 +31,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="C:\Users\samuel\Source\Repos\dotNet5781_7438_2867\images\LOGO.png" Margin="111,1,112,321" RenderTransformOrigin="0.531,0.75"/>
+        <Image Source="images\LOGO.png" Margin="111,1,112,321" RenderTransformOrigin="0.531,0.75"/>
         <Grid  HorizontalAlignment="Left" Margin="33,131,0,0" VerticalAlignment="Top" Height="158" Width="327">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="146.5"/>

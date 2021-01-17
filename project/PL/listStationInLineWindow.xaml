@@ -36,7 +36,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="159,0,160,347.5" />
+        <Image  Source="images\LOGO.png" Margin="159,0,160,347.5" />
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="458,10,9,376.5">
 
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>

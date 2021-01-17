@@ -15,7 +15,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="312,-15,312,302" />
+        <Image  Source="images\LOGO.png" Margin="312,-15,312,302" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
   ToolTip="MaterialDesignIconForegroundButton" Margin="709,24,25,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">

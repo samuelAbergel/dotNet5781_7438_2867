@@ -43,7 +43,7 @@
             <ComboBox Name="lineBox" IsReadOnly="False" ItemsSource="{Binding}" Grid.Column="1" Margin="2,32,4,-27" Grid.Row="3"/>
 
         </Grid>
-        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="80,1,80,239.5" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="80,1,80,239.5" RenderTransformOrigin="0.565,0.861"/>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="255,27,12,280.4">
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>

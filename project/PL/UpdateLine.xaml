@@ -44,7 +44,7 @@
             <Label Content=" list of station" Margin="-1,31,1,-30" Grid.Row="6"/>
             <ComboBox x:Name="StationBox"  Grid.Column="1" Margin="0,31,2.5,-26" Grid.Row="6" />
         </Grid>
-        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="93,-11,92.2,310.2" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="93,-11,92.2,310.2" RenderTransformOrigin="0.565,0.861"/>
         <Button
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"

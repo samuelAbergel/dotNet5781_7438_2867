@@ -24,7 +24,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Border Height="360" VerticalAlignment="Top" CornerRadius="0 0 180 0" Background="White" Margin="0,0,47,0" >
-            <Image Margin="413,44,28.8,86" Source="nn.png" Stretch="Fill"/>
+            <Image Margin="413,44,28.8,86" Source="images/newLogo.jpeg" Stretch="Fill"/>
         </Border>
 
         <!--barre du haut-->

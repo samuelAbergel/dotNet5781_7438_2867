@@ -71,7 +71,7 @@
             <TextBlock
                 Text="UPDATE THIS BUS" />
         </Button>
-        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="125,-15,126.6,308.2" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="125,-15,126.6,308.2" RenderTransformOrigin="0.565,0.861"/>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
 
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>

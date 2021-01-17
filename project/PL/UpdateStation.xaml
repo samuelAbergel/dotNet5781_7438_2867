@@ -11,7 +11,6 @@
         <CollectionViewSource x:Key="stationViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Station}, CreateList=True}"/>
     </Window.Resources>
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
         <Rectangle Margin="0,-4,0.4,257.6" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -48,7 +47,7 @@
             <TextBlock
                 Text="UPDATE THIS STATION" />
         </Button>
-        <Image Source="C:\Users\samuel\Source\repos\dotNet5781_7438_2867\images\LOGO.png" Margin="84,3,84.5,257.5" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="84,3,84.5,257.5" RenderTransformOrigin="0.565,0.861"/>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,14,17,373">
 
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
