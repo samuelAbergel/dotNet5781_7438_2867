@@ -70,12 +70,18 @@ namespace PL
         {
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the line of listview to the bus
+            double fuel = busPO.FuelRemain;
             if (busPO.Status == BO.BusStatus.ReadyToGo && busPO.FuelRemain <1200)//if it's possible
             {
                 RefuellingWindows wnd = new RefuellingWindows(busPO.getBus());//open the window to refuel
+                this.Hide();
                 wnd.ShowDialog();
-                btn.IsEnabled = false;//set the button so that we cannot press
-                Refuelling(busPO, 100000, btn);//call fonction to use backgroundWOrker
+                this.Show();
+                if (fuel != busPO.FuelRemain)
+                {
+                    btn.IsEnabled = false;//set the button so that we cannot press
+                    Refuelling(busPO, 100000, btn);//call fonction to use backgroundWOrker
+                }
             }
         }
 

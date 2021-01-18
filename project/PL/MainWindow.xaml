@@ -24,13 +24,13 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Border Height="360" VerticalAlignment="Top" CornerRadius="0 0 180 0" Background="White" Margin="0,0,47,0" >
-            <Image Margin="413,44,28.8,86" Source="images/newLogo.jpeg" Stretch="Fill"/>
+            <Image Margin="383,50,58.8,80" Source="images/newLogo.jpeg" Stretch="Fill"/>
         </Border>
 
         <!--barre du haut-->
         <!--information update-->
 
-        <StackPanel Width="350" Margin="64,45,386,-45">
+        <StackPanel Width="350" Margin="10,10,440,-10">
             <StackPanel Margin="20 40">
                 <TextBlock Text="User Login" Margin="20" Foreground="Black" TextAlignment="Center" FontSize="38" FontFamily="Great Vibes"></TextBlock>
                 <StackPanel Orientation="Horizontal" Margin="10">

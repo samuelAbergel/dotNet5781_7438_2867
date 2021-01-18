@@ -23,7 +23,7 @@
 
     <Grid>
 
-        <Rectangle Margin="0,1,0,316.8" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,0,0,316.8" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -31,7 +31,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="images\LOGO.png" Margin="111,1,112,321" RenderTransformOrigin="0.531,0.75"/>
+        <Image Source="images\LOGO.png" Margin="111,1,112,316.8" RenderTransformOrigin="0.531,0.75"/>
         <Grid  HorizontalAlignment="Left" Margin="33,131,0,0" VerticalAlignment="Top" Height="158" Width="327">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="146.5"/>
@@ -71,8 +71,8 @@
                 Text="ADD THIS BUS" />
         </Button>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="351,28,10,358.8">
-            
-            <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
+
+            <materialDesign:PackIcon Kind="Close" Height="38" Width="39"/>
         </Button>
     </Grid>
 </Window>

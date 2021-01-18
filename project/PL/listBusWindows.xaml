@@ -10,7 +10,7 @@
 
     <Grid>
 
-        <Rectangle Margin="-4,-7,-0.2,450" >
+        <Rectangle Margin="0,0,-0.2,454" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,15 +21,15 @@
         <Image  Source="images/LOGO.png" Margin="336,8,313,454" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="790,28,18,499" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="797,55,53.8,490" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
-    Kind="Home" Height="46" Width="51" />
+    Kind="Home" Height="45" Width="35" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="20,30,816,490" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click" RenderTransformOrigin="0.426,0.503">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="45,55,802.8,490" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click" RenderTransformOrigin="0.426,0.503">
             <materialDesign:PackIcon
-                Kind="ChevronLeft" Height="85" Width="61" />
+                Kind="ChevronLeft" Height="55" Width="57" />
         </Button>
         <ListView x:Name="busList" ItemsSource="{Binding}"  MouseDoubleClick="busList_MouseDoubleClick" Margin="-4,211,3,5" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch">
             <ListView.ItemContainerStyle>
@@ -50,18 +50,18 @@
                     </GridView.ColumnHeaderContainerStyle>
                     <GridViewColumn
         DisplayMemberBinding="{Binding LicenseNum}"
-        Header="LicenseNum"  Width="135"/>
+        Header="LicenseNum"  Width="134"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding TotalTrip}"
-        Header="TotalTrip"   Width="115"/>
+        Header="TotalTrip"   Width="114"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding FuelRemain}"
-        Header="FuelRemain" Width="135"/>
+        Header="FuelRemain" Width="132"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding Status}"
-        Header="Status" Width="100" />
+        Header="Status" Width="99.9" />
                     <GridViewColumn
-        Header="Refuel" Width="115" >
+        Header="Refuel" Width="111" >
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Grid
@@ -85,7 +85,7 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn
-        Header="upd" Width="90">
+        Header="up" Width="85">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button
@@ -95,21 +95,28 @@
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn
-        Header="remove" Width="108">
+        Header="remove" Width="107">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button
-  Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
-  ToolTip="Remove" Click="ButtonRemove_Click" Width="65" />
+  Content="{materialDesign:PackIcon Kind=TrashCanOutline }"
+  ToolTip="Remove" Click="ButtonRemove_Click" Width="50" Background="#FFBB112A" BorderBrush="#FFBB112A" />
+
+                               
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content=" sort by" Margin="0,155,813,414" FontSize="16"/>
+        <Label Content=" sort by" Margin="10,155,802.8,414" FontSize="16"/>
         <ComboBox x:Name="sortBox" Margin="10,186,770,389" Height="25" SelectionChanged="sortBox_SelectionChanged" />
-        <Label Content="search by liscence num" Margin="130,155,600,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
-        <TextBox x:Name="searchBox" Margin="136,187,597,389" KeyDown="OnKeyDownHandler"/>
+        <Label Content="search by liscence num" Margin="152,155,577.8,414" FontSize="16" RenderTransformOrigin="1.783,0.444"/>
+        <TextBox x:Name="searchBox" Margin="152,186,580.8,390" KeyDown="OnKeyDownHandler"/>
+
+
+
+        <Image  Source="images/LOGO.png" Margin="336,0,312.8,454" />
+      
     </Grid>
 </Window>

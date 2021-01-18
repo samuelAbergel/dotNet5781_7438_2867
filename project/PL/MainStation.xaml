@@ -15,16 +15,16 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="images\LOGO.png" Margin="312,-15,312,302" />
+        <Image  Source="images\LOGO.png" Margin="291,-5,291,311.6" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="724,24,10,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="MaterialDesignIconForegroundButton" Margin="724,40,22,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
     Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="22,24,712,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="MaterialDesignIconForegroundButton" Margin="22,40,723,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>

@@ -12,7 +12,7 @@
             <RowDefinition Height="111*"/>
             <RowDefinition Height="340*"/>
         </Grid.RowDefinitions>
-        <Rectangle >
+        <Rectangle Margin="0,0,4,1.2" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -22,7 +22,11 @@
         </Rectangle>
 
         <ListView x:Name="LineList" ItemsSource="{Binding}" Margin="-2,53,4,2.5" Grid.Row="1" MouseDoubleClick="LineList_MouseDoubleClick">
-
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
                     <GridView.ColumnHeaderContainerStyle>
@@ -46,25 +50,26 @@
         DisplayMemberBinding="{Binding LastStation}"
         Header="LastStation" Width="150"/>
                     <GridViewColumn
-        Header="remove" Width="130">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button
-  Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
-  ToolTip="Remove" Click="ButtonRemove_Click" />
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn
         Header="update" Width="130">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <Button
   Content="{materialDesign:PackIcon Kind=Update}"
-  ToolTip="Update" Click="ButtonUpdate_Click" />
+  ToolTip="Update" Click="ButtonUpdate_Click" Width="65" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+                    <GridViewColumn
+        Header="remove" Width="130"  >
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button
+  Content="{materialDesign:PackIcon Kind=TrashCanOutline}"
+  ToolTip="Remove" Click="ButtonRemove_Click" Background="#FFBB112A" BorderBrush="#FFBB112A" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                  
                 </GridView>
             </ListView.View>
         </ListView>
@@ -80,7 +85,7 @@
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
-        <Image  Source="images\LOGO.png" Margin="340,4,339,9" />
+        <Image  Source="images\LOGO.png" Margin="363,0,363,335.4" Grid.RowSpan="2" />
         <Label Content="sort by" FontSize="14" Margin="2,1,844,311.5" Grid.Row="1"/>
         <ComboBox x:Name="sortBox" Margin="2,26,822,288.5" Grid.Row="1" SelectionChanged="sortBox_SelectionChanged"/>
         <Label Content="search by id" FontSize="14" Margin="111,110,683,311.5" Grid.RowSpan="2"/>

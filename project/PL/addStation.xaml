@@ -12,7 +12,7 @@
     </Window.Resources>
     <Grid>
 
-        <Rectangle Margin="0,0,-0.4,258.8" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,0,-0.4,287.8" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -21,7 +21,7 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <Image Source="images\LOGO.png" Margin="89,-17,87.2,245.2" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="94,0,94,287.8" RenderTransformOrigin="0.565,0.861"/>
 
         <Button
             Style="{StaticResource MaterialDesignRaisedDarkButton}"

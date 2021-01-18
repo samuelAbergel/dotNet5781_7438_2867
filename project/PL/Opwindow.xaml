@@ -7,7 +7,7 @@
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="page2" Height="450" Width="800" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
-        <Rectangle Margin="-5,-7,-4,316" >
+        <Rectangle Margin="0,0,0,315.6" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -15,7 +15,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image  Source="images\LOGO.png" Margin="312,-15,312,302" />
+        <Image  Source="images\LOGO.png" Margin="297,0,295,315.6" />
       
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
