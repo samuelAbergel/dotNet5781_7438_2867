@@ -15,5 +15,6 @@ namespace BO
         public DateTime previewTreatmentDate { get; set; }
         public int BusOfLine { get; set; }
         public BusStatus Status { get; set; }
+        public override string ToString() => this.ToStringProperty();
     }
 }

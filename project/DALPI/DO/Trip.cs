@@ -15,5 +15,6 @@ namespace DO
         public int InAt { get; set; }
         public int OutStation { get; set; }
         public int OutAt { get; set; }
+        public override string ToString() => this.ToStringProperty();
     }
 }

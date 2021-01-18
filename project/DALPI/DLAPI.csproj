@@ -60,6 +60,7 @@
     <Compile Include="DO\Line.cs" />
     <Compile Include="DO\LineStation.cs" />
     <Compile Include="DO\LineTrip.cs" />
+    <Compile Include="DO\Tools.cs" />
     <Compile Include="IDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DO\Station.cs" />

@@ -16,5 +16,6 @@ namespace BO
         public int PrevStation { get; set; }
         public TimeSpan PrevStationAt { get; set; }
         public TimeSpan NextStationAt { get; set; }
+        public override string ToString() => this.ToStringProperty();
     }
 }

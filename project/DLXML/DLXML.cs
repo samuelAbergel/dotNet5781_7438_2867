@@ -229,14 +229,49 @@ namespace DL
 
         public bool isBusExisting(int liscenceNumber)
         {
-            throw new NotImplementedException();
+            XElement BusRootElem = XMLTools.LoadListFromXMLElement(BusPath);
+            Bus busVerif = (from p in BusRootElem.Elements()
+                           where int.Parse(p.Element("LicenseNum").Value) == liscenceNumber
+                            select new Bus()
+                           {
+                               BusOfLine = Int32.Parse(p.Element("BusOfLine").Value),
+                               FromDate = DateTime.Parse(p.Element("FromDate").Value),
+                               FuelRemain = double.Parse(p.Element("FuelRemain").Value),
+                               LicenseNum = Int32.Parse(p.Element("LicenseNum").Value),
+                               previewTreatmentDate = DateTime.Parse(p.Element("previewTreatmentDate").Value),
+                               Status = (BusStatus)Enum.Parse(typeof(BusStatus), p.Element("Status").Value),
+                               TotalTrip = double.Parse(p.Element("TotalTrip").Value),
+                           }
+                        ).FirstOrDefault();
+            if (busVerif != null)
+                return false;
+            return true;
         }
         #endregion
 
         #region line
         public void addLine(Line line)
         {
-            throw new NotImplementedException();
+
+            XElement LineRootElem = XMLTools.LoadListFromXMLElement(LinePath);
+
+            XElement line1 = (from p in LineRootElem.Elements()
+                             where int.Parse(p.Element("Id").Value) == line.Id
+                             select p).FirstOrDefault();
+
+            if (line1 != null)
+                throw new DO.badIdLineexeption(line);
+
+            XElement busElem = new XElement("Line", new XElement("Id", line.Id.ToString()),
+                                  new XElement("Code", line.Code.ToString()),
+                                  new XElement("Area", line.Area.ToString()),
+                                  new XElement("FirstStation", line.FirstStation.ToString()),
+                                  new XElement("LastStation", line.LastStation.ToString()),
+                                  new XElement("listOfStationInLine", line.listOfStationInLine.ToString()));
+
+            LineRootElem.Add(busElem);
+
+            XMLTools.SaveListToXMLElement(LineRootElem, BusPath);
         }
         public IEnumerable<Line> getAllLine()
         {
@@ -271,11 +306,37 @@ namespace DL
         #region station
         public void addStation(Station station)
         {
-            throw new NotImplementedException();
+            XElement StationRootElem = XMLTools.LoadListFromXMLElement(StationPath);
+
+            XElement station1 = (from p in StationRootElem.Elements()
+                             where int.Parse(p.Element("Code").Value) == station.Code
+                             select p).FirstOrDefault();
+
+            if (station1 != null)
+                throw new DO.badIDStationexeption(station);
+
+            XElement stationElem = new XElement("Station", new XElement("Code", station.Code.ToString()),
+                                  new XElement("Name", station.Name),
+                                  new XElement("Longitude",station.Longitude.ToString()),
+                                  new XElement("Lattitude", station.Lattitude.ToString()));
+
+            StationRootElem.Add(stationElem);
+
+            XMLTools.SaveListToXMLElement(StationRootElem, StationPath);
         }
         public IEnumerable<Station> getAllStation()
         {
-            throw new NotImplementedException();
+            XElement StationRootElem = XMLTools.LoadListFromXMLElement(StationPath);
+
+            return (from p in StationRootElem.Elements()
+                    select new Station()
+                    {
+                        Code = Int32.Parse(p.Element("Code").Value),
+                        Lattitude = double.Parse(p.Element("Lattitude").Value),
+                        Longitude = double.Parse(p.Element("Longitude").Value),
+                        Name = p.Element("Name").Value.ToString(),
+                    }
+                   );
         }
         public IEnumerable<Line> getLineOfStation(Station station)
         {
@@ -283,11 +344,39 @@ namespace DL
         }
         public Station getStation(int id)
         {
-            throw new NotImplementedException();
+            XElement StationRootElem = XMLTools.LoadListFromXMLElement(StationPath);
+
+            Station station = (from p in StationRootElem.Elements()
+                       where int.Parse(p.Element("Code").Value) == id
+                       select new Station()
+                       {
+                           Code = Int32.Parse(p.Element("Code").Value),
+                           Lattitude = double.Parse(p.Element("Lattitude").Value),
+                           Longitude = double.Parse(p.Element("Longitude").Value),
+                           Name = p.Element("Name").Value.ToString(),
+                       }
+                        ).FirstOrDefault();
+
+            if (station == null)
+                throw new DO.badIDStationexeption(id);
+            return station;
         }
         public void removeStation(int id)
         {
-            throw new NotImplementedException();
+            XElement StationRootElem = XMLTools.LoadListFromXMLElement(StationPath);
+
+            XElement station = (from p in StationRootElem.Elements()
+                            where int.Parse(p.Element("Code").Value) == id
+                            select p).FirstOrDefault();
+
+            if (station != null)
+            {
+                station.Remove(); //<==>   Remove per from personsRootElem
+
+                XMLTools.SaveListToXMLElement(StationRootElem, BusPath);
+            }
+            else
+                throw new DO.badIDStationexeption(id);
         }
         public IEnumerable<Station> searchStation(string item)
         {
@@ -295,11 +384,41 @@ namespace DL
         }
         public void updateStation(Station station)
         {
-            throw new NotImplementedException();
+            XElement StationRootElem = XMLTools.LoadListFromXMLElement(StationPath);
+
+            XElement station1 = (from p in StationRootElem.Elements()
+                             where int.Parse(p.Element("Code").Value) == station.Code
+                             select p).FirstOrDefault();
+
+            if (station1 != null)
+            {
+                station1.Element("Code").Value = station.Code.ToString();
+                station1.Element("Name").Value = station.Name;
+                station1.Element("Lattitude").Value = station.Lattitude.ToString();
+                station1.Element("Longitude").Value = station.Longitude.ToString();
+
+                XMLTools.SaveListToXMLElement(StationRootElem, StationPath);
+            }
+            else
+                throw new DO.badIDStationexeption(station.Code);
         }
         public bool isStationExisting(int code)
         {
-            throw new NotImplementedException();
+            XElement StationRootElem = XMLTools.LoadListFromXMLElement(StationPath);
+
+            Station stationVerif = (from p in StationRootElem.Elements()
+                               where int.Parse(p.Element("Code").Value) == code
+                               select new Station()
+                               {
+                                   Code = Int32.Parse(p.Element("Code").Value),
+                                   Lattitude = double.Parse(p.Element("Lattitude").Value),
+                                   Longitude = double.Parse(p.Element("Longitude").Value),
+                                   Name = p.Element("Name").Value.ToString(),
+                               }
+                        ).FirstOrDefault();
+            if (stationVerif != null)
+                return false;
+            return true;
         }
         #endregion
     }

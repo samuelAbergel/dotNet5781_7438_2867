@@ -46,7 +46,7 @@
     <Compile Include="XMLTools.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\project\DALPI\DLAPI.csproj">
+    <ProjectReference Include="..\DALPI\DLAPI.csproj">
       <Project>{d3c2167a-1bc7-41b0-81a4-600a9424b184}</Project>
       <Name>DLAPI</Name>
     </ProjectReference>
