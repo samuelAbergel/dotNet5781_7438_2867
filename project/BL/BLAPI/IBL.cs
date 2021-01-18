@@ -52,6 +52,7 @@ namespace BLAPI
         void updateAdjacentStation(BO.AdjacentStations adjacentStations);
         BO.AdjacentStations getAdjacentStations(int id);
         IEnumerable<BO.Line> getLineOfStation(BO.Station station);
+        IEnumerable<BO.Station> GetAdjacentStationsOfStation(BO.Station station);
         #endregion
     }
 }

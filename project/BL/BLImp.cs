@@ -407,6 +407,17 @@ namespace BL
             }
         }
 
+        public IEnumerable<BO.Station> GetAdjacentStationsOfStation(BO.Station station)
+        {
+            DO.Station stationDO = new DO.Station();//create do station
+            station.CopyPropertiesTo(stationDO);//copy property from BO to DO
+            IEnumerable<DO.Station> lst = dl.GetAdjacentStationsOfStation(stationDO);
+            if ( lst == null)
+                return null;
+            return from item in dl.GetAdjacentStationsOfStation(stationDO)
+                   select stationDoBoAdapter(item);
+        }
+
         #endregion
     }
 }

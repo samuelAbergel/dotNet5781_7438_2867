@@ -357,70 +357,70 @@ namespace DS
             {
                 new AdjacentStations
                 {
-                  Station1 = 3945,
-                  Station2 = 4725,
+                  Station1 = 3940,
+                  Station2 = 4721,
                   Distance = 1,
                   Time = TimeSpan.FromMinutes(55),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 4725,
-                  Station2 = 1908,
+                  Station1 = 4721,
+                  Station2 = 1902,
                   Distance = 1,
                   Time = TimeSpan.FromMinutes(30),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1908,
-                  Station2 = 9634,
+                  Station1 = 1902,
+                  Station2 = 9633,
                   Distance = 1,
                   Time = TimeSpan.FromMinutes(25),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 9634,
-                  Station2 = 3375,
+                  Station1 = 9633,
+                  Station2 = 3374,
                   Distance = 2,
                   Time = TimeSpan.FromMinutes(15),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 3375,
-                  Station2 = 1879,
+                  Station1 = 3374,
+                  Station2 = 1875,
                   Distance = 2,
                   Time = TimeSpan.FromMinutes(45),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1879,
-                  Station2 = 5583,
+                  Station1 = 1875,
+                  Station2 = 5586,
                   Distance = 2,
                   Time = TimeSpan.FromMinutes(53),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5583,
-                  Station2 = 5665,
+                  Station1 = 5586,
+                  Station2 = 5668,
                   Distance = 3,
                   Time = TimeSpan.FromMinutes(50),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5665,
-                  Station2 = 5328,
+                  Station1 = 5668,
+                  Station2 = 5329,
                   Distance = 3,
                   Time = TimeSpan.FromMinutes(40),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5328,
-                  Station2 = 5908,
+                  Station1 = 5329,
+                  Station2 = 5900,
                   Distance = 3,
                   Time = TimeSpan.FromMinutes(42),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5908,
+                  Station1 = 5900,
                   Station2 = 1324,
                   Distance = 4,
                   Time = TimeSpan.FromMinutes(35),

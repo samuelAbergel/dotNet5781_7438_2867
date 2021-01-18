@@ -23,15 +23,30 @@ namespace PL
         IBL bl;// create instance of IBL
         BO.Station station;
         IEnumerable<BO.Line> lineList;
+        IEnumerable<BO.Station> listStation;
         public InformationStationWindow(int stationId)
         {
             InitializeComponent();
             bl = BLFactory.GetBL();//and get it with blfactory
+            Update(stationId);
+            this.DataContext = station;//match datacontext and station
+
+        }
+
+        private void Update(int stationId)
+        {
             station = bl.getStation(stationId);//use getstation of blimp and put in station
             lineList = bl.getLineOfStation(station);
-            this.DataContext = station;//match datacontext and station
             lineBox.ItemsSource = lineList;
             lineBox.DisplayMemberPath = "Code";
+            listStation = bl.GetAdjacentStationsOfStation(station);
+            if (listStation != null)
+            {
+                adjBox.ItemsSource = listStation;
+                adjBox.DisplayMemberPath = "Code";
+            }
+            else
+                adjBox.IsEnabled = false;
         }
 
         private void ButtonClose_Click(object sender, RoutedEventArgs e)

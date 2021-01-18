@@ -40,7 +40,9 @@
             <Label Content="Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
             <TextBox x:Name="nameTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="line in station" Margin="0,29,0,-29" Grid.Row="3"/>
-            <ComboBox Name="lineBox" IsReadOnly="False" ItemsSource="{Binding}" Grid.Column="1" Margin="2,32,4,-27" Grid.Row="3"/>
+            <ComboBox Name="lineBox" IsReadOnly="False" ItemsSource="{Binding}" Grid.Column="1" Margin="6,28,0,-23" Grid.Row="3"/>
+            <Label Content="adj station" Margin="0,57,0,-57" Grid.Row="3" RenderTransformOrigin="0.344,2.645"/>
+            <ComboBox x:Name="adjBox" Grid.Column="1" Margin="6,53,1,-48" Grid.Row="3" />
 
         </Grid>
         <Image Source="images\LOGO.png" Margin="81,0,79,254.4" RenderTransformOrigin="0.565,0.861"/>

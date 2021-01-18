@@ -174,24 +174,20 @@ namespace DL
 
         public bool isLineExisting(Line line)
         {
-            int count = 0;
-            foreach (var item in DataSource.listLine)
-            {
-                if (line.Id == item.Id)
-                    return false;
-                foreach (var item1 in item.listOfStationInLine)
-                {
-                    foreach (var item2 in line.listOfStationInLine)
-                        if (item1.Code == item2.Code)
-                        {
-                            count++;
-                            break;
-                        }
-                }
-                if (count == item.listOfStationInLine.Count() && count == line.listOfStationInLine.Count())
-                    return false;
-                count = 0;
-            }
+            var verif = from item in DataSource.listLine
+                              where line.Id == item.Id
+                              select item;
+            if (verif.Count() != 0)
+                return false;
+            var listStation = from item in DataSource.listLine
+                              from item1 in item.listOfStationInLine
+                              from item2 in line.listOfStationInLine
+                              where item.listOfStationInLine.Count() == line.listOfStationInLine.Count()
+                              where item1.Code == item2.Code 
+                              select item1;
+
+            if (listStation.Count() == line.listOfStationInLine.Count())
+                return false;
             return true;
         }
 
@@ -307,6 +303,28 @@ namespace DL
                 throw new ArgumentException("this adjacent station already exist");
             //if it existe add it
             DataSource.listAdjacentStations.Add(adjacentStations.Clone());
+        }
+
+        public IEnumerable<Station> GetAdjacentStationsOfStation(Station station)
+        {
+            var num = from item in DataSource.listAdjacentStations
+                       where station.Code == item.Station1
+                       select item.Station2;
+            var num1 = from item in DataSource.listAdjacentStations
+                       where station.Code == item.Station2
+                       select item.Station1;
+
+            if(num.Count() == 0 && num1.Count() == 0)
+            return null;
+            num = num.Concat(num1);
+            var lst = from item in DataSource.listStation
+                      from item1 in num
+                      where item.Code == item1
+                      select item;
+          
+            if (lst.Count() == 0)
+                return null;
+            return lst.Distinct();
         }
 
         #endregion
