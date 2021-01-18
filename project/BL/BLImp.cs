@@ -101,6 +101,11 @@ namespace BL
             return from item in dl.GetAllBus()//search bus in dl.getallbus from DLObject
                    select busDoBoAdapter(item); //return adapter 
         }
+        public bool isBusExisting(int liscenceNumber)
+        {
+            return dl.isBusExisting(liscenceNumber);
+        }
+
         #endregion
 
         #region line
@@ -327,6 +332,10 @@ namespace BL
             return from item in dl.getLineOfStation(stationDO)
                    select lineDoBoAdapter(item);
         }
+        public bool isStationExisting(int code)
+        {
+            return dl.isStationExisting(code);
+        }
         #endregion
 
         #region adjacent station
@@ -417,7 +426,6 @@ namespace BL
             return from item in dl.GetAdjacentStationsOfStation(stationDO)
                    select stationDoBoAdapter(item);
         }
-
         #endregion
     }
 }

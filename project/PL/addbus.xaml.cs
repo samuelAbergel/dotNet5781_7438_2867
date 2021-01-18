@@ -36,13 +36,18 @@ namespace PL
         {
             int result;
             bool success = int.TryParse(fuelRemainTextBox.Text, out result);
-            if (result <= 1200 && success)
+            if (bl.isBusExisting(int.Parse(licenseNumTextBox.Text)))
             {
-                bl.addBus(bus);//use add from blImp
-                this.Close();//close this window
+                if (result <= 1200 && success)
+                {
+                    bl.addBus(bus);//use add from blImp
+                    this.Close();//close this window
+                }
+                else
+                    MessageBox.Show("bad entry", "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
-                MessageBox.Show("bad entry", "bad entry",  MessageBoxButton.OK,MessageBoxImage.Warning);
+                MessageBox.Show("this liscence num already exist", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
         private void Refuel_PreviewTextInput(object sender, TextCompositionEventArgs e)//to be able to write only numbers
         {

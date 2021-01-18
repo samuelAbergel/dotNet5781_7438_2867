@@ -23,6 +23,7 @@ namespace BLAPI
         void treatment(BO.Bus bus);
         BO.Bus GetBus(int id);
         IEnumerable<BO.Bus> GetAllBus();
+        bool isBusExisting(int liscenceNumber);
         #endregion
 
         #region station
@@ -32,6 +33,7 @@ namespace BLAPI
         IEnumerable<BO.Station> searchStation(string item);
         BO.Station getStation(int id);
         IEnumerable<BO.Station> getAllStation();
+        bool isStationExisting(int code);
         #endregion
 
         #region line

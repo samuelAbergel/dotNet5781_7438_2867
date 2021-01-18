@@ -72,6 +72,8 @@
                 Text="UPDATE THIS BUS" />
         </Button>
         <Image Source="images\LOGO.png" Margin="100,-4,117,306.8" RenderTransformOrigin="0.565,0.861"/>
-       
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="287,38,11.6,351.8">
+            <materialDesign:PackIcon Kind="Close" Height="34" Width="35"/>
+        </Button>
     </Grid>
 </Window>

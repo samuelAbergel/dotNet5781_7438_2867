@@ -87,7 +87,7 @@ namespace DL
                               select item).FirstOrDefault();//select it
             //mif itt doesn't exist throw an error
             if (realBus == null)
-                throw new Exception("not exist");
+                throw new badIdBusexeption(bus);
             // if it exist we do a treatment of the bus
             realBus.Status = BusStatus.inTreatment;
             realBus.previewTreatmentDate = DateTime.Now;
@@ -103,6 +103,16 @@ namespace DL
             return listStart;
             return null;
         }
+        public bool isBusExisting(int liscenceNumber)
+        {
+            Bus bus = (from item in DataSource.listBus
+                       where item.LicenseNum == liscenceNumber
+                       select item).FirstOrDefault();
+            if (bus != null)
+                return false;
+            return true;
+        }
+
         #endregion
 
         #region line
@@ -259,6 +269,16 @@ namespace DL
                      where stu.Code == station.Code
                       select item;
         }
+        public bool isStationExisting(int code)
+        {
+            Station station = (from item in DataSource.listStation
+                               where item.Code == code
+                               select item).FirstOrDefault();
+            if (station != null)
+                return false;
+            return true;
+        }
+
         #endregion
 
         #region adjacent station
@@ -326,7 +346,7 @@ namespace DL
                 return null;
             return lst.Distinct();
         }
-
+    
         #endregion
     }
 }

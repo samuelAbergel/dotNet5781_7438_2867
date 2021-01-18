@@ -37,6 +37,7 @@ namespace DLAPI
         /// <param name="bus"></param>
         void treatment(Bus bus);
         IEnumerable<Bus> GetAllBus();
+        bool isBusExisting(int liscenceNumber);
         #endregion
 
         #region station
@@ -47,6 +48,7 @@ namespace DLAPI
         IEnumerable<Station> searchStation(string item);
         IEnumerable<Station> getAllStation();
         IEnumerable<Line> getLineOfStation(Station station);
+        bool isStationExisting(int code);
         #endregion
 
         #region line

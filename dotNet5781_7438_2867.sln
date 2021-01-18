@@ -41,6 +41,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		bin\config.xml = bin\config.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DLXML", "DLXML\DLXML.csproj", "{AB5BA5D0-0E26-4413-8D3E-62E52C82EFD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{D3C2167A-1BC7-41B0-81A4-600A9424B184}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C2167A-1BC7-41B0-81A4-600A9424B184}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C2167A-1BC7-41B0-81A4-600A9424B184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB5BA5D0-0E26-4413-8D3E-62E52C82EFD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5BA5D0-0E26-4413-8D3E-62E52C82EFD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5BA5D0-0E26-4413-8D3E-62E52C82EFD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB5BA5D0-0E26-4413-8D3E-62E52C82EFD3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{60971145-F586-4E45-97E6-E614BACD5FF6} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
 		{D3C2167A-1BC7-41B0-81A4-600A9424B184} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
 		{8E4D07DD-3C99-4BDB-B8F6-075046E39605} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
+		{AB5BA5D0-0E26-4413-8D3E-62E52C82EFD3} = {2F311A45-2C87-4AA4-95DE-D2085698AA71}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59729C31-98F7-487B-81CC-F22C8C9BFD09}

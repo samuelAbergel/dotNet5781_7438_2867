@@ -32,8 +32,13 @@ namespace PL
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            bl.addStation(station);//use add of bl imp
-            this.Close();//close this window
+            if (bl.isStationExisting(int.Parse(codeTextBox.Text)))
+            {
+                bl.addStation(station);//use add of bl imp
+                this.Close();//close this window
+            }
+            else
+                MessageBox.Show("this station code already exist", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
