@@ -11,8 +11,8 @@ namespace BO
         public int Id { get; set; }
         public int Code { get; set; }
         public Areas Area { get; set; }
-        public int FirstStation { get; set; }
-        public int LastStation { get; set; }
+        public string FirstStation { get; set; }
+        public string LastStation { get; set; }
         public IEnumerable<Station> listOfStationInLine { get; set; }
     }
 }

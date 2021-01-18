@@ -780,8 +780,8 @@ namespace DS
                 {
                     Id = 123456789,
                     Code = 1,
-                    FirstStation = 275267202,
-                    LastStation = 257426568,
+                    FirstStation = 275267202.ToString(),
+                    LastStation = 257426568.ToString(),
                     Area = Areas.center,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 1
@@ -791,8 +791,8 @@ namespace DS
                 {
                     Id = 987654321,
                     Code = 2,
-                    FirstStation = 275267202,
-                    LastStation = 098765432,
+                    FirstStation = 275267202.ToString(),
+                    LastStation = 098765432.ToString(),
                     Area = Areas.center,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 2
@@ -802,8 +802,8 @@ namespace DS
                 {
                     Id = 720752642,
                     Code = 3,
-                    FirstStation = 0987654323,
-                    LastStation = 257426568,
+                    FirstStation = 0987654323.ToString(),
+                    LastStation = 257426568.ToString(),
                     Area = Areas.east,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 3
@@ -813,8 +813,8 @@ namespace DS
                 {
                     Id = 1752975225,
                     Code = 4,
-                    FirstStation = 987654326,
-                    LastStation = 875567342,
+                    FirstStation = 987654326.ToString(),
+                    LastStation = 875567342.ToString(),
                     Area = Areas.north,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 4
@@ -824,8 +824,8 @@ namespace DS
                 {
                     Id = 123456789,
                     Code = 5,
-                    FirstStation = 123456789,
-                    LastStation = 875567342,
+                    FirstStation = 123456789.ToString(),
+                    LastStation = 875567342.ToString(),
                     Area = Areas.south,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 5
@@ -835,8 +835,8 @@ namespace DS
                 {
                     Id = 801892875,
                     Code = 6,
-                    FirstStation = 987654321,
-                    LastStation = 098765432,
+                    FirstStation = 987654321.ToString(),
+                    LastStation = 098765432.ToString(),
                     Area = Areas.west,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 6
@@ -846,8 +846,8 @@ namespace DS
                 {
                     Id = 425729726,
                     Code = 7,
-                    FirstStation = 098765432,
-                    LastStation = 875567342,
+                    FirstStation = 098765432.ToString(),
+                    LastStation = 875567342.ToString(),
                     Area = Areas.north,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 7
@@ -857,8 +857,8 @@ namespace DS
                 {
                     Id = 0867956688,
                     Code = 8,
-                    FirstStation = 649458358,
-                    LastStation = 123456789,
+                    FirstStation = 649458358.ToString(),
+                    LastStation = 123456789.ToString(),
                     Area = Areas.south,
                    listOfStationInLine = from item in listStation
                                           where item.Code%10 == 8
@@ -868,8 +868,8 @@ namespace DS
                 {
                     Id = 769756444,
                     Code = 9,
-                    FirstStation = 675636378,
-                    LastStation = 987654326,
+                    FirstStation = 675636378.ToString(),
+                    LastStation = 987654326.ToString(),
                     Area = Areas.west,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 9
@@ -879,8 +879,8 @@ namespace DS
                 {
                     Id = 0829687256,
                     Code = 10,
-                    FirstStation = 098765432,
-                    LastStation = 257426568,
+                    FirstStation = 098765432.ToString(),
+                    LastStation = 257426568.ToString(),
                     Area = Areas.east,
                     listOfStationInLine = from item in listStation
                                           where item.Code%10 == 0

@@ -57,7 +57,7 @@ namespace PL.PO
                 RaisePropertyChanged("Area");
             }
         }
-        public int FirstStation
+        public string FirstStation
         {
             get => line.FirstStation;
             set
@@ -66,7 +66,7 @@ namespace PL.PO
                 RaisePropertyChanged("FirstStation");
             }
         }
-        public int LastStation
+        public string LastStation
         {
             get => line.LastStation;
             set
