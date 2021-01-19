@@ -19,7 +19,7 @@
       
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="24,24,715,364.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="PREVIOUS" Margin="24,24,715,364.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
@@ -27,7 +27,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,159,250,210" Click="ButtonBus_Click">
+            ToolTip="BUS" Margin="250,159,250,210" Click="ButtonBus_Click">
             <TextBlock
                 Text="BUS" />
         </Button>
@@ -35,7 +35,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,258,250,113" Click="ButtonLine_Click_1">
+            ToolTip="LINE" Margin="250,258,250,113" Click="ButtonLine_Click_1">
             <TextBlock
                 Text="LINE" />
         </Button>
@@ -43,7 +43,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,351,250,21" Click="ButtonStation_Click">
+            ToolTip="STATION" Margin="250,351,250,21" Click="ButtonStation_Click">
             <TextBlock
                 Text="STATION" />
         </Button>

@@ -77,8 +77,12 @@ namespace PL
                 this.Hide();
                 wnd.ShowDialog();
                 this.Show();
+                if (fuel != busPO.FuelRemain)
+                {
                     btn.IsEnabled = false;//set the button so that we cannot press
                     Refuelling(busPO, 100000, btn);//call fonction to use backgroundWOrker
+                }
+
             }
         }
 

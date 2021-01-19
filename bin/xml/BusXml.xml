@@ -4,7 +4,7 @@
     <LicenseNum>12345678</LicenseNum>
     <FromDate>13/10/1995</FromDate>
     <TotalTrip>1200</TotalTrip>
-    <FuelRemain>1200</FuelRemain>
+    <FuelRemain>120</FuelRemain>
     <previewTreatmentDate>19/01/2021</previewTreatmentDate>
     <BusOfLine>3</BusOfLine>
     <Status>ReadyToGo</Status>
@@ -47,19 +47,19 @@
   </Bus>
   <Bus>
     <LicenseNum>17052718</LicenseNum>
-    <FromDate>1995-10-13T00:00:00</FromDate>
+    <FromDate>13/10/1995</FromDate>
     <TotalTrip>113000</TotalTrip>
-    <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <FuelRemain>12</FuelRemain>
+    <previewTreatmentDate>20/01/2021</previewTreatmentDate>
     <BusOfLine>6</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
   <Bus>
     <LicenseNum>16053923</LicenseNum>
-    <FromDate>1995-10-13T00:00:00</FromDate>
+    <FromDate>13/10/1995</FromDate>
     <TotalTrip>18210</TotalTrip>
     <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <previewTreatmentDate>20/01/2021</previewTreatmentDate>
     <BusOfLine>7</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
