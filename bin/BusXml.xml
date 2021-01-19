@@ -1,275 +1,275 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Buses>
-	<Bus>
-		<LicenseNum> 12345678</LicenseNum>
-		<FromDate>01/01/2021</FromDate>
-		<TotalTrip>1200</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>3</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
+<ArrayOfBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Bus>
+    <LicenseNum> 12345678</LicenseNum>
+    <FromDate>01/01/2021</FromDate>
+    <TotalTrip>1200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>3</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
 
-	<Bus>
-		<LicenseNum> 23190499</LicenseNum>
-		<FromDate>03/11/2012</FromDate>
-		<TotalTrip>43296</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/05/2019</previewTreatmentDate>
-		<BusOfLine>1</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
+  <Bus>
+    <LicenseNum> 23190499</LicenseNum>
+    <FromDate>03/11/2012</FromDate>
+    <TotalTrip>43296</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/05/2019</previewTreatmentDate>
+    <BusOfLine>1</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
 
-	<Bus>
-		<LicenseNum> 94736821</LicenseNum>
-		<FromDate>34/01/2020</FromDate>
-		<TotalTrip>12000</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/09/2020</previewTreatmentDate>
-		<BusOfLine>2</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 16436078</LicenseNum>
-		<FromDate>07/01/2021</FromDate>
-		<TotalTrip>120</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>09/01/2021</previewTreatmentDate>
-		<BusOfLine>4</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 97564230</LicenseNum>
-		<FromDate>21/11/2001</FromDate>
-		<TotalTrip>123200</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>5</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 17052718</LicenseNum>
-		<FromDate>09/08/2017</FromDate>
-		<TotalTrip>113000</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>6</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 16053923</LicenseNum>
-		<FromDate>30/08/2019</FromDate>
-		<TotalTrip>18210</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>7</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 10901578</LicenseNum>
-		<FromDate>17/08/2011</FromDate>
-		<TotalTrip>18200</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>8</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum>38716602</LicenseNum>
-		<FromDate>23/11/2015</FromDate>
-		<TotalTrip>137200</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>9</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 12345678</LicenseNum>
-		<FromDate>28/06/2004</FromDate>
-		<TotalTrip>190124</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>10</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum>98723678</LicenseNum>
-		<FromDate>17/05/2016</FromDate>
-		<TotalTrip>182431</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>11</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 12345678</LicenseNum>
-		<FromDate>09/03/2016</FromDate>
-		<TotalTrip>132160</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>12</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 6436078</LicenseNum>
-		<FromDate>11/07/2005</FromDate>
-		<TotalTrip>327085</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>13</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 80727483</LicenseNum>
-		<FromDate>15/02/2013</FromDate>
-		<TotalTrip>120630</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>14</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 14304578</LicenseNum>
-		<FromDate>03/11/2020</FromDate>
-		<TotalTrip>12580</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>15</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 1278168</LicenseNum>
-		<FromDate>03/01/2000</FromDate>
-		<TotalTrip>148271</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>16</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 92480678</LicenseNum>
-		<FromDate>21/04/2015</FromDate>
-		<TotalTrip>128090</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>17</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 78395678</LicenseNum>
-		<FromDate>28/11/2016</FromDate>
-		<TotalTrip>107382</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>18</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 13295028</LicenseNum>
-		<FromDate>19/08/2006</FromDate>
-		<TotalTrip>232540</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>19</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 11604507</LicenseNum>
-		<FromDate>07/03/2010</FromDate>
-		<TotalTrip>122452</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>20</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 10293478</LicenseNum>
-		<FromDate>29/12/2014</FromDate>
-		<TotalTrip>129400</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>21</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 1046078</LicenseNum>
-		<FromDate>09/03/2012</FromDate>
-		<TotalTrip>122040</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>22</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 35861078</LicenseNum>
-		<FromDate>16/12/2012</FromDate>
-		<TotalTrip>93204</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>23</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 83420439</LicenseNum>
-		<FromDate>27/03/2019</FromDate>
-		<TotalTrip>72639</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>24</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 90346738</LicenseNum>
-		<FromDate>22/12/2015</FromDate>
-		<TotalTrip>124080</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>25</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 93569078</LicenseNum>
-		<FromDate>24/06/2018</FromDate>
-		<TotalTrip>45032</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>26</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 50026828</LicenseNum>
-		<FromDate>13/11/2018</FromDate>
-		<TotalTrip>94032</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>27</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 44531608</LicenseNum>
-		<FromDate>27/12/2017</FromDate>
-		<TotalTrip>100392</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>28</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 53607148</LicenseNum>
-		<FromDate>18/09/2020</FromDate>
-		<TotalTrip>34163</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>29</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-	<Bus>
-		<LicenseNum> 30747928</LicenseNum>
-		<FromDate>21/07/2020</FromDate>
-		<TotalTrip>45040</TotalTrip>
-		<FuelRemain>1200</FuelRemain>
-		<previewTreatmentDate>01/01/2021</previewTreatmentDate>
-		<BusOfLine>30</BusOfLine>
-		<Status>ReadyToGo</Status>
-	</Bus>
-</Buses>
+  <Bus>
+    <LicenseNum> 94736821</LicenseNum>
+    <FromDate>34/01/2020</FromDate>
+    <TotalTrip>12000</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/09/2020</previewTreatmentDate>
+    <BusOfLine>2</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 16436078</LicenseNum>
+    <FromDate>07/01/2021</FromDate>
+    <TotalTrip>120</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>09/01/2021</previewTreatmentDate>
+    <BusOfLine>4</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 97564230</LicenseNum>
+    <FromDate>21/11/2001</FromDate>
+    <TotalTrip>123200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>5</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 17052718</LicenseNum>
+    <FromDate>09/08/2017</FromDate>
+    <TotalTrip>113000</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>6</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 16053923</LicenseNum>
+    <FromDate>30/08/2019</FromDate>
+    <TotalTrip>18210</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>7</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 10901578</LicenseNum>
+    <FromDate>17/08/2011</FromDate>
+    <TotalTrip>18200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>8</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>38716602</LicenseNum>
+    <FromDate>23/11/2015</FromDate>
+    <TotalTrip>137200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>9</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 12345678</LicenseNum>
+    <FromDate>28/06/2004</FromDate>
+    <TotalTrip>190124</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>10</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>98723678</LicenseNum>
+    <FromDate>17/05/2016</FromDate>
+    <TotalTrip>182431</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>11</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 12345678</LicenseNum>
+    <FromDate>09/03/2016</FromDate>
+    <TotalTrip>132160</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>12</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 6436078</LicenseNum>
+    <FromDate>11/07/2005</FromDate>
+    <TotalTrip>327085</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>13</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 80727483</LicenseNum>
+    <FromDate>15/02/2013</FromDate>
+    <TotalTrip>120630</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>14</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 14304578</LicenseNum>
+    <FromDate>03/11/2020</FromDate>
+    <TotalTrip>12580</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>15</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 1278168</LicenseNum>
+    <FromDate>03/01/2000</FromDate>
+    <TotalTrip>148271</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>16</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 92480678</LicenseNum>
+    <FromDate>21/04/2015</FromDate>
+    <TotalTrip>128090</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>17</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 78395678</LicenseNum>
+    <FromDate>28/11/2016</FromDate>
+    <TotalTrip>107382</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>18</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 13295028</LicenseNum>
+    <FromDate>19/08/2006</FromDate>
+    <TotalTrip>232540</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>19</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 11604507</LicenseNum>
+    <FromDate>07/03/2010</FromDate>
+    <TotalTrip>122452</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>20</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 10293478</LicenseNum>
+    <FromDate>29/12/2014</FromDate>
+    <TotalTrip>129400</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>21</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 1046078</LicenseNum>
+    <FromDate>09/03/2012</FromDate>
+    <TotalTrip>122040</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>22</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 35861078</LicenseNum>
+    <FromDate>16/12/2012</FromDate>
+    <TotalTrip>93204</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>23</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 83420439</LicenseNum>
+    <FromDate>27/03/2019</FromDate>
+    <TotalTrip>72639</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>24</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 90346738</LicenseNum>
+    <FromDate>22/12/2015</FromDate>
+    <TotalTrip>124080</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>25</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 93569078</LicenseNum>
+    <FromDate>24/06/2018</FromDate>
+    <TotalTrip>45032</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>26</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 50026828</LicenseNum>
+    <FromDate>13/11/2018</FromDate>
+    <TotalTrip>94032</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>27</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 44531608</LicenseNum>
+    <FromDate>27/12/2017</FromDate>
+    <TotalTrip>100392</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>28</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 53607148</LicenseNum>
+    <FromDate>18/09/2020</FromDate>
+    <TotalTrip>34163</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>29</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum> 30747928</LicenseNum>
+    <FromDate>21/07/2020</FromDate>
+    <TotalTrip>45040</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>01/01/2021</previewTreatmentDate>
+    <BusOfLine>30</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+</ArrayOfBus>

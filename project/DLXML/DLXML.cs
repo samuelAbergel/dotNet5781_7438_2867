@@ -85,6 +85,7 @@ namespace DL
         {
             XElement BusRootElem = XMLTools.LoadListFromXMLElement(BusPath);
 
+            Console.WriteLine();
             return (from p in BusRootElem.Elements()
                     select new Bus()
                     {
