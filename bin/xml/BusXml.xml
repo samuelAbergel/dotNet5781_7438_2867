@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Bus>
+    <LicenseNum>23190499</LicenseNum>
+    <FromDate>13/10/1995</FromDate>
+    <TotalTrip>43296</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17/04/1985</previewTreatmentDate>
+    <BusOfLine>1</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>94736821</LicenseNum>
+    <FromDate>13/10/1995</FromDate>
+    <TotalTrip>12000</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>19/01/2021</previewTreatmentDate>
+    <BusOfLine>2</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>97564230</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>123200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>5</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>17052718</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>113000</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>6</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>16053923</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>18210</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>7</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>10901578</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>18200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>8</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>38716602</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>137200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>9</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>12345678</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>190124</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>10</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>98723678</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>182431</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>11</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>12345678</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>132160</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>12</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>6436078</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>327085</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>13</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>80727483</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>120630</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>14</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>14304578</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>12580</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>15</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>1278168</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>148271</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>16</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>92480678</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>128090</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>17</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>78395678</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>107382</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>18</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>13295028</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>232540</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>19</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>11604507</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>122452</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>20</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>10293478</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>129400</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>21</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>1046078</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>122040</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>22</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>35861078</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>93204</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>23</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>83420439</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>72639</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>24</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>90346738</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>124080</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>25</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>93569078</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>45032</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>26</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>50026828</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>94032</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>27</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>44531608</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>100392</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>28</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>53607148</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>34163</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>29</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>30747928</LicenseNum>
+    <FromDate>13/10/1995</FromDate>
+    <TotalTrip>45040</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17/04/1985</previewTreatmentDate>
+    <BusOfLine>30</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+</ArrayOfBus>
