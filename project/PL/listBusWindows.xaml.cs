@@ -77,11 +77,8 @@ namespace PL
                 this.Hide();
                 wnd.ShowDialog();
                 this.Show();
-                if (fuel != busPO.FuelRemain)
-                {
                     btn.IsEnabled = false;//set the button so that we cannot press
                     Refuelling(busPO, 100000, btn);//call fonction to use backgroundWOrker
-                }
             }
         }
 
@@ -196,11 +193,14 @@ namespace PL
         {
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the bus
-            UpdateBus wnd = new UpdateBus(busPO.getBus());//open page for update
-            this.Hide();
-            wnd.ShowDialog();
-            updateDataContext();//and update the datacontext
-            this.Show();
+            if (busPO.Status != BO.BusStatus.inTreatment && busPO.Status != BO.BusStatus.refueling)
+            {
+                UpdateBus wnd = new UpdateBus(busPO.getBus());//open page for update
+                this.Hide();
+                wnd.ShowDialog();
+                updateDataContext();//and update the datacontext
+                this.Show();
+            }
         }
         /// <summary>
         /// for remove a line of listview

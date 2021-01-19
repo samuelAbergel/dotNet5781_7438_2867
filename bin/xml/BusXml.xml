@@ -1,21 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfBus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Bus>
-    <LicenseNum>23190499</LicenseNum>
+    <LicenseNum>12345678</LicenseNum>
     <FromDate>13/10/1995</FromDate>
+    <TotalTrip>1200</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>19/01/2021</previewTreatmentDate>
+    <BusOfLine>3</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>23190499</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
     <TotalTrip>43296</TotalTrip>
     <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>17/04/1985</previewTreatmentDate>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
     <BusOfLine>1</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
   <Bus>
     <LicenseNum>94736821</LicenseNum>
-    <FromDate>13/10/1995</FromDate>
+    <FromDate>1995-10-13T00:00:00</FromDate>
     <TotalTrip>12000</TotalTrip>
     <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>19/01/2021</previewTreatmentDate>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
     <BusOfLine>2</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>16436078</LicenseNum>
+    <FromDate>1995-10-13T00:00:00</FromDate>
+    <TotalTrip>120</TotalTrip>
+    <FuelRemain>1200</FuelRemain>
+    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <BusOfLine>4</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
   <Bus>
@@ -173,10 +191,10 @@
   </Bus>
   <Bus>
     <LicenseNum>1046078</LicenseNum>
-    <FromDate>1995-10-13T00:00:00</FromDate>
+    <FromDate>13/10/1995</FromDate>
     <TotalTrip>122040</TotalTrip>
     <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
+    <previewTreatmentDate>17/04/1985</previewTreatmentDate>
     <BusOfLine>22</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
@@ -241,15 +259,6 @@
     <FuelRemain>1200</FuelRemain>
     <previewTreatmentDate>17-Apr-85 12:00:00 AM</previewTreatmentDate>
     <BusOfLine>29</BusOfLine>
-    <Status>ReadyToGo</Status>
-  </Bus>
-  <Bus>
-    <LicenseNum>30747928</LicenseNum>
-    <FromDate>13/10/1995</FromDate>
-    <TotalTrip>45040</TotalTrip>
-    <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>17/04/1985</previewTreatmentDate>
-    <BusOfLine>30</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
 </ArrayOfBus>

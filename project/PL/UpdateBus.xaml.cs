@@ -28,14 +28,16 @@ namespace PL
             this.bus = bus;
             InitializeComponent();
             bl = BLFactory.GetBL();
-            this.DataContext = bus;//set the datacontext
             statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();///set the combobox to busstatue
+            this.DataContext = bus;//set the datacontext
         }
 
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
             int result;
             bool success = int.TryParse(fuelRemainTextBox.Text, out result);
+            if(statusComboBox.SelectedItem != null)
+             bus.Status = (BO.BusStatus)statusComboBox.SelectedItem;
             if (result <= 1200 && success)
             { 
                 bl.updateBus(bus);//use the update of blimp

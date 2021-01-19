@@ -32,6 +32,7 @@ namespace PL
             this.DataContext = line;//match the line with the data context
             areaComboBox.ItemsSource = Enum.GetValues(typeof(BO.Areas)).Cast<BO.Areas>();//set the itemsource of combo box to area BO(enum)
             btnAdd.IsEnabled = false;
+            areaComboBox.SelectedIndex = 0;
         }
         private void update()
         {
@@ -67,6 +68,8 @@ namespace PL
                 btnAdd.IsEnabled = true;// i can add this line
                 update();//and update it 
                 StationBox.IsEnabled = true;// and i can see all station that i have add
+                StationBox.SelectedIndex = 0;
+
             }
         }
 

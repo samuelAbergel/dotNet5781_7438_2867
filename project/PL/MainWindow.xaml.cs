@@ -46,5 +46,17 @@ namespace PL
         {
             Application.Current.Shutdown();
         }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            if (bl.getUser(txtUsername.Text, txtPassword.Password.ToString()))
+            {
+                Opwindow wnd = new Opwindow();
+                    wnd.Show();
+                this.Close();
+            }
+            else
+                MessageBox.Show("this password or username dosn't exist", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
     }
 }

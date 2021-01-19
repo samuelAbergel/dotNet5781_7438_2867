@@ -346,7 +346,12 @@ namespace DL
                 return null;
             return lst.Distinct();
         }
-    
+
+        public bool getUser(string username, string password)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
     }
 }

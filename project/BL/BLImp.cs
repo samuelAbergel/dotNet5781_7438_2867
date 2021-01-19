@@ -426,6 +426,11 @@ namespace BL
             return from item in dl.GetAdjacentStationsOfStation(stationDO)
                    select stationDoBoAdapter(item);
         }
+
+        public bool getUser(string username, string password)
+        {
+            return dl.getUser(username, password);
+        }
         #endregion
     }
 }

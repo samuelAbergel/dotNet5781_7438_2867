@@ -3,130 +3,130 @@
   <Station>
     <Code>3940</Code>
     <Name>station 1</Name>
-    <Longitude>31.267</Longitude>
-    <Lattitude>35.123</Lattitude>
+    <Longitude>31.267481</Longitude>
+    <Lattitude>35.263825</Lattitude>
   </Station>
   <Station>
     <Code>6910</Code>
     <Name>station 2</Name>
-    <Longitude>31.267</Longitude>
-    <Lattitude>35.263</Lattitude>
+    <Longitude>31.267481</Longitude>
+    <Lattitude>35.263825</Lattitude>
   </Station>
   <Station>
     <Code>9820</Code>
     <Name>station 3</Name>
-    <Longitude>32.240</Longitude>
-    <Lattitude>35.210</Lattitude>
+    <Longitude>32.240881</Longitude>
+    <Lattitude>35.210325</Lattitude>
   </Station>
   <Station>
     <Code>2903</Code>
     <Name>station 4</Name>
-    <Longitude>27.236</Longitude>
-    <Lattitude>30.638</Lattitude>
+    <Longitude>27.236081</Longitude>
+    <Lattitude>30.63892</Lattitude>
   </Station>
   <Station>
     <Code>5623</Code>
     <Name>station 5</Name>
-    <Longitude>43.237</Longitude>
-    <Lattitude>45.620</Lattitude>
+    <Longitude>43.237041</Longitude>
+    <Lattitude>45.620435</Lattitude>
   </Station>
   <Station>
     <Code>0342</Code>
     <Name>station 6</Name>
-    <Longitude>46.742</Longitude>
-    <Lattitude>45.200</Lattitude>
+    <Longitude>46.742881</Longitude>
+    <Lattitude>45.200285</Lattitude>
   </Station>
   <Station>
     <Code>5903</Code>
     <Name>station 7</Name>
-    <Longitude>30.296</Longitude>
-    <Lattitude>30.263</Lattitude>
+    <Longitude>30.296734</Longitude>
+    <Lattitude>30.263825</Lattitude>
   </Station>
   <Station>
     <Code>0823</Code>
     <Name>station 8</Name>
-    <Longitude>31.260</Longitude>
-    <Lattitude>31.245</Lattitude>
+    <Longitude>31.260681</Longitude>
+    <Lattitude>31.245825</Lattitude>
   </Station>
   <Station>
     <Code>3920</Code>
     <Name>station 9</Name>
-    <Longitude>31.267</Longitude>
-    <Lattitude>31.209</Lattitude>
+    <Longitude>31.267481</Longitude>
+    <Lattitude>31.209815</Lattitude>
   </Station>
   <Station>
     <Code>3103</Code>
     <Name>station 10</Name>
-    <Longitude>21.237</Longitude>
-    <Lattitude>25.216</Lattitude>
+    <Longitude>21.237181</Longitude>
+    <Lattitude>25.216825</Lattitude>
   </Station>
   <Station>
     <Code>2914</Code>
     <Name>station 11</Name>
-    <Longitude>33.649</Longitude>
-    <Lattitude>33.093</Lattitude>
+    <Longitude>33.649801</Longitude>
+    <Lattitude>33.093225</Lattitude>
   </Station>
   <Station>
     <Code>8932</Code>
     <Name>station 12</Name>
-    <Longitude>31.024</Longitude>
-    <Lattitude>34.282</Lattitude>
+    <Longitude>31.024781</Longitude>
+    <Lattitude>34.282195</Lattitude>
   </Station>
   <Station>
     <Code>9034</Code>
     <Name>station 13</Name>
-    <Longitude>28.208</Longitude>
-    <Lattitude>23.618</Lattitude>
+    <Longitude>28.208431</Longitude>
+    <Lattitude>23.618425</Lattitude>
   </Station>
   <Station>
     <Code>3594</Code>
     <Name>station 14</Name>
-    <Longitude>36.260</Longitude>
-    <Lattitude>36.204</Lattitude>
+    <Longitude>36.260319</Longitude>
+    <Lattitude>36.204325</Lattitude>
   </Station>
   <Station>
     <Code>3941</Code>
     <Name>station 15</Name>
-    <Longitude>39.547</Longitude>
-    <Lattitude>38.519</Lattitude>
+    <Longitude>39.547293</Longitude>
+    <Lattitude>38.519635</Lattitude>
   </Station>
   /--/
   <Station>
     <Code>3482</Code>
     <Name>station 16</Name>
-    <Longitude>31.267</Longitude>
-    <Lattitude>35.263</Lattitude>
+    <Longitude>31.267481</Longitude>
+    <Lattitude>35.263825</Lattitude>
   </Station>
   <Station>
     <Code>3213</Code>
     <Name>station 17</Name>
-    <Longitude>30.207</Longitude>
-    <Lattitude>31.163</Lattitude>
+    <Longitude>30.207481</Longitude>
+    <Lattitude>31.163825</Lattitude>
   </Station>
 
   <Station>
     <Code>0901</Code>
     <Name>station 18</Name>
-    <Longitude>34.023</Longitude>
+    <Longitude>34.023261</Longitude>
     <Lattitude>35.25</Lattitude>
   </Station>
   <Station>
     <Code>4029</Code>
     <Name>station 19</Name>
     <Longitude>38.781</Longitude>
-    <Lattitude>41.062</Lattitude>
+    <Lattitude>41.0625</Lattitude>
   </Station>
   <Station>
     <Code>2903</Code>
     <Name>station 20</Name>
-    <Longitude>31.267</Longitude>
-    <Lattitude>35.263</Lattitude>
+    <Longitude>31.267481</Longitude>
+    <Lattitude>35.263825</Lattitude>
   </Station>
   <Station>
     <Code>1982</Code>
     <Name>station 21</Name>
-    <Longitude>21.624</Longitude>
-    <Lattitude>25.280</Lattitude>
+    <Longitude>21.624081</Longitude>
+    <Lattitude>25.280325</Lattitude>
   </Station>
   <Station>
     <Code>3217</Code>
@@ -137,57 +137,57 @@
   <Station>
     <Code>3120</Code>
     <Name>station 23</Name>
-    <Longitude>35.703</Longitude>
-    <Lattitude>35.092</Lattitude>
+    <Longitude>35.7032</Longitude>
+    <Lattitude>35.0925</Lattitude>
   </Station>
   <Station>
     <Code>2910</Code>
     <Name>station 24</Name>
-    <Longitude>38.097</Longitude>
-    <Lattitude>39.398</Lattitude>
+    <Longitude>38.0971</Longitude>
+    <Lattitude>39.3985</Lattitude>
   </Station>
 
   <Station>
     <Code>2010</Code>
     <Name>station 25</Name>
-    <Longitude>27.780</Longitude>
-    <Lattitude>25.250</Lattitude>
+    <Longitude>27.7801</Longitude>
+    <Lattitude>25.25024</Lattitude>
   </Station>
   <Station>
     <Code>0031</Code>
     <Name>station 26</Name>
-    <Longitude>31.700</Longitude>
-    <Lattitude>35.109</Lattitude>
+    <Longitude>31.7001</Longitude>
+    <Lattitude>35.109325</Lattitude>
   </Station>
   <Station>
     <Code>6382</Code>
     <Name>station 27</Name>
-    <Longitude>31.730</Longitude>
-    <Lattitude>33.663</Lattitude>
+    <Longitude>31.730261</Longitude>
+    <Lattitude>33.66382</Lattitude>
   </Station>
   <Station>
     <Code>7120</Code>
     <Name>station 28</Name>
-    <Longitude>39.539</Longitude>
-    <Lattitude>35.937</Lattitude>
+    <Longitude>39.53921</Longitude>
+    <Lattitude>35.937502</Lattitude>
   </Station>
   <Station>
     <Code>9282</Code>
     <Name>station 29</Name>
-    <Longitude>36.21</Longitude>
-    <Lattitude>35.733</Lattitude>
+    <Longitude>36.21653</Longitude>
+    <Lattitude>35.73395</Lattitude>
   </Station>
   <Station>
     <Code>6392</Code>
     <Name>station 30</Name>
-    <Longitude>31.203</Longitude>
-    <Lattitude>33.073</Lattitude>
+    <Longitude>31.20363</Longitude>
+    <Lattitude>33.0735</Lattitude>
   </Station>
   <Station>
     <Code>0372</Code>
     <Name>station 31</Name>
-    <Longitude>36.267</Longitude>
-    <Lattitude>35.729</Lattitude>
+    <Longitude>36.26773</Longitude>
+    <Lattitude>35.72925</Lattitude>
   </Station>
   <Station>
     <Code>9274</Code>
@@ -199,48 +199,42 @@
     <Code>7392</Code>
     <Name>station 33</Name>
     <Longitude>24.81</Longitude>
-    <Lattitude>25.629</Lattitude>
+    <Lattitude>25.6295</Lattitude>
   </Station>
   <Station>
     <Code>8292</Code>
     <Name>station 34</Name>
-    <Longitude>29.728</Longitude>
-    <Lattitude>32.258</Lattitude>
+    <Longitude>29.7281</Longitude>
+    <Lattitude>32.2582</Lattitude>
   </Station>
   <Station>
     <Code>2912</Code>
     <Name>station 35</Name>
-    <Longitude>33.183</Longitude>
-    <Lattitude>38.920</Lattitude>
+    <Longitude>33.1832</Longitude>
+    <Lattitude>38.92035</Lattitude>
   </Station>
   <Station>
     <Code>8392</Code>
     <Name>station 36</Name>
-    <Longitude>39.007</Longitude>
-    <Lattitude>32.202</Lattitude>
+    <Longitude>39.00741</Longitude>
+    <Lattitude>32.20235</Lattitude>
   </Station>
   <Station>
     <Code>8328</Code>
     <Name>station 37</Name>
-    <Longitude>34.748</Longitude>
+    <Longitude>34.74804</Longitude>
     <Lattitude>33.825</Lattitude>
   </Station>
   <Station>
     <Code>8357</Code>
     <Name>station 38</Name>
-    <Longitude>37.740</Longitude>
-    <Lattitude>36.0128</Lattitude>
-  </Station>
-  <Station>
-    <Code>0382</Code>
-    <Name>station 39</Name>
-    <Longitude>31.173</Longitude>
-    <Lattitude>35.22O</Lattitude>
+    <Longitude>37.74021</Longitude>
+    <Lattitude>36.012825</Lattitude>
   </Station>
   <Station>
     <Code>3940</Code>
     <Name>station 40</Name>
-    <Longitude>38.262</Longitude>
-    <Lattitude>32.947</Lattitude>
+    <Longitude>38.2621</Longitude>
+    <Lattitude>32.9475</Lattitude>
   </Station>
 </ArrayOfStation>

@@ -56,5 +56,6 @@ namespace BLAPI
         IEnumerable<BO.Line> getLineOfStation(BO.Station station);
         IEnumerable<BO.Station> GetAdjacentStationsOfStation(BO.Station station);
         #endregion
+        bool getUser(string username, string password);
     }
 }

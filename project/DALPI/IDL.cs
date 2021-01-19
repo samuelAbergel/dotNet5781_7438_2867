@@ -70,5 +70,8 @@ namespace DLAPI
         void updateAdjacentStation(AdjacentStations adjacentStations);
         AdjacentStations getAdjacentStations(int id);
         #endregion
+        #region user
+        bool getUser(string username, string password);
+        #endregion
     }
 }
