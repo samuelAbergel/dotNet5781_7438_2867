@@ -151,7 +151,7 @@ namespace PL
                wnd.Show();
                 this.Close();
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 MessageBox.Show(ex.Message, "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
