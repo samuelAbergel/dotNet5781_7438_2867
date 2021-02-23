@@ -36,320 +36,320 @@ namespace DS
                 {
                     Code= 3940,
                     Name= "station 1",
-                    Lattitude=31.770868,
-                    Longitude=35.173806,
+                    Lattitude=31.770868.ToString(),
+                    Longitude=35.173806.ToString(),
 
                 },
                 new Station
                 {
                     Code= 4721,
                     Name= "station 2",
-                    Lattitude=31.746961,
-                    Longitude=35.23278,
+                    Lattitude=31.746961.ToString(),
+                    Longitude=35.23278.ToString(),
 
                 },
                 new Station
                 {
                     Code= 1902,
                     Name= "station 3",
-                    Lattitude=31.746998,
-                    Longitude=35.2364,
+                    Lattitude=31.746998.ToString(),
+                    Longitude=35.2364.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9633,
                     Name= "station 4",
-                    Lattitude=31.746921,
-                    Longitude=35.2167,
+                    Lattitude=31.746921.ToString(),
+                    Longitude=35.2167.ToString(),
 
                 },
                 new Station
                 {
                     Code= 3374,
                     Name= "station 5",
-                    Lattitude=31.746341,
-                    Longitude=35.2376,
+                    Lattitude=31.746341.ToString(),
+                    Longitude=35.2376.ToString(),
 
                 },
                 new Station
                 {
                     Code= 1875,
                     Name= "station 6",
-                    Lattitude=31.727231,
-                    Longitude=35.251990,
+                    Lattitude=31.727231.ToString(),
+                    Longitude=35.251990.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5586,
                     Name= "station 7",
-                    Lattitude=31.746976,
-                    Longitude=35.251897,
+                    Lattitude=31.746976.ToString(),
+                    Longitude=35.251897.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2417,
                     Name= "station 8",
-                    Lattitude=31.712961,
-                    Longitude=35.251721,
+                    Lattitude=31.712961.ToString(),
+                    Longitude=35.251721.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5668,
                     Name= "station 9",
-                    Lattitude=31.748165,
-                    Longitude=35.251675,
+                    Lattitude=31.748165.ToString(),
+                    Longitude=35.251675.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5329,
                     Name= "station 10",
-                    Lattitude=31.748098,
-                    Longitude=35.251586,
+                    Lattitude=31.748098.ToString(),
+                    Longitude=35.251586.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5900,
                     Name= "station 11",
-                    Lattitude=31.748076,
-                    Longitude=35.251450,
+                    Lattitude=31.748076.ToString(),
+                    Longitude=35.251450.ToString(),
 
                 },
                 new Station
                 {
                     Code= 1324,
                     Name= "station 12",
-                    Lattitude=31.748081,
-                    Longitude=35.251365,
+                    Lattitude=31.748081.ToString(),
+                    Longitude=35.251365.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9737,
                     Name= "station 13",
-                    Lattitude=31.748067,
-                    Longitude=35.251274,
+                    Lattitude=31.748067.ToString(),
+                    Longitude=35.251274.ToString(),
 
                 },
                 new Station
                 {
                     Code= 7405,
                     Name= "station 14",
-                    Lattitude=31.7480514,
-                    Longitude=35.251189,
+                    Lattitude=31.7480514.ToString(),
+                    Longitude=35.251189.ToString(),
 
                 },
                 new Station
                 {
                     Code= 7218,
                     Name= "station 15",
-                    Lattitude=31.7480489,
-                    Longitude=35.192666,
+                    Lattitude=31.7480489.ToString(),
+                    Longitude=35.192666.ToString(),
 
                 },
                 new Station
                 {
                     Code= 3398,
                     Name= "station 16",
-                    Lattitude=31.748034,
-                    Longitude=35.25166,
+                    Lattitude=31.748034.ToString(),
+                    Longitude=35.25166.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9280,
                     Name= "station 17",
-                    Lattitude=31.780296,
-                    Longitude=35.251247,
+                    Lattitude=31.780296.ToString(),
+                    Longitude=35.251247.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5547,
                     Name= "station 18",
-                    Lattitude=31.748013,
-                    Longitude=35.19529,
+                    Lattitude=31.748013.ToString(),
+                    Longitude=35.19529.ToString(),
 
                 },
                 new Station
                 {
                     Code= 7235,
                     Name= "station 19",
-                    Lattitude=31.748351,
-                    Longitude=35.19534,
+                    Lattitude=31.748351.ToString(),
+                    Longitude=35.19534.ToString(),
 
                 },
                 new Station
                 {
                     Code= 3385,
                     Name= "station 20",
-                    Lattitude=31.770868,
-                    Longitude=35.192666,
+                    Lattitude=31.770868.ToString(),
+                    Longitude=35.192666.ToString(),
 
                 },
                 new Station
                 {
                     Code= 1289,
                     Name= "station 21",
-                    Lattitude=31.748349,
-                    Longitude=35.19561,
+                    Lattitude=31.748349.ToString(),
+                    Longitude=35.19561.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9238,
                     Name= "station 22",
-                    Lattitude=31.728791,
-                    Longitude=35.19573,
+                    Lattitude=31.728791.ToString(),
+                    Longitude=35.19573.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2914,
                     Name= "station 23",
-                    Lattitude=31.728098,
-                    Longitude=35.195790,
+                    Lattitude=31.728098.ToString(),
+                    Longitude=35.195790.ToString(),
 
                 },
                 new Station
                 {
                     Code= 6482,
                     Name= "station 24",
-                    Lattitude=31.728091,
-                    Longitude=35.19589,
+                    Lattitude=31.728091.ToString(),
+                    Longitude=35.19589.ToString(),
 
                 },
                 new Station
                 {
                     Code= 8428,
                     Name= "station 25",
-                    Lattitude=31.728089,
-                    Longitude=35.19507,
+                    Lattitude=31.728089.ToString(),
+                    Longitude=35.19507.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2904,
                     Name= "station 26",
-                    Lattitude=31.728072,
-                    Longitude=35.19509,
+                    Lattitude=31.728072.ToString(),
+                    Longitude=35.19509.ToString(),
 
                 },
                 new Station
                 {
                     Code= 7290,
                     Name= "station 27",
-                    Lattitude=31.728076,
-                    Longitude=35.195666,
+                    Lattitude=31.728076.ToString(),
+                    Longitude=35.195666.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5540,
                     Name= "station 28",
-                    Lattitude=31.728062,
-                    Longitude=35.19541,
+                    Lattitude=31.728062.ToString(),
+                    Longitude=35.19541.ToString(),
 
                 },
                 new Station
                 {
                     Code= 1532,
                     Name= "station 29",
-                    Lattitude=31.728059,
-                    Longitude=35.231903,
+                    Lattitude=31.728059.ToString(),
+                    Longitude=35.231903.ToString(),
 
                 },
                 new Station
                 {
                     Code= 4020,
                     Name= "station 30",
-                    Lattitude=31.728047,
-                    Longitude=35.231894,
+                    Lattitude=31.728047.ToString(),
+                    Longitude=35.231894.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9093,
                     Name= "station 31",
-                    Lattitude=31.728039,
-                    Longitude=35.231759,
+                    Lattitude=31.728039.ToString(),
+                    Longitude=35.231759.ToString(),
 
                 },
                 new Station
                 {
                     Code= 6881,
                     Name= "station 32",
-                    Lattitude=31.728028,
-                    Longitude=35.231684,
+                    Lattitude=31.728028.ToString(),
+                    Longitude=35.231684.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5623,
                     Name= "station 33",
-                    Lattitude=31.728011,
-                    Longitude=35.231520,
+                    Lattitude=31.728011.ToString(),
+                    Longitude=35.231520.ToString(),
 
                 },
                 new Station
                 {
                     Code= 5423,
                     Name= "station 34",
-                    Lattitude=31.815421,
-                    Longitude=35.231387,
+                    Lattitude=31.815421.ToString(),
+                    Longitude=35.231387.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9902,
                     Name= "station 35",
-                    Lattitude=31.81090,
-                    Longitude=35.23131,
+                    Lattitude=31.81090.ToString(),
+                    Longitude=35.23131.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2309,
                     Name= "station 36",
-                    Lattitude=31.810822,
-                    Longitude=35.231295,
+                    Lattitude=31.810822.ToString(),
+                    Longitude=35.231295.ToString(),
 
                 },
                 new Station
                 {
                     Code= 9834,
                     Name= "station 37",
-                    Lattitude=31.810762,
-                    Longitude=35.231142,
+                    Lattitude=31.810762.ToString(),
+                    Longitude=35.231142.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2204,
                     Name= "station 38",
-                    Lattitude=31.810698,
-                    Longitude=35.231094,
+                    Lattitude=31.810698.ToString(),
+                    Longitude=35.231094.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2020,
                     Name= "station 39",
-                    Lattitude=31.813421,
-                    Longitude=35.231666,
+                    Lattitude=31.813421.ToString(),
+                    Longitude=35.231666.ToString(),
 
                 },
                 new Station
                 {
                     Code= 2021,
                     Name= "station 40",
-                    Lattitude=31.810386,
-                    Longitude=35.231583,
+                    Lattitude=31.810386.ToString(),
+                    Longitude=35.231583.ToString(),
 
                 },
             };
@@ -783,9 +783,7 @@ namespace DS
                     FirstStation = 275267202.ToString(),
                     LastStation = 257426568.ToString(),
                     Area = Areas.center,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 1
-                                          select item,
+                   
                 },
                 new Line
                 {
@@ -794,9 +792,6 @@ namespace DS
                     FirstStation = 275267202.ToString(),
                     LastStation = 098765432.ToString(),
                     Area = Areas.center,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 2
-                                          select item,
                 },
                 new Line
                 {
@@ -805,9 +800,6 @@ namespace DS
                     FirstStation = 0987654323.ToString(),
                     LastStation = 257426568.ToString(),
                     Area = Areas.east,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 3
-                                          select item,
                 },
                 new Line
                 {
@@ -816,9 +808,6 @@ namespace DS
                     FirstStation = 987654326.ToString(),
                     LastStation = 875567342.ToString(),
                     Area = Areas.north,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 4
-                                          select item,
                 },
                 new Line
                 {
@@ -827,9 +816,6 @@ namespace DS
                     FirstStation = 123456789.ToString(),
                     LastStation = 875567342.ToString(),
                     Area = Areas.south,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 5
-                                          select item,
                 },
                 new Line
                 {
@@ -838,9 +824,6 @@ namespace DS
                     FirstStation = 987654321.ToString(),
                     LastStation = 098765432.ToString(),
                     Area = Areas.west,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 6
-                                          select item,
                 },
                 new Line
                 {
@@ -849,9 +832,6 @@ namespace DS
                     FirstStation = 098765432.ToString(),
                     LastStation = 875567342.ToString(),
                     Area = Areas.north,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 7
-                                          select item,
                 },
                 new Line
                 {
@@ -860,9 +840,6 @@ namespace DS
                     FirstStation = 649458358.ToString(),
                     LastStation = 123456789.ToString(),
                     Area = Areas.south,
-                   listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 8
-                                          select item,
                 },
                 new Line
                 {
@@ -871,9 +848,6 @@ namespace DS
                     FirstStation = 675636378.ToString(),
                     LastStation = 987654326.ToString(),
                     Area = Areas.west,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 9
-                                          select item,
                 },
                 new Line
                 {
@@ -882,9 +856,6 @@ namespace DS
                     FirstStation = 098765432.ToString(),
                     LastStation = 257426568.ToString(),
                     Area = Areas.east,
-                    listOfStationInLine = from item in listStation
-                                          where item.Code%10 == 0
-                                          select item,
                 },
             };
             listBusOnTrip = new List<BusOnTrip>();

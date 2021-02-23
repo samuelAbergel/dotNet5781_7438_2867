@@ -10,8 +10,8 @@ namespace DO
     {
         public int Code { get; set; }
         public string Name { get; set; }
-        public double Longitude { get; set; }
-        public double Lattitude { get; set; }
+        public string Longitude { get; set; }
+        public string Lattitude { get; set; }
         public override string ToString() => this.ToStringProperty();
     }
 }

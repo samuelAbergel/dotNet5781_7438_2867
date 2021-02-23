@@ -1,5 +1,6 @@
 ﻿using BLAPI;
 using PL.PO;
+using PO;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -23,20 +24,21 @@ namespace PL
     public partial class listStationInLineWindow : Window
     {
         IBL bl;
-        ObservableCollection<StationPO> collection;
+        ObservableCollection<LineStationPO> collection;
         StationPO stationPO;
         BO.Line line;
-        public listStationInLineWindow(BO.Line line)
+        public listStationInLineWindow(BO.Line line, IBL bl)
         {
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             InitializeComponent();
             this.line = line;
             updateDataContext();//call fonction to update the data context
+            ok.Text = bl.getTime(line).ToString();
         }
         void updateDataContext()
         {
-            collection = new ObservableCollection<StationPO>(from item in bl.getStationOfLine(line)//get all station of list of station
-                                                         select new StationPO(item));
+            collection = new ObservableCollection<LineStationPO>(from item in bl.GetLineStationsFromLine(line)//get all station of list of station
+                                                         select new LineStationPO(item));
             StationList.DataContext = null;
             StationList.DataContext = collection;//and reset the data context
         }

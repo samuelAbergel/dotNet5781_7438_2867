@@ -1,4 +1,5 @@
 ﻿using BLAPI;
+using BO;
 using PL.PO;
 using System;
 using System.Collections.Generic;
@@ -27,15 +28,14 @@ namespace PL
         ObservableCollection<StationPO> collection;
         StationPO stationsPO;
         BO.Line line;
-        int index = 0;
         string[] listString = { "Code", "Name" };
         /// <summary>
         /// constructor basic
         /// </summary>
-        public ListStationWindows()
+        public ListStationWindows(IBL bl)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             updateDataContext();//call fonction to update the data context
             sortBox.ItemsSource = listString;//set the comboBox to sort the list
         }
@@ -43,51 +43,21 @@ namespace PL
         /// constructor for sort this window i call the window again 
         /// </summary>
         /// <param name="item"></param>
-        public ListStationWindows(string item)
+        public ListStationWindows(string item, IBL bl)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             updateDataContext();//call fonction to update the data context
             sortBox.ItemsSource = listString;//set the comboBox to sort the list
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(StationList.DataContext);//to sort list 
             view.SortDescriptions.Add(new SortDescription(item, ListSortDirection.Ascending));
         }
-        /// <summary>
-        /// constructor for when I want to choose stations for a line
-        /// </summary>
-        /// <param name="line"></param>
-        /// <param name="index"></param>
-        /// <param name="item"></param>
-        public ListStationWindows(BO.Line line ,int index,string item)
-        {
-            InitializeComponent();
-            bl = BLFactory.GetBL();
-            Resize();
-            sortBox.ItemsSource = listString;//set the comboBox to sort the list
-            this.index = index;//set the index
-            this.line = line;//set the line
-            updateDataContext();//call fonction to update the data context
-            if (item != string.Empty)//if i want to sort this windows and choose station for line
-            {
-                CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(StationList.DataContext);//to sort the list
-                view.SortDescriptions.Add(new SortDescription(item, ListSortDirection.Ascending));
-            }
-            if(line.listOfStationInLine == null)
-            line.listOfStationInLine = new BO.Station[] { new BO.Station() };// init station of line with a base station so that it is not null
-
-        }
+     
+      
         /// <summary>
         /// i resize my windows when i want to choose station for a line because i don't want button remove and update at this moment
         /// </summary>
-        private void Resize()
-        {
-            columnRemove.Width = 0;
-            columnUpdate.Width = 0;
-            ColumnName.Width = 189;
-            ColumnCode.Width = 184;
-            ColumnLattitude.Width = 174;
-            ColumnLongitude.Width = 186;
-        }
+    
 
         void updateDataContext()
         {
@@ -110,16 +80,9 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            if (index == 0)
-            {
-                MainStation wnd = new MainStation();//open one page before
+                MainStation wnd = new MainStation(bl);//open one page before
                 wnd.Show();
                 this.Close();//and close this page
-            }
-            if(index == 2)
-            {
-                this.Close();
-            }
         }
         /// <summary>
         /// to go to home page
@@ -128,7 +91,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            Opwindow wnd = new Opwindow();//open th ehome page
+            Opwindow wnd = new Opwindow(bl);//open th ehome page
             wnd.Show();
             this.Close();//and close this page
         }
@@ -140,24 +103,14 @@ namespace PL
         private void StationList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             StationPO station = ((FrameworkElement)e.OriginalSource).DataContext as StationPO;//set the bus
-            if(index == 0) //if I am in my station list and I want the info
+            if (station != null)
             {
-                InformationStationWindow wnd = new InformationStationWindow(station.Code);
+                InformationStationWindow wnd = new InformationStationWindow(station.Code, bl);
                 this.Hide();
                 wnd.ShowDialog();
                 this.Show();
             }
-            if (index == 2 && station != null)//and if want to choose station for line
-            {
-                IEnumerable<BO.Station> list = from item in bl.getAllStation()
-                                               where item.Code == station.Code
-                                               select item; //get the bus that i want to add
-                if (line.listOfStationInLine.FirstOrDefault(p => p.Code == list.First().Code) == null)//if I haven't already added it
-                {
-                    line.listOfStationInLine = line.listOfStationInLine.Concat(list);//i add it
-                    MessageBox.Show(string.Format($"this station :{station.Code} was add"), "bus add", MessageBoxButton.OK, MessageBoxImage.Information);//and I inform him
-                }
-            }
+            
         }
         /// <summary>
         /// button click to remove a line from listview
@@ -166,13 +119,10 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonRemove_Click(object sender, RoutedEventArgs e)
         {
-            if (index == 0)
-            {
                 Button btn = sender as Button;//set the button
                 StationPO StationPO = btn.DataContext as StationPO;//Set the line of listview to station
                 bl.removeStation(StationPO.Code);//and use remove from blimp
                 updateDataContext();//and update the datacontext
-            }
         }
         /// <summary>
         /// button for update one line of the listview
@@ -181,16 +131,13 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
-            if (index == 0)
-            {
                 Button btn = sender as Button;//set the button
                 StationPO stationsPO = btn.DataContext as StationPO;//set the line of listview to station
-                UpdateStation wnd = new UpdateStation(stationsPO.Code);
+                UpdateStation wnd = new UpdateStation(stationsPO.Code,bl);
                 this.Hide();
                 wnd.ShowDialog();
                 updateDataContext();// and update the datacontext
                 this.Show();
-            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -205,15 +152,9 @@ namespace PL
         private void sortBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string item = sortBox.SelectedItem as string;
-            if(index == 2 && item != null)//if i want to choose station fo rline
+           if (item != null)//if i want to see the list of list of station
             {
-                ListStationWindows wnd = new ListStationWindows(line,2,item);//I open this resized page
-                wnd.Show();
-                this.Close();
-            }
-            else if (item != null)//if i want to see the list of list of station
-            {
-                ListStationWindows wnd = new ListStationWindows(item);//i open this sorted window 
+                ListStationWindows wnd = new ListStationWindows(item,bl);//i open this sorted window 
                 wnd.Show();
                 this.Close();
             }
@@ -229,6 +170,16 @@ namespace PL
             }
         }
 
-    
+        private void Button_ClickSimulator(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;//set the button
+            StationPO stationsPO = btn.DataContext as StationPO;//set the line of listview to station
+            if (bl.listLineOfstationForsimu(stationsPO.getStation(), clock.Instance.startTime).Count() != 0)
+            {
+                Simulator wnd = new Simulator(bl, stationsPO.getStation());
+                wnd.Show();
+            }
+        }
+
     }
 }

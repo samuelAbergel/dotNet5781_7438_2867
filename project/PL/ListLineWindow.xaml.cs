@@ -28,17 +28,17 @@ namespace PL
         ObservableCollection<LinePO> collection;
         LinePO linePO;
         string[] listString = { "Id", "Area", "FirstStation", "LastStation" };
-        public ListLineWindow()
+        public ListLineWindow(IBL bl)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             updateDataContext();//call this fonction to update data context
             sortBox.ItemsSource = listString;
         }
-        public ListLineWindow(string item)
+        public ListLineWindow(string item, IBL bl)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             updateDataContext();//call this fonction to update data context
             sortBox.ItemsSource = listString;
             CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(LineList.DataContext);
@@ -65,7 +65,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            Opwindow wnd = new Opwindow();//open the home page
+            Opwindow wnd = new Opwindow(bl);//open the home page
             wnd.Show();
             this.Close();//and close this page
         }
@@ -76,7 +76,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            MainLine wnd = new MainLine();//open one page before
+            MainLine wnd = new MainLine(bl);//open one page before
             wnd.Show();
             this.Close();
         }
@@ -88,9 +88,9 @@ namespace PL
         private void LineList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             LinePO linePO = ((FrameworkElement)e.OriginalSource).DataContext as LinePO;//get the  line 
-            if (linePO != null && linePO.listOfStationInLine != null) //if it exist
+            if (linePO != null && bl.GetLineStationsFromLine(linePO.getLine()).Count() != 0) //if it exist
             {
-                listStationInLineWindow wnd = new listStationInLineWindow(linePO.getLine());//open information page
+                listStationInLineWindow wnd = new listStationInLineWindow(linePO.getLine(),bl);//open information page
                 this.Hide();
                 wnd.ShowDialog();
                 this.Show();
@@ -106,6 +106,11 @@ namespace PL
             Button btn = sender as Button;//set button
             LinePO linePO= btn.DataContext as LinePO;//set the line in line
             bl.removeLine(linePO.Id);//use remove from blimp
+            bl.removeLineTrip(linePO.Code);
+            foreach(var item in bl.GetLineStationsFromLine(linePO.getLine()))
+            {
+                bl.removeLineStation(item.Station);
+            }
             updateDataContext();//and update the data context
         }
 
@@ -113,7 +118,7 @@ namespace PL
         {
             Button btn = sender as Button;//set the bus 
             LinePO linePO = btn.DataContext as LinePO;//ste the line in line
-            UpdateLine wnd = new UpdateLine(linePO.getLine());//open window page
+            UpdateLine wnd = new UpdateLine(linePO.getLine(),bl);//open window page
             this.Hide();
             wnd.ShowDialog();
             updateDataContext();// an dupdate the data context
@@ -129,7 +134,7 @@ namespace PL
             string item = sortBox.SelectedItem as string;
             if (item != null)
             {
-                ListLineWindow wnd = new ListLineWindow(item);//I open the page again with the constructor which sorts the list
+                ListLineWindow wnd = new ListLineWindow(item,bl);//I open the page again with the constructor which sorts the list
                 wnd.Show();
                 this.Close();
             }

@@ -22,7 +22,7 @@ namespace PL
     /// </summary>
     public partial class informationWindows : Window
     {
-        public informationWindows(BO.Bus bus)
+        public informationWindows(BO.Bus bus, IBL bl)
         {
             InitializeComponent();
             this.DataContext = bus; //match data context and bus

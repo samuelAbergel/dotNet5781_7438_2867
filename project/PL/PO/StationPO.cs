@@ -41,7 +41,7 @@ namespace PL.PO
                 RaisePropertyChanged("Name");
             }
         }
-        public double Longitude
+        public string Longitude
         {
             get => station.Longitude;
             set
@@ -50,7 +50,7 @@ namespace PL.PO
                 RaisePropertyChanged("Longitude");
             }
         }
-        public double Lattitude
+        public string Lattitude
         {
             get => station.Lattitude;
             set

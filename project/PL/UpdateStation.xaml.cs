@@ -22,10 +22,10 @@ namespace PL
     {
         IBL bl;
         BO.Station Stations;
-        public UpdateStation(int idStation)
+        public UpdateStation(int idStation, IBL bl)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();
+          this.bl = bl;
             Stations = bl.getStation(idStation);//get the station with his id
             this.DataContext = Stations;//set the data context
         }

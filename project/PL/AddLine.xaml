@@ -20,7 +20,7 @@
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
-    <Grid Height="448" VerticalAlignment="Top">
+    <Grid Height="474" VerticalAlignment="Top">
         <Rectangle Margin="0,0,-1,346" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
@@ -31,7 +31,7 @@
         </Rectangle>
         <Image Source="images\LOGO.png" Margin="120,0,120,344" RenderTransformOrigin="0.565,0.861"/>
 
-        <Grid  HorizontalAlignment="Left" Margin="49,145,0,0" VerticalAlignment="Top" Width="303">
+        <Grid  HorizontalAlignment="Left" Margin="42,192,0,0" VerticalAlignment="Top" Width="303">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="133.5"/>
                 <ColumnDefinition Width="Auto" MinWidth="124"/>
@@ -52,22 +52,18 @@
                 </ComboBox.ItemsPanel>
             </ComboBox>
             <Label Content="Code:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="1" VerticalAlignment="Center" Height="24" Width="39"/>
-            <TextBox x:Name="codeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="1" Text="{Binding Code, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="First Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="2" VerticalAlignment="Center" Height="24" Width="73"/>
-            <TextBox  x:Name="firstStationTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="2" Text="{Binding FirstStation, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="codeTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="1" Text="{Binding Code, Mode=TwoWay}" VerticalAlignment="Center" Width="120" KeyDown="codeTextBox_KeyDown"/>
             <Label Content="Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Height="24" Width="21"/>
-            <TextBox x:Name="idTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="3" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Last Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="4" VerticalAlignment="Center" Height="24" Width="72"/>
-            <TextBox x:Name="lastStationTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="4" Text="{Binding LastStation, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
-            <Label Content=" list of station" Margin="-3,31,3,-29" Grid.Row="4"/>
-            <ComboBox x:Name="StationBox" IsEnabled="False" Grid.Column="1" Margin="1,30,-0.5,-25" Grid.Row="4" />
+            <TextBox x:Name="idTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="3" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Center" Width="120" KeyDown="idTextBox_KeyDown"/>
+            <Label Content=" list of station" Margin="0,5,0,-3" Grid.Row="4"/>
+            <ComboBox x:Name="StationBox" IsEnabled="False" Grid.Column="1" Margin="2,4,-1.5,1" Grid.Row="4" />
         </Grid>
         <Button
             x:Name="btnAdd"
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="49,355,83,29" Click="ButtonAddLine_Click">
+            ToolTip="ADD THIS LINE" Margin="48,366,84,39" Click="ButtonAddLine_Click">
             <TextBlock
                 Text="ADD THIS LINE" />
         </Button>
@@ -77,9 +73,9 @@
         </Button>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
 
-        <Button
+        <Button Name="btnPlus"
   Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-  ToolTip="MaterialDesignFloatingActionMiniDarkButton" Margin="318,301,48,112" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
+  ToolTip="ADD STATION" Margin="317,290,49,147" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
             <materialDesign:PackIcon
     Kind="Plus"
     Height="24"

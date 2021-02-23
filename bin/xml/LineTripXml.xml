@@ -1,69 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfLineTrip xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <LineTrip>
-    <LineId>21</LineId>
-    <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
-    <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
+  <LineId>
     <LineId>39</LineId>
     <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
     <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>45</LineId>
+    <Frequency>00:23:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>67</LineId>
     <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
     <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>25</LineId>
+    <Frequency>00:18:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>78</LineId>
     <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
     <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>149</LineId>
+    <Frequency>00:20:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>112</LineId>
     <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
     <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>21</LineId>
+    <Frequency>00:17:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>86</LineId>
     <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
     <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>21</LineId>
-    <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
-    <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>36</LineId>
-    <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
-    <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>10</LineId>
-    <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
-    <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>8</LineId>
-    <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
-    <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
-  <LineTrip>
-    <LineId>21</LineId>
-    <StartAt>06:00:00</StartAt>
-    <Frequency>10</Frequency>
-    <FinishAt>22:00:00</FinishAt>
-  </LineTrip>
+    <Frequency>00:01:00</Frequency>
+  </LineId>
 </ArrayOfLineTrip>

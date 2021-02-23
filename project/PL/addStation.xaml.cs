@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,27 +23,79 @@ namespace PL
     {
         IBL bl;//create instance of IBL
         BO.Station station;
-        public addStation()
+        public addStation(IBL bl)
         {
             InitializeComponent();
-            bl = BLFactory.GetBL();//and get it with blfactory
+            this.bl = bl;
             station = new BO.Station();
             this.DataContext = station;//match datacontext with the instance of  station
         }
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            if (bl.isStationExisting(int.Parse(codeTextBox.Text)))
+            try
             {
                 bl.addStation(station);//use add of bl imp
                 this.Close();//close this window
             }
-            else
-                MessageBox.Show("this station code already exist", "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
         }
+        private void Refuel_PreviewTextInput(object sender, TextCompositionEventArgs e)//to be able to write only numbers
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+      
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void codeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                TextBox s = e.Source as TextBox;
+                if (s != null)
+                {
+                    s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
+                }
+
+                e.Handled = true;
+            }
+        }
+
+        private void lattitudeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                TextBox s = e.Source as TextBox;
+                if (s != null)
+                {
+                    s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
+                }
+
+                e.Handled = true;
+            }
+        }
+
+        private void longitudeTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                TextBox s = e.Source as TextBox;
+                if (s != null)
+                {
+                    s.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
+                }
+
+                e.Handled = true;
+            }
         }
     }
 }

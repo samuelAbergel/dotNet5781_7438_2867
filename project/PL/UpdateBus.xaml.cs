@@ -23,12 +23,11 @@ namespace PL
     {
         IBL bl;
         BO.Bus bus;
-        public UpdateBus(BO.Bus bus)
+        public UpdateBus(BO.Bus bus, IBL bl)
         {
             this.bus = bus;
             InitializeComponent();
-            bl = BLFactory.GetBL();
-            statusComboBox.ItemsSource = Enum.GetValues(typeof(BO.BusStatus)).Cast<BO.BusStatus>();///set the combobox to busstatue
+            this.bl = bl;
             this.DataContext = bus;//set the datacontext
         }
 
@@ -36,8 +35,7 @@ namespace PL
         {
             int result;
             bool success = int.TryParse(fuelRemainTextBox.Text, out result);
-            if(statusComboBox.SelectedItem != null)
-             bus.Status = (BO.BusStatus)statusComboBox.SelectedItem;
+          
             if (result <= 1200 && success)
             { 
                 bl.updateBus(bus);//use the update of blimp

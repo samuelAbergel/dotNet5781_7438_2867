@@ -7,24 +7,12 @@ using System.Threading.Tasks;
 namespace DO
 {
     [Serializable]
-    public class badIdBusexeption :Exception
+    public class DLExeption :Exception
     {
-        public badIdBusexeption(int id): base(string.Format($"this id bus does not exist : {id}")) { }
-        public badIdBusexeption(Bus bus) : base(string.Format($"this id bus already exist : {bus.LicenseNum}")) { }
+        public DLExeption(string msg): base(msg) { }
     }
 
-    [Serializable]
-    public class badIdLineexeption : Exception
-    {
-        public badIdLineexeption(int id) : base(string.Format($"this id Line does not  exist : {id}")) { }
-        public badIdLineexeption(Line line) : base(string.Format($"this id Line already exist : {line.Id}")) { }
-    }
-    [Serializable]
-    public class badIDStationexeption : Exception
-    {
-        public badIDStationexeption(int id) : base(string.Format($"this code station does not exist : {id}")) { }
-        public badIDStationexeption(Station station) : base(string.Format($"this code station already exist : {station.Code}")) { }
-    }
+   
     public class XMLFileLoadCreateException : Exception
     {
         public string xmlFilePath;

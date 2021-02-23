@@ -22,9 +22,10 @@ namespace PL
     public partial class Opwindow : Window
     {
         IBL bl;
-        public Opwindow()
+        public Opwindow(IBL bl)
         {
             InitializeComponent();
+            this.bl = bl;
         }
         /// <summary>
         /// to go to page of main bus
@@ -33,7 +34,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonBus_Click(object sender, RoutedEventArgs e)
         {
-            MainBus wnd = new MainBus();
+            MainBus wnd = new MainBus(bl);
             wnd.Show();
             this.Close();
         }
@@ -44,7 +45,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonLine_Click_1(object sender, RoutedEventArgs e)
         {
-            MainLine wnd = new MainLine();
+            MainLine wnd = new MainLine(bl);
             wnd.Show();
             this.Close();
         }
@@ -55,7 +56,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonStation_Click(object sender, RoutedEventArgs e)
         {
-            MainStation wnd = new MainStation();
+            MainStation wnd = new MainStation(bl);
             wnd.Show();
             this.Close();
         }

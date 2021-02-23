@@ -23,11 +23,11 @@ namespace PL
     {
         IBL bl;
         BO.Bus bus;
-        public RefuellingWindows(BO.Bus bus)
+        public RefuellingWindows(BO.Bus bus, IBL bl)
         {
             this.bus = bus;
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            this.bl =bl;
             txtRefuel.Text = (1200-bus.FuelRemain).ToString();//to set the textbox
         }
 

@@ -12,7 +12,7 @@
             <RowDefinition Height="111*"/>
             <RowDefinition Height="340*"/>
         </Grid.RowDefinitions>
-        <Rectangle Margin="0,0,4,1.2" >
+        <Rectangle Margin="0,0,0,1" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -75,20 +75,33 @@
         </ListView>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="10,37,842,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="PREVIOUS" Margin="10,37,842,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="822,38,29,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="HOME" Margin="822,38,29,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
         <Image  Source="images\LOGO.png" Margin="363,0,363,335.4" Grid.RowSpan="2" />
-        <Label Content="sort by" FontSize="14" Margin="2,1,844,311.5" Grid.Row="1"/>
-        <ComboBox x:Name="sortBox" Margin="2,26,822,288.5" Grid.Row="1" SelectionChanged="sortBox_SelectionChanged"/>
-        <Label Content="search by id" FontSize="14" Margin="111,110,683,311.5" Grid.RowSpan="2"/>
-        <TextBox x:Name="searchBox" Margin="105,28,683,288.5" Grid.Row="1" KeyDown="OnKeyDownHandler"/>
+        <ComboBox
+            Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+            materialDesign:TextFieldAssist.HasClearButton="True"
+            materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+            materialDesign:ColorZoneAssist.Mode="Custom"
+            materialDesign:HintAssist.Hint="  Sort by"
+            materialDesign:HintAssist.HelperText="Select one "
+            MinWidth="128" Height="49" Margin="28,110,708,291.4"
+           
+             x:Name="sortBox" SelectionChanged="sortBox_SelectionChanged" Grid.RowSpan="2"/>
+        <TextBox
+            materialDesign:HintAssist.Hint="Search by license number"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+            VerticalAlignment="Center" Height="48" Margin="222,111,526,291.4"  x:Name="searchBox" KeyDown="OnKeyDownHandler" Grid.RowSpan="2" />
+
+
     </Grid>
 </Window>

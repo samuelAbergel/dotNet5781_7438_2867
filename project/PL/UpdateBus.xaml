@@ -20,7 +20,7 @@
     </Window.Resources>
     <Grid>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
-        <Rectangle Margin="0,-4,-1,317.8" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="0,-4,-1,303" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -28,7 +28,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="53,125,0,0" VerticalAlignment="Top" Width="302">
+        <Grid  HorizontalAlignment="Left" Margin="51,145,0,0" VerticalAlignment="Top" Width="302">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="152.5"/>
                 <ColumnDefinition Width="Auto" MinWidth="125"/>
@@ -52,14 +52,6 @@
             <TextBox x:Name="licenseNumTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,3,0,3" Grid.Row="3" Text="{Binding LicenseNum, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="preview Treatment Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,4" Grid.Row="4" VerticalAlignment="Center" Height="24" Width="137"/>
             <DatePicker x:Name="previewTreatmentDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="4" SelectedDate="{Binding previewTreatmentDate, Mode=TwoWay}" VerticalAlignment="Center" Height="25" Width="121"/>
-            <Label Content="Status:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,5,0,5" Grid.Row="5" VerticalAlignment="Center" Height="24" Width="43"/>
-            <ComboBox x:Name="statusComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="28" ItemsSource="{Binding Source={StaticResource dataFromEnum}}" Margin="3,3,0,3" Grid.Row="5" VerticalAlignment="Center" Width="120">
-                <ComboBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel/>
-                    </ItemsPanelTemplate>
-                </ComboBox.ItemsPanel>
-            </ComboBox>
             <Label Content="Total Trip:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="6" VerticalAlignment="Center" Height="24" Width="59"/>
             <TextBox x:Name="totalTripTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="6" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
         </Grid>
@@ -67,11 +59,11 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="100,350,100,10" Click="ButtonUpdate_Click">
+            ToolTip="UPDATE THIS BUS" Margin="100,350,100,10" Click="ButtonUpdate_Click">
             <TextBlock
                 Text="UPDATE THIS BUS" />
         </Button>
-        <Image Source="images\LOGO.png" Margin="100,-4,117,306.8" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="101,6,116,311" RenderTransformOrigin="0.565,0.861"/>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="287,38,11.6,351.8">
             <materialDesign:PackIcon Kind="Close" Height="34" Width="35"/>
         </Button>

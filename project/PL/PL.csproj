@@ -69,6 +69,9 @@
     <Compile Include="addStation.xaml.cs">
       <DependentUpon>addStation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChooseLineStation.xaml.cs">
+      <DependentUpon>ChooseLineStation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="InformationStationWindow.xaml.cs">
       <DependentUpon>InformationStationWindow.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,9 @@
     <Compile Include="ListStationWindows.xaml.cs">
       <DependentUpon>ListStationWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mail.xaml.cs">
+      <DependentUpon>Mail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainLine.xaml.cs">
       <DependentUpon>MainLine.xaml</DependentUpon>
     </Compile>
@@ -96,9 +102,22 @@
     <Compile Include="PO\AdjacentStationsPO.cs" />
     <Compile Include="PO\BusPO.cs" />
     <Compile Include="PO\LinePO.cs" />
+    <Compile Include="PO\LineStationPO.cs" />
     <Compile Include="PO\StationPO.cs" />
     <Compile Include="RefuellingWindows.xaml.cs">
       <DependentUpon>RefuellingWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="simu.xaml.cs">
+      <DependentUpon>simu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Simulator.xaml.cs">
+      <DependentUpon>Simulator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="stationSimu.xaml.cs">
+      <DependentUpon>stationSimu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Time.xaml.cs">
+      <DependentUpon>Time.xaml</DependentUpon>
     </Compile>
     <Compile Include="UpdateBus.xaml.cs">
       <DependentUpon>UpdateBus.xaml</DependentUpon>
@@ -118,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="addStation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChooseLineStation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -142,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ListStationWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -176,6 +203,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RefuellingWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="simu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Simulator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="stationSimu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Time.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,6 +262,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\BO.AdjacentStations.datasource" />
     <None Include="Properties\DataSources\BO.Bus.datasource" />
+    <None Include="Properties\DataSources\BO.DepartureLine.datasource" />
     <None Include="Properties\DataSources\BO.Line.datasource" />
     <None Include="Properties\DataSources\BO.Station.datasource" />
     <None Include="Properties\Settings.settings">

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:PL"
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.ListStationWindows"
        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
-         Title="list station" Height="514.494" Width="781.554" ResizeMode="NoResize" WindowStyle="None">
+         Title="list station" Height="514.494" Width="900" ResizeMode="NoResize" WindowStyle="None">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -22,7 +22,7 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,59,1.5,0" Height="333" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="StationList_MouseDoubleClick">
+        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,59,2.5,0" Height="333" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="StationList_MouseDoubleClick">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -48,14 +48,24 @@
                     <GridViewColumn x:Name="ColumnLongitude"
         DisplayMemberBinding="{Binding Longitude}"
         Header="Longitude" Width="132"/>
-                   
+
                     <GridViewColumn
         Header="update" Width="108" x:Name="columnUpdate">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                               <Button
+                                <Button
   Content="{materialDesign:PackIcon Kind=Update}"
-  ToolTip="Update" Click="ButtonUpdate_Click" Width="65" />  
+  ToolTip="Update" Click="ButtonUpdate_Click" Width="65" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn
+        Header="Simulation" Width="126" x:Name="columnSimulation">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button
+  Content="{materialDesign:PackIcon Kind=AccessPoint}"
+  ToolTip="Simulation" Click="Button_ClickSimulator" Width="65" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
@@ -75,19 +85,31 @@
         <Image  Source="images\LOGO.png" Margin="295,1,295.6,4.2" />
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="705,29,23.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="HOME" Margin="705,29,23.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="11,29,717.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="PREVIOUS" Margin="11,29,717.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
-        <Label Content="sort by" FontSize="14" Margin="-2,1,717.5,366.5" Grid.Row="1" />
-        <ComboBox x:Name="sortBox" Margin="1,35,702.5,335.5" Grid.Row="1" SelectionChanged="sortBox_SelectionChanged"  />
-        <Label Content="search by code" FontSize="14" Margin="113,117,550.5,367.5" Grid.RowSpan="2"/>
-        <TextBox x:Name="searchBox" Margin="96,27,545.5,336.5" Grid.Row="1" KeyDown="OnKeyDownHandler" />
+        <ComboBox
+  Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+  materialDesign:TextFieldAssist.HasClearButton="True"
+  materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+  materialDesign:ColorZoneAssist.Mode="Custom"
+  materialDesign:HintAssist.Hint="Sort by"
+  materialDesign:HintAssist.HelperText="Select one "
+  MinWidth="128" Height="49" Margin="25,115,750,350.5"
+            x:Name="sortBox" SelectionChanged="sortBox_SelectionChanged" Grid.RowSpan="2"/>
+        <TextBox
+            materialDesign:HintAssist.Hint="Search by code"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            materialDesign:TextFieldAssist.UnderlineBrush="{DynamicResource SecondaryHueMidBrush}"
+            VerticalAlignment="Center" Height="47" Margin="171,0,560,348.5"  x:Name="searchBox" KeyDown="OnKeyDownHandler" Grid.Row="1" />
+
+
     </Grid>
 </Window>

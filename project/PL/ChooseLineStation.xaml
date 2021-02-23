@@ -1,0 +1,105 @@
+﻿<Window x:Class="PL.ChooseLineStation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="list station" Height="514.494" Width="900" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="119*"/>
+            <RowDefinition Height="396*"/>
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Left" Width="899" >
+            <Rectangle.Fill>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#4579a3" Offset="1" />
+                    <GradientStop Color="#044d74" Offset="0.55" />
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image  Source="images\LOGO.png" Margin="370,-2,371,3" />
+
+        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,5,319,0" Height="390" VerticalAlignment="Top" Grid.Row="1" MouseDoubleClick="StationList_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style BasedOn="{StaticResource {x:Type GridViewColumnHeader}}" TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="IsHitTestVisible" Value="False"/>
+
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn x:Name="ColumnName"
+        DisplayMemberBinding="{Binding Name}"
+        Header="Name" Width="135"/>
+                    <GridViewColumn x:Name="ColumnCode"
+        DisplayMemberBinding="{Binding Code}"
+        Header="Code" Width="140"/>
+                    <GridViewColumn x:Name="ColumnLattitude"
+        DisplayMemberBinding="{Binding Lattitude}"
+        Header="Lattitude"   Width="120"/>
+                    <GridViewColumn x:Name="ColumnLongitude"
+        DisplayMemberBinding="{Binding Longitude}"
+        Header="Longitude" Width="132"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="35,26,739,24">
+
+            <materialDesign:PackIcon Kind="Close" Height="38" Width="39"/>
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="395" Margin="582,0,0,0" VerticalAlignment="Top" Width="318" Grid.Row="1">
+
+            <Button
+                Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                Width="150"
+                materialDesign:RippleAssist.IsDisabled="True" Margin="66,23,64,340" Background="#FF0C334F" >
+                LINE STATION
+            </Button>
+            <Grid.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF91B0C5" Offset="1" />
+                    <GradientStop Color="#4579a3" Offset="0.55" />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+        </Grid>
+
+        <ListView x:Name="LineStationList" ItemsSource="{Binding}" Margin="584,59,2,0" Height="336" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Grid.Row="1" >
+
+            <ListView.View>
+                <GridView>
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style BasedOn="{StaticResource {x:Type GridViewColumnHeader}}" TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="IsHitTestVisible" Value="False"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn x:Name="ColumnName1"
+        DisplayMemberBinding="{Binding LineStationIndex}"
+        Header="Index" Width="100"/>
+                    <GridViewColumn x:Name="ColumnCode1"
+        DisplayMemberBinding="{Binding Station}"
+        Header="Station" Width="110"/>
+                    <GridViewColumn
+        Header="remove" Width="110">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button
+  Content="{materialDesign:PackIcon Kind=TrashCanOutline }"
+  ToolTip="Remove" Click="ButtonInformation_Click" Width="48" Background="#FFBB112A" BorderBrush="#FFBB112A" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Window>
+
+

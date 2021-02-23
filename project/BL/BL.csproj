@@ -56,6 +56,9 @@
     <Compile Include="BO\Bus.cs" />
     <Compile Include="BO\BusOnTrip.cs" />
     <Compile Include="BO\BusStatus.cs" />
+    <Compile Include="BO\clock.cs" />
+    <Compile Include="BO\DepartureLine.cs" />
+    <Compile Include="BO\Exeptions.cs" />
     <Compile Include="BO\Line.cs" />
     <Compile Include="BO\LineStation.cs" />
     <Compile Include="BO\LineTrip.cs" />

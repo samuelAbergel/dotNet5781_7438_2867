@@ -1,7 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <User>
-    <UserName>sam</UserName>
-    <Password>12345678</Password>
+    <UserName>yechouabenchimol@gmail.com</UserName>
+    <Password>hLsEkKtK</Password>
+  </User>
+  <User>
+    <UserName>kohaneavi@gmail.com</UserName>
+    <Password>OoAvbz6T</Password>
+  </User>
+  <User>
+    <UserName>eyalou3@gmail.com</UserName>
+    <Password>eR4XEMed</Password>
+  </User>
+  <User>
+    <UserName>hillelpinto3@gmail.com</UserName>
+    <Password>3Z1AIWK8</Password>
+  </User>
+  <User>
+    <UserName>samuelabergel124@gmail.com</UserName>
+    <Password>8ZOLCkB8</Password>
+  </User>
+  <User>
+    <UserName>samuelabergel123@gmail.com</UserName>
+    <Password>urJiYlCK</Password>
+  </User>
+  <User>
+    <UserName>samuelabergel127@gmail.com</UserName>
+    <Password>Dz2Q3Jas</Password>
+  </User>
+  <User>
+    <UserName>hillelpinto4@gmail.com</UserName>
+    <Password>W77ihTOf</Password>
   </User>
 </ArrayOfUser>

@@ -28,17 +28,16 @@ namespace PL
         ObservableCollection<BusPO> collection;
         BusPO busPO;
         string[] listString = { "LicenseNum", "TotalTrip", "FuelRemain" };
-        public listBusWindows()
+        public listBusWindows(IBL bl)
         {
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             InitializeComponent();
             updateDataContext();//call fonction to update the data context
             sortBox.ItemsSource = listString;
-
         }
-        public listBusWindows(string item)
+        public listBusWindows(string item, IBL bl)
         {
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             InitializeComponent();
             updateDataContext();//call fonction to update the data context
             sortBox.ItemsSource = listString;
@@ -71,15 +70,33 @@ namespace PL
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the line of listview to the bus
             double fuel = busPO.FuelRemain;
-            if (busPO.Status == BO.BusStatus.ReadyToGo && busPO.FuelRemain <1200)//if it's possible
+            if (busPO.Status == BO.BusStatus.ReadyToGo)
             {
-                RefuellingWindows wnd = new RefuellingWindows(busPO.getBus());//open the window to refuel
-                this.Hide();
-                wnd.ShowDialog();
-                this.Show();
-                    btn.IsEnabled = false;//set the button so that we cannot press
-                    Refuelling(busPO, 100000, btn);//call fonction to use backgroundWOrker
+                try
+                {
+                    if (fuel < 1200)
+                    {
+                        RefuellingWindows wnd = new RefuellingWindows(busPO.getBus(), bl);//open the window to refuel
+                        this.Hide();
+                        wnd.ShowDialog();
+                        this.Show();
+                        if (fuel != bl.GetBus(busPO.LicenseNum).FuelRemain)
+                        {
+                            btn.IsEnabled = false;//set the button so that we cannot press
+                            Refuelling(busPO, 100000, btn);//call fonction to use backgroundWOrker
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
+            else
+                MessageBox.Show("you cant refuel because the statue", "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+
         }
 
         private void Refuelling(BusPO busPO, int time, Button btn)
@@ -116,12 +133,22 @@ namespace PL
         {
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the bus
-            if (busPO.Status == BO.BusStatus.ReadyToGo)//if it's possible
+            if (busPO.Status == BO.BusStatus.ReadyToGo)
             {
-                bl.treatment(busPO.getBus());//use treatment of blimp
-                btn.IsEnabled = false;//you can't press the button
-                Treatment(busPO, 10000, btn);//call fonction with backgroun worker
+                try
+                {
+                    bl.treatment(busPO.getBus());//use treatment of blimp
+                    btn.IsEnabled = false;//you can't press the button
+                    Treatment(busPO, 10000, btn);//call fonction with backgroun worker
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             }
+            else
+                    MessageBox.Show("you can treat because the statue", "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
+
         }
 
 
@@ -161,7 +188,7 @@ namespace PL
             BusPO bus = ((FrameworkElement)e.OriginalSource).DataContext as BusPO;//set the bus
             if (bus != null)//if it exist
             {
-                informationWindows wnd = new informationWindows(bus.getBus());//open page withthe information
+                informationWindows wnd = new informationWindows(bus.getBus(),bl);//open page withthe information
                 this.Hide();
                 wnd.ShowDialog();
                 this.Show();
@@ -174,7 +201,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            Opwindow wnd = new Opwindow();
+            Opwindow wnd = new Opwindow(bl);
             wnd.Show();
             this.Close();
         }
@@ -185,7 +212,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            MainBus wnd = new MainBus();
+            MainBus wnd = new MainBus(bl);
             wnd.Show();
             this.Close();
         }
@@ -193,14 +220,17 @@ namespace PL
         {
             Button btn = sender as Button;//set the button
             busPO = btn.DataContext as BusPO;//set the bus
-            if (busPO.Status != BO.BusStatus.inTreatment && busPO.Status != BO.BusStatus.refueling)
+            if (busPO.Status == BO.BusStatus.ReadyToGo)
             {
-                UpdateBus wnd = new UpdateBus(busPO.getBus());//open page for update
+                UpdateBus wnd = new UpdateBus(busPO.getBus(), bl);//open page for update
                 this.Hide();
                 wnd.ShowDialog();
                 updateDataContext();//and update the datacontext
                 this.Show();
             }
+            else
+                MessageBox.Show("you can update because the statue", "bad entry", MessageBoxButton.OK, MessageBoxImage.Warning);
+
         }
         /// <summary>
         /// for remove a line of listview
@@ -224,7 +254,7 @@ namespace PL
             string item = sortBox.SelectedItem as string;
             if(item != null)
             {
-                listBusWindows wnd = new listBusWindows(item);//I open the window again with the constructor which sorts
+                listBusWindows wnd = new listBusWindows(item,bl);//I open the window again with the constructor which sorts
                 wnd.Show();
                 this.Close();
             }
@@ -239,6 +269,7 @@ namespace PL
                     updateDataContext1(item);//i'm search and update the list
             }
         }
+
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLAPI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,8 +20,10 @@ namespace PL
     /// </summary>
     public partial class MainBus : Window
     {
-        public MainBus()
+        IBL bl;
+        public MainBus(IBL bl)
         {
+            this.bl = bl;
             InitializeComponent();
         }
         /// <summary>
@@ -30,7 +33,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            Addbus wnd = new Addbus();//open window to add bus
+            Addbus wnd = new Addbus(bl);//open window to add bus
             this.Hide();
             wnd.ShowDialog();
             this.Show();
@@ -42,7 +45,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
-            listBusWindows wnd = new listBusWindows();//open page to search bus
+            listBusWindows wnd = new listBusWindows(bl);//open page to search bus
             wnd.Show();
             this.Close();//and close this page
         }
@@ -53,7 +56,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
-            Opwindow wnd = new Opwindow();
+            Opwindow wnd = new Opwindow(bl);
             wnd.Show();
             this.Close();
         }
@@ -64,7 +67,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonPreviousPage_Click(object sender, RoutedEventArgs e)
         {
-            Opwindow wnd = new Opwindow();
+            Opwindow wnd = new Opwindow(bl);
             wnd.Show();
             this.Close();
         }

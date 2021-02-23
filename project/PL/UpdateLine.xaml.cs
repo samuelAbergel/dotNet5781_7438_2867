@@ -23,26 +23,30 @@ namespace PL
     {
         IBL bl;
         BO.Line line;
-        IEnumerable<Station> listStation;
-        public UpdateLine(BO.Line line)
+        IEnumerable<LineStation> listStation;
+        public UpdateLine(BO.Line line, IBL bl)
         {
             this.line = line;
             InitializeComponent();
-            bl = BLFactory.GetBL();
+            this.bl = bl;
             this.DataContext = line;//set the data context
+            areaComboBox.ItemsSource = Enum.GetValues(typeof(BO.Areas)).Cast<BO.Areas>();//set the itemsource of combo box to area BO(enum)
+            areaComboBox.SelectedIndex = (int)line.Area;
             update();
             if (listStation == null)
                 StationBox.IsEnabled = false;
         }
         private void update()
         {
-            listStation = bl.getStationOfLine(line);//search all station in line
+            listStation = bl.GetLineStationsFromLine(line);//search all station in line
             StationBox.ItemsSource = listStation;//set the itemsource to thi liststation with all station pf the line
-            StationBox.DisplayMemberPath = "Name";//i want that the combobox display name of station
+            StationBox.DisplayMemberPath = "Station";//i want that the combobox display name of station
         }
         private void ButtonUpdate_Click(object sender, RoutedEventArgs e)
         {
+            line.Area = (BO.Areas)areaComboBox.SelectedItem;
             bl.updateLine(line);//use the update of blimp
+            bl.updateLineTrip(bl.getLineTrip(line.Code));
             this.Close();//and close this page
         }
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
@@ -53,10 +57,9 @@ namespace PL
         private void ButtonAddStationLine_Click(object sender, RoutedEventArgs e)
         {
 
-            ListStationWindows wnd = new ListStationWindows(line, 2, string.Empty);// i open list of station to add 
+            ChooseLineStation wnd = new ChooseLineStation(line,bl);// i open list of station to add 
             wnd.ShowDialog();
-            line.listOfStationInLine = line.listOfStationInLine.Where(p => p.Code != 0);//i take the new line but i'm remove the fisrt station that I added so that the list is not null
-            if (line.listOfStationInLine != null && line.listOfStationInLine.Count() != 0)//if there is a station
+            if (bl.GetLineStationsFromLine(line).Count() != 0)//if there is a station
             {
                 update();//and update it 
                 StationBox.IsEnabled = true;// and i can see all station that i have add

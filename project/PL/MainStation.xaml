@@ -18,13 +18,13 @@
         <Image  Source="images\LOGO.png" Margin="291,-5,291,311.6" />
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="724,40,22,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+  ToolTip="HOME" Margin="724,40,22,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
     Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="MaterialDesignIconForegroundButton" Margin="22,40,723,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="PREVIOUS" Margin="22,40,723,358.6" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>
@@ -32,7 +32,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="250,187,250,176" Click="ButtonSearch_Click">
+            ToolTip="RESEARCH" Margin="250,187,250,176" Click="ButtonSearch_Click">
             <TextBlock
                 Text="RESEARCH" />
         </Button>
@@ -40,7 +40,7 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="MaterialDesignRaisedDarkButton with Round Corners" Margin="249,309,251,54" Click="ButtonAdd_Click">
+            ToolTip="ADD" Margin="249,309,251,54" Click="ButtonAdd_Click">
             <TextBlock
                 Text="ADD" />
         </Button>
