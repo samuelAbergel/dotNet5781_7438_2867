@@ -398,7 +398,7 @@ namespace DL
             DataSource.listLineStation.Add(lineStation.Clone());
         }
 
-        public void updateLineStation(LineStation lineStation)
+        public void updateLineStation(LineStation lineStation) 
         {
             //to verify its existence 
             LineStation sLine = DataSource.listLineStation.Find(p => p.LineId == lineStation.LineId);
