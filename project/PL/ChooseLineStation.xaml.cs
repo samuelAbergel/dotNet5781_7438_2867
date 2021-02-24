@@ -98,7 +98,7 @@ namespace PL
         {
             //remove this line station et replace other
             LineStationPO linestation = ((FrameworkElement)e.OriginalSource).DataContext as LineStationPO;//set the bus
-            bl.removeLineStation(linestation.Station);
+            bl.removeLineStation(linestation.ID);
             List<BO.LineStation> lst = bl.GetLineStationsFromLine(line).ToList();
             for (int i = linestation.LineStationIndex; i < lst.Count(); i++)
             {

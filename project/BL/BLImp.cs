@@ -743,6 +743,7 @@ namespace BL
 
             clock simulator = clock.Instance;
             simulator.rate = rate;
+            if(!simulator.stopWatch.IsRunning)
             simulator.stopWatch.Restart();
             simulator.ClockObserver += updateTime;
             while (simulator.cancel == true)

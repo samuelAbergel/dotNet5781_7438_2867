@@ -742,7 +742,6 @@ namespace DL
                 SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
 
                 mail.From = new MailAddress("myprojectdotnet10@gmail.com");
-                mail.Subject = "test to eyal";
                 mail.To.Add(mail1);
                 mail.Subject = "receive your password";
                 mail.Body = $"your password is {res.ToString()}";
@@ -818,8 +817,8 @@ namespace DL
             XElement LineStationRootElem = XMLTools.LoadListFromXMLElement(LineStationPath);//load xml file
 
             var linestation = (from p in LineStationRootElem.Elements()//search it
-                               where int.Parse(p.Element("Station").Value) == id
-                               select p);
+                               where int.Parse(p.Element("id").Value) == id
+                               select p).FirstOrDefault();
 
             if (linestation != null)
             {

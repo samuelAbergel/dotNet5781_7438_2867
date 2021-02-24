@@ -63,6 +63,7 @@ namespace PL
         }
         private void worker_DoWork(object sender, DoWorkEventArgs e)
         {
+            dt.Stop();
             dt.Start();
             if (worker.CancellationPending == true)
             {
@@ -70,9 +71,7 @@ namespace PL
                 clock.Instance.cancel = false;
                 return;
             }
-            
              bl.startSimulator(clock.Instance.startTime, clock.Instance.rate, showtimespan);
-
         }
 
         private void dt_Tick(object sender, EventArgs e)
@@ -110,6 +109,7 @@ namespace PL
         /// <param name="e"></param>
         private void ButtonHome_Click(object sender, RoutedEventArgs e)
         {
+            dt.Stop();
             Opwindow wnd = new Opwindow(bl);
             wnd.Show();
             this.Close();

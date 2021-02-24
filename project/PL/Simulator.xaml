@@ -4,8 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        mc:Ignorable="d"
-        Title="Simulator" Height="350" Width="500" WindowStyle="None">
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="Simulator" Height="355" Width="510" WindowStyle="None">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
@@ -16,7 +16,12 @@
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="396,-29,-36,245">
             <materialDesign:PackIcon Kind="Close" Height="45" Width="44"/>
         </Button>
-        <ListView x:Name="SimuList" ItemsSource="{Binding}" Margin="-2,56,5,2.5">
+        <ListView x:Name="SimuList" ItemsSource="{Binding}" Margin="-2,56,5,2.5" VerticalAlignment="Top" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
                     <GridViewColumn
@@ -38,9 +43,9 @@
         </ListView>
 
 
-        <materialDesign:PackIcon Kind="Autorenew" Margin="304,56,0,0" Height="44" Width="39" />
-        <materialDesign:PackIcon Kind="ClockTimeThreeOutline" Margin="407,56,0,0" Height="44" Width="39" />
-        <materialDesign:PackIcon Kind="Bus" RenderTransformOrigin="1.075,1.825" Height="44" Width="44" Margin="66,58,0,0" />
-        <materialDesign:PackIcon Kind="ArrowRight" Margin="154,62,0,0" Height="40" Width="101" />
+        <materialDesign:PackIcon Kind="Autorenew" Margin="316,55,0,0" Height="44" Width="39" />
+        <materialDesign:PackIcon Kind="ClockTimeThreeOutline" Margin="421,55,0,0" Height="44" Width="39" />
+        <materialDesign:PackIcon Kind="Bus" RenderTransformOrigin="1.075,1.825" Height="44" Width="44" Margin="36,56,0,0" />
+        <materialDesign:PackIcon Kind="ArrowRight" Margin="131,58,0,0" Height="40" Width="101" />
     </Grid>
 </Window>

@@ -56,7 +56,7 @@
             <materialDesign:PackIcon Kind="Power"/>
         </Button>
         <Label  Height="67" HorizontalAlignment="Left" Margin="545,7,0,0" x:Name="label1" VerticalAlignment="Top" Width="201" FontSize="50" FontFamily="Forte" />
-        <Button x:Name="startStopBtn" Click="ButtonSimu_Click" Margin="435,12,261,411" Height="Auto"/>
+        <Button x:Name="startStopBtn" Click="ButtonSimu_Click" Margin="638,381,58,42" Height="Auto"/>
 
     </Grid>
 

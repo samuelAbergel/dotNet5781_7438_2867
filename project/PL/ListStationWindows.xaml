@@ -85,13 +85,13 @@
         <Image  Source="images\LOGO.png" Margin="295,1,295.6,4.2" />
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="HOME" Margin="705,29,23.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="HOME" Margin="809,29,24,37" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="PREVIOUS" Margin="11,29,717.6,37.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="PREVIOUS" Margin="11,29,826,37" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
                 Kind="ChevronLeft" Height="40" Width="44" />
         </Button>

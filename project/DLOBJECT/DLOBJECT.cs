@@ -416,9 +416,12 @@ namespace DL
         public void removeLineStation(int id)
         {
             //to verify its existence
-            if ((DataSource.listLineStation.FirstOrDefault(p => p.Station == id) == null))
+            if ((DataSource.listLineStation.FirstOrDefault(p => p.id == id) == null))
                 throw new DLExeption("this linestation dosn't exist");
-            DataSource.listLineStation.RemoveAll(p => p.LineId == id);
+            var lineStation = (from item in DataSource.listLineStation
+                               where item.id == id
+                               select item).FirstOrDefault();
+            DataSource.listLineStation.Remove(lineStation);
         }
 
         public LineStation getLineStation(int id)
@@ -511,6 +514,7 @@ namespace DL
                 throw new DLExeption("this line trip dosn't exist");
         }
         #endregion
+
         #region user
         public bool getUser(string username)
         {
