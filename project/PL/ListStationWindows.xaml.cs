@@ -26,8 +26,6 @@ namespace PL
     {
         IBL bl;
         ObservableCollection<StationPO> collection;
-        StationPO stationsPO;
-        BO.Line line;
         string[] listString = { "Code", "Name" };
         /// <summary>
         /// constructor basic
@@ -174,7 +172,7 @@ namespace PL
         {
             Button btn = sender as Button;//set the button
             StationPO stationsPO = btn.DataContext as StationPO;//set the line of listview to station
-            if (bl.listLineOfstationForsimu(stationsPO.getStation(), clock.Instance.startTime).Count() != 0)
+            if (bl.listLineOfstationForsimu(stationsPO.getStation(), clock.Instance.startTime).Count() != 0 && clock.Instance.stopWatch.IsRunning)
             {
                 Simulator wnd = new Simulator(bl, stationsPO.getStation());
                 wnd.Show();

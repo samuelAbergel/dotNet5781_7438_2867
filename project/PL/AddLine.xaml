@@ -9,7 +9,7 @@
         xmlns:enm="clr-namespace:BO;assembly=BL"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="PL.AddLine"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="addbus" Height="477.327" Width="400" WindowStyle="None" >
+        Title="addbus" Height="400.327" Width="400" WindowStyle="None" >
     <Window.Resources>
         <CollectionViewSource x:Key="lineViewSource" d:DesignSource="{d:DesignInstance {x:Type enm:Line}, CreateList=True}"/>
 
@@ -20,8 +20,8 @@
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
-    <Grid Height="474" VerticalAlignment="Top">
-        <Rectangle Margin="0,0,-1,346" RenderTransformOrigin="0.496,0.679" >
+    <Grid Height="404" VerticalAlignment="Top" Margin="0,0,0,-3.5">
+        <Rectangle Margin="0,0,-1,308" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -29,9 +29,9 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="images\LOGO.png" Margin="120,0,120,344" RenderTransformOrigin="0.565,0.861"/>
+        <Image Source="images\LOGO.png" Margin="120,0,120,310" RenderTransformOrigin="0.565,0.861"/>
 
-        <Grid  HorizontalAlignment="Left" Margin="42,192,0,0" VerticalAlignment="Top" Width="303">
+        <Grid  HorizontalAlignment="Left" Margin="50,165,0,0" VerticalAlignment="Top" Width="303">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" MinWidth="133.5"/>
                 <ColumnDefinition Width="Auto" MinWidth="124"/>
@@ -53,8 +53,6 @@
             </ComboBox>
             <Label Content="Code:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="1" VerticalAlignment="Center" Height="24" Width="39"/>
             <TextBox x:Name="codeTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="1" Text="{Binding Code, Mode=TwoWay}" VerticalAlignment="Center" Width="120" KeyDown="codeTextBox_KeyDown"/>
-            <Label Content="Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="3" VerticalAlignment="Center" Height="24" Width="21"/>
-            <TextBox x:Name="idTextBox" PreviewTextInput="Refuel_PreviewTextInput" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="3" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Center" Width="120" KeyDown="idTextBox_KeyDown"/>
             <Label Content=" list of station" Margin="0,5,0,-3" Grid.Row="4"/>
             <ComboBox x:Name="StationBox" IsEnabled="False" Grid.Column="1" Margin="2,4,-1.5,1" Grid.Row="4" />
         </Grid>
@@ -63,19 +61,19 @@
             Style="{StaticResource MaterialDesignRaisedDarkButton}"
             Height="Auto"
             materialDesign:ButtonAssist.CornerRadius="25"
-            ToolTip="ADD THIS LINE" Margin="48,366,84,39" Click="ButtonAddLine_Click">
+            ToolTip="ADD THIS LINE" Margin="51,300,81,43" Click="ButtonAddLine_Click">
             <TextBlock
                 Text="ADD THIS LINE" />
         </Button>
-        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,28,17,373">
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="335,28,17,332">
 
-            <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
+            <materialDesign:PackIcon Kind="Close" Height="38" Width="45"/>
         </Button>
         <Grid HorizontalAlignment="Left" Height="100" Margin="-86,172,0,0" VerticalAlignment="Top" Width="100" Grid.RowSpan="2"/>
 
         <Button Name="btnPlus"
   Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-  ToolTip="ADD STATION" Margin="317,290,49,147" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
+  ToolTip="ADD STATION" Margin="319,232,40,136" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
             <materialDesign:PackIcon
     Kind="Plus"
     Height="24"

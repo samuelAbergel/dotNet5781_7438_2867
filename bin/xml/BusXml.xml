@@ -3,9 +3,9 @@
   <Bus>
     <LicenseNum>12345678</LicenseNum>
     <FromDate>04/10/1995</FromDate>
-    <TotalTrip>20000</TotalTrip>
+    <TotalTrip>0</TotalTrip>
     <FuelRemain>1200</FuelRemain>
-    <previewTreatmentDate>16/02/2021</previewTreatmentDate>
+    <previewTreatmentDate>23/02/2021</previewTreatmentDate>
     <BusOfLine>3</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>

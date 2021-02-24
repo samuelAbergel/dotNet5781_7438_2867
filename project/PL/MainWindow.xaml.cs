@@ -36,7 +36,7 @@ namespace PL
             worker = new BackgroundWorker();
             time = DateTime.Now.TimeOfDay;
             dt.Tick += new EventHandler(dt_Tick);
-            dt.Interval = TimeSpan.FromMilliseconds(100);
+            dt.Interval = TimeSpan.FromMilliseconds(1      );
             worker.WorkerSupportsCancellation = true;
             worker.WorkerReportsProgress = true;
             worker.DoWork += worker_DoWork;
@@ -70,7 +70,9 @@ namespace PL
                 clock.Instance.cancel = false;
                 return;
             }
-            bl.startSimulator(clock.Instance.startTime, clock.Instance.rate, showtimespan);
+            
+             bl.startSimulator(clock.Instance.startTime, clock.Instance.rate, showtimespan);
+
         }
 
         private void dt_Tick(object sender, EventArgs e)

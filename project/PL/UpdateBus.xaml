@@ -11,6 +11,7 @@
         Title="update bus" Height="425" Width="400" WindowStyle="None" >
     <Window.Resources>
         <CollectionViewSource x:Key="busViewSource" d:DesignSource="{d:DesignInstance {x:Type BO:Bus}, CreateList=True}"/>
+        
         <ObjectDataProvider x:Key="dataFromEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
@@ -43,7 +44,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Bus Of Line:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center" Height="24" Width="71"/>
-            <TextBox x:Name="busOfLineTextBox" PreviewTextInput="Refuel_PreviewTextInput"  Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="0" Text="{Binding BusOfLine, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <ComboBox Name="lineBox" IsReadOnly="False" ItemsSource="{Binding}" Grid.Column="1" Margin="3,6,6.5,1.5"/>
             <Label Content="From Date:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,3" Grid.Row="1" VerticalAlignment="Center" Height="24" Width="66"/>
             <DatePicker x:Name="fromDateDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="1" SelectedDate="{Binding FromDate, Mode=TwoWay}" VerticalAlignment="Center" Height="25" Width="116"/>
             <Label Content="Fuel Remain:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="2" VerticalAlignment="Center" Height="24" Width="75"/>

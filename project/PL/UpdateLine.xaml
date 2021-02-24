@@ -26,7 +26,7 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Grid  HorizontalAlignment="Left" Margin="68,132,0,0" VerticalAlignment="Top">
+        <Grid  HorizontalAlignment="Left" Margin="65,156,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -47,15 +47,13 @@
                 </ComboBox.ItemsPanel>
             </ComboBox>
             <Label Content="Code:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center"/>
-            <TextBox x:Name="codeTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding Code, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="codeTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="1" Text="{Binding Code, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="First Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center"/>
             <TextBox x:Name="firstStationTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="2" Text="{Binding FirstStation}" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Id:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center"/>
-            <TextBox x:Name="idTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="3" Text="{Binding Id, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
             <Label Content="Last Station:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center"/>
             <TextBox x:Name="lastStationTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="4" Text="{Binding LastStation, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
-            <Label Content=" list of station" Margin="-1,31,1,-30" Grid.Row="6"/>
-            <ComboBox x:Name="StationBox"  Grid.Column="1" Margin="0,31,2.5,-26" Grid.Row="6" />
+            <Label Content=" list of station" Margin="-3,35,3,-34" Grid.Row="4"/>
+            <ComboBox x:Name="StationBox"  Grid.Column="1" Margin="0.5,31,1.5,-26" Grid.Row="4" />
         </Grid>
         <Image Source="images\LOGO.png" Margin="84,0,86.6,320.8" RenderTransformOrigin="0.565,0.861"/>
         <Button
@@ -72,7 +70,7 @@
 
         <Button
   Style="{StaticResource MaterialDesignFloatingActionMiniDarkButton}"
-  ToolTip="ADD STATION>" Margin="279,283,25.6,113.8" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
+  ToolTip="ADD STATION>" Margin="279,280,25,117" Height="Auto" Width="Auto" Click="ButtonAddStationLine_Click">
             <materialDesign:PackIcon
     Kind="Plus"
     Height="24"

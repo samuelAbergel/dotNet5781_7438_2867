@@ -70,10 +70,8 @@ namespace PL
         private void ButtonAddStationLine_Click(object sender, RoutedEventArgs e)
         {
             bool flag = true;
-            bool flag1 = true;
             flag = int.TryParse(codeTextBox.Text, out int a);
-            flag1 = int.TryParse(idTextBox.Text, out int b);
-            if (flag && flag1)
+            if (flag)
             {
                 if (codeTextBox.Text != "0")
                 {
@@ -114,7 +112,7 @@ namespace PL
             }
             this.Close();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 this.Close();
             }

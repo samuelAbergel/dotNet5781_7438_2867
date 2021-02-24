@@ -46,11 +46,14 @@
             <TextBox x:Name="statusTextBox" Grid.Column="1" IsEnabled="False" HorizontalAlignment="Left" Height="22" Margin="2,8,0,4" Grid.Row="4" Text="{Binding Status, Mode=TwoWay}" VerticalAlignment="Center" Width="120" RenderTransformOrigin="0.469,3.5"/>
             <Label Content="Total Trip:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="5" VerticalAlignment="Center" Height="24" Width="59"/>
             <TextBox x:Name="totalTripTextBox" IsEnabled="False" Grid.Column="1" HorizontalAlignment="Left" Height="22" Margin="3,4,0,4" Grid.Row="5" Text="{Binding TotalTrip, Mode=TwoWay}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="Bus Of Line:" Grid.Column="0" HorizontalAlignment="Left" Margin="1,-28,0,35" Grid.Row="0" VerticalAlignment="Center" Height="24" Width="157"/>
+            <TextBox x:Name="busOfLineTextBox" IsEnabled="False" HorizontalAlignment="Left" Height="22" Margin="2,-29,-22.5,38" Grid.Row="0" Text="{Binding BusOfLine, Mode=TwoWay}" VerticalAlignment="Center" Width="152" Grid.Column="1"/>
         </Grid>
         <Image Source="images\LOGO.png" Margin="117,-4,117,310.2" RenderTransformOrigin="0.565,0.861"/>
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="342,26,10,356.8">
 
             <materialDesign:PackIcon Kind="Close" Height="34" Width="45"/>
         </Button>
+
     </Grid>
 </Window>

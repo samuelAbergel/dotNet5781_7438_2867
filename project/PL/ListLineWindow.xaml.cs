@@ -26,7 +26,6 @@ namespace PL
     {
         IBL bl;
         ObservableCollection<LinePO> collection;
-        LinePO linePO;
         string[] listString = { "Id", "Area", "FirstStation", "LastStation" };
         public ListLineWindow(IBL bl)
         {
@@ -105,7 +104,7 @@ namespace PL
         {
             Button btn = sender as Button;//set button
             LinePO linePO= btn.DataContext as LinePO;//set the line in line
-            bl.removeLine(linePO.Id);//use remove from blimp
+            bl.removeLine(linePO.Code);//use remove from blimp
             bl.removeLineTrip(linePO.Code);
             foreach(var item in bl.GetLineStationsFromLine(linePO.getLine()))
             {

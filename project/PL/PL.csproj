@@ -107,9 +107,6 @@
     <Compile Include="RefuellingWindows.xaml.cs">
       <DependentUpon>RefuellingWindows.xaml</DependentUpon>
     </Compile>
-    <Compile Include="simu.xaml.cs">
-      <DependentUpon>simu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Simulator.xaml.cs">
       <DependentUpon>Simulator.xaml</DependentUpon>
     </Compile>
@@ -203,10 +200,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RefuellingWindows.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="simu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

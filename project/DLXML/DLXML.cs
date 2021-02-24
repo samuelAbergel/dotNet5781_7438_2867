@@ -367,7 +367,7 @@ namespace DL
             XElement LineRootElem = XMLTools.LoadListFromXMLElement(LinePath);//load xml file
 
             XElement line1 = (from p in LineRootElem.Elements()//search it
-                              where int.Parse(p.Element("Code").Value) == line.Id
+                              where int.Parse(p.Element("Code").Value) == line.Code
                               select p).FirstOrDefault();
 
             if (line1 != null)
@@ -376,7 +376,7 @@ namespace DL
             line.FirstStation = lst.First().Station.ToString();
             line.LastStation = lst.Last().Station.ToString();
             //create it
-            XElement lineElem = new XElement("Line", new XElement("Id", line.Id.ToString()),
+            XElement lineElem = new XElement("Line", 
                                   new XElement("Code", line.Code.ToString()),
                                   new XElement("Area", line.Area.ToString()),
                                   new XElement("FirstStation", line.FirstStation),
@@ -395,7 +395,6 @@ namespace DL
             return (from p in LineRootElem.Elements()//return all line of file
                     select new Line()
                     {
-                        Id = Int32.Parse(p.Element("Id").Value),
                         Area = (Areas)Enum.Parse(typeof(Areas), p.Element("Area").Value),
                         Code = Int32.Parse(p.Element("Code").Value),
                         FirstStation = p.Element("FirstStation").Value,
@@ -411,7 +410,6 @@ namespace DL
                          where int.Parse(p.Element("Code").Value) == id
                          select new Line()
                          {
-                             Id = Int32.Parse(p.Element("Id").Value),
                              Area = (Areas)Enum.Parse(typeof(Areas), p.Element("Area").Value),
                              Code = Int32.Parse(p.Element("Code").Value),
                              FirstStation = p.Element("FirstStation").Value,
@@ -432,7 +430,6 @@ namespace DL
                              where int.Parse(p.Element("Code").Value) == line.Code
                              select new Line()
                              {
-                                 Id = Int32.Parse(p.Element("Id").Value),
                                  Area = (Areas)Enum.Parse(typeof(Areas), p.Element("Area").Value),
                                  Code = Int32.Parse(p.Element("Code").Value),
                                  FirstStation = p.Element("FirstStation").Value,
@@ -451,7 +448,7 @@ namespace DL
 
 
             XElement line = (from p in LineRootElem.Elements()//search this line
-                             where int.Parse(p.Element("Id").Value) == id
+                             where int.Parse(p.Element("Code").Value) == id
                              select p).FirstOrDefault();
             var linestations = from p in LineStationRootElem.Elements()
                                where int.Parse(p.Element("LineId").Value) == id
@@ -472,10 +469,9 @@ namespace DL
         {
             XElement LineRootElem = XMLTools.LoadListFromXMLElement(LinePath);//load xml file
             IEnumerable<Line> listStart = (from p in LineRootElem.Elements()//search all line thant start with item
-                                           where p.Element("Id").Value.ToString().StartsWith(item)
+                                           where p.Element("Code").Value.ToString().StartsWith(item)
                                            select new Line()
                                            {
-                                               Id = Int32.Parse(p.Element("Id").Value),
                                                Area = (Areas)Enum.Parse(typeof(Areas), p.Element("Area").Value),
                                                Code = Int32.Parse(p.Element("Code").Value),
                                                FirstStation = p.Element("FirstStation").Value,
@@ -493,7 +489,7 @@ namespace DL
             XElement LineRootElem = XMLTools.LoadListFromXMLElement(LinePath);//load xml file
 
             XElement line1 = (from p in LineRootElem.Elements()//search this line
-                              where int.Parse(p.Element("Id").Value) == line.Id
+                              where int.Parse(p.Element("Code").Value) == line.Code
                               select p).FirstOrDefault();
 
             IEnumerable<LineStation> lst = GetLineStationsFromLine(line);
@@ -501,7 +497,6 @@ namespace DL
             line.LastStation = lst.Last().Station.ToString();
             if (line1 != null)// and update all the field
             {
-                line1.Element("Id").Value = line.Id.ToString();
                 line1.Element("Code").Value = line.Code.ToString();
                 line1.Element("Area").Value = line.Area.ToString();
                 line1.Element("FirstStation").Value = line.FirstStation;
@@ -528,11 +523,11 @@ namespace DL
                 throw new DO.DLExeption("this name is not valid");
             if (station.Lattitude == null)
                 station.Lattitude = "0";
-            if (double.TryParse(station.Lattitude.ToString(), out double a))
+            if (!double.TryParse(station.Lattitude, out double a))
                 throw new DLExeption("this lattitude is not valid");
             if (station.Longitude == null)
                 station.Longitude = "0";
-            if (double.TryParse(station.Longitude.ToString(), out double b))
+            if (!double.TryParse(station.Longitude, out double b))
                 throw new DLExeption("this Longitude is not valid");
             if (a > 90 || a < -90)
                 throw new DO.DLExeption("this lattitude dosn't valid");
@@ -580,7 +575,6 @@ namespace DL
                                      where item.Element("LineId").Value.ToString() == item1.Element("Code").Value.ToString()
                                      select new Line
                                      {
-                                         Id = Int32.Parse(item1.Element("Id").Value),
                                          Area = (Areas)Enum.Parse(typeof(Areas), item1.Element("Area").Value),
                                          Code = Int32.Parse(item1.Element("Code").Value),
                                          FirstStation = item1.Element("FirstStation").Value,
@@ -730,9 +724,10 @@ namespace DL
 
         public void SignIn(string mail1)
         {
+            //verify if existing
             if (getUser(mail1))
                 throw new DLExeption("this mail already exist please login");
-
+            //create a password
             const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
             StringBuilder res = new StringBuilder();
             Random rnd = new Random();
@@ -740,6 +735,7 @@ namespace DL
             {
                 res.Append(valid[rnd.Next(valid.Length)]);
             }
+            //try to end it in mail
             try
             {
                 MailMessage mail = new MailMessage();
@@ -761,7 +757,7 @@ namespace DL
             {
                 throw new DLExeption(ex.Message);
             }
-
+            //adxmld it to fill 
             addUser(mail1, res.ToString());
         }
         #endregion
@@ -1001,7 +997,7 @@ namespace DL
             
             if (linetrip != null)// and update all the field
             {
-                linetrip.Element("lineId").Value = LineTrip.LineId.ToString();
+                linetrip.Element("LineId").Value = LineTrip.LineId.ToString();
                 linetrip.Element("StartAt").Value = LineTrip.StartAt.ToString();
                 linetrip.Element("FinishAt").Value = LineTrip.FinishAt.ToString();
                 linetrip.Element("Frequency").Value = LineTrip.Frequency.ToString();

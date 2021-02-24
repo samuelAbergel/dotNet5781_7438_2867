@@ -14,7 +14,6 @@ namespace PL.PO
         public LinePO(Line line)
         {
             this.line = line;
-            this.Id = line.Id;
             this.Code = line.Code;
             this.Area = line.Area;
             this.FirstStation = line.FirstStation;
@@ -29,15 +28,7 @@ namespace PL.PO
         {
             return line;
         }
-        public int Id
-        {
-            get => line.Id;
-            set
-            {
-                line.Id = value;
-                RaisePropertyChanged("Id");
-            }
-        }
+       
         public int Code
         {
             get => line.Code;

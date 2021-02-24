@@ -96,6 +96,7 @@ namespace PL
 
         private void ButtonInformation_Click(object sender, RoutedEventArgs e)
         {
+            //remove this line station et replace other
             LineStationPO linestation = ((FrameworkElement)e.OriginalSource).DataContext as LineStationPO;//set the bus
             bl.removeLineStation(linestation.Station);
             List<BO.LineStation> lst = bl.GetLineStationsFromLine(line).ToList();

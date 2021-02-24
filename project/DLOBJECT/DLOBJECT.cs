@@ -4,6 +4,7 @@ using DS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,8 @@ namespace DL
                 throw new DLExeption($"this id bus not valid {bus.LicenseNum}");
             if (bus.FuelRemain > 1200)
                 throw new DLExeption("this fuel is not valid");
+            if (bus.TotalTrip > 20000)
+                throw new DLExeption("this total trip is not valid");
             //to add in list of bus
             DataSource.listBus.Add(bus.Clone());
         }
@@ -48,6 +51,10 @@ namespace DL
             }
             else //if the bus does not exist, an error is returned 
                 throw new DLExeption("this bus dosn't exist");
+            if (bus.FuelRemain > 1200)
+                throw new DLExeption("this fuel is not valid");
+            if (bus.TotalTrip > 20000)
+                throw new DLExeption("this total trip is not valid");
         }
         public void removeBus(int id)
         {
@@ -78,8 +85,6 @@ namespace DL
                               select item).FirstOrDefault();
             if (realBus == null)//and update the changed bus
                 throw new DO.DLExeption("this bus dosn't exist");
-            if (realBus.FuelRemain < 1200)
-                throw new DO.DLExeption("this fuel is too high");
             if (realBus.Status != BusStatus.ReadyToGo)
                 throw new DO.DLExeption("you can refuel because the statue");
             //if it doesn't exist throw error
@@ -109,16 +114,18 @@ namespace DL
         }
         public IEnumerable<Bus> searchBus(string item)
         {
+            //search bus that start with same item
             IEnumerable<Bus> listStart = from bus in DataSource.listBus
                                          where bus.LicenseNum.ToString().StartsWith(item)
                                          select bus;
            
-            if(listStart != null)
+            if(listStart != null)//if existing return true
             return listStart;
             return null;
         }
         public bool isBusExisting(int liscenceNumber)
         {
+            //search if existing
             Bus bus = (from item in DataSource.listBus
                        where item.LicenseNum == liscenceNumber
                        select item).FirstOrDefault();
@@ -133,40 +140,44 @@ namespace DL
         public void addLine(Line line)
         {
             //to verify its existence
-            if ((DataSource.listLine.FirstOrDefault(p => p.Id == line.Id) != null))
+            if ((DataSource.listLine.FirstOrDefault(p => p.Code == line.Code) != null))
                 throw new DLExeption("this line already exist");
+            IEnumerable<LineStation> lst = GetLineStationsFromLine(line);
+            line.FirstStation = lst.First().Station.ToString();
+            line.LastStation = lst.Last().Station.ToString();
             //if it exist add this line in list of line
             DataSource.listLine.Add(line.Clone());
         }
         public void updateLine(Line line)
         {
             //to verify its existence
-            Line sLine = DataSource.listLine.Find(p => p.Id == line.Id);
+            Line sLine = DataSource.listLine.Find(p => p.Code == line.Code);
             // if it exist update all field of the bus
             if (sLine != null)
             {
                 sLine.Area = line.Area;
                 sLine.Code = line.Code;
-                sLine.FirstStation = line.FirstStation;
-                sLine.Id = line.Id;
-                sLine.LastStation = line.LastStation;
+                IEnumerable<LineStation> lst = GetLineStationsFromLine(line);
+                sLine.FirstStation = lst.First().Station.ToString();
+                sLine.LastStation = lst.Last().Station.ToString();
             }
             else // else throw an error
                 throw new DLExeption("this line dosn't exist");
+           
 
         }
         public void removeLine(int id)
         {
             //to verify existence
-            if ((DataSource.listLine.FirstOrDefault(p => p.Id == id) == null))
+            if ((DataSource.listLine.FirstOrDefault(p => p.Code == id) == null))
                 throw new DLExeption("this line dosn't exist");
             //if it exist we remove this bus
-            DataSource.listLine.RemoveAll(p => p.Id == id);
+            DataSource.listLine.RemoveAll(p => p.Code == id);
         }
         public Line getLine(int id)
         {
             //to verify its existence
-            Line sLine = DataSource.listLine.Find(p => p.Id == id);
+            Line sLine = DataSource.listLine.Find(p => p.Code == id);
             if (sLine != null)
                 return sLine.Clone();//if it exist return the bus
             else
@@ -175,10 +186,11 @@ namespace DL
 
         public IEnumerable<Line> searchLine(string item)
         {
+            //search if there is a line that start start with the same item
             IEnumerable<Line> listStart = from line in DataSource.listLine
-                                          where line.Id.ToString().StartsWith(item)
+                                          where line.Code.ToString().StartsWith(item)
                                           select line;
-
+            //return true if existing
             if (listStart != null)
                 return listStart;
             return null;
@@ -193,8 +205,9 @@ namespace DL
 
         public bool isLineExisting(Line line)
         {
+            //search if there is a line that start start with the same item
             var line1 = (from item in DataSource.listLineStation
-                       where item.LineId == line.Id
+                       where item.LineId == line.Code
                        select item).FirstOrDefault();
             if (line1 != null)
                 return false;
@@ -209,19 +222,19 @@ namespace DL
             //to verify its existence
             if ((DataSource.listStation.FirstOrDefault(p => p.Code == station.Code) != null))
                 throw new DLExeption("this station already exist");
-            if (station.Name == null)
+            if (station.Name == string.Empty)
                 throw new DO.DLExeption("this name is not valid");
             if (station.Lattitude == null)
                 station.Lattitude = "0";
-            if (!double.TryParse(station.Lattitude.ToString(), out double a))
+            if (!double.TryParse(station.Lattitude, out double a))
                 throw new DLExeption("this lattitude is not valid");
             if (station.Longitude == null)
                 station.Longitude = "0";
-            if (!double.TryParse(station.Longitude.ToString(), out double b))
+            if (!double.TryParse(station.Longitude, out double b))
                 throw new DLExeption("this Longitude is not valid");
-            if (int.Parse(station.Lattitude) > 90 || int.Parse(station.Lattitude) < -90)
+            if (a > 90 || a < -90)
                 throw new DO.DLExeption("this lattitude dosn't valid");
-            if (int.Parse(station.Longitude) > 180 || int.Parse(station.Longitude) < -180)
+            if (b > 180 || b < -180)
                 throw new DO.DLExeption("this Longitude dosn't valid");
             if (station.Code < 0)
                 throw new DO.DLExeption("this code is not valid");
@@ -282,10 +295,12 @@ namespace DL
 
         public IEnumerable<Line> getLineOfStation(Station station)
         {
-            //return from item in DataSource.listLine
-            //        from stu in item.listOfStationInLine
-            //         where stu.Code == station.Code
-            //          select item;
+           IEnumerable<LineStation> linestation = from item in DataSource.listLineStation
+                                                  where item.Station == station.Code
+                                                  select item;
+            if (linestation != null)
+                return from item in linestation
+                       select getLine(item.LineId);
             return null;
         }
         public bool isStationExisting(int code)
@@ -375,7 +390,7 @@ namespace DL
             //to verify its existence
            var lst = (from item in DataSource.listLine
                       from item1 in DataSource.listLineStation
-                     where item.Id == lineStation.LineId && item1.Station== lineStation.Station
+                     where item.Code == lineStation.LineId && item1.Station== lineStation.Station
                      select item1).FirstOrDefault();
             if(lst != null)
                 throw new DLExeption("this lineStation already exist");
@@ -401,7 +416,7 @@ namespace DL
         public void removeLineStation(int id)
         {
             //to verify its existence
-            if ((DataSource.listLineStation.FirstOrDefault(p => p.LineId == id) == null))
+            if ((DataSource.listLineStation.FirstOrDefault(p => p.Station == id) == null))
                 throw new DLExeption("this linestation dosn't exist");
             DataSource.listLineStation.RemoveAll(p => p.LineId == id);
         }
@@ -418,6 +433,7 @@ namespace DL
 
         public IEnumerable<LineStation> GetLineStationsFromLine(Line line)
         {
+            //get all linestation of line 
             var lst = from item in DataSource.listLineStation
                       where item.LineId == line.Code
                       select item;
@@ -426,6 +442,7 @@ namespace DL
 
         public bool isLineStationExisting(LineStation lineStation)
         {
+            //search if there is a station with start with the same item
             LineStation lineStation1 = (from item in DataSource.listLineStation
                                         where item.LineId == lineStation.LineId
                                         select item).FirstOrDefault();
@@ -436,69 +453,143 @@ namespace DL
 
         public void removeAllLineStationOfLine(int id)
         {
+            //remove all line station one after one
             foreach (var item in DataSource.listLineStation)
                 if (item.LineId == id)
                     DataSource.listLineStation.Remove(item);
         }
-
+        public IEnumerable<LineStation> getAllLineStation()
+        {
+            return from linetrip in DataSource.listLineStation //search line in list of line                                                                    
+                   select linetrip.Clone(); //return all line
+        }
 
         #endregion
 
-        #region implemented just in XML
+        #region line trip
+        public void addLineTrip(int id)
+        {
+            //to verify its existence
+            if ((DataSource.listLineTrip.FirstOrDefault(p => p.LineId == id) != null))
+                throw new DLExeption("this line trip already exist");
+            //if it exist add this line in list of line
+            DataSource.listLineTrip.Add(getLineTrip(id).Clone());
+        }
+
+        public void updateLineTrip(LineTrip LineTrip)
+        {
+            //to verify its existence
+            LineTrip sLineTrip = DataSource.listLineTrip.Find(p => p.LineId == LineTrip.LineId);
+            // if it exist update all field of the bus
+            if (sLineTrip != null)
+            {
+                sLineTrip.FinishAt = LineTrip.FinishAt;
+                sLineTrip.StartAt = LineTrip.StartAt;
+                sLineTrip.Frequency = LineTrip.Frequency;
+                sLineTrip.LineId = LineTrip.LineId;
+            }
+            else // else throw an error
+                throw new DLExeption("this line trip dosn't exist");
+        }
+
+        public void removeLineTrip(int id)
+        {
+            //to verify existence
+            if ((DataSource.listLineTrip.FirstOrDefault(p => p.LineId == id) == null))
+                throw new DLExeption("this line trip dosn't exist");
+            //if it exist we remove this bus
+            DataSource.listLineTrip.RemoveAll(p => p.LineId == id);
+        }
+
+        public LineTrip getLineTrip(int id)
+        {
+            //to verify its existence
+            LineTrip sLineTrip = DataSource.listLineTrip.Find(p => p.LineId == id);
+            if (sLineTrip != null)
+                return sLineTrip.Clone();//if it exist return the bus
+            else
+                throw new DLExeption("this line trip dosn't exist");
+        }
+        #endregion
+        #region user
         public bool getUser(string username)
         {
-            throw new DLExeption("this not implement in DLObject");
+            User verif = (from p in DataSource.listUser//verif it existing
+                          where p.UserName == username
+                          select p).FirstOrDefault();
+            if (verif != null)
+                return true;
+            return false;
         }
+        public void addUser(string name, string password)
+        {
+            //to verify its existence
+            if ((DataSource.listUser.FirstOrDefault(p => p.Password == password && p.UserName ==name) != null))
+                throw new DLExeption("this user already exist");
+            //if it exist add this line in list of line
+            DataSource.listUser.Add(new User { UserName = name,Password = password}.Clone());
+        }
+        public void SignIn(string mail1)
+        {
+            //verify if existing
+            if (getUser(mail1))
+                throw new DLExeption("this mail already exist please login");
+            //create a password
+            const string valid = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            StringBuilder res = new StringBuilder();
+            Random rnd = new Random();
+            for (int i = 0; i < 8; i++)
+            {
+                res.Append(valid[rnd.Next(valid.Length)]);
+            }
+            //and send to mail
+            try
+            {
+                MailMessage mail = new MailMessage();
+                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                mail.From = new MailAddress("myprojectdotnet10@gmail.com");
+                mail.Subject = "test to eyal";
+                mail.To.Add(mail1);
+                mail.Subject = "receive your password";
+                mail.Body = $"your password is {res.ToString()}";
+
+                SmtpServer.Port = 587;
+                SmtpServer.Credentials = new System.Net.NetworkCredential("myprojectdotnet10@gmail.com", "A12345678b");
+                SmtpServer.EnableSsl = true;
+
+                SmtpServer.Send(mail);
+            }
+            catch (DO.DLExeption ex)
+            {
+                throw new DLExeption(ex.Message);
+            }
+            //add the user and password to datasource
+            addUser(mail1, res.ToString());
+
+        }
+        public bool getLogin(string mail, string password)
+        {
+             User verif = (from p in DataSource.listUser//verif it existing
+                            where p.UserName == mail && p.Password == password
+                            select p).FirstOrDefault();
+            if (verif != null)
+                return true;
+            return false;
+        }
+        #endregion
+
+        #region implemented just in XML
+
         public void verif()
         {
             return;
-        }
-
-        public void addUser(string name, string password)
-        {
-            throw new DLExeption("this not implement in DLObject");
         }
 
         public TimeSpan getTime(Line line)
         {
             return default;
         }
-
-        public void SignIn(string mail)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool getLogin(string mail, string password)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void addLineTrip(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void updateLineTrip(LineTrip LineTrip)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void removeLineTrip(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public LineTrip getLineTrip(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public IEnumerable<LineStation> getAllLineStation()
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
 
     }

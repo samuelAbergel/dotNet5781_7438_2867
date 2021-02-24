@@ -1,38 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfLine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Line>
-    <Id>0</Id>
     <Code>39</Code>
-    <Area>center</Area>
+    <Area>south</Area>
     <FirstStation>38831</FirstStation>
     <LastStation>38844</LastStation>
   </Line>
   <Line>
-    <Id>0</Id>
     <Code>67</Code>
     <Area>center</Area>
     <FirstStation>38837</FirstStation>
     <LastStation>38888</LastStation>
   </Line>
   <Line>
-    <Id>0</Id>
     <Code>78</Code>
     <Area>center</Area>
     <FirstStation>38831</FirstStation>
     <LastStation>38887</LastStation>
   </Line>
   <Line>
-    <Id>0</Id>
     <Code>112</Code>
     <Area>center</Area>
     <FirstStation>38873</FirstStation>
     <LastStation>38838</LastStation>
   </Line>
   <Line>
-    <Id>0</Id>
     <Code>86</Code>
     <Area>center</Area>
     <FirstStation>38890</FirstStation>
     <LastStation>38834</LastStation>
+  </Line>
+  <Line>
+    <Code>77</Code>
+    <Area>south</Area>
+    <FirstStation>38831</FirstStation>
+    <LastStation>38837</LastStation>
+  </Line>
+  <Line>
+    <Code>123</Code>
+    <Area>east</Area>
+    <FirstStation>38869</FirstStation>
+    <LastStation>38880</LastStation>
+  </Line>
+  <Line>
+    <Code>56</Code>
+    <Area>east</Area>
+    <FirstStation>38892</FirstStation>
+    <LastStation>38883</LastStation>
+  </Line>
+  <Line>
+    <Code>43</Code>
+    <Area>north</Area>
+    <FirstStation>38890</FirstStation>
+    <LastStation>38831</LastStation>
+  </Line>
+  <Line>
+    <Code>90</Code>
+    <Area>west</Area>
+    <FirstStation>38891</FirstStation>
+    <LastStation>38836</LastStation>
   </Line>
 </ArrayOfLine>

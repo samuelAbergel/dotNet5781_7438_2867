@@ -114,6 +114,7 @@ namespace PL
             Button ButtonRefuelling_Click = lst[2] as Button;//set the button
             BusPO bus = lst[0] as BusPO;//set the bus
             bus.Status = BO.BusStatus.ReadyToGo;//set the statue
+            bl.updateBus(bus.getBus());
             ButtonRefuelling_Click.IsEnabled = true; //you can press the button
             updateDataContext();//update the data context
         }
@@ -167,6 +168,7 @@ namespace PL
             Button ButtonTreatment_Click = lst[2] as Button;//set the button
             BusPO bus = lst[0] as BusPO;//set the bus
             bus.Status = BO.BusStatus.ReadyToGo;//set the statue
+            bl.updateBus(bus.getBus());
             ButtonTreatment_Click.IsEnabled = true;//you can press the button
             updateDataContext();//update the data context
         }

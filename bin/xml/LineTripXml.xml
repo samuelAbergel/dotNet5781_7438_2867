@@ -30,4 +30,34 @@
     <FinishAt>22:00:00</FinishAt>
     <Frequency>00:01:00</Frequency>
   </LineId>
+  <LineId>
+    <LineId>77</LineId>
+    <StartAt>06:00:00</StartAt>
+    <FinishAt>22:00:00</FinishAt>
+    <Frequency>00:13:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>123</LineId>
+    <StartAt>06:00:00</StartAt>
+    <FinishAt>22:00:00</FinishAt>
+    <Frequency>00:08:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>56</LineId>
+    <StartAt>06:00:00</StartAt>
+    <FinishAt>22:00:00</FinishAt>
+    <Frequency>00:00:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>43</LineId>
+    <StartAt>06:00:00</StartAt>
+    <FinishAt>22:00:00</FinishAt>
+    <Frequency>00:17:00</Frequency>
+  </LineId>
+  <LineId>
+    <LineId>90</LineId>
+    <StartAt>06:00:00</StartAt>
+    <FinishAt>22:00:00</FinishAt>
+    <Frequency>00:15:00</Frequency>
+  </LineId>
 </ArrayOfLineTrip>

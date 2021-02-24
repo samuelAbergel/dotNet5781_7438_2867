@@ -12,14 +12,13 @@ namespace DS
     /// </summary>
     public static class DataSource
     {
+        static int id = 0;
         public static List<Bus> listBus;
         public static List<Line> listLine;
         public static List<Station> listStation;
         public static List<AdjacentStations> listAdjacentStations;
-        public static List<BusOnTrip> listBusOnTrip;
         public static List<LineStation> listLineStation;
         public static List<LineTrip> listLineTrip;
-        public static List<Trip> listTrip;
         public static List<User> listUser;
 
 
@@ -34,320 +33,320 @@ namespace DS
             {
                 new Station
                 {
-                    Code= 3940,
-                    Name= "station 1",
-                    Lattitude=31.770868.ToString(),
-                    Longitude=35.173806.ToString(),
+                    Code= 38831,
+                    Name= "בי''ס בר לב/בן יהודה",
+                    Lattitude=32.183921.ToString(),
+                    Longitude=34.917806.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 4721,
-                    Name= "station 2",
-                    Lattitude=31.746961.ToString(),
-                    Longitude=35.23278.ToString(),
+                    Code= 38832,
+                    Name= "הרצל/צומת בילו",
+                    Lattitude=31.8734.ToString(),
+                    Longitude=34.819541.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 1902,
-                    Name= "station 3",
+                    Code= 38833,
+                    Name= "הנחשול/הדייגים",
                     Lattitude=31.746998.ToString(),
                     Longitude=35.2364.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9633,
-                    Name= "station 4",
+                    Code= 38834,
+                    Name= "פריד/ששת הימים",
                     Lattitude=31.746921.ToString(),
                     Longitude=35.2167.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 3374,
-                    Name= "station 5",
+                    Code= 38836,
+                    Name= "ת. מרכזית לוד/הורדה",
                     Lattitude=31.746341.ToString(),
                     Longitude=35.2376.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 1875,
-                    Name= "station 6",
+                    Code= 38837,
+                    Name= "חנה אברך/וולקני",
                     Lattitude=31.727231.ToString(),
                     Longitude=35.251990.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5586,
-                    Name= "station 7",
+                    Code= 38838,
+                    Name= "הרצל/משה שרת",
                     Lattitude=31.746976.ToString(),
                     Longitude=35.251897.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2417,
-                    Name= "station 8",
+                    Code= 38839,
+                    Name= "הבנים/אלי כהן",
                     Lattitude=31.712961.ToString(),
                     Longitude=35.251721.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5668,
-                    Name= "station 9",
+                    Code= 38840,
+                    Name= "ויצמן/הבנים",
                     Lattitude=31.748165.ToString(),
                     Longitude=35.251675.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5329,
-                    Name= "station 10",
+                    Code= 38841,
+                    Name= "האירוס/הכלנית",
                     Lattitude=31.748098.ToString(),
                     Longitude=35.251586.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5900,
-                    Name= "station 11",
+                    Code= 38842,
+                    Name= "הכלנית/הנרקיס",
                     Lattitude=31.748076.ToString(),
                     Longitude=35.251450.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 1324,
-                    Name= "station 12",
+                    Code= 38844,
+                    Name= "אלי כהן/לוחמי הגטאות",
                     Lattitude=31.748081.ToString(),
                     Longitude=35.251365.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9737,
-                    Name= "station 13",
+                    Code= 38845,
+                    Name= "שבזי/שבת אחים",
                     Lattitude=31.748067.ToString(),
                     Longitude=35.251274.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 7405,
-                    Name= "station 14",
+                    Code= 38846,
+                    Name= "שבזי/ויצמן ",
                     Lattitude=31.7480514.ToString(),
                     Longitude=35.251189.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 7218,
-                    Name= "station 15",
+                    Code= 38847,
+                    Name= "חיים בר לב/שדרות יצחק רבין",
                     Lattitude=31.7480489.ToString(),
                     Longitude=35.192666.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 3398,
-                    Name= "station 16",
+                    Code= 38848,
+                    Name= "מרכז לבריאות הנפש לב השרון",
                     Lattitude=31.748034.ToString(),
                     Longitude=35.25166.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9280,
-                    Name= "station 17",
+                    Code= 38849,
+                    Name= "מרכז לבריאות הנפש לב השרון",
                     Lattitude=31.780296.ToString(),
                     Longitude=35.251247.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5547,
-                    Name= "station 18",
+                    Code= 38852,
+                    Name= "הולצמן/המדע",
                     Lattitude=31.748013.ToString(),
                     Longitude=35.19529.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 7235,
-                    Name= "station 19",
+                    Code= 38854,
+                    Name= "מחנה צריפין/מועדון",
                     Lattitude=31.748351.ToString(),
                     Longitude=35.19534.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 3385,
-                    Name= "station 20",
+                    Code= 38855,
+                    Name= "הרצל/גולני",
                     Lattitude=31.770868.ToString(),
                     Longitude=35.192666.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 1289,
-                    Name= "station 21",
+                    Code= 38856,
+                    Name= "הרותם/הדגניות",
                     Lattitude=31.748349.ToString(),
                     Longitude=35.19561.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9238,
-                    Name= "station 22",
+                    Code= 38859,
+                    Name= "הערבה",
                     Lattitude=31.728791.ToString(),
                     Longitude=35.19573.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2914,
-                    Name= "station 23",
+                    Code= 38860,
+                    Name= "מבוא הגפן/מורד התאנה",
                     Lattitude=31.728098.ToString(),
                     Longitude=35.195790.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 6482,
-                    Name= "station 24",
+                    Code= 38861,
+                    Name= "מבוא הגפן/ההרחבה",
                     Lattitude=31.728091.ToString(),
                     Longitude=35.19589.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 8428,
-                    Name= "station 25",
+                    Code= 38862,
+                    Name= "ההרחבה א",
                     Lattitude=31.728089.ToString(),
                     Longitude=35.19507.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2904,
-                    Name= "station 26",
+                    Code= 38863,
+                    Name= "ההרחבה ב",
                     Lattitude=31.728072.ToString(),
                     Longitude=35.19509.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 7290,
-                    Name= "station 27",
+                    Code= 38864,
+                    Name= "ההרחבה/הותיקים",
                     Lattitude=31.728076.ToString(),
                     Longitude=35.195666.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5540,
-                    Name= "station 28",
+                    Code= 38865,
+                    Name= "רשות שדות התעופה/העליה",
                     Lattitude=31.728062.ToString(),
                     Longitude=35.19541.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 1532,
-                    Name= "station 29",
+                    Code= 38866,
+                    Name= "כנף/ברוש",
                     Lattitude=31.728059.ToString(),
                     Longitude=35.231903.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 4020,
-                    Name= "station 30",
+                    Code= 38867,
+                    Name= "החבורה/דב הוז",
                     Lattitude=31.728047.ToString(),
                     Longitude=35.231894.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9093,
-                    Name= "station 31",
+                    Code= 38869,
+                    Name= "בית הלוי ה",
                     Lattitude=31.728039.ToString(),
                     Longitude=35.231759.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 6881,
-                    Name= "station 32",
+                    Code= 38870,
+                    Name= "הראשונים/כביש 5700",
                     Lattitude=31.728028.ToString(),
                     Longitude=35.231684.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5623,
-                    Name= "station 33",
+                    Code= 38872,
+                    Name= "הגאון בן איש חי/צאלון",
                     Lattitude=31.728011.ToString(),
                     Longitude=35.231520.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 5423,
-                    Name= "station 34",
+                    Code= 38873,
+                    Name= "עוקשי/לוי אשכול",
                     Lattitude=31.815421.ToString(),
                     Longitude=35.231387.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9902,
-                    Name= "station 35",
+                    Code= 38875,
+                    Name= "מנוחה ונחלה/יהודה גורודיסקי",
                     Lattitude=31.81090.ToString(),
                     Longitude=35.23131.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2309,
-                    Name= "station 36",
+                    Code= 38876,
+                    Name= "גורודסקי/יחיאל פלדי",
                     Lattitude=31.810822.ToString(),
                     Longitude=35.231295.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 9834,
-                    Name= "station 37",
+                    Code= 38877,
+                    Name= "דרך מנחם בגין/יעקב חזן",
                     Lattitude=31.810762.ToString(),
                     Longitude=35.231142.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2204,
-                    Name= "station 38",
+                    Code= 38878,
+                    Name= "דרך הפארק/הרב נריה",
                     Lattitude=31.810698.ToString(),
                     Longitude=35.231094.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2020,
-                    Name= "station 39",
+                    Code= 38879,
+                    Name= "התאנה/הגפן",
                     Lattitude=31.813421.ToString(),
                     Longitude=35.231666.ToString(),
 
                 },
                 new Station
                 {
-                    Code= 2021,
-                    Name= "station 40",
+                    Code= 38880,
+                    Name= "התאנה/האלון",
                     Lattitude=31.810386.ToString(),
                     Longitude=35.231583.ToString(),
 
@@ -357,211 +356,695 @@ namespace DS
             {
                 new AdjacentStations
                 {
-                  Station1 = 3940,
-                  Station2 = 4721,
+                  Station1 = 38831,
+                  Station2 = 38832,
                   Distance = 1,
                   Time = TimeSpan.FromMinutes(55),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 4721,
-                  Station2 = 1902,
+                  Station1 = 38832,
+                  Station2 = 38833,
                   Distance = 1,
                   Time = TimeSpan.FromMinutes(30),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1902,
-                  Station2 = 9633,
+                  Station1 = 38833,
+                  Station2 = 38834,
                   Distance = 1,
                   Time = TimeSpan.FromMinutes(25),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 9633,
-                  Station2 = 3374,
+                  Station1 = 38834,
+                  Station2 = 38836,
                   Distance = 2,
                   Time = TimeSpan.FromMinutes(15),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 3374,
-                  Station2 = 1875,
+                  Station1 = 38836,
+                  Station2 = 38837,
                   Distance = 2,
                   Time = TimeSpan.FromMinutes(45),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1875,
-                  Station2 = 5586,
+                  Station1 = 38837,
+                  Station2 = 38838,
                   Distance = 2,
                   Time = TimeSpan.FromMinutes(53),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5586,
-                  Station2 = 5668,
+                  Station1 = 38838,
+                  Station2 = 38839,
                   Distance = 3,
                   Time = TimeSpan.FromMinutes(50),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5668,
-                  Station2 = 5329,
+                  Station1 = 38839,
+                  Station2 = 38840,
                   Distance = 3,
                   Time = TimeSpan.FromMinutes(40),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5329,
-                  Station2 = 5900,
+                  Station1 = 38840,
+                  Station2 = 38852,
                   Distance = 3,
                   Time = TimeSpan.FromMinutes(42),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5900,
-                  Station2 = 1324,
+                  Station1 = 38852,
+                  Station2 = 38849,
                   Distance = 4,
                   Time = TimeSpan.FromMinutes(35),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1324,
-                  Station2 = 9737,
+                  Station1 = 38849,
+                  Station2 = 38832,
                   Distance = 4,
                   Time = TimeSpan.FromMinutes(33),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 9737,
-                  Station2 = 7409,
+                  Station1 = 38832,
+                  Station2 = 38831,
                   Distance = 4,
                   Time = TimeSpan.FromMinutes(31),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 7409,
-                  Station2 = 7218,
+                  Station1 = 38831,
+                  Station2 = 38844,
                   Distance = 5,
                   Time = TimeSpan.FromMinutes(41),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 7218,
-                  Station2 = 3398,
+                  Station1 = 38844,
+                  Station2 = 38848,
                   Distance = 5,
                   Time = TimeSpan.FromMinutes(42),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 3398,
-                  Station2 = 9280,
+                  Station1 = 38848,
+                  Station2 = 38842,
                   Distance = 5,
                   Time = TimeSpan.FromMinutes(43),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 9280,
-                  Station2 = 5547,
+                  Station1 = 38842,
+                  Station2 = 38838,
                   Distance = 6,
                   Time = TimeSpan.FromMinutes(50),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5547,
-                  Station2 = 7239,
+                  Station1 = 38838,
+                  Station2 = 38833,
                   Distance = 6,
                   Time = TimeSpan.FromMinutes(52),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 7239,
-                  Station2 = 3385,
+                  Station1 = 38833,
+                  Station2 = 38845,
                   Distance = 6,
                   Time = TimeSpan.FromMinutes(51),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 3385,
-                  Station2 = 1289,
+                  Station1 = 38833,
+                  Station2 = 38852,
                   Distance = 7,
                   Time = TimeSpan.FromMinutes(15),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1289,
-                  Station2 = 9238,
+                  Station1 = 38852,
+                  Station2 = 38842,
                   Distance = 7,
                   Time = TimeSpan.FromMinutes(16),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 9238,
-                  Station2 = 2914,
+                  Station1 = 38842,
+                  Station2 = 38859,
                   Distance = 7,
                   Time = TimeSpan.FromMinutes(18),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 2914,
-                  Station2 = 6482,
+                  Station1 = 38859,
+                  Station2 = 38864,
                   Distance = 8,
                   Time = TimeSpan.FromMinutes(26),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 6482,
-                  Station2 = 2914,
+                  Station1 = 38864,
+                  Station2 = 38866,
                   Distance = 8,
                   Time = TimeSpan.FromMinutes(29),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 9238,
-                  Station2 = 8428,
+                  Station1 = 38866,
+                  Station2 = 38856,
                   Distance = 8,
                   Time = TimeSpan.FromMinutes(27),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 8428,
-                  Station2 = 2904,
+                  Station1 = 38856,
+                  Station2 = 38832,
                   Distance = 9,
                   Time = TimeSpan.FromMinutes(39),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 2904,
-                  Station2 = 7290,
+                  Station1 = 38832,
+                  Station2 = 38837,
                   Distance = 9,
                   Time = TimeSpan.FromMinutes(35),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 7290,
-                  Station2 = 5540,
+                  Station1 = 38837,
+                  Station2 = 38840,
                   Distance = 9,
                   Time = TimeSpan.FromMinutes(37),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 5540,
-                  Station2 = 1532,
+                  Station1 = 38834,
+                  Station2 = 38852,
                   Distance = 10,
                   Time = TimeSpan.FromMinutes(53),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 1532,
-                  Station2 = 4020,
+                  Station1 = 38852,
+                  Station2 = 38862,
                   Distance = 10,
                   Time = TimeSpan.FromMinutes(54),
                 },
                 new AdjacentStations
                 {
-                  Station1 = 4020,
-                  Station2 = 9093,
+                  Station1 = 38862,
+                  Station2 = 38863,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38863,
+                  Station2 = 38834,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38834,
+                  Station2 = 38856,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38856,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38838,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38838,
+                  Station2 = 38833,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38833,
+                  Station2 = 38840,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38839,
+                  Station2 = 38847,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38847,
+                  Station2 = 38862,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38862,
+                  Station2 = 38833,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38833,
+                  Station2 = 38841,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38841,
+                  Station2 = 38846,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38846,
+                  Station2 = 38860,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38860,
+                  Station2 = 38838,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38838,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38834,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38849,
+                  Station2 = 38831,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38831,
+                  Station2 = 38862,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38862,
+                  Station2 = 38863,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38863,
+                  Station2 = 38841,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38841,
+                  Station2 = 38836,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38836,
+                  Station2 = 38840,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38840,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38839,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38839,
+                  Station2 = 38844,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38834,
+                  Station2 = 38837,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38837,
+                  Station2 = 38842,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38842,
+                  Station2 = 38854,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38854,
+                  Station2 = 38841,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38841,
+                  Station2 = 38836,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38836,
+                  Station2 = 38864,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38864,
+                  Station2 = 38867,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38867,
+                  Station2 = 38849,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38849,
+                  Station2 = 38837,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38839,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38832,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38832,
+                  Station2 = 38863,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38863,
+                  Station2 = 38854,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38854,
+                  Station2 = 38846,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38846,
+                  Station2 = 38840,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38840,
+                  Station2 = 38848,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38848,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38864,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38839,
+                  Station2 = 38847,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38847,
+                  Station2 = 38862,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38862,
+                  Station2 = 38833,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38833,
+                  Station2 = 38841,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38841,
+                  Station2 = 38846,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38846,
+                  Station2 = 38860,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38860,
+                  Station2 = 38838,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38838,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38834,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+               
+                new AdjacentStations
+                {
+                  Station1 = 38838,
+                  Station2 = 38856,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38856,
+                  Station2 = 38852,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38852,
+                  Station2 = 38831,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38831,
+                  Station2 = 38841,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38841,
+                  Station2 = 38836,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38836,
+                  Station2 = 38863,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38863,
+                  Station2 = 38848,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38848,
+                  Station2 = 38859,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38859,
+                  Station2 = 38864,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38852,
+                  Station2 = 38837,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38837,
+                  Station2 = 38866,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38866,
+                  Station2 = 38833,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38833,
+                  Station2 = 38841,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38841,
+                  Station2 = 38840,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38840,
+                  Station2 = 38832,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38832,
+                  Station2 = 38852,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38852,
+                  Station2 = 38839,
+                  Distance = 10,
+                  Time = TimeSpan.FromMinutes(59),
+                },
+                new AdjacentStations
+                {
+                  Station1 = 38839,
+                  Station2 = 38864,
                   Distance = 10,
                   Time = TimeSpan.FromMinutes(59),
                 },
@@ -580,7 +1063,7 @@ namespace DS
                    TotalTrip = 2345,
                    BusOfLine =1,
                    previewTreatmentDate = DateTime.Now.AddMonths(-9)
-                   
+
                },
                new Bus
                {
@@ -778,91 +1261,979 @@ namespace DS
             {
                 new Line
                 {
-                    Id = 123456789,
                     Code = 1,
-                    FirstStation = 275267202.ToString(),
-                    LastStation = 257426568.ToString(),
+                    FirstStation = 38830.ToString(),
+                    LastStation = 38840.ToString(),
                     Area = Areas.center,
-                   
+
                 },
                 new Line
                 {
-                    Id = 987654321,
-                    Code = 2,
-                    FirstStation = 275267202.ToString(),
-                    LastStation = 098765432.ToString(),
+                    Code = 21,
+                    FirstStation = 38852.ToString(),
+                    LastStation = 38845.ToString(),
                     Area = Areas.center,
                 },
                 new Line
                 {
-                    Id = 720752642,
-                    Code = 3,
-                    FirstStation = 0987654323.ToString(),
-                    LastStation = 257426568.ToString(),
+                    Code = 39,
+                    FirstStation = 38833.ToString(),
+                    LastStation = 38840.ToString(),
                     Area = Areas.east,
                 },
                 new Line
                 {
-                    Id = 1752975225,
-                    Code = 4,
-                    FirstStation = 987654326.ToString(),
-                    LastStation = 875567342.ToString(),
+                    Code =75,
+                    FirstStation = 38834.ToString(),
+                    LastStation = 38840.ToString(),
                     Area = Areas.north,
                 },
                 new Line
                 {
-                    Id = 123456789,
-                    Code = 5,
-                    FirstStation = 123456789.ToString(),
-                    LastStation = 875567342.ToString(),
+                    Code = 42,
+                    FirstStation = 38839.ToString(),
+                    LastStation = 38834.ToString(),
                     Area = Areas.south,
                 },
                 new Line
                 {
-                    Id = 801892875,
+                    Code = 71,
+                    FirstStation = 38849.ToString(),
+                    LastStation = 38844.ToString(),
+                    Area = Areas.west,
+                },
+                new Line
+                {
+                    Code = 67,
+                    FirstStation = 38834.ToString(),
+                    LastStation = 38837.ToString(),
+                    Area = Areas.north,
+                },
+                new Line
+                {
+                    Code = 92,
+                    FirstStation = 38839.ToString(),
+                    LastStation = 38864.ToString(),
+                    Area = Areas.south,
+                },
+                new Line
+                {
                     Code = 6,
-                    FirstStation = 987654321.ToString(),
-                    LastStation = 098765432.ToString(),
+                    FirstStation = 38838.ToString(),
+                    LastStation = 38864.ToString(),
                     Area = Areas.west,
                 },
                 new Line
                 {
-                    Id = 425729726,
-                    Code = 7,
-                    FirstStation = 098765432.ToString(),
-                    LastStation = 875567342.ToString(),
-                    Area = Areas.north,
-                },
-                new Line
-                {
-                    Id = 0867956688,
-                    Code = 8,
-                    FirstStation = 649458358.ToString(),
-                    LastStation = 123456789.ToString(),
-                    Area = Areas.south,
-                },
-                new Line
-                {
-                    Id = 769756444,
-                    Code = 9,
-                    FirstStation = 675636378.ToString(),
-                    LastStation = 987654326.ToString(),
-                    Area = Areas.west,
-                },
-                new Line
-                {
-                    Id = 0829687256,
-                    Code = 10,
-                    FirstStation = 098765432.ToString(),
-                    LastStation = 257426568.ToString(),
+                    Code = 4,
+                    FirstStation = 38839.ToString(),
+                    LastStation = 38834.ToString(),
                     Area = Areas.east,
+                },
+                 new Line
+                {
+                    Code = 5,
+                    FirstStation = 38852.ToString(),
+                    LastStation = 38864.ToString(),
+                    Area = Areas.north,
                 },
             };
-            listBusOnTrip = new List<BusOnTrip>();
-            listLineStation = new List<LineStation>();
-            listLineTrip = new List<LineTrip>();
-            listTrip = new List<Trip>();
-            listUser = new List<User>();
+            listLineStation = new List<LineStation>()
+            {
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=0,
+                   Station = 38831
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=1,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=2,
+                   Station = 38832
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=3,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=4,
+                   Station = 38834
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=5,
+                   Station = 38836
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=6,
+                   Station = 38837
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=7,
+                   Station = 38838
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=8,
+                   Station = 38839
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 1,
+                   LineStationIndex=9,
+                   Station = 38840
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=0,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=1,
+                   Station = 38849
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=2,
+                   Station = 38832
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=3,
+                   Station = 38831
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=4,
+                   Station = 38844
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=5,
+                   Station = 38848
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=6,
+                   Station = 38842
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=7,
+                   Station = 38838
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=8,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 21,
+                   LineStationIndex=9,
+                   Station = 38845
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=0,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=1,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=2,
+                   Station = 38842
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=3,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=4,
+                   Station = 38864
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=5,
+                   Station = 38866
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=6,
+                   Station = 38856
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=7,
+                   Station = 38832
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=8,
+                   Station = 38837
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 39,
+                   LineStationIndex=9,
+                   Station = 38840
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=0,
+                   Station = 38834
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=1,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=2,
+                   Station = 38862
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=3,
+                   Station = 38863
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=4,
+                   Station = 38834
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=5,
+                   Station = 38856
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=6,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=7,
+                   Station = 38838
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=8,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 75,
+                   LineStationIndex=9,
+                   Station = 38840
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=0,
+                   Station = 38839
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=1,
+                   Station = 38847
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=2,
+                   Station = 38862
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=3,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=4,
+                   Station = 38841
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=5,
+                   Station = 38846
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=6,
+                   Station = 38860
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=7,
+                   Station = 38838
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=8,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=9,
+                   Station = 38834
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=0,
+                   Station = 38849
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=1,
+                   Station = 38831
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=2,
+                   Station = 38862
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=3,
+                   Station = 38863
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=4,
+                   Station = 38841
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=5,
+                   Station = 38836
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=6,
+                   Station = 38840
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=7,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=8,
+                   Station = 38839
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 71,
+                   LineStationIndex=9,
+                   Station = 38844
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=0,
+                   Station = 38834
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=1,
+                   Station = 38837
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=2,
+                   Station = 38842
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=3,
+                   Station = 38854
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=4,
+                   Station = 38841
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=5,
+                   Station = 38836
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=6,
+                   Station = 38864
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=7,
+                   Station = 38867
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=8,
+                   Station = 38849
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 67,
+                   LineStationIndex=9,
+                   Station = 38837
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=0,
+                   Station = 38839
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=1,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=2,
+                   Station = 38832
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=3,
+                   Station = 38863
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=4,
+                   Station = 38854
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=5,
+                   Station = 38846
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=6,
+                   Station = 38840
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=7,
+                   Station = 38848
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=8,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 92,
+                   LineStationIndex=9,
+                   Station = 38864
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=0,
+                   Station = 38839
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=1,
+                   Station = 38847
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=2,
+                   Station = 38862
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=3,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=4,
+                   Station = 38841
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=5,
+                   Station = 38846
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=6,
+                   Station = 38860
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=7,
+                   Station = 38838
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=8,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 4,
+                   LineStationIndex=9,
+                   Station = 38834
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=0,
+                   Station = 38838
+                },  
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=1,
+                   Station = 38856
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=2,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=3,
+                   Station = 38831
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=4,
+                   Station = 38841
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=5,
+                   Station = 38836
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=6,
+                   Station = 38863
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=7,
+                   Station = 38848
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=8,
+                   Station = 38859
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 6,
+                   LineStationIndex=9,
+                   Station = 38864
+                },
+
+
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=0,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=1,
+                   Station = 38837
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=2,
+                   Station = 38866
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=3,
+                   Station = 38833
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 42,
+                   LineStationIndex=4,
+                   Station = 38841
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=5,
+                   Station = 38840
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=6,
+                   Station = 38832
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=7,
+                   Station = 38852
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=8,
+                   Station = 38839
+                },
+                new LineStation
+                {
+                   id = id++,
+                   LineId = 5,
+                   LineStationIndex=9,
+                   Station = 38864
+                },
+
+            };
+            listLineTrip = new List<LineTrip>
+            {
+                new LineTrip
+                {
+                    LineId = 1,
+                    StartAt = new TimeSpan(6,0,0),
+                    FinishAt = new TimeSpan(22,0,0),
+                    Frequency = new TimeSpan(0,10,0)
+                },
+
+
+                  new LineTrip
+                  {
+                      LineId = 21,
+                      StartAt = new TimeSpan(6, 0, 0),
+                      FinishAt = new TimeSpan(22, 0, 0),
+                      Frequency = new TimeSpan(0, 17, 0)
+                  },
+
+  new LineTrip
+  {
+      LineId = 39,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 12, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 75,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 21, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 42,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 07, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 71,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 14, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 67,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 17, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 92,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 30, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 5,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 24, 0)
+  },
+
+  new LineTrip
+  {
+      LineId = 4,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 04, 0)
+  },
+    new LineTrip
+  {
+      LineId = 6,
+      StartAt = new TimeSpan(6, 0, 0),
+      FinishAt = new TimeSpan(22, 0, 0),
+      Frequency = new TimeSpan(0, 14, 0)
+  },
+
+
+
+
+            };
+            listUser = new List<User>
+            {
+                new User
+                {
+                    Password ="To8bTY9",
+                    UserName = "samuelabergel123@gmail.com"
+                }
+            };
         }
     }
 }

@@ -164,7 +164,6 @@ namespace BL
             lineBO.Code = lineDO.Code;
             lineBO.FirstStation = lineDO.FirstStation;
             lineBO.LastStation = lineDO.LastStation;
-            lineBO.Id = lineDO.Id;
             return lineBO;
         }
         DO.Line lineBoDoAdapter(BO.Line lineBO)
@@ -175,7 +174,6 @@ namespace BL
             lineDO.Code = lineBO.Code;
             lineDO.FirstStation = lineBO.FirstStation;
             lineDO.LastStation = lineBO.LastStation;
-            lineDO.Id = lineBO.Id;
             return lineDO;
         }
         public void addLine(BO.Line line)
@@ -744,7 +742,6 @@ namespace BL
         {
 
             clock simulator = clock.Instance;
-            simulator.startTime = startTime;
             simulator.rate = rate;
             simulator.stopWatch.Restart();
             simulator.ClockObserver += updateTime;

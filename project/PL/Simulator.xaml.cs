@@ -25,7 +25,6 @@ namespace PL
     {
 
         DispatcherTimer timer;
-        string currentTime;
         Station station;
         IBL bl;
         ObservableCollection<DepartureLine> collection;
@@ -47,7 +46,8 @@ namespace PL
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += (s, args) =>
             {
-                if (objet.Time.Seconds <= 0)
+                 int ok = objet.Time.Subtract(TimeSpan.FromSeconds(clock.Instance.rate)).Seconds;
+                if (objet.Time.Seconds <= 0 ||ok<=0)
                 {
                     if (objet.Time.Minutes > 0)
                     {

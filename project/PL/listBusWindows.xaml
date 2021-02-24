@@ -50,7 +50,7 @@
                     </GridView.ColumnHeaderContainerStyle>
                     <GridViewColumn
         DisplayMemberBinding="{Binding LicenseNum}"
-        Header="LicenseNum"  Width="134"/>
+        Header="LicenseNum"  Width="139"/>
                     <GridViewColumn
         DisplayMemberBinding="{Binding TotalTrip}"
         Header="TotalTrip"   Width="114"/>

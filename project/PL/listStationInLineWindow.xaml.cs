@@ -25,7 +25,6 @@ namespace PL
     {
         IBL bl;
         ObservableCollection<LineStationPO> collection;
-        StationPO stationPO;
         BO.Line line;
         public listStationInLineWindow(BO.Line line, IBL bl)
         {

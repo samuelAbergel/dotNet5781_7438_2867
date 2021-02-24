@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -32,7 +33,7 @@ namespace PL
         }
         private void ButtonClose_Click(object sender, RoutedEventArgs e)
         {
-            if (firstStationTextBox.Text != "" && WithSecondsTimePicker.SelectedTime.Value.TimeOfDay != null)
+            if (firstStationTextBox.Text != "" && WithSecondsTimePicker.SelectedTime != null)
             {
                 clock.Instance.rate = int.Parse(firstStationTextBox.Text);
                 clock.Instance.startTime = WithSecondsTimePicker.SelectedTime.Value.TimeOfDay;
@@ -41,6 +42,11 @@ namespace PL
             else
                 MessageBox.Show("you must fill the rate and hours", "information", MessageBoxButton.OK, MessageBoxImage.Information);
         }
-       
+        private void Refuel_PreviewTextInput(object sender, TextCompositionEventArgs e)//to be able to write only numbers
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
     }
 }

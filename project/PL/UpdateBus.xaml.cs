@@ -23,11 +23,16 @@ namespace PL
     {
         IBL bl;
         BO.Bus bus;
+        IEnumerable<BO.Line> listLine;
+
         public UpdateBus(BO.Bus bus, IBL bl)
         {
             this.bus = bus;
             InitializeComponent();
             this.bl = bl;
+            listLine = bl.getAllLine();
+            lineBox.ItemsSource = listLine;
+            lineBox.DisplayMemberPath = "Code";
             this.DataContext = bus;//set the datacontext
         }
 
@@ -37,7 +42,9 @@ namespace PL
             bool success = int.TryParse(fuelRemainTextBox.Text, out result);
           
             if (result <= 1200 && success)
-            { 
+            {
+                if(lineBox.SelectedItem != null)
+                bus.BusOfLine = int.Parse(lineBox.Text);
                 bl.updateBus(bus);//use the update of blimp
                 this.Close();//and close this page
             }

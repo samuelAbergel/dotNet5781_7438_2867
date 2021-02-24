@@ -22,7 +22,7 @@
         <materialDesign:Chip Margin="264,103,0,36" Height="Auto" Width="125">
             in this simulation
         </materialDesign:Chip>
-        <TextBox x:Name="firstStationTextBox" FontSize="30" HorizontalAlignment="Left" Height="57" Margin="215,110,0,33" Text="{Binding FirstStation}" VerticalAlignment="Center" Width="43" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="firstStationTextBox" PreviewTextInput="Refuel_PreviewTextInput" FontSize="30" HorizontalAlignment="Left" Height="57" Margin="215,110,0,33" Text="{Binding FirstStation}" VerticalAlignment="Center" Width="43" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -28,14 +28,14 @@ namespace PL
         Station station;
         IBL bl;
         ObservableCollection<DepartureLine> collection;
-        public stationSimu(IBL bl,Station station)
+        public stationSimu(IBL bl, Station station)
         {
             InitializeComponent();
             this.bl = bl;
             this.station = station;
             SimuList.DataContext = null;
-            collection = new ObservableCollection<DepartureLine>( from item in bl.listLineOfstationForsimu(station, clock.Instance.Time)
-                         select new DepartureLine(item));
+            collection = new ObservableCollection<DepartureLine>(from item in bl.listLineOfstationForsimu(station, clock.Instance.Time)
+                                                                 select new DepartureLine(item));
             SimuList.DataContext = collection;
             collection.ToList().ForEach(item => BackToBeginning(item));
         }
@@ -43,23 +43,11 @@ namespace PL
         {
             timer = new DispatcherTimer();
             timer.Start();
-            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Interval = TimeSpan.FromMilliseconds(10);
             timer.Tick += (s, args) =>
             {
-                if (objet.Time.Seconds <= 0)
+                if (objet.Time.Seconds <= 0 || objet.Time.Seconds - clock.Instance.rate <= 0 || objet.Time.Minutes <= 0 || objet.Time.Minutes - (clock.Instance.rate)/60 <= 0 || objet.Time.Hours <= 0 || objet.Time.Hours - (clock.Instance.rate)/3600 <= 0)
                 {
-                    if (objet.Time.Minutes > 0)
-                    {
-                        objet.Time = objet.Time.Subtract(TimeSpan.FromMinutes(1));
-                        objet.Time = objet.Time.Add(TimeSpan.FromSeconds(59));
-                    }
-                    else if (objet.Time.Minutes <= 0 && objet.Time.Hours > 0)
-                    {
-                        objet.Time = objet.Time.Subtract(TimeSpan.FromHours(1));
-                        objet.Time = objet.Time.Add(TimeSpan.FromMinutes(59));
-                        objet.Time = objet.Time.Add(TimeSpan.FromSeconds(59));
-                    }
-                    else
                         objet.Time = new TimeSpan(0, objet.Frequency.Minutes, 0);
                 }
                 else
