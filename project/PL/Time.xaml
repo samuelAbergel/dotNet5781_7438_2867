@@ -19,10 +19,10 @@
   Content="second in reality equal to"
   Icon="1" Margin="5,101,0,40" Height="Auto" Width="197" />
 
-        <materialDesign:Chip Margin="264,103,0,36" Height="Auto" Width="125">
+        <materialDesign:Chip Margin="265,100,0,41" Height="Auto" Width="125">
             in this simulation
         </materialDesign:Chip>
-        <TextBox x:Name="firstStationTextBox" PreviewTextInput="Refuel_PreviewTextInput" FontSize="30" HorizontalAlignment="Left" Height="57" Margin="215,110,0,33" Text="{Binding FirstStation}" VerticalAlignment="Center" Width="43" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="firstStationTextBox" PreviewTextInput="Refuel_PreviewTextInput" FontSize="30" HorizontalAlignment="Left" Height="57" Margin="215,103,0,40" Text="{Binding FirstStation}" VerticalAlignment="Center" Width="43" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -35,15 +35,15 @@
 
         <Button
   Style="{StaticResource MaterialDesignIconForegroundButton}"
-  ToolTip="MaterialDesignIconForegroundButton" Margin="320,5,-7,113" Height="Auto" Width="Auto" Click="ButtonClose_Click">
+  ToolTip="Close" Margin="339,6,8,143" Height="Auto" Width="Auto" Click="ButtonClose_Click">
             <materialDesign:PackIcon
     Kind="close" Height="52" Width="56" />
         </Button>
 
         <Grid.Background>
-            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
-                <GradientStop Color="#FF06325B" Offset="0.8" />
-                <GradientStop Color="#FF70ABE4" Offset="-2" />
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#FFD0DEF0" Offset="1" />
+                <GradientStop Color="#044d74" Offset="-0." />
             </LinearGradientBrush>
         </Grid.Background>
 

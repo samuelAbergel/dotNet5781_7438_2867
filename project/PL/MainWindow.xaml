@@ -55,8 +55,8 @@
         <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonFechar_Click" RenderTransformOrigin="3.997,-1.433" Margin="758,-2,3,401.5">
             <materialDesign:PackIcon Kind="Power"/>
         </Button>
-        <Label  Height="67" HorizontalAlignment="Left" Margin="545,7,0,0" x:Name="label1" VerticalAlignment="Top" Width="201" FontSize="50" FontFamily="Forte" />
-        <Button x:Name="startStopBtn" Click="ButtonSimu_Click" Margin="638,381,58,42" Height="Auto"/>
+        <Label  Height="67" HorizontalAlignment="Left" Margin="291,372,0,0" x:Name="label1" VerticalAlignment="Top" Width="201" FontSize="50" FontFamily="Forte" />
+        <Button x:Name="startStopBtn" Click="ButtonSimu_Click" Margin="540,395,156,28" Height="Auto"/>
 
     </Grid>
 

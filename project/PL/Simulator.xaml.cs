@@ -3,6 +3,7 @@ using BO;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,6 +38,8 @@ namespace PL
             collection = new ObservableCollection<DepartureLine>(from item in bl.listLineOfstationForsimu(station, clock.Instance.Time)
                                                                  select new DepartureLine(item));
             SimuList.DataContext = collection;
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(SimuList.DataContext);
+            view.SortDescriptions.Add(new SortDescription("Time", ListSortDirection.Ascending));
             collection.ToList().ForEach(item => BackToBeginning(item));
         }
         void BackToBeginning(DepartureLine objet)
@@ -62,6 +65,9 @@ namespace PL
                     }
                     else
                         objet.Time = new TimeSpan(0, objet.Frequency.Minutes, 0);
+                    this.Close();
+                    Simulator wnd = new Simulator(bl, station);
+                    wnd.Show();
                 }
                 else
                     objet.Time = objet.Time.Subtract(TimeSpan.FromSeconds(clock.Instance.rate));

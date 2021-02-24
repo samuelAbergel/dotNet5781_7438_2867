@@ -6,7 +6,7 @@
     <TotalTrip>4329</TotalTrip>
     <FuelRemain>120</FuelRemain>
     <previewTreatmentDate>16/02/2021</previewTreatmentDate>
-    <BusOfLine>1</BusOfLine>
+    <BusOfLine>67</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
   <Bus>
@@ -250,6 +250,15 @@
     <FuelRemain>1200</FuelRemain>
     <previewTreatmentDate>16/02/2021</previewTreatmentDate>
     <BusOfLine>29</BusOfLine>
+    <Status>ReadyToGo</Status>
+  </Bus>
+  <Bus>
+    <LicenseNum>8976549</LicenseNum>
+    <FromDate>08/07/2016</FromDate>
+    <TotalTrip>980</TotalTrip>
+    <FuelRemain>90</FuelRemain>
+    <previewTreatmentDate>01/01/0001</previewTreatmentDate>
+    <BusOfLine>78</BusOfLine>
     <Status>ReadyToGo</Status>
   </Bus>
 </ArrayOfBus>

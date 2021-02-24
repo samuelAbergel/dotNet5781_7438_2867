@@ -2,9 +2,9 @@
 <ArrayOfLine xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Line>
     <Code>67</Code>
-    <Area>center</Area>
+    <Area>west</Area>
     <FirstStation>38890</FirstStation>
-    <LastStation>38836</LastStation>
+    <LastStation>38831</LastStation>
   </Line>
   <Line>
     <Code>78</Code>
@@ -53,5 +53,11 @@
     <Area>west</Area>
     <FirstStation>38864</FirstStation>
     <LastStation>38883</LastStation>
+  </Line>
+  <Line>
+    <Code>111</Code>
+    <Area>east</Area>
+    <FirstStation>38836</FirstStation>
+    <LastStation>38875</LastStation>
   </Line>
 </ArrayOfLine>

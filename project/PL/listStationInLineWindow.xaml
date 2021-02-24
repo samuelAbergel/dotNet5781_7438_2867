@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PL" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        Title="listStationInLineWindow" Height="450" Width="376.507" WindowStyle="None">
+        Title="listStationInLineWindow" Height="450" Width="386.507" WindowStyle="None">
     <Grid Margin="0,0,0,-0.5">
-        <Rectangle Margin="-4,-4,-2,342.5" RenderTransformOrigin="0.496,0.679" >
+        <Rectangle Margin="-1,-4,-1.5,342.5" RenderTransformOrigin="0.496,0.679" >
             <Rectangle.Fill>
                 <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
                     <GradientStop Color="#4579a3" Offset="1" />
@@ -16,8 +16,12 @@
             </Rectangle.Fill>
         </Rectangle>
 
-        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,103,3,0" Height="345" VerticalAlignment="Top" >
-
+        <ListView x:Name="StationList" ItemsSource="{Binding}" Margin="-1,103,3,0" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Height="345" VerticalAlignment="Top" >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
                     <GridViewColumn

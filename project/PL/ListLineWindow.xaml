@@ -73,13 +73,21 @@
         </ListView>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="PREVIOUS" Margin="42,32,682,29" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
+            ToolTip="PREVIOUS" Margin="42,32,694,29" Foreground="White" Height="Auto" Width="Auto" Click="ButtonPreviousPage_Click">
             <materialDesign:PackIcon
-                Kind="ChevronLeft" Height="48" Width="58" />
+                Kind="ChevronLeft" Height="48" Width="49" />
         </Button>
         <Button
             Style="{StaticResource MaterialDesignIconForegroundButton}"
-            ToolTip="HOME" Margin="822,38,29,25.2" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click">
+            ToolTip="HOME" Margin="724,30,19,33" Foreground="White" Height="Auto" Width="Auto" Click="ButtonHome_Click" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
             <materialDesign:PackIcon
                 Kind="Home" Height="25" Width="28" />
         </Button>

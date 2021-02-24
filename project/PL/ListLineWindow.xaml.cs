@@ -26,7 +26,7 @@ namespace PL
     {
         IBL bl;
         ObservableCollection<LinePO> collection;
-        string[] listString = { "Id", "Area", "FirstStation", "LastStation" };
+        string[] listString = { "Code", "Area", "FirstStation", "LastStation" };
         public ListLineWindow(IBL bl)
         {
             InitializeComponent();

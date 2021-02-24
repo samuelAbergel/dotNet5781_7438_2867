@@ -8,15 +8,15 @@
         Title="Simulator" Height="355" Width="510" WindowStyle="None">
     <Grid>
         <Grid.Background>
-            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
-                <GradientStop Color="#FF06325B" Offset="0.8" />
-                <GradientStop Color="#FF70ABE4" Offset="-2" />
+            <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                <GradientStop Color="#FFD0DEF0" Offset="1" />
+                <GradientStop Color="#044d74" Offset="-0." />
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="396,-29,-36,245">
+        <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="Auto" Height="Auto" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonClose_Click" RenderTransformOrigin="3.997,-1.433" Margin="429,1,6,280">
             <materialDesign:PackIcon Kind="Close" Height="45" Width="44"/>
         </Button>
-        <ListView x:Name="SimuList" ItemsSource="{Binding}" Margin="-2,56,5,2.5" VerticalAlignment="Top" >
+        <ListView x:Name="SimuList" ItemsSource="{Binding}" Margin="0,77,3,0" VerticalAlignment="Top" >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
