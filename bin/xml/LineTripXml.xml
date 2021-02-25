@@ -60,4 +60,10 @@
     <FinishAt>22:00:00</FinishAt>
     <Frequency>00:08:00</Frequency>
   </LineId>
+  <LineId>
+    <LineId>321</LineId>
+    <StartAt>06:00:00</StartAt>
+    <FinishAt>22:00:00</FinishAt>
+    <Frequency>00:14:00</Frequency>
+  </LineId>
 </ArrayOfLineTrip>

@@ -780,4 +780,22 @@
     <Distance>31</Distance>
     <Time>01:12:00</Time>
   </AdjacentStations>
+  <AdjacentStations>
+    <Station1>38836</Station1>
+    <Station2>38838</Station2>
+    <Distance>19</Distance>
+    <Time>00:36:00</Time>
+  </AdjacentStations>
+  <AdjacentStations>
+    <Station1>38838</Station1>
+    <Station2>38832</Station2>
+    <Distance>58</Distance>
+    <Time>01:20:00</Time>
+  </AdjacentStations>
+  <AdjacentStations>
+    <Station1>38833</Station1>
+    <Station2>38838</Station2>
+    <Distance>24</Distance>
+    <Time>01:10:00</Time>
+  </AdjacentStations>
 </ArrayOfAdjacenStation>
