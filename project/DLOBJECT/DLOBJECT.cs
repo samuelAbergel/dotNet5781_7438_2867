@@ -388,10 +388,10 @@ namespace DL
         public void AddLineStation(LineStation lineStation)
         {
             //to verify its existence
-           var lst = (from item in DataSource.listLine
-                      from item1 in DataSource.listLineStation
-                     where item.Code == lineStation.LineId && item1.Station== lineStation.Station
-                     select item1).FirstOrDefault();
+           var lst = (
+                      from item in DataSource.listLineStation
+                     where item.id == lineStation.id
+                     select item).FirstOrDefault();
             if(lst != null)
                 throw new DLExeption("this lineStation already exist");
             //to add in list of linestation
