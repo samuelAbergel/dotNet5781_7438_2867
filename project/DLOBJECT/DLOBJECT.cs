@@ -108,8 +108,8 @@ namespace DL
             if (realBus.Status != BusStatus.ReadyToGo)
                 throw new DO.DLExeption("you can't treat because the statue");
             // if it exist we do a treatment of the bus
-            realBus.Status = BusStatus.inTreatment;
-            realBus.previewTreatmentDate = DateTime.Now;
+            bus.Status = BusStatus.inTreatment;
+            bus.previewTreatmentDate = DateTime.Now;
 
         }
         public IEnumerable<Bus> searchBus(string item)
@@ -206,8 +206,8 @@ namespace DL
         public bool isLineExisting(Line line)
         {
             //search if there is a line that start start with the same item
-            var line1 = (from item in DataSource.listLineStation
-                       where item.LineId == line.Code
+            var line1 = (from item in DataSource.listLine
+                       where item.Code == line.Code
                        select item).FirstOrDefault();
             if (line1 != null)
                 return false;
@@ -457,7 +457,7 @@ namespace DL
         public void removeAllLineStationOfLine(int id)
         {
             //remove all line station one after one
-            foreach (var item in DataSource.listLineStation)
+            foreach (var item in DataSource.listLineStation.ToList())
                 if (item.LineId == id)
                     DataSource.listLineStation.Remove(item);
         }
@@ -476,7 +476,7 @@ namespace DL
             if ((DataSource.listLineTrip.FirstOrDefault(p => p.LineId == id) != null))
                 throw new DLExeption("this line trip already exist");
             //if it exist add this line in list of line
-            DataSource.listLineTrip.Add(getLineTrip(id).Clone());
+            DataSource.listLineTrip.Add((new LineTrip { LineId = id,FinishAt = new TimeSpan(22,0,0),StartAt = new TimeSpan(6,0,0),Frequency = new TimeSpan(0,new Random().Next(30),0)}).Clone());
         }
 
         public void updateLineTrip(LineTrip LineTrip)

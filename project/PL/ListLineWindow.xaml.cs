@@ -104,12 +104,14 @@ namespace PL
         {
             Button btn = sender as Button;//set button
             LinePO linePO= btn.DataContext as LinePO;//set the line in line
+            bl.removeAllLineStationOfLine(linePO.Code);
             bl.removeLine(linePO.Code);//use remove from blimp
             bl.removeLineTrip(linePO.Code);
-            foreach(var item in bl.GetLineStationsFromLine(linePO.getLine()))
-            {
-                bl.removeLineStation(item.Station);
-            }
+            //IEnumerable<LineStation> lst = bl.GetLineStationsFromLine(linePO.getLine());
+            //foreach (var item in lst)
+            //{
+            //    bl.removeLineStation(item.id);
+            //}
             updateDataContext();//and update the data context
         }
 
